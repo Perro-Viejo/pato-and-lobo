@@ -16,6 +16,7 @@ export var text_color := Color.white
 export var walk_speed := 200.0
 export var is_player := false
 export var texture: Texture setget _set_texture
+export var vo_name: String = ''
 
 onready var sprite: Sprite = $Sprite
 
@@ -82,7 +83,11 @@ func say(dialog: String, is_in_queue := true) -> void:
 		return
 
 	C.emit_signal('character_spoke', self, dialog)
+
+	if vo_name:
+		A.play_vo(vo_name, global_position, false)
 	$AnimationPlayer.play('talk_%s' % _looking_dir)
+
 	yield(G, 'continue_clicked')
 	idle(false)
 

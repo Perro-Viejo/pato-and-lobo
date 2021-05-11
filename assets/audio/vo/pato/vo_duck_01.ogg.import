@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_duck_01.ogg-5ddc52a3872bd5d03db2eac4596a6f2f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/pato/vo_duck_01.ogg"
+dest_files=[ "res://.import/vo_duck_01.ogg-5ddc52a3872bd5d03db2eac4596a6f2f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
