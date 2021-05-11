@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Autoload/GodotAdventureQuest.gd" type="Script" id=1]
+[ext_resource path="res://src/TransitionLayer/TransitionLayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/GraphicInterface/GraphicInterface.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Helpers/GAQRoom.gd" type="Script" id=4]
+[ext_resource path="res://src/Characters/Pato/Pato.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Characters/Lobo/Lobo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Characters/Conejuno/Conejuno.tscn" type="PackedScene" id=7]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 4 )
+id = "Bar"
+path = "res://src/Rooms/Bar/RoomBar.tscn"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 4 )
+id = "Sea"
+path = "res://src/Rooms/Sea/RoomSea.tscn"
+
+[node name="GodotAdventureQuest" type="Node"]
+script = ExtResource( 1 )
+rooms = [ SubResource( 1 ), SubResource( 2 ) ]
+characters = [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
+skip_cutscene_time = 0.25
+text_speeds = [ 0.05, 0.01, 0.0 ]
+text_speed_idx = 2
+
+[node name="GraphicInterface" parent="." instance=ExtResource( 3 )]
+
+[node name="TransitionLayer" parent="." instance=ExtResource( 2 )]
+
+[node name="MainCamera" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 2, 2 )
+limit_left = -960
+limit_top = -540
+limit_right = 960
+limit_bottom = 540
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
+__meta__ = {
+"_editor_description_": ""
+}

@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/images/rooms/sea/bg.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/rooms/sea/boat.png" type="Texture" id=4]
+[ext_resource path="res://src/Rooms/Sea/RoomSea.gd" type="Script" id=5]
+[ext_resource path="res://assets/images/rooms/sea/drown.png" type="Texture" id=6]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( -470.547, -115.58, 86.7308, -115.58, 72.9578, -86.9744, -462.071, -88.0339 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -470.547, -115.58, 86.7308, -115.58, 72.9578, -86.9744, -462.071, -88.0339 ) ]
+
+[node name="RoomSea" instance=ExtResource( 1 )]
+script = ExtResource( 5 )
+script_name = "Sea"
+characters = [ {
+"position": Vector2( 622, 224 ),
+"script_name": "Lobo"
+} ]
+
+[node name="Bg" parent="Props" index="0" instance=ExtResource( 2 )]
+baseline = -540
+texture = ExtResource( 3 )
+
+[node name="Boat" parent="Props" index="1" instance=ExtResource( 2 )]
+position = Vector2( -186, -204 )
+baseline = 198
+texture = ExtResource( 4 )
+
+[node name="Drown" parent="Props" index="2" instance=ExtResource( 2 )]
+position = Vector2( 639, 187 )
+description = "Lobo ahogándose"
+baseline = 353
+texture = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" parent="Props/Drown" index="0"]
+polygon = PoolVector2Array( -185, -170, 162, -185, 217, -8, 179, 136, 18, 199, -146, 171, -220, 7 )
+
+[node name="BaselineHelper" parent="Props/Drown" index="1"]
+position = Vector2( 0, 353 )
+
+[node name="Sprite" parent="Props/Drown" index="3"]
+texture = ExtResource( 6 )
+
+[node name="EntryPoint" type="Position2D" parent="Points" index="0"]
+position = Vector2( -114.102, -101.305 )
+
+[node name="ProwPoint" type="Position2D" parent="Points" index="1"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
+navpoly = SubResource( 1 )
+
+[node name="PositionLobo" type="Position2D" parent="Characters" index="0"]
+position = Vector2( 623, 224 )
+
+[editable path="Props/Drown"]

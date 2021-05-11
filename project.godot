@@ -1,0 +1,156 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Clickable",
+"class": "Character",
+"language": "GDScript",
+"path": "res://src/Nodes/Character/Character.gd"
+}, {
+"base": "Area2D",
+"class": "Clickable",
+"language": "GDScript",
+"path": "res://src/Nodes/Clickable/Clickable.gd"
+}, {
+"base": "Container",
+"class": "DialogMenu",
+"language": "GDScript",
+"path": "res://src/GraphicInterface/DialogMenu/DialogMenu.gd"
+}, {
+"base": "Resource",
+"class": "DialogOption",
+"language": "GDScript",
+"path": "res://src/DialogTree/DialogOption.gd"
+}, {
+"base": "RichTextLabel",
+"class": "DialogText",
+"language": "GDScript",
+"path": "res://src/GraphicInterface/Dialog/DialogText.gd"
+}, {
+"base": "Resource",
+"class": "DialogTree",
+"language": "GDScript",
+"path": "res://src/DialogTree/DialogTree.gd"
+}, {
+"base": "Label",
+"class": "DisplayBox",
+"language": "GDScript",
+"path": "res://src/GraphicInterface/DisplayBox/DisplayBox.gd"
+}, {
+"base": "Resource",
+"class": "GAQRoom",
+"language": "GDScript",
+"path": "res://src/Helpers/GAQRoom.gd"
+}, {
+"base": "Clickable",
+"class": "Hotspot",
+"language": "GDScript",
+"path": "res://src/Nodes/Hotspot/Hotspot.gd"
+}, {
+"base": "Control",
+"class": "InventoryContainer",
+"language": "GDScript",
+"path": "res://src/GraphicInterface/Inventory/InventoryContainer.gd"
+}, {
+"base": "Control",
+"class": "Item",
+"language": "GDScript",
+"path": "res://src/Inventory/Item.gd"
+}, {
+"base": "Clickable",
+"class": "Prop",
+"language": "GDScript",
+"path": "res://src/Nodes/Prop/Prop.gd"
+}, {
+"base": "Node2D",
+"class": "Room",
+"language": "GDScript",
+"path": "res://src/Nodes/Room/Room.gd"
+}, {
+"base": "NinePatchRect",
+"class": "Toolbar",
+"language": "GDScript",
+"path": "res://src/GraphicInterface/Toolbar/Toolbar.gd"
+}, {
+"base": "TextureButton",
+"class": "ToolbarButton",
+"language": "GDScript",
+"path": "res://src/GraphicInterface/Toolbar/ToolbarButton.gd"
+} ]
+_global_script_class_icons={
+"Character": "",
+"Clickable": "",
+"DialogMenu": "",
+"DialogOption": "",
+"DialogText": "",
+"DialogTree": "",
+"DisplayBox": "",
+"GAQRoom": "",
+"Hotspot": "",
+"InventoryContainer": "",
+"Item": "",
+"Prop": "",
+"Room": "",
+"Toolbar": "",
+"ToolbarButton": ""
+}
+
+[application]
+
+config/name="adventure_jam-2021"
+run/main_scene="res://src/Rooms/Bar/RoomBar.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Utils="*res://src/Autoload/Utils.gd"
+Cursor="*res://src/Autoload/Cursor.tscn"
+E="*res://src/Autoload/GodotAdventureQuest.tscn"
+C="*res://src/Autoload/CharacterInterface.gd"
+I="*res://src/Inventory/Inventory.tscn"
+D="*res://src/Autoload/DialogTreeInterface.tscn"
+G="*res://src/Autoload/GraphicInterfaceEvents.gd"
+Globals="*res://src/Autoload/Globals.gd"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/test_width=960
+window/size/test_height=540
+
+[input]
+
+interact={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+look={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+skip={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"

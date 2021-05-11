@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/Rooms/Bar/RoomBar.gd" type="Script" id=1]
+[ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/images/rooms/bar/bg.png" type="Texture" id=3]
+[ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/images/rooms/bar/sink.png" type="Texture" id=5]
+[ext_resource path="res://src/Rooms/Bar/PropSink.gd" type="Script" id=6]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( -907, -129, -675, -142, -685, 5, -917, 535, 924, 539, -30, -1, -37, -144, 706.694, -150.256, 729, -106, 775, -106, 914, -152, 789.733, -150.955 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 3, 2, 5 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 4, 8, 9 ), PoolIntArray( 10, 4, 9, 11 ) ]
+outlines = [ PoolVector2Array( -675, -142, -907, -129, -917, 535, 924, 539, 914, -152, 789.733, -150.955, 775, -106, 729, -106, 706.694, -150.256, -37, -144, -30, -1, -685, 5 ) ]
+
+[node name="RoomBar" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+script_name = "Bar"
+characters = [ {
+"position": Vector2( 435, 260 ),
+"script_name": "Lobo"
+}, {
+"position": Vector2( -467, -230 ),
+"script_name": "Conejuno"
+} ]
+
+[node name="Prop" parent="Props" index="0" instance=ExtResource( 4 )]
+clickable = false
+baseline = -540
+texture = ExtResource( 3 )
+
+[node name="BaselineHelper" parent="Props/Prop" index="1"]
+position = Vector2( 0, -540 )
+
+[node name="Sprite" parent="Props/Prop" index="3"]
+texture = ExtResource( 3 )
+
+[node name="Sink" parent="Props" index="1" instance=ExtResource( 4 )]
+position = Vector2( 754, -220 )
+script = ExtResource( 6 )
+description = "Lavamanos"
+baseline = 100
+walk_to_point = Vector2( -2, 125 )
+cursor = 1
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" parent="Props/Sink" index="0"]
+polygon = PoolVector2Array( -43, 16, -14, -14, 10, -13, 15, 7, 37, 12, 37, 54, 5, 69, 11, 94, 7, 109, -9, 109, -12, 69, -40, 59 )
+
+[node name="BaselineHelper" parent="Props/Sink" index="1"]
+position = Vector2( 0, 100 )
+
+[node name="WalkToHelper" parent="Props/Sink" index="2"]
+position = Vector2( -2, 125 )
+
+[node name="Sprite" parent="Props/Sink" index="3"]
+texture = ExtResource( 5 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
+navpoly = SubResource( 1 )
+
+[node name="PositionLobo" type="Position2D" parent="Characters" index="0"]
+position = Vector2( 435, 260 )
+
+[node name="PositionConejuno" type="Position2D" parent="Characters" index="1"]
+position = Vector2( -467, -230 )
+
+[editable path="Props/Prop"]
+[editable path="Props/Sink"]

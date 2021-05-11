@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Resources/DynamicFonts/KgHappySolid24.tres" type="DynamicFont" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="DialogOption" type="Button"]
+margin_right = 320.0
+margin_bottom = 14.0
+custom_styles/focus = SubResource( 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "asdasd"
+flat = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
