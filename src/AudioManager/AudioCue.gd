@@ -3,7 +3,7 @@ class_name AudioCue
 extends Resource
 
 export var audio: AudioStream
-export var loop := false
+export var loop := false setget _set_loop
 export var is_2d := false
 export var pitch := 0.0
 export var volume := 1.0
@@ -30,3 +30,9 @@ func _get_rnd_pitch() -> float:
 func _get_rnd_volume() -> float:
 	randomize()
 	return volume + rand_range(rnd_volume.x, rnd_volume.y)
+
+
+func _set_loop(value: bool) -> void:
+	loop = value
+	audio.loop = value
+	property_list_changed_notify()

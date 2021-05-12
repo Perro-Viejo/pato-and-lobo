@@ -6,6 +6,8 @@ extends Prop
 func on_interact() -> void:
 	yield(E.run([
 		C.walk_to_clicked(),
+		A.stop('bg_bar'),
+		A.stop('mx_bar_01'),
 		C.player.say('Me voy a lavar las alitas'),
 		E.wait(),
 		'Pato: ¡Ay qué rico!',

@@ -85,7 +85,7 @@ func say(dialog: String, is_in_queue := true) -> void:
 	C.emit_signal('character_spoke', self, dialog)
 
 	if vo_name:
-		A.play_vo(vo_name, global_position, false)
+		A.play(vo_name, global_position, false)
 	$AnimationPlayer.play('talk_%s' % _looking_dir)
 
 	yield(G, 'continue_clicked')

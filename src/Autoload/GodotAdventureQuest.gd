@@ -38,6 +38,8 @@ func _ready() -> void:
 		C.characters.append(character)
 	
 	set_process_input(false)
+	
+	DebugOverlay.visible = true
 
 
 func _process(delta: float) -> void:

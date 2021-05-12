@@ -1,6 +1,8 @@
 tool
 extends Room
 
+var laguna_uno := 0
+var laguna_dos := 0
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 # TODO: Sobrescribir los métodos de Godot que hagan falta
@@ -8,7 +10,8 @@ extends Room
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
-	pass
+	A.play_music('mx_bar_01', false)
+	A.play('bg_bar', Vector2.ZERO, false)
 
 
 func on_room_transition_finished() -> void:

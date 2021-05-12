@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mx_bar_01.ogg-57952514166c20a1c159fde37f81abaf.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/mx/mx_bar_01.ogg"
+dest_files=[ "res://.import/mx_bar_01.ogg-57952514166c20a1c159fde37f81abaf.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

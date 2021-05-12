@@ -125,6 +125,7 @@ D="*res://src/Autoload/DialogTreeInterface.tscn"
 G="*res://src/Autoload/GraphicInterfaceEvents.gd"
 A="*res://src/Autoload/AudioManager.tscn"
 Globals="*res://src/Autoload/Globals.gd"
+DebugOverlay="*res://src/Autoload/DebugOverlay.tscn"
 
 [display]
 
