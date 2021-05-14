@@ -8,17 +8,19 @@ func on_interact() -> void:
 		C.walk_to_clicked(),
 		C.player.say('Me voy a lavar las alitas'),
 		#TODO: Estos sonidos no deberían sonar hasta que llegue al lavamanos
-		A.play('sfx_sink_head', global_position, false),
-		A.play('sfx_sink_loop', global_position, false),
+		A.play('sfx_sink_head', global_position),
+		A.play('sfx_sink_loop', global_position),
 		
 		E.wait(),
 		'Pato: ¡Ay qué rico!',
 		#Estos sonidos deberían sonar despues o antes de cada frase
-		A.play('sfx_sink_wash', global_position, false),
+		A.play('sfx_sink_wash', global_position),
 		'...',
-		A.play('sfx_sink_wash', global_position, false),
+		#Estos sonidos deberían sonar despues o antes de cada frase
+		A.play('sfx_sink_wash', global_position),
 		'Pato: ...y si...',
-		A.play('sfx_sink_wash', global_position, false),
+		#Estos sonidos deberían sonar despues o antes de cada frase
+		A.play('sfx_sink_wash', global_position),
 		A.stop('bg_bar'),
 		A.stop('mx_bar_01'),
 		A.stop('sfx_sink_loop'),
