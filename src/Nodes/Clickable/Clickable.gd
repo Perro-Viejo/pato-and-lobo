@@ -83,6 +83,12 @@ func disable(is_in_queue := true) -> void:
 	yield(get_tree(), 'idle_frame')
 
 
+func enable(is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	self.visible = true
+	yield(get_tree(), 'idle_frame')
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _toggle_description(display: bool) -> void:
 	set_process_unhandled_input(display)

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Characters/Spaceship/CharacterSpaceship.gd" type="Script" id=1]
+[ext_resource path="res://src/Nodes/Character/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Characters/Spaceship/spaceship.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle_d"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[node name="CharacterSpaceship" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+description = "Nave espacial"
+clickable = false
+script_name = "Spaceship"
+texture = ExtResource( 3 )
+follow_player = true
+
+[node name="AnimationPlayer" parent="." index="3"]
+anims/idle_d = SubResource( 1 )
+
+[node name="Sprite" parent="." index="4"]
+texture = ExtResource( 3 )

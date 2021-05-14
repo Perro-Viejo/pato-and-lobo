@@ -24,7 +24,7 @@ onready var game_width := get_viewport().get_visible_rect().end.x
 onready var game_height := get_viewport().get_visible_rect().end.y
 onready var half_width := game_width / 2.0
 onready var half_height := game_height / 2.0
-onready var _main_camera: Camera2D = find_node('MainCamera')
+onready var main_camera: Camera2D = find_node('MainCamera')
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
@@ -45,7 +45,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if not Engine.editor_hint and is_instance_valid(C.player):
-		_main_camera.position = C.player.position
+		main_camera.position = C.player.position
 
 
 func _input(event: InputEvent) -> void:
@@ -154,8 +154,8 @@ func room_readied(room: Room) -> void:
 	if room.has_player:
 		room.add_character(C.player)
 	
-	G.done()
 	room.on_room_entered()
+	G.done()
 
 	$TransitionLayer.play_transition('fade_out')
 	yield($TransitionLayer, 'transition_finished')

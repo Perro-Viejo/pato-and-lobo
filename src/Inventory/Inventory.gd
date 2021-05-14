@@ -29,7 +29,8 @@ func add_item(item_name: String, is_in_queue := true) -> void:
 	if is_in_queue: yield()
 
 	var i: Item = _get_item_instance(item_name)
-	if is_instance_valid(i):
+	if is_instance_valid(i) and not i.in_inventory:
+		i.in_inventory = true
 		emit_signal('item_added', i)
 		return yield(self, 'item_add_done')
 
@@ -55,6 +56,7 @@ func remove_item(item_name: String, is_in_queue := true) -> void:
 	
 	var i: Item = _get_item_instance(item_name)
 	if is_instance_valid(i):
+		i.in_inventory = false
 		set_active_item(null)
 		emit_signal('item_removed', i)
 		yield(self, 'item_remove_done')

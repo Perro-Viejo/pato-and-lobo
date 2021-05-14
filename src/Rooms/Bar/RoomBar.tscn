@@ -1,21 +1,23 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Rooms/Bar/RoomBar.gd" type="Script" id=1]
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/images/rooms/bar/bg.png" type="Texture" id=3]
+[ext_resource path="res://src/Rooms/Bar/Sprites/bg.png" type="Texture" id=3]
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/images/rooms/bar/sink.png" type="Texture" id=5]
+[ext_resource path="res://src/Rooms/Bar/Sprites/sink.png" type="Texture" id=5]
 [ext_resource path="res://src/Rooms/Bar/PropSink.gd" type="Script" id=6]
 [ext_resource path="res://src/Rooms/Bar/PropGlassWithDentures.gd" type="Script" id=7]
-[ext_resource path="res://assets/images/rooms/bar/glass_with_dentures.png" type="Texture" id=8]
+[ext_resource path="res://src/Rooms/Bar/Sprites/glass_with_dentures.png" type="Texture" id=8]
 [ext_resource path="res://src/Nodes/Hotspot/Hotspot.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Rooms/Bar/HotspotSink.gd" type="Script" id=10]
-[ext_resource path="res://assets/images/rooms/bar/wolf_mask.png" type="Texture" id=11]
+[ext_resource path="res://src/Rooms/Bar/Sprites/wolf_mask.png" type="Texture" id=11]
 [ext_resource path="res://src/Rooms/Bar/PropWolfMask.gd" type="Script" id=12]
-[ext_resource path="res://assets/images/rooms/bar/brooms.png" type="Texture" id=13]
+[ext_resource path="res://src/Rooms/Bar/Sprites/brooms.png" type="Texture" id=13]
 [ext_resource path="res://src/Rooms/Bar/PropBrooms.gd" type="Script" id=14]
 [ext_resource path="res://src/Rooms/Bar/PropCoat.gd" type="Script" id=15]
-[ext_resource path="res://assets/images/rooms/bar/coat.png" type="Texture" id=16]
+[ext_resource path="res://src/Rooms/Bar/Sprites/coat.png" type="Texture" id=16]
+[ext_resource path="res://src/Rooms/Bar/PropLunaPoster.gd" type="Script" id=17]
+[ext_resource path="res://src/Rooms/Bar/Sprites/luna_poster.png" type="Texture" id=18]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 846, 862, 1315, 946, -1871, 933, 324, 874, 1371, -180, 1829, 225, 938, 288, 841, 118, 1302, 508, 1556, 759, 1217, 775, 1014.21, 513.794, 516, 212, 779, 18, 641, -144, 758, 127, 677, 27, -1354, 234, -1020, -274, -871, -277, -887, 69, -1024, 265, -226, 66, -230, -282, 475, -261, 60, 234, -1175, 703, -1563, 650 )
@@ -33,15 +35,15 @@ characters = [ {
 "script_name": "Conejuno"
 } ]
 
-[node name="Prop" parent="Props" index="0" instance=ExtResource( 4 )]
+[node name="Bg" parent="Props" index="0" instance=ExtResource( 4 )]
 clickable = false
 baseline = -540
 texture = ExtResource( 3 )
 
-[node name="BaselineHelper" parent="Props/Prop" index="1"]
+[node name="BaselineHelper" parent="Props/Bg" index="1"]
 position = Vector2( 0, -540 )
 
-[node name="Sprite" parent="Props/Prop" index="3"]
+[node name="Sprite" parent="Props/Bg" index="3"]
 texture = ExtResource( 3 )
 
 [node name="Sink" parent="Props" index="1" instance=ExtResource( 4 )]
@@ -141,6 +143,26 @@ position = Vector2( -118.794, 213.546 )
 [node name="Sprite" parent="Props/Coat" index="3"]
 texture = ExtResource( 16 )
 
+[node name="LunaPoster" parent="Props" index="6" instance=ExtResource( 4 )]
+position = Vector2( 1179, -564 )
+script = ExtResource( 17 )
+description = "Póster de La Luna"
+baseline = -406
+walk_to_point = Vector2( 18, 414 )
+texture = ExtResource( 18 )
+
+[node name="CollisionPolygon2D" parent="Props/LunaPoster" index="0"]
+polygon = PoolVector2Array( -119, -146, 122, -162, 118, 143, -118, 159 )
+
+[node name="BaselineHelper" parent="Props/LunaPoster" index="1"]
+position = Vector2( 0, -406 )
+
+[node name="WalkToHelper" parent="Props/LunaPoster" index="2"]
+position = Vector2( 18, 414 )
+
+[node name="Sprite" parent="Props/LunaPoster" index="3"]
+texture = ExtResource( 18 )
+
 [node name="Sink" parent="Hotspots" index="0" instance=ExtResource( 9 )]
 position = Vector2( 842, -271 )
 script = ExtResource( 10 )
@@ -163,10 +185,11 @@ position = Vector2( 842, 393 )
 [node name="PositionConejuno" type="Position2D" parent="Characters" index="1"]
 position = Vector2( -577, -316 )
 
-[editable path="Props/Prop"]
+[editable path="Props/Bg"]
 [editable path="Props/Sink"]
 [editable path="Props/GlassWithDentures"]
 [editable path="Props/WolfMask"]
 [editable path="Props/Brooms"]
 [editable path="Props/Coat"]
+[editable path="Props/LunaPoster"]
 [editable path="Hotspots/Sink"]

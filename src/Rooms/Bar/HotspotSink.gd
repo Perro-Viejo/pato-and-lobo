@@ -25,8 +25,8 @@ func on_interact() -> void:
 		A.stop('mx_bar_01'),
 		A.stop('sfx_sink_loop'),
 	]), 'completed')
-	E.goto_room('Sea')
 	A.play('sfx_dream_transition', Vector2.ZERO, false)
+	E.goto_room('Sea')
 
 
 func on_look() -> void:

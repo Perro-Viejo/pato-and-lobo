@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Rooms/HomesPlantation/RoomHomesPlantation.gd" type="Script" id=2]
+[ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Rooms/HomesPlantation/Sprites/bg.png" type="Texture" id=4]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 676, 158, 946, 111, 921, 506, 337, 515, 176, 149, 492, 124, -619, 506, -298, 100, -127, 111, -505, 140, -760, 136, -924, 495, -931, 201 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 0, 3, 6 ), PoolIntArray( 7, 8, 4, 6, 9 ), PoolIntArray( 10, 9, 6, 11, 12 ) ]
+outlines = [ PoolVector2Array( 946, 111, 676, 158, 492, 124, 176, 149, -127, 111, -298, 100, -505, 140, -760, 136, -931, 201, -924, 495, -619, 506, 337, 515, 921, 506 ) ]
+
+[node name="RoomHomesPlantation" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+script_name = "HomesPlantation"
+limit_left = -960.0
+limit_right = 960.0
+limit_top = -540.0
+limit_bottom = 540.0
+
+[node name="Bg" parent="Props" index="0" instance=ExtResource( 3 )]
+clickable = false
+baseline = -540
+texture = ExtResource( 4 )
+
+[node name="EntryPoint" type="Position2D" parent="Points" index="0"]
+position = Vector2( 827, 269 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
+navpoly = SubResource( 1 )

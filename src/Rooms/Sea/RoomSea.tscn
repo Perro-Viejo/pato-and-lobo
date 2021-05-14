@@ -2,10 +2,10 @@
 
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/images/rooms/sea/bg.png" type="Texture" id=3]
-[ext_resource path="res://assets/images/rooms/sea/boat.png" type="Texture" id=4]
+[ext_resource path="res://src/Rooms/Sea/Sprites/bg.png" type="Texture" id=3]
+[ext_resource path="res://src/Rooms/Sea/Sprites/boat.png" type="Texture" id=4]
 [ext_resource path="res://src/Rooms/Sea/RoomSea.gd" type="Script" id=5]
-[ext_resource path="res://assets/images/rooms/sea/drown.png" type="Texture" id=6]
+[ext_resource path="res://src/Rooms/Sea/Sprites/drown.png" type="Texture" id=6]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -470.547, -115.58, 86.7308, -115.58, 72.9578, -86.9744, -462.071, -88.0339 )

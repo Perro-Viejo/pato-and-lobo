@@ -11,7 +11,8 @@ export var stack := false
 export var script_name := ''
 export(Cursor.Type) var cursor
 
-var amount = 1
+var amount := 1
+var in_inventory := false
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░

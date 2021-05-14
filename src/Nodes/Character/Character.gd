@@ -16,7 +16,8 @@ export var text_color := Color.white
 export var walk_speed := 200.0
 export var is_player := false
 export var texture: Texture setget _set_texture
-export var vo_name: String = ''
+export var vo_name := ''
+export var follow_player := false
 
 onready var sprite: Sprite = $Sprite
 
@@ -25,6 +26,14 @@ onready var sprite: Sprite = $Sprite
 func _ready():
 	# Conectarse a señales del cielo
 	idle(false)
+	set_process(follow_player)
+
+
+func _process(delta: float) -> void:
+	if Engine.editor_hint: return
+
+	if is_instance_valid(C.player):
+		global_position = C.player.global_position
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░

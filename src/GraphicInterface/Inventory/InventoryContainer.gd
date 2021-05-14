@@ -86,9 +86,10 @@ func _add_item(item: Item) -> void:
 	item.connect('description_toggled', self, '_show_item_info')
 	item.connect('selected', self, '_change_cursor')
 	
-	_open()
-	yield(get_tree().create_timer(2.0), 'timeout')
-	_close()
+	if not G.blocked:
+		_open()
+		yield(get_tree().create_timer(2.0), 'timeout')
+		_close()
 
 	I.emit_signal('item_add_done', item)
 

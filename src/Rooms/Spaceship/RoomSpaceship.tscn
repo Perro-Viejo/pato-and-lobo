@@ -1,0 +1,98 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Rooms/Spaceship/RoomSpaceship.gd" type="Script" id=2]
+[ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/bg.png" type="Texture" id=4]
+[ext_resource path="res://src/Rooms/Spaceship/PropSpaceship.gd" type="Script" id=5]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceship.png" type="Texture" id=6]
+[ext_resource path="res://src/Nodes/Prop/PropRoboticArm.gd" type="Script" id=7]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/robotic_arm.png" type="Texture" id=8]
+[ext_resource path="res://src/Nodes/Prop/PropTeletransportLaser.gd" type="Script" id=9]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/teletransport_laser.png" type="Texture" id=10]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/garbage_extractor.png" type="Texture" id=11]
+[ext_resource path="res://src/Nodes/Prop/PropGarbageExtractor.gd" type="Script" id=12]
+
+[node name="RoomSpaceship" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+script_name = "Spaceship"
+characters = [ {
+"position": Vector2( 150, 236 ),
+"script_name": "Lobo"
+} ]
+limit_left = 0.0
+limit_right = 0.0
+limit_top = 0.0
+limit_bottom = 0.0
+
+[node name="Bg" parent="Props" index="0" instance=ExtResource( 3 )]
+clickable = false
+baseline = -540
+texture = ExtResource( 4 )
+
+[node name="Spaceship" parent="Props" index="1" instance=ExtResource( 3 )]
+script = ExtResource( 5 )
+clickable = false
+baseline = 540
+texture = ExtResource( 6 )
+
+[node name="RoboticArm" parent="Props" index="2" instance=ExtResource( 3 )]
+position = Vector2( -559, 311 )
+script = ExtResource( 7 )
+description = "Halacosas"
+baseline = 540
+cursor = 1
+script_name = "RoboticArm"
+texture = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" parent="Props/RoboticArm" index="0"]
+polygon = PoolVector2Array( -6, -120, 77, -100, 130, 27, -21, 119, -72, 110, -120, -74 )
+
+[node name="BaselineHelper" parent="Props/RoboticArm" index="1"]
+position = Vector2( 0, 540 )
+
+[node name="Sprite" parent="Props/RoboticArm" index="3"]
+texture = ExtResource( 8 )
+
+[node name="TeletransportLaser" parent="Props" index="3" instance=ExtResource( 3 )]
+position = Vector2( 593, 217 )
+script = ExtResource( 9 )
+description = "Rasho teletransportador"
+baseline = 540
+cursor = 1
+script_name = "TeletransportLaser"
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" parent="Props/TeletransportLaser" index="0"]
+polygon = PoolVector2Array( -55, -22, -81, -56, -52, -84, -16, -47, 40, -63, 81, -27, 68.4288, -17.3097, 72, 31, 48, 67, -2, 83, -41.0054, 67.0458, -63, 84, -80, 35 )
+
+[node name="BaselineHelper" parent="Props/TeletransportLaser" index="1"]
+position = Vector2( 0, 540 )
+
+[node name="Sprite" parent="Props/TeletransportLaser" index="3"]
+texture = ExtResource( 10 )
+
+[node name="GarbageExtractor" parent="Props" index="4" instance=ExtResource( 3 )]
+position = Vector2( 153, 268 )
+script = ExtResource( 12 )
+description = "Extractor de basuras"
+baseline = 540
+cursor = 1
+script_name = "GarbageExtractor"
+texture = ExtResource( 11 )
+
+[node name="CollisionPolygon2D" parent="Props/GarbageExtractor" index="0"]
+polygon = PoolVector2Array( -120, -65, 110, -84, 113, 36, 85, 69, 6, 78, -63, 79, -100, 49 )
+
+[node name="BaselineHelper" parent="Props/GarbageExtractor" index="1"]
+position = Vector2( 0, 540 )
+
+[node name="Sprite" parent="Props/GarbageExtractor" index="3"]
+texture = ExtResource( 11 )
+
+[node name="Position2D" type="Position2D" parent="Characters" index="0"]
+position = Vector2( 150, 136 )
+
+[editable path="Props/RoboticArm"]
+[editable path="Props/TeletransportLaser"]
+[editable path="Props/GarbageExtractor"]

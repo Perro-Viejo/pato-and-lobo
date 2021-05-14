@@ -15,7 +15,7 @@ func on_room_entered() -> void:
 
 
 func on_room_transition_finished() -> void:
-	E.run([
+	E.run_cutscene([
 		C.player_say('Esta fiesta está re-buena...'),
 		C.player_say('y está más buena porque Lobo está aquí'),
 		C.player_say('Hoy es el día.'),

@@ -18,6 +18,10 @@ export var has_player := true
 var is_current := false setget _set_is_current
 var visited := false
 var visited_first_time := false
+var limit_left := 0.0
+var limit_right := 0.0
+var limit_top := 0.0
+var limit_bottom := 0.0
 
 var _path := []
 
@@ -27,6 +31,15 @@ onready var _nav_path: Navigation2D = $WalkableAreas.get_child(0)
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready():
 	set_process_unhandled_input(false)
+	
+	if limit_left != 0.0:
+		E.main_camera.limit_left = limit_left
+	if limit_right != 0.0:
+		E.main_camera.limit_right = limit_right
+	if limit_top != 0.0:
+		E.main_camera.limit_top = limit_top
+	if limit_bottom != 0.0:
+		E.main_camera.limit_bottom = limit_bottom
 	
 	for p in $Props.get_children():
 		# TODO: Esta validación de baseline no será necesaria cuando sean Props
@@ -73,6 +86,33 @@ func _unhandled_input(event):
 		return
 
 	C.player.walk(get_local_mouse_position(), false)
+
+
+func _get_property_list():
+	var properties = []
+	properties.append({
+		name = "Camera limits",
+		type = TYPE_NIL,
+		hint_string = "limit_",
+		usage = PROPERTY_USAGE_GROUP | PROPERTY_USAGE_SCRIPT_VARIABLE
+	})
+	properties.append({
+		name = "limit_left",
+		type = TYPE_REAL
+	})
+	properties.append({
+		name = "limit_right",
+		type = TYPE_REAL
+	})
+	properties.append({
+		name = "limit_top",
+		type = TYPE_REAL
+	})
+	properties.append({
+		name = "limit_bottom",
+		type = TYPE_REAL
+	})
+	return properties
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░

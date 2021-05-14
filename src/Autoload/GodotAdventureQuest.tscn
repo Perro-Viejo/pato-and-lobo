@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Autoload/GodotAdventureQuest.gd" type="Script" id=1]
 [ext_resource path="res://src/TransitionLayer/TransitionLayer.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/Characters/Pato/Pato.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Characters/Lobo/Lobo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Characters/Conejuno/Conejuno.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Characters/Spaceship/CharacterSpaceship.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 4 )
@@ -18,11 +19,26 @@ script = ExtResource( 4 )
 id = "Sea"
 path = "res://src/Rooms/Sea/RoomSea.tscn"
 
+[sub_resource type="Resource" id=3]
+script = ExtResource( 4 )
+id = "Space"
+path = "res://src/Rooms/Space/RoomSpace.tscn"
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 4 )
+id = "HomesPlantation"
+path = "res://src/Rooms/HomesPlantation/RoomHomesPlantation.tscn"
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 4 )
+id = "Spaceship"
+path = "res://src/Rooms/Spaceship/RoomSpaceship.tscn"
+
 [node name="GodotAdventureQuest" type="Node"]
 script = ExtResource( 1 )
-rooms = [ SubResource( 1 ), SubResource( 2 ) ]
-characters = [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
-skip_cutscene_time = 0.25
+rooms = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ]
+characters = [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]
+skip_cutscene_time = 0.5
 text_speeds = [ 0.05, 0.01, 0.0 ]
 text_speed_idx = 2
 

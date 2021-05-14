@@ -10,6 +10,8 @@ signal freed
 signal blocked
 signal interface_hidden
 
+var blocked := false
+
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
 # Muestra un texto en el centro de la pantalla. Puede servir para dar
@@ -28,6 +30,7 @@ func display(msg: String, is_in_queue := true) -> void:
 # Notifica que ya se pueden desbloquear lo elementos de la Interfaz Gráfica del
 # Jugador porque una secuencia de eventos (o cinemática (cutscene)) ha terminado.
 func done() -> void:
+	blocked = false
 	emit_signal('freed')
 
 
@@ -41,6 +44,7 @@ func show_info(msg := '') -> void:
 
 
 func block() -> void:
+	blocked = true
 	emit_signal('blocked')
 
 
