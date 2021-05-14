@@ -20,6 +20,8 @@ export var script_name := ''
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready():
+	connect('visibility_changed', self, '_toggle_input')
+
 	if clickable:
 		connect('mouse_entered', self, '_toggle_description', [true])
 		connect('mouse_exited', self, '_toggle_description', [false])
@@ -74,6 +76,12 @@ func on_item_used(item: Item) -> void:
 	pass
 
 
+# Oculta el objeto y hace que no reciba interacciones
+func disable(is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	self.visible = false
+	yield(get_tree(), 'idle_frame')
+
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _toggle_description(display: bool) -> void:
@@ -100,3 +108,9 @@ func _set_walk_to_point(value: Vector2) -> void:
 	
 	if Engine.editor_hint and get_node_or_null('WalkToHelper'):
 		get_node('WalkToHelper').position = value
+
+
+func _toggle_input() -> void:
+	if clickable:
+		input_pickable = visible
+		set_process_unhandled_input(false)

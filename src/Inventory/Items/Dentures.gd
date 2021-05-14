@@ -7,8 +7,14 @@ func on_interact() -> void:
 
 
 func on_look() -> void:
-	.on_look()
+	C.player_say('Esta dentadura de lobo me servirá resto', false)
 
 
 func on_item_used(item: Item) -> void:
-	.on_item_used(item)
+	if item.script_name == 'Mask':
+		E.run([
+			I.remove_item(item.script_name),
+			I.remove_item(script_name),
+			C.player_say('Listo, ya tengo la jeta'),
+			I.add_item('MaskWithFangs'),
+		])

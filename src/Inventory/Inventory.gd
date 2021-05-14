@@ -11,7 +11,7 @@ var _item_instances := []
 var active: Item
 
 export(Array, PackedScene) var inventory_items
-export var items := []
+
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready():
@@ -25,15 +25,19 @@ func _ready():
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
-func add_item(item_name: String) -> void:
+func add_item(item_name: String, is_in_queue := true) -> void:
+	if is_in_queue: yield()
+
 	var i: Item = _get_item_instance(item_name)
 	if is_instance_valid(i):
 		emit_signal('item_added', i)
 		return yield(self, 'item_add_done')
 
 
-func add_item_as_active(item_name: String) -> void:
-	var item: Item = yield(add_item(item_name), 'completed')
+func add_item_as_active(item_name: String, is_in_queue := true) -> void:
+	if is_in_queue: yield()
+
+	var item: Item = yield(add_item(item_name, false), 'completed')
 	set_active_item(item)
 
 

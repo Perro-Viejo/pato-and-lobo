@@ -8,6 +8,7 @@
 margin_left = 4.0
 margin_right = 47.0
 margin_bottom = 20.0
+rect_min_size = Vector2( 384, 76 )
 mouse_filter = 0
 texture = ExtResource( 2 )
 patch_margin_left = 35
@@ -22,8 +23,8 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="."]
 
 [node name="InventoryPanel" type="MarginContainer" parent="."]
-margin_right = 20.0
-margin_bottom = 20.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 mouse_filter = 2
 custom_constants/margin_right = 4
 custom_constants/margin_top = 2
@@ -36,10 +37,12 @@ __meta__ = {
 [node name="InventoryGrid" type="GridContainer" parent="InventoryPanel"]
 margin_left = 4.0
 margin_top = 2.0
-margin_right = 16.0
-margin_bottom = 16.0
+margin_right = 380.0
+margin_bottom = 72.0
 mouse_filter = 2
-columns = 10
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 6
 
 [node name="InventoryForeground" type="TextureRect" parent="."]
 margin_right = 75.0

@@ -33,10 +33,10 @@ text_speed_idx = 2
 [node name="MainCamera" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 2, 2 )
-limit_left = -960
-limit_top = -540
-limit_right = 960
-limit_bottom = 540
+limit_left = -1920
+limit_top = -1080
+limit_right = 1920
+limit_bottom = 1080
 limit_smoothed = true
 smoothing_enabled = true
 smoothing_speed = 10.0

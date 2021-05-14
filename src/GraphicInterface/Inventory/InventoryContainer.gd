@@ -7,7 +7,7 @@ var is_disabled := false
 
 var _can_hide_inventory := true
 
-onready var _hide_y := rect_position.y - (rect_size.y - 3.5)
+onready var _hide_y := rect_position.y - (rect_size.y - 16)
 onready var _foreground: TextureRect = find_node('InventoryForeground')
 onready var _grid: GridContainer = find_node('InventoryGrid')
 

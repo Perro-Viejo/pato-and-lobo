@@ -39,7 +39,8 @@ func _ready() -> void:
 	
 	set_process_input(false)
 	
-	DebugOverlay.visible = true
+	if OS.has_feature('editor'):
+		DebugOverlay.visible = true
 
 
 func _process(delta: float) -> void:

@@ -15,7 +15,12 @@ func on_room_entered() -> void:
 
 
 func on_room_transition_finished() -> void:
-	pass
+	E.run([
+		C.player_say('Esta fiesta está re-buena...'),
+		C.player_say('y está más buena porque Lobo está aquí'),
+		C.player_say('Hoy es el día.'),
+		C.player_say('¡HOY LE HABLARÉ A LOBO!'),
+	])
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
