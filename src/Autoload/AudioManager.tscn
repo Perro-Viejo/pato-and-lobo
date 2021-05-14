@@ -1,14 +1,20 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Autoload/AudioManager.gd" type="Script" id=1]
 [ext_resource path="res://src/AudioManager/Cues/VO_duck.tres" type="Resource" id=2]
 [ext_resource path="res://src/AudioManager/Cues/VO_bunny.tres" type="Resource" id=3]
 [ext_resource path="res://src/AudioManager/Cues/MX_bar_01.tres" type="Resource" id=4]
 [ext_resource path="res://src/AudioManager/Cues/BG_bar.tres" type="Resource" id=5]
+[ext_resource path="res://src/AudioManager/Cues/SFX_sink_head.tres" type="Resource" id=6]
+[ext_resource path="res://src/AudioManager/Cues/SFX_sink_loop.tres" type="Resource" id=7]
+[ext_resource path="res://src/AudioManager/Cues/SFX_sink_tail.tres" type="Resource" id=8]
+[ext_resource path="res://src/AudioManager/Cues/SFX_sink_wash.tres" type="Resource" id=9]
+[ext_resource path="res://src/AudioManager/Cues/BG_dream_boat.tres" type="Resource" id=10]
+[ext_resource path="res://src/AudioManager/Cues/SFX_dream_transition.tres" type="Resource" id=11]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource( 1 )
-cues = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ]
+cues = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
 
 [node name="Positional" type="Node" parent="."]
 
@@ -19,6 +25,10 @@ cues = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) 
 [node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Positional"]
 
 [node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="Positional"]
+
+[node name="AudioStreamPlayer2D5" type="AudioStreamPlayer2D" parent="Positional"]
+
+[node name="AudioStreamPlayer2D6" type="AudioStreamPlayer2D" parent="Positional"]
 
 [node name="Generic" type="Node" parent="."]
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_dream_transition.ogg-2e418dc5cff09b864121f29491f80f37.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_dream_transition.ogg"
+dest_files=[ "res://.import/sfx_dream_transition.ogg-2e418dc5cff09b864121f29491f80f37.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

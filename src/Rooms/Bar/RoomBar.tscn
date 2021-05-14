@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://src/Rooms/Bar/RoomBar.gd" type="Script" id=1]
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=2]
@@ -12,6 +12,10 @@
 [ext_resource path="res://src/Rooms/Bar/HotspotSink.gd" type="Script" id=10]
 [ext_resource path="res://assets/images/rooms/bar/wolf_mask.png" type="Texture" id=11]
 [ext_resource path="res://src/Rooms/Bar/PropWolfMask.gd" type="Script" id=12]
+[ext_resource path="res://assets/images/rooms/bar/brooms.png" type="Texture" id=13]
+[ext_resource path="res://src/Rooms/Bar/PropBrooms.gd" type="Script" id=14]
+[ext_resource path="res://src/Rooms/Bar/PropCoat.gd" type="Script" id=15]
+[ext_resource path="res://assets/images/rooms/bar/coat.png" type="Texture" id=16]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 846, 862, 1315, 946, -1871, 933, 324, 874, 1371, -180, 1829, 225, 938, 288, 841, 118, 1302, 508, 1556, 759, 1217, 775, 1014.21, 513.794, 516, 212, 779, 18, 641, -144, 758, 127, 677, 27, -1354, 234, -1020, -274, -871, -277, -887, 69, -1024, 265, -226, 66, -230, -282, 475, -261, 60, 234, -1175, 703, -1563, 650 )
@@ -104,6 +108,39 @@ position = Vector2( 0, 208 )
 [node name="Sprite" parent="Props/WolfMask" index="3"]
 texture = ExtResource( 11 )
 
+[node name="Brooms" parent="Props" index="4" instance=ExtResource( 4 )]
+position = Vector2( -980.978, -383.2 )
+script = ExtResource( 14 )
+walk_to_point = Vector2( -64.7322, 203.195 )
+cursor = 1
+texture = ExtResource( 13 )
+
+[node name="CollisionPolygon2D" parent="Props/Brooms" index="0"]
+polygon = PoolVector2Array( 37.2373, -173.983, 48.4746, -148.512, 38.7356, -91.5766, 62.7086, 142.159, 2.77628, 176.62, -66.895, 148.153, -14.4543, 64.9965, 23.0034, -99.0681, 25.2509, -173.983 )
+
+[node name="WalkToHelper" parent="Props/Brooms" index="2"]
+position = Vector2( -64.7322, 203.195 )
+
+[node name="Sprite" parent="Props/Brooms" index="3"]
+texture = ExtResource( 13 )
+
+[node name="Coat" parent="Props" index="5" instance=ExtResource( 4 )]
+position = Vector2( 320, -448 )
+script = ExtResource( 15 )
+description = "Este peluchin parece una cola..."
+walk_to_point = Vector2( -118.794, 213.546 )
+cursor = 1
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" parent="Props/Coat" index="0"]
+polygon = PoolVector2Array( -28.5551, -113.213, 36.8512, -105.483, 43.9865, -92.402, 67.176, 110.358, 2.36423, 115.115, -71.9612, 102.628, -53.5285, -94.1859 )
+
+[node name="WalkToHelper" parent="Props/Coat" index="2"]
+position = Vector2( -118.794, 213.546 )
+
+[node name="Sprite" parent="Props/Coat" index="3"]
+texture = ExtResource( 16 )
+
 [node name="Sink" parent="Hotspots" index="0" instance=ExtResource( 9 )]
 position = Vector2( 842, -271 )
 script = ExtResource( 10 )
@@ -130,4 +167,6 @@ position = Vector2( -577, -316 )
 [editable path="Props/Sink"]
 [editable path="Props/GlassWithDentures"]
 [editable path="Props/WolfMask"]
+[editable path="Props/Brooms"]
+[editable path="Props/Coat"]
 [editable path="Hotspots/Sink"]

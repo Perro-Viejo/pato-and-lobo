@@ -8,6 +8,7 @@ extends Room
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
+	A.play('bg_dream_boat', Vector2.ZERO, false)
 	C.player.global_position = $Points/EntryPoint.global_position
 
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_sink_wash_02.ogg-772f61e5cd00d15a20c08c124173b137.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_sink_wash_02.ogg"
+dest_files=[ "res://.import/sfx_sink_wash_02.ogg-772f61e5cd00d15a20c08c124173b137.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

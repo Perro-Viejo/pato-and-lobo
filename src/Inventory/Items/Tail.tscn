@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Inventory/Items/Tail.gd" type="Script" id=1]
+[ext_resource path="res://src/Inventory/InventoryItem.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/images/items/tail.png" type="Texture" id=3]
+
+[node name="Tail" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+description = "Un peluchin en forma de cola"
+script_name = "Tail"
+cursor = 1
+
+[node name="Icon" parent="." index="0"]
+texture = ExtResource( 3 )
