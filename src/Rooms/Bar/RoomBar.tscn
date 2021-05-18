@@ -34,6 +34,10 @@ characters = [ {
 "position": Vector2( -577, -316 ),
 "script_name": "Conejuno"
 } ]
+limit_left = 0.0
+limit_right = 0.0
+limit_top = 0.0
+limit_bottom = 0.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 4 )]
 clickable = false

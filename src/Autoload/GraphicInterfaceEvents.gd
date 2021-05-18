@@ -44,7 +44,7 @@ func show_info(msg := '') -> void:
 
 
 func block() -> void:
-	blocked = true
+#	blocked = true
 	emit_signal('blocked')
 
 
