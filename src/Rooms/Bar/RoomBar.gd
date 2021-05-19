@@ -7,7 +7,10 @@ func _init() -> void:
 		visited = self.visited,
 		visited_first_time = self.visited_first_time,
 		visited_times = self.visited_times,
-		mask_grabbed = false
+		has_mask = true,
+		has_dentures = true,
+		has_coat = true,
+		has_brooms = true
 	}
 
 
@@ -22,8 +25,14 @@ func on_room_entered() -> void:
 	elif C.player.last_room == 'Sea':
 		C.player.global_position = $Points/Sink.global_position
 	
-	if state.mask_grabbed:
+	if not state.has_mask:
 		$Props/WolfMask.disable(false)
+	if not state.has_dentures:
+		$Props/GlassWithDentures.disable(false)
+	if not state.has_coat:
+		$Props/Coat.disable(false)
+	if not state.has_brooms:
+		$Props/Brooms.disable(false)
 
 
 func on_room_transition_finished() -> void:
