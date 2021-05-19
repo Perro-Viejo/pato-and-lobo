@@ -1,6 +1,7 @@
 extends Node
 # (C) Para hacer cosas con los personajes
 
+# warning-ignore-all:unused_signal
 # El nodo Character que se movió en la escena
 signal character_moved(character)
 signal character_spoke(character, message)

@@ -15,6 +15,7 @@ onready var _hide_y := rect_position.y - (rect_size.y - 4)
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
+# warning-ignore-all:return_value_discarded
 func _ready() -> void:
 	rect_position.y = _hide_y
 	

@@ -8,6 +8,7 @@ onready var _click_handler: Button = $MainContainer/ClickHandler
 onready var _dialog_menu: DialogMenu = find_node('DialogMenu')
 onready var _toolbar: Toolbar = find_node('Toolbar')
 
+# warning-ignore-all:return_value_discarded
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready():

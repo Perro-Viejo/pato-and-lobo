@@ -29,10 +29,10 @@ characters = [ {
 "position": Vector2( 622, 224 ),
 "script_name": "Lobo"
 } ]
-limit_left = 0.0
-limit_right = 0.0
-limit_top = 0.0
-limit_bottom = 0.0
+limit_left = -960.0
+limit_right = 960.0
+limit_top = -540.0
+limit_bottom = 540.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 2 )]
 clickable = false
@@ -181,6 +181,9 @@ position = Vector2( -57.3982, 53.3936 )
 [node name="Sprite" parent="Props/Mop" index="3"]
 texture = ExtResource( 13 )
 
+[node name="PositionLobo" type="Position2D" parent="Characters" index="0"]
+position = Vector2( 623, 224 )
+
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]
 position = Vector2( -114.102, -101.305 )
 
@@ -188,9 +191,6 @@ position = Vector2( -114.102, -101.305 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
 navpoly = SubResource( 1 )
-
-[node name="PositionLobo" type="Position2D" parent="Characters" index="0"]
-position = Vector2( 623, 224 )
 
 [editable path="Props/Bg"]
 [editable path="Props/SeaBack"]

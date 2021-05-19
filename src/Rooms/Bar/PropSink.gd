@@ -11,5 +11,5 @@ func on_look() -> void:
 	E.run(['Pato: Ese es el lavamanos.'])
 
 
-func on_item_used(item: Item) -> void:
+func on_item_used(_item: Item) -> void:
 	pass

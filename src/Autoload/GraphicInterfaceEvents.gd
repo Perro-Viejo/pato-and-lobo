@@ -3,6 +3,7 @@ extends Node
 # TODO: Que todo esto vaya al script que se carga en la escena de la interfaz
 # gráfica, que en últimas irá también al Autoload.
 
+# warning-ignore-all:unused_signal
 signal show_info_requested(info)
 signal show_box_requested(message)
 signal continue_clicked

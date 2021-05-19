@@ -62,7 +62,7 @@ func process_monitor(monitor) -> String:
 	return ""
 
 
-func _process(delta):
+func _process(_delta):
 	if visible:
 		$Label.rect_size = Vector2.ZERO
 

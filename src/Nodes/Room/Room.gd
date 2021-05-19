@@ -4,20 +4,15 @@ class_name Room
 extends Node2D
 # Nodo base para la creación de habitaciones dentro del juego.
 
-# TODO: Tal vez estas podrían reducirse a dos señales: item_interacted y item_looked.
-# Y los Props y Hotspots podrían heredar de Item.
-signal prop_interacted(prop, msg)
-signal prop_looked(prop, msg)
-signal hotspot_interacted(hotspot)
-signal hotspot_looked(hotspot)
-
 export var script_name := ''
 export(Array, Dictionary) var characters := [] setget _set_characters
 export var has_player := true
+export var hide_gi := false
 
 var is_current := false setget _set_is_current
 var visited := false
 var visited_first_time := false
+var visited_times := 0
 var limit_left := 0.0
 var limit_right := 0.0
 var limit_top := 0.0
@@ -40,21 +35,6 @@ func _ready():
 		E.main_camera.limit_top = limit_top
 	if limit_bottom != 0.0:
 		E.main_camera.limit_bottom = limit_bottom
-	
-	for p in $Props.get_children():
-		# TODO: Esta validación de baseline no será necesaria cuando sean Props
-		if p.get('baseline'):
-			var prop: Prop = p as Prop
-			prop.connect('interacted', self, '_on_prop_interacted', [p])
-			prop.connect('looked', self, '_on_prop_looked', [p])
-	
-	for h in $Hotspots.get_children():
-		if not h is Hotspot: continue
-		var hotspot: Hotspot = h
-#		hotspot.connect(
-#			'interacted', self, 'emit_signal', ['hotspot_interacted', hotspot]
-#		)
-		hotspot.connect('looked', self, '_hotspot_looked', [hotspot])
 	
 	if not Engine.editor_hint and is_instance_valid(C.player):
 		C.player.connect('started_walk_to', self, '_update_navigation_path')
@@ -157,6 +137,22 @@ func remove_character(chr: Character) -> void:
 	$Characters.remove_child(chr)
 
 
+# Retorna el estado de la habitación para que sea tenido en cuenta la próxima vez
+# que se entre a la habitación
+func get_state() -> Dictionary:
+	return {
+		visited = self.visited,
+		visited_first_time = self.visited_first_time,
+		visited_times = self.visited_times
+	}
+
+
+func set_state(stored_state: Dictionary) -> void:
+	self.visited = stored_state.visited
+	self.visited_first_time = stored_state.visited_first_time
+	self.visited_times = stored_state.visited_times
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _move_along_path(distance):
 	var last_point = C.player.position
@@ -187,26 +183,6 @@ func _update_navigation_path(start_position, end_position):
 	_path = _nav_path.get_simple_path(start_position, end_position, true)
 	_path.remove(0)
 	set_process(true)
-
-
-func _on_prop_interacted(msg: String, prop: Prop) -> void:
-	_update_navigation_path(C.player.position, prop.walk_to_point)
-#	emit_signal('prop_interacted', prop, msg)
-
-
-func _on_prop_looked(msg: String, prop: Prop) -> void:
-	var text: String = 'Eso es un prop de la habitación y se llama: %s' % prop.description.to_lower()
-	if msg:
-		text = msg
-	C.emit_signal('character_spoke', C.player, text)
-#	emit_signal('prop_looked', prop, msg)
-
-
-func _hotspot_looked(hotspot: Hotspot) -> void:
-	G.emit_signal(
-		'show_box_requested',
-		'Estás viendo: %s' % hotspot.description
-	)
 
 
 func _set_characters(value: Array) -> void:

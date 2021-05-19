@@ -48,7 +48,7 @@ vo_name = "vo_bunny"
 polygon = PoolVector2Array( -33, -207, -15, -113, -54, -101, -52, -46, -93, -55, -94, -88, -107, -62, -141, -87, -151, -47, -147, -24, -107, -41, -42, -24, -42, -1, 87, -4, 74, -31, 149, -65, 147, -90, 123, -81, 132, -109, 95, -109, 102, -80, 63, -49, 59, -115, 28, -116, 31, -201, 5, -116 )
 
 [node name="WalkToHelper" parent="." index="2"]
-position = Vector2( -2, 246 )
+position = Vector2( 1, 194 )
 
 [node name="AnimationPlayer" parent="." index="3"]
 anims/idle_d = SubResource( 1 )

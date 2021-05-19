@@ -1,6 +1,7 @@
 extends Node
 # (E) El núcleo de Godot Adventure Quest
 
+# warning-ignore-all:unused_signal
 signal inline_dialog_requested(options)
 signal text_speed_changed(idx)
 
@@ -25,6 +26,14 @@ onready var game_height := get_viewport().get_visible_rect().end.y
 onready var half_width := game_width / 2.0
 onready var half_height := game_height / 2.0
 onready var main_camera: Camera2D = find_node('MainCamera')
+onready var _defaults := {
+	camera_limits = {
+		left = main_camera.limit_left,
+		right = main_camera.limit_right,
+		top = main_camera.limit_top,
+		bottom = main_camera.limit_bottom
+	}
+}
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
@@ -43,7 +52,7 @@ func _ready() -> void:
 		DebugOverlay.visible = true
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not Engine.editor_hint and is_instance_valid(C.player):
 		main_camera.position = C.player.position
 
@@ -70,7 +79,7 @@ func break_run() -> void:
 	pass
 
 
-func run(instructions: Array) -> void:
+func run(instructions: Array, show_gi := true) -> void:
 	G.block()
 	
 	for idx in instructions.size():
@@ -94,7 +103,8 @@ func run(instructions: Array) -> void:
 			instruction.resume()
 			yield(instruction, 'completed')
 	
-	if not D.active: G.done()
+	if not D.active and show_gi:
+		G.done()
 
 
 # Es como run, pero salta la secuencia de acciones si se presiona la acción 'skip'.
@@ -129,13 +139,22 @@ func goto_room(path := '') -> void:
 	
 	C.player.last_room = current_room.script_name
 	
+	Globals.rooms_states[current_room.script_name] = current_room.get_state()
+	
 	# Sacar los personajes de la habitación para que no sean eliminados
 	current_room.on_room_exited()
+	
+	# Reiniciar la configuración de la cámara
+	main_camera.limit_left = _defaults.camera_limits.left
+	main_camera.limit_right = _defaults.camera_limits.right
+	main_camera.limit_top = _defaults.camera_limits.top
+	main_camera.limit_bottom = _defaults.camera_limits.bottom
 	
 	for r in rooms:
 		var room = r as GAQRoom
 		if room.id.to_lower() == path.to_lower():
 			get_tree().change_scene(room.path)
+#			get_tree().change_scene_to(room.scene)
 			return
 	
 	printerr('No se encontró la Room %s' % path)
@@ -143,6 +162,16 @@ func goto_room(path := '') -> void:
 
 func room_readied(room: Room) -> void:
 	current_room = room
+	
+	if Globals.rooms_states.has(room.script_name):
+		room.set_state(Globals.rooms_states[room.script_name])
+	
+	room.is_current = true
+	room.visited_first_time = false
+	if room.visited_times == 0:
+		room.visited = true
+		room.visited_first_time = true
+	room.visited_times += 1
 	
 	# Agregar a la habitación los personajes que tiene configurados
 	for c in room.characters:
@@ -155,7 +184,9 @@ func room_readied(room: Room) -> void:
 		room.add_character(C.player)
 	
 	room.on_room_entered()
-	G.done()
+	
+	if not room.hide_gi:
+		G.done()
 
 	$TransitionLayer.play_transition('fade_out')
 	yield($TransitionLayer, 'transition_finished')
@@ -164,8 +195,8 @@ func room_readied(room: Room) -> void:
 	self.in_room = true
 
 	# Esto también hace que la habitación empiece a escuchar eventos de Input
-	room.is_current = true
 	room.on_room_transition_finished()
+
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

@@ -13,7 +13,7 @@ func start() -> void:
 	D.disconnect('option_selected', self, 'option_selected')
 
 
-func option_selected(opt: DialogOption) -> void:
+func option_selected(_opt: DialogOption) -> void:
 	pass
 
 

@@ -13,17 +13,29 @@ func on_room_entered() -> void:
 
 
 func on_room_transition_finished() -> void:
-	E.run([
+	E.run_cutscene([
 		C.player_walk_to($Points/ProwPoint.global_position),
 		C.player.face_right(),
 		'Pato: No se me preocupes...',
 		'...',
+		C.player.face_left(),
+		'...',
+		C.player.face_right(),
+		'...',
+		C.player.face_left(),
+		'...',
+		C.player.face_right(),
+		'...',
 		'Pato: ¡¡¡Buscaré la forma de sacarte de ahí!!!',
 		C.player.face_left(),
-		E.wait(3),
+		'...',
 		'Pato: Tiene que haber algo que pueda hacer'
 	])
 
+
+func on_room_exited() -> void:
+	Globals.did(Globals.GameState.SEA_DREAMED)
+	.on_room_exited()
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 # TODO: Poner aquí los métodos privados

@@ -6,12 +6,12 @@
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/bg.png" type="Texture" id=4]
 [ext_resource path="res://src/Rooms/Spaceship/PropSpaceship.gd" type="Script" id=5]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceship.png" type="Texture" id=6]
-[ext_resource path="res://src/Nodes/Prop/PropRoboticArm.gd" type="Script" id=7]
+[ext_resource path="res://src/Rooms/Spaceship/PropRoboticArm.gd" type="Script" id=7]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/robotic_arm.png" type="Texture" id=8]
-[ext_resource path="res://src/Nodes/Prop/PropTeletransportLaser.gd" type="Script" id=9]
+[ext_resource path="res://src/Rooms/Spaceship/PropTeletransportLaser.gd" type="Script" id=9]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/teletransport_laser.png" type="Texture" id=10]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/garbage_extractor.png" type="Texture" id=11]
-[ext_resource path="res://src/Nodes/Prop/PropGarbageExtractor.gd" type="Script" id=12]
+[ext_resource path="res://src/Rooms/Spaceship/PropGarbageExtractor.gd" type="Script" id=12]
 
 [node name="RoomSpaceship" instance=ExtResource( 1 )]
 script = ExtResource( 2 )

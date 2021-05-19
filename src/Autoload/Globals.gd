@@ -2,15 +2,14 @@ extends Node
 
 enum GameState {
 	NONE,
-	GOT_BUCKET,
-	LOST_BUCKET,
-	CAVE_VISITED,
-	GOT_MEDAL,
+	SEA_DREAMED,
 	WON_GAME
 }
 
 var game_progress := [GameState.NONE]
 var asked_polas := 0
+var courage := 0 setget _set_courage
+var rooms_states := {}
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
@@ -23,3 +22,9 @@ func did(id := -1) -> void:
 	if game_progress.has(id): return
 
 	game_progress.append(id)
+
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
+func _set_courage(value: int) -> void:
+	courage = value
+	I.emit_signal('courage_updated', courage)

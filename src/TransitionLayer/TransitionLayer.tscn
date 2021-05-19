@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/TransitionLayer/TransitionLayer.gd" type="Script" id=1]
-[ext_resource path="res://assets/images/transition_layer/fade.png" type="Texture" id=2]
+[ext_resource path="res://src/TransitionLayer/fade.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=5]
 resource_name = "SETUP"

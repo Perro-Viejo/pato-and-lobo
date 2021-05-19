@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=2]
@@ -7,8 +7,11 @@
 [ext_resource path="res://src/Rooms/Space/Sprites/planet_homes_plantation.png" type="Texture" id=5]
 [ext_resource path="res://src/Rooms/Space/Sprites/planet_amanita.png" type="Texture" id=6]
 [ext_resource path="res://src/Rooms/Space/Sprites/luna.png" type="Texture" id=7]
-[ext_resource path="res://src/Rooms/Space/Sprites/planet_gordo.png" type="Texture" id=8]
+[ext_resource path="res://src/Rooms/Space/PropAmanita.gd" type="Script" id=8]
 [ext_resource path="res://src/Rooms/Space/PropHomesPlantation.gd" type="Script" id=9]
+[ext_resource path="res://src/Rooms/Space/PropLuna.gd" type="Script" id=10]
+[ext_resource path="res://src/Rooms/Space/PropMarrano.gd" type="Script" id=11]
+[ext_resource path="res://src/Rooms/Space/Sprites/planet_marrano.png" type="Texture" id=12]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 703.151, -507.424, 883.151, -429.424, 915.151, 348.576, 845.151, 510.576, -772.849, 500.576, -906.849, 360.576, -906.849, -281.424, -658.849, -485.424 )
@@ -38,32 +41,12 @@ position = Vector2( -16, -540 )
 [node name="Sprite" parent="Props/Bg" index="3"]
 texture = ExtResource( 3 )
 
-[node name="Luna" parent="Props" index="1" instance=ExtResource( 1 )]
-position = Vector2( -637.797, -288.174 )
-description = "Luna"
-baseline = 89
-walk_to_point = Vector2( 51, 91 )
-cursor = 1
-texture = ExtResource( 7 )
-
-[node name="CollisionPolygon2D" parent="Props/Luna" index="0"]
-polygon = PoolVector2Array( -70.8614, -51.4529, -23.4852, -88.2224, 48.6397, -79.7372, 86.8235, -28.1184, 79.7524, 46.835, 18.2341, 90.6756, -58.8405, 71.5837, -93.4888, 5.82275 )
-
-[node name="BaselineHelper" parent="Props/Luna" index="1"]
-position = Vector2( -0.202975, 89.174 )
-
-[node name="WalkToHelper" parent="Props/Luna" index="2"]
-position = Vector2( 51, 91 )
-
-[node name="Sprite" parent="Props/Luna" index="3"]
-texture = ExtResource( 7 )
-
-[node name="HomesPlantation" parent="Props" index="2" instance=ExtResource( 1 )]
+[node name="HomesPlantation" parent="Props" index="1" instance=ExtResource( 1 )]
 position = Vector2( 500.685, -160.362 )
 script = ExtResource( 9 )
 description = "Plantación de casas"
 baseline = 123
-walk_to_point = Vector2( -194, 140 )
+walk_to_point = Vector2( 137.315, -46.638 )
 cursor = 1
 texture = ExtResource( 5 )
 
@@ -74,48 +57,66 @@ polygon = PoolVector2Array( -301.247, -101.642, -169.725, -115.784, 79.8835, -11
 position = Vector2( 0, 123 )
 
 [node name="WalkToHelper" parent="Props/HomesPlantation" index="2"]
-position = Vector2( -194, 140 )
+position = Vector2( 137.315, -46.638 )
 
 [node name="Sprite" parent="Props/HomesPlantation" index="3"]
 texture = ExtResource( 5 )
 
+[node name="Luna" parent="Props" index="2" instance=ExtResource( 1 )]
+position = Vector2( -494, -231 )
+script = ExtResource( 10 )
+description = "Luna"
+baseline = 96
+texture = ExtResource( 7 )
+
+[node name="CollisionPolygon2D" parent="Props/Luna" index="0"]
+polygon = PoolVector2Array( -84, -52, -38, -87, 35, -89, 85, -52, 97, 28, 49, 89, -33, 91, -77, 56, -93, -3 )
+
+[node name="BaselineHelper" parent="Props/Luna" index="1"]
+position = Vector2( -9, 96 )
+
+[node name="Sprite" parent="Props/Luna" index="3"]
+texture = ExtResource( 7 )
+
 [node name="Amanita" parent="Props" index="3" instance=ExtResource( 1 )]
-position = Vector2( -493.64, 235.505 )
+position = Vector2( -619, 264 )
+script = ExtResource( 8 )
 description = "Amanita"
 baseline = 163
-walk_to_point = Vector2( 230, -134 )
+walk_to_point = Vector2( -156, -2 )
 texture = ExtResource( 6 )
 
 [node name="CollisionPolygon2D" parent="Props/Amanita" index="0"]
-polygon = PoolVector2Array( -190.934, -66.4921, -39.4304, -160.784, 132.203, -134.298, 231.792, -20.9352, 224.376, 104.081, -2.34924, 153.876, -218.48, 134.806, -231.193, 23.5623 )
+polygon = PoolVector2Array( -188, -71, -44, -162, 154, -122, 239, -20, 205, 111, -8, 162, -226, 125, -232, 20 )
 
 [node name="BaselineHelper" parent="Props/Amanita" index="1"]
-position = Vector2( -3.35998, 163.495 )
+position = Vector2( -2, 163 )
 
 [node name="WalkToHelper" parent="Props/Amanita" index="2"]
-position = Vector2( 230, -134 )
+position = Vector2( -156, -2 )
 
 [node name="Sprite" parent="Props/Amanita" index="3"]
 texture = ExtResource( 6 )
 
-[node name="Gordo" parent="Props" index="4" instance=ExtResource( 1 )]
-position = Vector2( 439.004, 262.204 )
+[node name="Marrano" parent="Props" index="4" instance=ExtResource( 1 )]
+position = Vector2( 377, 310 )
+script = ExtResource( 11 )
 description = "Marrano"
-baseline = 193
-walk_to_point = Vector2( -209, -118 )
-texture = ExtResource( 8 )
+baseline = 194
+walk_to_point = Vector2( 70, 113 )
+texture = ExtResource( 12 )
 
-[node name="CollisionPolygon2D" parent="Props/Gordo" index="0"]
-polygon = PoolVector2Array( -126.004, -93.2038, 15.996, -71.2038, 35.996, -182.204, 99.996, -197.204, 146.996, -173.204, 159.996, -129.204, 104.996, -59.2038, 194.996, -20.2038, 229.996, 77.7962, 185.996, 164.796, -22.004, 196.796, -180.004, 161.796, -223.004, 88.7962, -218.004, 21.7962, -189.004, -54.2038 )
+[node name="CollisionPolygon2D" parent="Props/Marrano" index="0"]
+polygon = PoolVector2Array( -130, -93, 24.5096, -74.9739, 26, -149, 73, -201, 146, -166, 157, -108, 94, -67, 177, -34, 219, 23, 222, 88, 194, 153, -99, 192, -205, 122, -225, 60, -210, -12 )
 
-[node name="BaselineHelper" parent="Props/Gordo" index="1"]
-position = Vector2( -0.0039978, 193.796 )
+[node name="BaselineHelper" parent="Props/Marrano" index="1"]
+position = Vector2( -2, 194 )
 
-[node name="WalkToHelper" parent="Props/Gordo" index="2"]
-position = Vector2( -209, -118 )
+[node name="WalkToHelper" parent="Props/Marrano" index="2"]
+position = Vector2( 70, 113 )
 
-[node name="Sprite" parent="Props/Gordo" index="3"]
-texture = ExtResource( 8 )
+[node name="Sprite" parent="Props/Marrano" index="3"]
+texture = ExtResource( 12 )
 
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]
 
@@ -123,7 +124,7 @@ texture = ExtResource( 8 )
 navpoly = SubResource( 1 )
 
 [editable path="Props/Bg"]
-[editable path="Props/Luna"]
 [editable path="Props/HomesPlantation"]
+[editable path="Props/Luna"]
 [editable path="Props/Amanita"]
-[editable path="Props/Gordo"]
+[editable path="Props/Marrano"]

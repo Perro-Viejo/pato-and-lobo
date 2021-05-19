@@ -1,10 +1,15 @@
 extends Node
 # (I) Para hacer cosas con el inventario
 
+# warning-ignore-all:unused_signal
 signal item_added(item)
 signal item_add_done(item)
 signal item_removed(item)
 signal item_remove_done(item)
+signal courage_updated(value)
+signal courage_update_shown()
+
+export var always_visible := false
 
 var _item_instances := []
 

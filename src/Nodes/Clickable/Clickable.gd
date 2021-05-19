@@ -6,9 +6,6 @@ extends Area2D
 
 # TODO: Hacer la lógica para el uso de objetos de inventario sobre este nodo
 
-signal interacted
-signal looked
-
 export var description := ''
 export var clickable := true
 export var baseline := 0 setget _set_baseline
@@ -19,6 +16,7 @@ export var script_name := ''
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
+# warning-ignore-all:return_value_discarded
 func _ready():
 	connect('visibility_changed', self, '_toggle_input')
 
@@ -49,7 +47,7 @@ func _unhandled_input(event):
 				on_look()
 
 
-func _process(delta):
+func _process(_delta):
 	if Engine.editor_hint:
 		if walk_to_point != get_node('WalkToHelper').position:
 			# Esto debería ocurrir sólo si se cambiar en el editor la posición
@@ -72,7 +70,7 @@ func on_look() -> void:
 	G.done()
 
 
-func on_item_used(item: Item) -> void:
+func on_item_used(_item: Item) -> void:
 	pass
 
 
