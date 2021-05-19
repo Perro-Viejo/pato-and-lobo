@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_mask_dentures_pu.ogg-17553314a2249a1ba5f7fd6479e88e57.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_mask_dentures_pu.ogg"
+dest_files=[ "res://.import/sfx_mask_dentures_pu.ogg-17553314a2249a1ba5f7fd6479e88e57.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

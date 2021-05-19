@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://src/Autoload/AudioManager.gd" type="Script" id=1]
 [ext_resource path="res://src/AudioManager/Cues/VO_duck.tres" type="Resource" id=2]
@@ -11,10 +11,28 @@
 [ext_resource path="res://src/AudioManager/Cues/SFX_sink_wash.tres" type="Resource" id=9]
 [ext_resource path="res://src/AudioManager/Cues/BG_dream_boat.tres" type="Resource" id=10]
 [ext_resource path="res://src/AudioManager/Cues/SFX_dream_transition.tres" type="Resource" id=11]
+[ext_resource path="res://src/AudioManager/Cues/MX_bar_02.tres" type="Resource" id=12]
+[ext_resource path="res://src/AudioManager/Cues/SFX_mask_dentures_pu.tres" type="Resource" id=13]
+[ext_resource path="res://src/AudioManager/Cues/SFX_mop_active.tres" type="Resource" id=14]
+[ext_resource path="res://src/AudioManager/Cues/SFX_mop_pu.tres" type="Resource" id=15]
+[ext_resource path="res://src/AudioManager/Cues/SFX_mask_dentures_active.tres" type="Resource" id=16]
+[ext_resource path="res://src/AudioManager/Cues/SFX_dentures_pu.tres" type="Resource" id=17]
+[ext_resource path="res://src/AudioManager/Cues/SFX_dentures_active.tres" type="Resource" id=18]
+[ext_resource path="res://src/AudioManager/Cues/SFX_mask_active.tres" type="Resource" id=19]
+[ext_resource path="res://src/AudioManager/Cues/SFX_mask_pu.tres" type="Resource" id=20]
+[ext_resource path="res://src/AudioManager/Cues/SFX_umbrella_active.tres" type="Resource" id=21]
+[ext_resource path="res://src/AudioManager/Cues/SFX_tail_pu.tres" type="Resource" id=22]
+[ext_resource path="res://src/AudioManager/Cues/SFX_tape_active.tres" type="Resource" id=23]
+[ext_resource path="res://src/AudioManager/Cues/SFX_tape_use.tres" type="Resource" id=24]
+[ext_resource path="res://src/AudioManager/Cues/SFX_mopbrella_active.tres" type="Resource" id=25]
+[ext_resource path="res://src/AudioManager/Cues/SFX_umbrella_pu.tres" type="Resource" id=26]
+[ext_resource path="res://src/AudioManager/Cues/SFX_tail_active.tres" type="Resource" id=27]
+[ext_resource path="res://src/AudioManager/Cues/SFX_tape_pu.tres" type="Resource" id=28]
+[ext_resource path="res://src/AudioManager/Cues/SFX_mopbrella_pu.tres" type="Resource" id=29]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource( 1 )
-cues = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
+cues = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 25 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 21 ), ExtResource( 26 ), ExtResource( 12 ) ]
 
 [node name="Positional" type="Node" parent="."]
 

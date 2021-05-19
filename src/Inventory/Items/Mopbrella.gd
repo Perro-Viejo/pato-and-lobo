@@ -3,6 +3,7 @@ extends Item
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
+	A.play('sfx_mopbrella_active', Vector2.ZERO, false)
 	.on_interact()
 
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_mopbrella_pu.ogg-f4d423fd78822fe86ec7e94bae787667.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_mopbrella_pu.ogg"
+dest_files=[ "res://.import/sfx_mopbrella_pu.ogg-f4d423fd78822fe86ec7e94bae787667.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

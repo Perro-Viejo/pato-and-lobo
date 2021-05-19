@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_mask_active.ogg-29ddbcfe1e8d2d2c0fdcc14d60cc158c.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_mask_active.ogg"
+dest_files=[ "res://.import/sfx_mask_active.ogg-29ddbcfe1e8d2d2c0fdcc14d60cc158c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

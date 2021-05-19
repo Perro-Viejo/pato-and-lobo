@@ -17,6 +17,7 @@ func on_item_used(item: Item) -> void:
 			C.player_say('Te salve de la desgracía Lobo de mis amores'),
 		]), 'completed')
 		A.stop('bg_dream_boat', 0, false)
+		I.remove_item(item.script_name, false)
 		A.play('sfx_dream_transition', Vector2.ZERO, false)
 		E.goto_room('Bar')
 	else:

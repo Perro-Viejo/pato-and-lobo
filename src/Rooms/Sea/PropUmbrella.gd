@@ -7,6 +7,7 @@ func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
 		C.player_say('A ver el sombrillín.'),
+		A.play('sfx_umbrella_pu', global_position),
 		disable(),
 		I.add_item('Umbrella'),
 		C.player_say('El mango parece un gancho.'),

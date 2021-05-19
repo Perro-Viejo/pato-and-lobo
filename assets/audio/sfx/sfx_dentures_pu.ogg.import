@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_dentures_pu.ogg-33640b965eaccc2e6f0ab29c81b7d6d1.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_dentures_pu.ogg"
+dest_files=[ "res://.import/sfx_dentures_pu.ogg-33640b965eaccc2e6f0ab29c81b7d6d1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

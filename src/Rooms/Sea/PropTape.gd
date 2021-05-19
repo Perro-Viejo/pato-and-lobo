@@ -6,6 +6,7 @@ extends Prop
 func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
+		A.play('sfx_tape_pu', global_position),
 		C.player_say('Arranquemos esta vuelta a ver que...'),
 		disable(),
 		I.add_item('Tape'),
