@@ -31,8 +31,9 @@ func semitone_to_pitch(pitch: float) -> float:
 	return pow(twelfth_root_of_two, pitch)
 
 
-func play(cue_name: String, pos := Vector2.ZERO, is_in_queue := true) -> void:
+func play(cue_name: String, pos := Vector2.ZERO, is_in_queue := true, wait_audio_complete := false) -> void:
 	var dic: Dictionary = {}
+	var stream_player: Node = null
 	
 	if cue_name.find('vo_') > -1: dic = _vo_cues
 	else: dic = _sfx_cues
@@ -41,10 +42,14 @@ func play(cue_name: String, pos := Vector2.ZERO, is_in_queue := true) -> void:
 		if is_in_queue: yield()
 
 		var cue: AudioCue = dic[cue_name.to_lower()]
-		_play(cue, pos)
+		stream_player = _play(cue, pos)
 	else:
 		printerr('AudioManager.play: No se encontró el sonido', cue_name)
-	yield(get_tree(), 'idle_frame')
+	
+	if wait_audio_complete:
+		yield(stream_player, 'finished')
+	else:
+		yield(get_tree(), 'idle_frame')
 
 
 func play_music(cue_name: String, is_in_queue := true) -> void:
