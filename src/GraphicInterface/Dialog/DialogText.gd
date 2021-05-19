@@ -22,6 +22,7 @@ onready var _label_dflt_size: Vector2 = $Label.rect_size
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
+# warning-ignore-all:return_value_discarded
 func _ready() -> void:
 	# Establecer la configuración inicial
 	clear()

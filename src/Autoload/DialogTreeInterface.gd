@@ -1,6 +1,7 @@
 extends Node
 # (D) Para hacer cosas con los árboles de diálogo
 
+# warning-ignore-all:unused_signal
 signal option_selected(opt)
 signal dialog_requested
 signal dialog_finished

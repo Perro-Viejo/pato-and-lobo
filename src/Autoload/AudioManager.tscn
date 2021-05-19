@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Autoload/AudioManager.gd" type="Script" id=1]
 [ext_resource path="res://src/AudioManager/Cues/VO_duck.tres" type="Resource" id=2]
@@ -11,10 +11,11 @@
 [ext_resource path="res://src/AudioManager/Cues/SFX_sink_wash.tres" type="Resource" id=9]
 [ext_resource path="res://src/AudioManager/Cues/BG_dream_boat.tres" type="Resource" id=10]
 [ext_resource path="res://src/AudioManager/Cues/SFX_dream_transition.tres" type="Resource" id=11]
+[ext_resource path="res://src/Rooms/End/mx_frolic.tres" type="Resource" id=12]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource( 1 )
-cues = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
+cues = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 12 ) ]
 
 [node name="Positional" type="Node" parent="."]
 

@@ -29,7 +29,7 @@ func _ready():
 	set_process(follow_player)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Engine.editor_hint: return
 
 	if is_instance_valid(C.player):
@@ -43,8 +43,11 @@ func walk(target_pos: Vector2, is_in_queue := true) -> void:
 	$Sprite.flip_h = target_pos.x < position.x
 
 	if E.cutscene_skipped:
+		E.main_camera.smoothing_enabled = false
 		position = target_pos
+		E.main_camera.position = target_pos
 		yield(get_tree(), 'idle_frame')
+		E.main_camera.smoothing_enabled = true
 		return
 	
 	$AnimationPlayer.play('walk_r')

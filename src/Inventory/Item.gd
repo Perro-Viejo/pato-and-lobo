@@ -1,3 +1,4 @@
+# warnings-disable
 extends Control
 class_name Item
 # Estos son los objetos que podrán ir al inventario:
@@ -34,7 +35,7 @@ func on_look() -> void:
 
 
 # Lo que pasará cuando se use otro Item del inventario sobre este
-func on_item_used(item: Item) -> void:
+func on_item_used(_item: Item) -> void:
 	pass
 
 

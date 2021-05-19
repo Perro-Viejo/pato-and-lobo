@@ -6,6 +6,7 @@ export var script_name := ''
 export(Cursor.Type) var cursor
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
+# warning-ignore-all:return_value_discarded
 func _ready() -> void:
 	connect('pressed', self, 'on_pressed')
 	connect('mouse_entered', self, 'on_mouse_entered')

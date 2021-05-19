@@ -12,6 +12,7 @@ var _active := {}
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
+# warning-ignore-all:return_value_discarded
 func _ready() -> void:
 	for c in cues:
 		var cue: AudioCue = c
@@ -59,7 +60,7 @@ func play_music(cue_name: String, is_in_queue := true) -> void:
 	yield(get_tree(), 'idle_frame')
 
 
-func stop(cue_name: String, instance_i := 0, is_in_queue := true) -> void:
+func stop(cue_name: String, _instance_i := 0, is_in_queue := true) -> void:
 	if is_in_queue: yield()
 
 	if _active.has(cue_name):

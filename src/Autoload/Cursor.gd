@@ -21,7 +21,7 @@ func _ready():
 	set_cursor()
 
 
-func _process(delta):
+func _process(_delta):
 	$AnimatedSprite.position = $AnimatedSprite.get_global_mouse_position()
 	$Sprite.position = $AnimatedSprite.get_global_mouse_position()
 

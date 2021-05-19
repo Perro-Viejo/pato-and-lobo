@@ -1,6 +1,7 @@
 class_name DialogMenu
 extends Container
 
+# warning-ignore-all:unused_signal
 signal shown
 signal hidden
 
@@ -17,6 +18,7 @@ onready var _options: Container = find_node('Options')
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
+# warning-ignore-all:return_value_discarded
 func _ready() -> void:
 	connect('gui_input', self, '_clicked')
 	

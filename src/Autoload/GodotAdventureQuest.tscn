@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Autoload/GodotAdventureQuest.gd" type="Script" id=1]
 [ext_resource path="res://src/TransitionLayer/TransitionLayer.tscn" type="PackedScene" id=2]
@@ -8,35 +8,68 @@
 [ext_resource path="res://src/Characters/Lobo/Lobo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Characters/Conejuno/Conejuno.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Characters/Spaceship/CharacterSpaceship.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Rooms/Sea/RoomSea.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Rooms/Bar/RoomBar.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Resource" id=1]
+resource_name = "Bar"
 script = ExtResource( 4 )
 id = "Bar"
 path = "res://src/Rooms/Bar/RoomBar.tscn"
+scene = ExtResource( 10 )
 
 [sub_resource type="Resource" id=2]
+resource_name = "Sea"
 script = ExtResource( 4 )
 id = "Sea"
 path = "res://src/Rooms/Sea/RoomSea.tscn"
+scene = ExtResource( 9 )
 
 [sub_resource type="Resource" id=3]
+resource_name = "Space"
 script = ExtResource( 4 )
 id = "Space"
 path = "res://src/Rooms/Space/RoomSpace.tscn"
 
 [sub_resource type="Resource" id=4]
+resource_name = "HomesPlantation"
 script = ExtResource( 4 )
 id = "HomesPlantation"
 path = "res://src/Rooms/HomesPlantation/RoomHomesPlantation.tscn"
 
 [sub_resource type="Resource" id=5]
+resource_name = "Spaceship"
 script = ExtResource( 4 )
 id = "Spaceship"
 path = "res://src/Rooms/Spaceship/RoomSpaceship.tscn"
 
+[sub_resource type="Resource" id=6]
+resource_name = "Luna"
+script = ExtResource( 4 )
+id = "Luna"
+path = "res://src/Rooms/Luna/RoomLuna.tscn"
+
+[sub_resource type="Resource" id=7]
+resource_name = "Amanita"
+script = ExtResource( 4 )
+id = "Amanita"
+path = "res://src/Rooms/Amanita/RoomAmanita.tscn"
+
+[sub_resource type="Resource" id=8]
+resource_name = "Marrano"
+script = ExtResource( 4 )
+id = "Marrano"
+path = "res://src/Rooms/Marrano/RoomMarrano.tscn"
+
+[sub_resource type="Resource" id=9]
+resource_name = "End"
+script = ExtResource( 4 )
+id = "End"
+path = "res://src/Rooms/End/RoomEnd.tscn"
+
 [node name="GodotAdventureQuest" type="Node"]
 script = ExtResource( 1 )
-rooms = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ]
+rooms = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ]
 characters = [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]
 skip_cutscene_time = 0.5
 text_speeds = [ 0.05, 0.01, 0.0 ]

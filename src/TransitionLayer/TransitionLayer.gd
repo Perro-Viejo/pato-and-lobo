@@ -14,6 +14,7 @@ onready var n := {
 }
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
+# warning-ignore:return_value_discarded
 func _ready() -> void:
 	$AnimationPlayer.connect('animation_finished', self, '_transition_finished')
 	
@@ -49,5 +50,5 @@ func play_transition(name := 'fade_in', time := 1.0) -> void:
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
-func _transition_finished(anim_name := '') -> void:
+func _transition_finished(_anim_name := '') -> void:
 	emit_signal('transition_finished')
