@@ -1,11 +1,14 @@
 tool
 extends Room
 
-var laguna_uno := 0
-var laguna_dos := 0
-
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
-# TODO: Sobrescribir los métodos de Godot que hagan falta
+func _init() -> void:
+	state = {
+		visited = self.visited,
+		visited_first_time = self.visited_first_time,
+		visited_times = self.visited_times,
+		mask_grabbed = false
+	}
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
@@ -15,8 +18,12 @@ func on_room_entered() -> void:
 	
 	if visited_first_time:
 		C.player.global_position = $Points/Entrance.global_position
+		C.player.face_left(false)
 	elif C.player.last_room == 'Sea':
 		C.player.global_position = $Points/Sink.global_position
+	
+	if state.mask_grabbed:
+		$Props/WolfMask.disable(false)
 
 
 func on_room_transition_finished() -> void:

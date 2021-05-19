@@ -17,6 +17,7 @@ var limit_left := 0.0
 var limit_right := 0.0
 var limit_top := 0.0
 var limit_bottom := 0.0
+var state := {}
 
 var _path := []
 
@@ -140,17 +141,18 @@ func remove_character(chr: Character) -> void:
 # Retorna el estado de la habitación para que sea tenido en cuenta la próxima vez
 # que se entre a la habitación
 func get_state() -> Dictionary:
-	return {
-		visited = self.visited,
-		visited_first_time = self.visited_first_time,
-		visited_times = self.visited_times
-	}
+	state.visited = self.visited
+	state.visited_first_time = self.visited_first_time
+	state.visited_times = self.visited_times
+
+	return state
 
 
 func set_state(stored_state: Dictionary) -> void:
 	self.visited = stored_state.visited
 	self.visited_first_time = stored_state.visited_first_time
 	self.visited_times = stored_state.visited_times
+	state = stored_state
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

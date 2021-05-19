@@ -3,13 +3,7 @@ extends Room
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
-func _init() -> void:
-	# El estado común a todos los Room
-	state = {
-		visited = self.visited,
-		visited_first_time = self.visited_first_time,
-		visited_times = self.visited_times
-	}
+# TODO: Sobrescribir los métodos de Godot que hagan falta
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░

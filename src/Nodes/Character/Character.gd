@@ -41,16 +41,18 @@ func walk(target_pos: Vector2, is_in_queue := true) -> void:
 	if is_in_queue: yield()
 	
 	$Sprite.flip_h = target_pos.x < position.x
+	var dir := 'l' if $Sprite.flip_h else 'r'
 
 	if E.cutscene_skipped:
 		E.main_camera.smoothing_enabled = false
+		yield(get_tree(), 'idle_frame')
 		position = target_pos
 		E.main_camera.position = target_pos
 		yield(get_tree(), 'idle_frame')
 		E.main_camera.smoothing_enabled = true
 		return
 	
-	$AnimationPlayer.play('walk_r')
+	$AnimationPlayer.play('walk_%s' % dir)
 	emit_signal('started_walk_to', position, target_pos)
 	yield(C, 'character_move_ended')
 

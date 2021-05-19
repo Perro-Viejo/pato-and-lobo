@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://src/Rooms/Bar/RoomBar.gd" type="Script" id=1]
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://src/Rooms/Bar/Sprites/luna_poster.png" type="Texture" id=18]
 [ext_resource path="res://src/Rooms/Bar/Sprites/bg_filter.png" type="Texture" id=19]
 [ext_resource path="res://src/Rooms/Bar/Sprites/dance_floor_light.png" type="Texture" id=20]
+[ext_resource path="res://src/Rooms/Bar/HotspotExit.gd" type="Script" id=21]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 846, 862, 1315, 946, -1871, 933, 324, 874, 1371, -180, 1829, 225, 938, 288, 841, 118, 1302, 508, 1556, 759, 1217, 775, 1014.21, 513.794, 516, 212, 779, 18, 641, -144, -206, -246, -222, -284, 475, -261, 758, 127, 677, 27, 60, 234, -209, -176, -1020, -274, -941, -275, -915, -177, -1354, 234, -875, -178, -834, -60, -1024, 265, -304, -63, -1175, 703, -1563, 650, -254, -177 )
@@ -192,6 +193,18 @@ position = Vector2( 48, 150 )
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Hotspots/Sink" index="3"]
 polygon = PoolVector2Array( 153, -52, 187, -54, 189, -33, 197, -48, 225, -50, 242, -38, 242, -56, 281, -55, 280, -39, 295, -41, 366, 4, 362, 62, 268, 76, 161, 74, 120, 21, 124, -31, 151, -32 )
 
+[node name="Exit" parent="Hotspots" index="1" instance=ExtResource( 9 )]
+script = ExtResource( 21 )
+description = "Salir a tomar aire"
+walk_to_point = Vector2( 159, -238 )
+cursor = 1
+
+[node name="CollisionPolygon2D" parent="Hotspots/Exit" index="0"]
+polygon = PoolVector2Array( -30, -664, -25, -273, 325, -269, 318, -681, 50, -686 )
+
+[node name="WalkToHelper" parent="Hotspots/Exit" index="2"]
+position = Vector2( 159, -238 )
+
 [node name="Sink" type="Position2D" parent="Points" index="0"]
 position = Vector2( 890, -121 )
 
@@ -215,3 +228,4 @@ navpoly = SubResource( 1 )
 [editable path="Props/Coat"]
 [editable path="Props/LunaPoster"]
 [editable path="Hotspots/Sink"]
+[editable path="Hotspots/Exit"]

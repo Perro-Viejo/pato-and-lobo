@@ -4,6 +4,7 @@ extends Prop
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
+	E.current_room.state.mask_grabbed = true
 	E.run([
 		C.walk_to_clicked(),
 		C.player_say('Qué bueno que el DJ trajo esta máscara'),

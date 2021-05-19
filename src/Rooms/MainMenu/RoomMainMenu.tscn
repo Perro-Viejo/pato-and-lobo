@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Rooms/MainMenu/RoomMainMenu.gd" type="Script" id=2]
+[ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Rooms/MainMenu/bg.png" type="Texture" id=4]
+[ext_resource path="res://src/Rooms/MainMenu/HotspotDoor.gd" type="Script" id=5]
+[ext_resource path="res://src/Nodes/Hotspot/Hotspot.tscn" type="PackedScene" id=6]
+
+[node name="RoomMainMenu" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+script_name = "MainMenu"
+has_player = false
+limit_left = -960.0
+limit_right = 960.0
+limit_top = -540.0
+limit_bottom = 540.0
+
+[node name="Bg" parent="Props" index="0" instance=ExtResource( 3 )]
+clickable = false
+texture = ExtResource( 4 )
+
+[node name="Hotspot" parent="Hotspots" index="0" instance=ExtResource( 6 )]
+script = ExtResource( 5 )
+description = "Entrada al bar"
+cursor = 1
+
+[node name="CollisionPolygon2D" parent="Hotspots/Hotspot" index="0"]
+polygon = PoolVector2Array( -505, -36, -497, 363, -139, 363, -153, -48 )
+
+[editable path="Hotspots/Hotspot"]
