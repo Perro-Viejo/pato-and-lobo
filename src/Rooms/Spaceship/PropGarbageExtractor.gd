@@ -12,20 +12,26 @@ func on_interact() -> void:
 		])
 	elif C.player.last_room == 'Marrano':
 		if Globals.has_done(Globals.GameState.DOME_SPOTTED):
-			if not Globals.has_done(Globals.GameState.WATER_TAKEN):
+			if not Globals.has_done(Globals.GameState.WATER_TAKEN) and not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
 				yield(
 					E.run([
 					'Lobo: Ahí voy, espero estes Patopreparade',
 					'Pato: ¡Suelteloooo!',
 				]), 'completed')
+				Globals.did(Globals.GameState.GARBAGE_THROWN)
 				E.goto_room('Marrano')
-		elif Globals.has_done(Globals.GameState.WATER_TAKEN):
-			E.run([
-				'Lobo: ¿Para qué quiero esto? ¡Debo transportar a pato pronto!'
-			])
+			elif not Globals.has_done(Globals.GameState.WATER_TAKEN): 
+				E.run([
+					'Lobo: Ya no hay más basura...',
+					'Lobo: ¡Vamos Pato, agarra el agua antes que se de distraiga!'
+				])
+			else:
+				E.run([
+					'Lobo: ¿Para qué quiero esto? ¡Debo transportar a pato pronto!'
+				])
 		else:
 			E.run([
-			'Lobo: No quiero tirar basura al espacio epsterior'
+				'Lobo: No quiero tirar basura al espacio epsterior'
 			])
 
 func on_look() -> void:

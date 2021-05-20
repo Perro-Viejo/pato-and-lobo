@@ -18,10 +18,6 @@ characters = [ {
 "position": Vector2( 20, 15 ),
 "script_name": "Lobo"
 } ]
-limit_left = -960.0
-limit_right = 960.0
-limit_top = -1080.0
-limit_bottom = 1080.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 1 )]
 clickable = false

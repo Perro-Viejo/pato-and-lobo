@@ -11,7 +11,7 @@ func on_room_entered() -> void:
 	C.player.global_position = Vector2.ZERO
 	C.player.disable(false)
 	I.add_item('Pato', false)
-	I.add_item('Lobo', false)	
+	I.add_item('Lobo', false)
 
 func on_room_transition_finished() -> void:
 	pass
