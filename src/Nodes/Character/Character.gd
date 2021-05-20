@@ -106,6 +106,23 @@ func say(dialog: String, is_in_queue := true) -> void:
 	idle(false)
 
 
+func grab(is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	
+	if E.cutscene_skipped:
+		yield(get_tree(), 'idle_frame')
+		return
+	
+	$AnimationPlayer.play('grab_%s' % _looking_dir)
+	
+	if get_node_or_null('AnimatedSprite'):
+		yield($AnimatedSprite, 'animation_finished')
+	else:
+		yield($AnimationPlayer, 'animation_finished')
+
+	idle(false)
+
+
 # Quita un ítem del inventario del personaje (¿o del jugador?)
 func remove_inventory() -> void:
 	pass

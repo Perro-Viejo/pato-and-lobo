@@ -8,6 +8,7 @@ func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
 		C.player_say('Es el momento, ahora puedo tomar la dentadura.'),
+		C.player.grab(),
 		A.play('sfx_dentures_pu', global_position),
 		disable(),
 		I.add_item('Dentures'),

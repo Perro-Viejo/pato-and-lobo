@@ -6,7 +6,7 @@
 [ext_resource path="res://src/Characters/Lobo/dance.png" type="Texture" id=4]
 [ext_resource path="res://src/Characters/Lobo/idle.png" type="Texture" id=5]
 
-[sub_resource type="Animation" id=52]
+[sub_resource type="Animation" id=1]
 resource_name = "dance"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -81,8 +81,7 @@ tracks/5/keys = {
 "values": [ Vector2( 7, -173 ) ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "idle_d"
+[sub_resource type="Animation" id=2]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -156,8 +155,7 @@ tracks/5/keys = {
 "values": [ Vector2( -28, -182 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "talk_d"
+[sub_resource type="Animation" id=3]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -411,12 +409,12 @@ flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 3390, 2487, 678, 829 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=52]
 animations = [ {
 "frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
 "loop": true,
 "name": "idle",
-"speed": 60.0
+"speed": 30.0
 }, {
 "frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ) ],
 "loop": true,
@@ -440,9 +438,9 @@ polygon = PoolVector2Array( -53, -334, -57.0205, -222.43, -95, -155, -59, -104, 
 position = Vector2( -232, -93 )
 
 [node name="AnimationPlayer" parent="." index="3"]
-anims/dance = SubResource( 52 )
-anims/idle_d = SubResource( 1 )
-anims/talk_d = SubResource( 2 )
+anims/dance = SubResource( 1 )
+anims/idle_d = SubResource( 2 )
+anims/talk_d = SubResource( 3 )
 
 [node name="Sprite" parent="." index="4"]
 visible = false
@@ -452,7 +450,7 @@ texture = ExtResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="5"]
 position = Vector2( -28, -182 )
 scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 3 )
+frames = SubResource( 52 )
 animation = "idle"
-frame = 18
+frame = 21
 playing = true
