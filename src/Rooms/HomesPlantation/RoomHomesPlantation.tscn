@@ -1,18 +1,25 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Rooms/HomesPlantation/RoomHomesPlantation.gd" type="Script" id=2]
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Rooms/HomesPlantation/Sprites/bg.png" type="Texture" id=4]
+[ext_resource path="res://src/Rooms/Space/Sprites/bg.png" type="Texture" id=4]
+[ext_resource path="res://src/Rooms/HomesPlantation/Sprites/planet_sign.png" type="Texture" id=5]
+[ext_resource path="res://src/Rooms/HomesPlantation/PropSign.gd" type="Script" id=6]
+[ext_resource path="res://src/Rooms/Space/Sprites/planet_homes_plantation.png" type="Texture" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 676, 158, 946, 111, 921, 506, 337, 515, 176, 149, 492, 124, -619, 506, -298, 100, -127, 111, -505, 140, -760, 136, -924, 495, -931, 201 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 0, 3, 6 ), PoolIntArray( 7, 8, 4, 6, 9 ), PoolIntArray( 10, 9, 6, 11, 12 ) ]
-outlines = [ PoolVector2Array( 946, 111, 676, 158, 492, 124, 176, 149, -127, 111, -298, 100, -505, 140, -760, 136, -931, 201, -924, 495, -619, 506, 337, 515, 921, 506 ) ]
+vertices = PoolVector2Array( 719.664, 686.593, 497.702, 1135.26, 137.702, 1291.26, -258.298, 1251.26, -606.298, 1035.26, -744.364, 535.402, -547.816, 124.668, -361.348, -24.0029, 11.5886, -124.797, 376.966, -39.1219, 623.91, 157.426 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ) ]
+outlines = [ PoolVector2Array( 623.91, 157.426, 376.966, -39.1219, 11.5886, -124.797, -361.348, -24.0029, -547.816, 124.668, -744.364, 535.402, -606.298, 1035.26, -258.298, 1251.26, 137.702, 1291.26, 497.702, 1135.26, 719.664, 686.593 ) ]
 
 [node name="RoomHomesPlantation" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 script_name = "HomesPlantation"
+characters = [ {
+"position": Vector2( 0, 20 ),
+"script_name": "Lobo"
+} ]
 limit_left = -960.0
 limit_right = 960.0
 limit_top = -540.0
@@ -23,8 +30,49 @@ clickable = false
 baseline = -540
 texture = ExtResource( 4 )
 
+[node name="Planet" parent="Props" index="1" instance=ExtResource( 3 )]
+position = Vector2( 8.98987, 549.367 )
+clickable = false
+baseline = -812
+texture = ExtResource( 7 )
+
+[node name="BaselineHelper" parent="Props/Planet" index="1"]
+position = Vector2( 0, -812 )
+
+[node name="Sprite" parent="Props/Planet" index="3"]
+texture = ExtResource( 7 )
+
+[node name="Sign" parent="Props" index="2" instance=ExtResource( 3 )]
+position = Vector2( -345.367, -50.5573 )
+script = ExtResource( 6 )
+description = "Una descripción de esta plantaciao"
+baseline = 64
+walk_to_point = Vector2( 96, 96 )
+cursor = 1
+script_name = "Sign"
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" parent="Props/Sign" index="0"]
+position = Vector2( -110.873, -102.054 )
+polygon = PoolVector2Array( -10, -10, 225.57, -8.15881, 220.53, 105.234, 0.04422, 103.974 )
+
+[node name="BaselineHelper" parent="Props/Sign" index="1"]
+position = Vector2( 0, 64 )
+
+[node name="WalkToHelper" parent="Props/Sign" index="2"]
+position = Vector2( 96, 96 )
+
+[node name="Sprite" parent="Props/Sign" index="3"]
+texture = ExtResource( 5 )
+
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]
-position = Vector2( 827, 269 )
+position = Vector2( 288.826, 322.817 )
+
+[node name="Navigation2D" parent="WalkableAreas" index="0"]
+position = Vector2( 0, -11 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
 navpoly = SubResource( 1 )
+
+[editable path="Props/Planet"]
+[editable path="Props/Sign"]

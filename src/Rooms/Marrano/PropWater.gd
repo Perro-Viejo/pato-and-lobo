@@ -1,24 +1,24 @@
-tool
+	tool
 extends Prop
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
 	if not Globals.has_done(Globals.GameState.DOME_SPOTTED):
+		E.run([
+			'Pato: Mmmm, ese cerdo no se quita de ahí',
+			'Pato: No se si pueda convencerlo...',
+		])
+	else:
 		yield(
 			E.run([
-				C.walk_to_clicked(),
-				'Pato: Can de mis amores, abrase el shut aquí',
-				'Lobo: =O ¿Vámos a delinquír?',
-				'Pato: Pero solo un poquito...'
-			]), 'completed'
-		)
+			'Pato: ¡Ya lo tengo!',
+			'Pato: ¡Telestransportame con prontitud!',
+			'Lobo: Listongolo',
+		]), 'completed')
 		E.goto_room('Spaceship')
-		Globals.did(Globals.GameState.DOME_SPOTTED)
-	else:
-		E.run([
-			'Pato: ¡No hay tiempo que perder, a por el agua!'
-		])
+		Globals.did(Globals.GameState.WATER_TAKEN)
+
 
 func on_look() -> void:
 	pass

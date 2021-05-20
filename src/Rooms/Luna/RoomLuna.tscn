@@ -14,6 +14,10 @@ outlines = [ PoolVector2Array( -202, -352, -101, -353, -4, -390, 90, -487, 232, 
 [node name="RoomLuna" instance=ExtResource( 2 )]
 script = ExtResource( 3 )
 script_name = "Luna"
+characters = [ {
+"position": Vector2( 20, 15 ),
+"script_name": "Lobo"
+} ]
 limit_left = -960.0
 limit_right = 960.0
 limit_top = -1080.0

@@ -1,15 +1,10 @@
 tool
-extends Prop
-
+extends Character
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	pass
+	.on_interact()
 
 
 func on_look() -> void:
-	pass
-
-
-func on_item_used(item: Item) -> void:
-	pass
+	.on_look()
