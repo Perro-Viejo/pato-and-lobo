@@ -1,0 +1,37 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://src/DialogTree/DialogOption.gd" type="Script" id=1]
+[ext_resource path="res://src/DialogTree/ChatWithMarrano/ChatWithMarrano.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+resource_name = "OptA"
+script = ExtResource( 1 )
+id = "OptA"
+text = "Buenas, Buenas"
+visible = true
+
+[sub_resource type="Resource" id=2]
+resource_name = "OptB"
+script = ExtResource( 1 )
+id = "OptB"
+text = "¿Me vende un tin de esa agüita?"
+visible = true
+
+[sub_resource type="Resource" id=3]
+resource_name = "OptC"
+script = ExtResource( 1 )
+id = "OptC"
+text = "Creo que lo están llamando..."
+visible = true
+
+[sub_resource type="Resource" id=4]
+resource_name = "OptD"
+script = ExtResource( 1 )
+id = "OptD"
+text = "Usted está muy choncho..."
+visible = true
+
+[resource]
+script = ExtResource( 2 )
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+script_name = "ChatWithMarrano"

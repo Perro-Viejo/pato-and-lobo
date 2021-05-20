@@ -36,6 +36,11 @@ func on_room_entered() -> void:
 	if not state.has_brooms:
 		$Props/Brooms.disable(false)
 
+func on_room_exited() -> void:
+	A.stop('bg_bar', 0, false)
+	A.stop('mx_bar_01', 0, false)
+	A.stop('mx_bar_02', 0, false)
+	.on_room_exited()
 
 func on_room_transition_finished() -> void:
 	if visited_first_time:

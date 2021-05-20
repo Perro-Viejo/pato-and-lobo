@@ -1,10 +1,14 @@
-tool
-extends Character
+extends Item
+
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	D.show_dialog('ChatWithMarrano')
+	.on_interact()
 
 
 func on_look() -> void:
 	.on_look()
+
+
+func on_item_used(item: Item) -> void:
+	.on_item_used(item)

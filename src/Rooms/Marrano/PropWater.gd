@@ -13,6 +13,8 @@ func on_interact() -> void:
 		yield(
 			E.run([
 			'Pato: ¡Ya lo tengo!',
+			disable(),
+			I.add_item('WaterCase'),
 			'Pato: ¡Telestransportame con prontitud!',
 			'Lobo: Listongolo',
 		]), 'completed')

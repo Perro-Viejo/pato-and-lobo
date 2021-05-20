@@ -6,9 +6,17 @@
 
 [node name="Marrano" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+description = "Marrano"
+cursor = 8
 script_name = "Marrano"
+text_color = Color( 1, 0.670588, 0.6, 1 )
 texture = ExtResource( 3 )
 vo_name = "vo_pig"
 
+[node name="CollisionPolygon2D" parent="." index="0"]
+position = Vector2( 48.0833, -162.787 )
+polygon = PoolVector2Array( -29.2165, 158.249, 71.4325, 132.822, 131.822, 84.0869, 158.308, -2.78903, 141.357, -75.892, 94.7407, -129.925, 15.2809, -168.065, -79.0113, -162.768, -160.59, -206.206, -228.396, -172.303, -255.942, -114.033, -202.968, -21.8594, -180.72, 74.5518, -115.033, 138.12 )
+
 [node name="Sprite" parent="." index="4"]
+position = Vector2( 0, -184 )
 texture = ExtResource( 3 )

@@ -16,6 +16,7 @@ func on_room_entered() -> void:
 func on_room_exited() -> void:
 	C.player.scale = Vector2.ONE
 	C.get_character('Lobo').scale = Vector2.ONE
+	.on_room_exited()
 
 func on_room_transition_finished() -> void:
 	if Globals.has_done(Globals.GameState.GOT_HOME):
