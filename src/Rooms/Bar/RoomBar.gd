@@ -16,6 +16,8 @@ func _init() -> void:
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
+	I.remove_item('Pato', false)
+	I.remove_item('Lobo', false)
 	A.play_music('mx_bar_01', false)
 	A.play('bg_bar', Vector2.ZERO, false)
 	
@@ -36,7 +38,7 @@ func on_room_entered() -> void:
 
 
 func on_room_transition_finished() -> void:
-	if visited_first_time:
+	if not C.player.last_room:
 		E.run_cutscene([
 			C.player_say('Esta fiesta está re-buena...'),
 			C.player_walk_to($Points/DanceFloor.global_position),
@@ -48,9 +50,13 @@ func on_room_transition_finished() -> void:
 			C.player_say('¡HOY LE HABLARÉ A LOBO!'),
 		])
 	elif C.player.last_room == 'Sea':
-		Globals.courage += 100
+		Globals.courage += 25
 		yield(I, 'courage_update_shown')
 		E.run(['Pato: Siento que ora sí le voy a hablar'])
+	elif Globals.has_done(Globals.GameState.GOT_HOME):
+		Globals.courage += 25
+		yield(I, 'courage_update_shown')
+		E.run(['Pato: Que bonito sueño...'])
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

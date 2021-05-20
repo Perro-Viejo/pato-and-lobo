@@ -1,11 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Rooms/Sea/Sprites/marcielo.png" type="Texture" id=3]
 [ext_resource path="res://src/Rooms/Sea/Sprites/marbarcobase.png" type="Texture" id=4]
 [ext_resource path="res://src/Rooms/Sea/RoomSea.gd" type="Script" id=5]
-[ext_resource path="res://src/Rooms/Sea/Sprites/drown.png" type="Texture" id=6]
 [ext_resource path="res://src/Rooms/Sea/Sprites/marfrente.png" type="Texture" id=7]
 [ext_resource path="res://src/Rooms/Sea/Sprites/martras.png" type="Texture" id=8]
 [ext_resource path="res://src/Rooms/Sea/PropMop.gd" type="Script" id=9]
@@ -13,7 +12,6 @@
 [ext_resource path="res://src/Rooms/Sea/PropUmbrella.gd" type="Script" id=11]
 [ext_resource path="res://src/Rooms/Sea/Sprites/boat_umbrella.png" type="Texture" id=12]
 [ext_resource path="res://src/Rooms/Sea/Sprites/boat_mop.png" type="Texture" id=13]
-[ext_resource path="res://src/Rooms/Sea/PropDrown.gd" type="Script" id=15]
 [ext_resource path="res://src/Rooms/Sea/Sprites/marbarcolata.png" type="Texture" id=16]
 [ext_resource path="res://src/Rooms/Sea/Sprites/marbarcocerca.png" type="Texture" id=17]
 
@@ -98,36 +96,20 @@ texture = ExtResource( 17 )
 position = Vector2( -7.24426, 238.988 )
 z_index = 2
 clickable = false
-baseline = -188
+baseline = 44
 texture = ExtResource( 7 )
 
 [node name="BaselineHelper" parent="Props/SeaFront" index="1"]
-position = Vector2( 0, -188 )
+position = Vector2( 0, 44 )
 
 [node name="Sprite" parent="Props/SeaFront" index="3"]
 texture = ExtResource( 7 )
 
-[node name="Drown" parent="Props" index="6" instance=ExtResource( 2 )]
-position = Vector2( 639, 187 )
-z_index = 3
-script = ExtResource( 15 )
-baseline = 353
-texture = ExtResource( 6 )
-
-[node name="CollisionPolygon2D" parent="Props/Drown" index="0"]
-polygon = PoolVector2Array( -185, -170, 162, -185, 217, -8, 179, 136, 18, 199, -146, 171, -220, 7 )
-
-[node name="BaselineHelper" parent="Props/Drown" index="1"]
-position = Vector2( 0, 353 )
-
-[node name="Sprite" parent="Props/Drown" index="3"]
-texture = ExtResource( 6 )
-
-[node name="Umbrella" parent="Props" index="7" instance=ExtResource( 2 )]
+[node name="Umbrella" parent="Props" index="6" instance=ExtResource( 2 )]
 position = Vector2( -645.776, -254.313 )
 script = ExtResource( 11 )
 description = "Un sombrillón con un ganchín"
-baseline = -22
+baseline = 98
 walk_to_point = Vector2( 118.794, 135.765 )
 cursor = 1
 texture = ExtResource( 12 )
@@ -137,7 +119,7 @@ position = Vector2( -34.1291, -74.6078 )
 polygon = PoolVector2Array( -39.5161, -49.769, 62.0777, -79.9296, 217.643, -56.1186, 125.574, 10.5522, 28.7422, 59.7616, -72.0578, 128.814, -170.477, 171.673, -125.236, 39.9191 )
 
 [node name="BaselineHelper" parent="Props/Umbrella" index="1"]
-position = Vector2( 0, -22 )
+position = Vector2( 0, 98 )
 
 [node name="WalkToHelper" parent="Props/Umbrella" index="2"]
 position = Vector2( 118.794, 135.765 )
@@ -145,10 +127,10 @@ position = Vector2( 118.794, 135.765 )
 [node name="Sprite" parent="Props/Umbrella" index="3"]
 texture = ExtResource( 12 )
 
-[node name="Tape" parent="Props" index="8" instance=ExtResource( 2 )]
+[node name="Tape" parent="Props" index="7" instance=ExtResource( 2 )]
 position = Vector2( -405.632, -266.124 )
 script = ExtResource( 10 )
-description = "Esta cinta voladora necesita un lugar en esta escena :("
+description = "Un lugar lleno de chécheres"
 walk_to_point = Vector2( 16.8642, 151.627 )
 cursor = 1
 
@@ -159,7 +141,7 @@ polygon = PoolVector2Array( -312.531, -110.856, -198.66, -151.311, -89.2835, -11
 [node name="WalkToHelper" parent="Props/Tape" index="2"]
 position = Vector2( 16.8642, 151.627 )
 
-[node name="Mop" parent="Props" index="9" instance=ExtResource( 2 )]
+[node name="Mop" parent="Props" index="8" instance=ExtResource( 2 )]
 position = Vector2( 257.624, -161.516 )
 script = ExtResource( 9 )
 description = "Un traperocho pa alcanzar al lobacho tal vez"
@@ -198,7 +180,6 @@ navpoly = SubResource( 1 )
 [editable path="Props/BoatCan"]
 [editable path="Props/BoatFront"]
 [editable path="Props/SeaFront"]
-[editable path="Props/Drown"]
 [editable path="Props/Umbrella"]
 [editable path="Props/Tape"]
 [editable path="Props/Mop"]

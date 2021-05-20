@@ -3,6 +3,9 @@ extends Node
 enum GameState {
 	NONE,
 	SEA_DREAMED,
+	GOT_HOME,
+	DOME_SPOTTED,
+	WATER_TAKEN,
 	WON_GAME
 }
 
