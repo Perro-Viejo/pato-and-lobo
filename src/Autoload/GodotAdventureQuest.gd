@@ -139,7 +139,7 @@ func goto_room(path := '') -> void:
 	
 	C.player.last_room = current_room.script_name
 	
-	Globals.rooms_states[current_room.script_name] = current_room.get_state()
+	Globals.rooms_states[current_room.script_name] = current_room.state
 	
 	# Sacar los personajes de la habitación para que no sean eliminados
 	current_room.on_room_exited()
@@ -164,7 +164,7 @@ func room_readied(room: Room) -> void:
 	current_room = room
 	
 	if Globals.rooms_states.has(room.script_name):
-		room.set_state(Globals.rooms_states[room.script_name])
+		room.state = Globals.rooms_states[room.script_name]
 	
 	room.is_current = true
 	room.visited_first_time = false
@@ -184,13 +184,13 @@ func room_readied(room: Room) -> void:
 		room.add_character(C.player)
 	
 	room.on_room_entered()
-	
-	if not room.hide_gi:
-		G.done()
 
 	$TransitionLayer.play_transition('fade_out')
 	yield($TransitionLayer, 'transition_finished')
 	yield(wait(0.3, false), 'completed')
+	
+	if not room.hide_gi:
+		G.done()
 
 	self.in_room = true
 

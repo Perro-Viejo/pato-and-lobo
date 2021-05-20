@@ -97,6 +97,8 @@ func _add_item(item: Item) -> void:
 
 
 func _remove_item(item: Item) -> void:
+	if not _grid.get_node_or_null(item.name): return
+	
 	item.disconnect('description_toggled', self, '_show_item_info')
 	item.disconnect('selected', self, '_change_cursor')
 	_grid.remove_child(item)

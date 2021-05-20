@@ -17,7 +17,7 @@ var limit_left := 0.0
 var limit_right := 0.0
 var limit_top := 0.0
 var limit_bottom := 0.0
-var state := {}
+var state := {} setget _set_state, _get_state
 
 var _path := []
 
@@ -138,23 +138,6 @@ func remove_character(chr: Character) -> void:
 	$Characters.remove_child(chr)
 
 
-# Retorna el estado de la habitación para que sea tenido en cuenta la próxima vez
-# que se entre a la habitación
-func get_state() -> Dictionary:
-	state.visited = self.visited
-	state.visited_first_time = self.visited_first_time
-	state.visited_times = self.visited_times
-
-	return state
-
-
-func set_state(stored_state: Dictionary) -> void:
-	self.visited = stored_state.visited
-	self.visited_first_time = stored_state.visited_first_time
-	self.visited_times = stored_state.visited_times
-	state = stored_state
-
-
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _move_along_path(distance):
 	var last_point = C.player.position
@@ -207,3 +190,21 @@ func _check_baseline(nde: Node, chr_y_pos: float, z := 1) -> void:
 func _set_is_current(value: bool) -> void:
 	is_current = value
 	set_process_unhandled_input(is_current)
+
+
+func _set_state(stored_state: Dictionary) -> void:
+	state = stored_state
+
+	self.visited = stored_state.visited
+	self.visited_first_time = stored_state.visited_first_time
+	self.visited_times = stored_state.visited_times
+
+
+# Retorna el estado de la habitación para que sea tenido en cuenta la próxima vez
+# que se entre a la habitación
+func _get_state() -> Dictionary:
+	state.visited = self.visited
+	state.visited_first_time = self.visited_first_time
+	state.visited_times = self.visited_times
+
+	return state

@@ -38,7 +38,7 @@ func on_room_entered() -> void:
 
 
 func on_room_transition_finished() -> void:
-	if not C.player.last_room:
+	if visited_first_time:
 		E.run_cutscene([
 			C.player_say('Esta fiesta está re-buena...'),
 			C.player_walk_to($Points/DanceFloor.global_position),
