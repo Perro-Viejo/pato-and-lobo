@@ -6,7 +6,7 @@ extends Clickable
 
 # TODO: Crear la máquina de estados
 
-signal started_walk_to(start, end)
+signal started_walk_to(character, start, end)
 
 var last_room := ''
 
@@ -53,14 +53,14 @@ func walk(target_pos: Vector2, is_in_queue := true) -> void:
 		return
 	
 	$AnimationPlayer.play('walk_%s' % _looking_dir)
-	emit_signal('started_walk_to', position, target_pos)
+	emit_signal('started_walk_to', self, position, target_pos)
 	yield(C, 'character_move_ended')
 
 
 func idle(is_in_queue := true) -> void:
 	if is_in_queue: yield()
 	$AnimationPlayer.play('idle_%s' % _looking_dir)
-	yield(get_tree(), 'idle_frame')
+	yield(get_tree().create_timer(0.5), 'timeout')
 
 
 func face_up(is_in_queue := true) -> void:

@@ -20,6 +20,7 @@ var limit_bottom := 0.0
 var state := {} setget _set_state, _get_state
 
 var _path := []
+var _moving_character: Character = null
 
 onready var _nav_path: Navigation2D = $WalkableAreas.get_child(0)
 
@@ -38,8 +39,6 @@ func _ready():
 		E.main_camera.limit_bottom = limit_bottom
 	
 	if not Engine.editor_hint and is_instance_valid(C.player):
-		C.player.connect('started_walk_to', self, '_update_navigation_path')
-
 		for c in $Characters.get_children():
 			(c as Node2D).queue_free()
 
@@ -55,7 +54,7 @@ func _process(delta):
 		
 	if _path.empty(): return
 
-	var walk_distance = C.player.walk_speed * delta
+	var walk_distance = _moving_character.walk_speed * delta
 	_move_along_path(walk_distance)
 
 
@@ -132,41 +131,53 @@ func on_room_exited() -> void:
 
 func add_character(chr: Character) -> void:
 	$Characters.add_child(chr)
+	chr.connect('started_walk_to', self, '_update_navigation_path')
 
 
 func remove_character(chr: Character) -> void:
 	$Characters.remove_child(chr)
 
 
+func get_point(point_name: String) -> Vector2:
+	var point: Position2D = get_node_or_null('Points/' + point_name)
+	if point:
+		return point.global_position
+	printerr('Room[%s].get_point: No se encontró el punto %s' % [script_name, point_name])
+	return Vector2.ZERO
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _move_along_path(distance):
-	var last_point = C.player.position
+	var last_point = _moving_character.position
 	
 	while _path.size():
 		var distance_between_points = last_point.distance_to(_path[0])
 		if distance <= distance_between_points:
-			C.player.position = last_point.linear_interpolate(
+			_moving_character.position = last_point.linear_interpolate(
 				_path[0], distance / distance_between_points
 			)
-
-#			character_moved(C.player)
-
 			return
 
 		distance -= distance_between_points
 		last_point = _path[0]
 		_path.remove(0)
 
-	C.player.position = last_point
-	C.player.idle(false)
-	C.emit_signal('character_move_ended', C.player)
+	_moving_character.position = last_point
+	_moving_character.idle(false)
+	C.emit_signal('character_move_ended', _moving_character)
+	_moving_character = null
 
-#	set_process(false)
 
-
-func _update_navigation_path(start_position, end_position):
+func _update_navigation_path(
+		character: Character, start_position: Vector2, end_position: Vector2
+	):
+	# TODO: Esto debería ir en un diccionario para que se puedan tener varios
+	# personajes moviéndose al tiempo. O que cada personaje controle su
+	# movimiento. (;￢＿￢)
 	_path = _nav_path.get_simple_path(start_position, end_position, true)
 	_path.remove(0)
+	_moving_character = character
+
 	set_process(true)
 
 

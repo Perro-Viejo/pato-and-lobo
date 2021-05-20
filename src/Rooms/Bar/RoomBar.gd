@@ -41,7 +41,7 @@ func on_room_transition_finished() -> void:
 	if visited_first_time:
 		E.run_cutscene([
 			C.player_say('Esta fiesta está re-buena...'),
-			C.player_walk_to($Points/DanceFloor.global_position),
+			C.player_walk_to($Points/NearDanceFloor.global_position),
 			'...',
 			C.player.face_right(),
 			'...',

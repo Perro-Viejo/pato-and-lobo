@@ -24,17 +24,22 @@ func on_interact() -> void:
 	else:
 		E.run([
 			C.player_say('¡¡¡Ayyyy pero qué guapote!!!'),
-			'...',
+#			'...',
 			C.player.face_left(),
-			'...',
+#			'...',
 			C.player.face_right(),
-			'...',
-			'Pato: Nunca seré capaz de hablarle'
+#			'...',
+			'Pato: Nunca seré capaz de hablarle',
+			walk(E.current_room.get_point('DanceFloor')),
+			C.player.face_left(),
+			_dance(),
+			'Pato: Ayyyy... qué rico se mueve... \/( > __ < \\)'
 		])
 
 
 func on_look() -> void:
 	E.run(['Pato: Está más bueno que el pan con chocolate'])
+
 
 func on_item_used(item: Item) -> void:
 	if item.script_name == 'Mopbrella':
@@ -49,3 +54,9 @@ func on_item_used(item: Item) -> void:
 		E.run([
 			C.player_say('No alcanzo hasta allá'),
 		])
+
+
+func _dance(is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	$AnimationPlayer.play('dance_%s' % _looking_dir)
+	yield(get_tree().create_timer(0.5), 'timeout')
