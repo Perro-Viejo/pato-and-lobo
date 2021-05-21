@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/GraphicInterface/Inventory/InventoryContainer.gd" type="Script" id=1]
 [ext_resource path="res://src/GraphicInterface/Inventory/bg.png" type="Texture" id=2]
 [ext_resource path="res://src/GraphicInterface/Inventory/fg.png" type="Texture" id=3]
 [ext_resource path="res://src/Resources/DynamicFonts/KgHappySolid24.tres" type="DynamicFont" id=4]
 [ext_resource path="res://src/GraphicInterface/Inventory/courage_progress.png" type="Texture" id=7]
-[ext_resource path="res://src/GraphicInterface/Inventory/courage_under.png" type="Texture" id=8]
 
 [node name="InventoryContainer" type="NinePatchRect"]
 margin_left = 4.0
@@ -73,8 +72,9 @@ margin_bottom = 31.0
 mouse_filter = 2
 size_flags_vertical = 4
 value = 50.0
-texture_under = ExtResource( 8 )
+texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 7 )
+tint_under = Color( 0.0745098, 0.0470588, 0.0666667, 1 )
 
 [node name="InventoryForeground" type="TextureRect" parent="."]
 margin_right = 75.0

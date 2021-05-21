@@ -7,11 +7,10 @@ func on_interact() -> void:
 	if not Globals.has_done(Globals.GameState.SEA_DREAMED):
 		yield(E.run([
 			C.walk_to_clicked(),
-			C.player.face_left(),
-			C.player.say('Me voy a lavar las alitas'),
+			C.player.face_up(),
+			'Pato: Me voy a lavar las alitas',
 			A.play('sfx_sink_head', global_position),
 			A.play('sfx_sink_loop', global_position),
-			
 			E.wait(),
 			'Pato: ¡Ay qué rico!',
 			A.play('sfx_sink_wash', global_position),

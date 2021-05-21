@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pato.png-149c9ce8660ab137fe3f54f67db88304.stex"
+path="res://.import/walk.png-8d30582cc0ff8b46601800966496539b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Characters/Pato/pato.png"
-dest_files=[ "res://.import/pato.png-149c9ce8660ab137fe3f54f67db88304.stex" ]
+source_file="res://src/Characters/Pato/Sprites/walk.png"
+dest_files=[ "res://.import/walk.png-8d30582cc0ff8b46601800966496539b.stex" ]
 
 [params]
 

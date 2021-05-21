@@ -3,7 +3,7 @@ extends Character
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	if Globals.courage >= 20:
+	if Globals.courage >= 50:
 		yield(E.run([
 			'Pato: Ya no le daré más vueltas',
 			'Pato: Voy con toda a hablarle a Lobo',
@@ -30,9 +30,9 @@ func on_interact() -> void:
 			C.player.face_right(),
 #			'...',
 			'Pato: Nunca seré capaz de hablarle',
-			walk(E.current_room.get_point('DanceFloor')),
+			face_left(),
 			C.player.face_left(),
-			_dance(),
+			dance(),
 			'Pato: Ayyyy... qué rico se mueve... \/( > __ < \\)'
 		])
 
@@ -56,7 +56,7 @@ func on_item_used(item: Item) -> void:
 		])
 
 
-func _dance(is_in_queue := true) -> void:
+func dance(is_in_queue := true) -> void:
 	if is_in_queue: yield()
 	$AnimationPlayer.play('dance_%s' % _looking_dir)
 	yield(get_tree().create_timer(0.5), 'timeout')

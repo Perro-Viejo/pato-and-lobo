@@ -53,8 +53,8 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if not Engine.editor_hint and is_instance_valid(C.player):
-		main_camera.position = C.player.position
+	if not Engine.editor_hint and is_instance_valid(C.camera_owner):
+		main_camera.position = C.camera_owner.position
 
 
 func _input(event: InputEvent) -> void:

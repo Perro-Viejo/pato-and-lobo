@@ -43,7 +43,6 @@ wrap_width = 720
 min_wrap_width = 400
 
 [node name="DisplayBox" parent="MainContainer" instance=ExtResource( 11 )]
-custom_fonts/font = ExtResource( 2 )
 
 [node name="InventoryContainer" parent="MainContainer" instance=ExtResource( 4 )]
 

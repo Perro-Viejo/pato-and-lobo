@@ -8,39 +8,32 @@ func start() -> void:
 	# opciones del diálogo
 	# P.e. Hacer que el personaje jugable mire al personaje con el que va a hablar,
 	# camine hasta éste y lo salude (o sea saludado).
-	yield(
-		E.run([
-			C.walk_to_clicked(),
-			C.player.face_up(),
-			'Conejuno: ¿Qué le sirvo mijín?'
-		]),
-		'completed'
-	)
 	
 	# La llamada al método start del padre hace que se muestren las opciones
 	.start()
 
 
 func option_selected(opt: DialogOption) -> void:
+	yield(E.run([C.player_say(opt.text)]), 'completed')
 	match opt.id:
 		'Opt1':
-			if Globals.asked_polas == 0:
-				yield(E.run([
-					C.player_say(opt.text),
-					'Conejuno: Se nos acabó la pola',
-				]), 'completed')
-			else:
-				yield(E.run([
-					C.player_say(opt.text),
-					'Conejuno: ...',
-					'Conejuno: ¡Que se nos acabó la pola!',
-				]), 'completed')
-			Globals.asked_polas += 1
-		'Opt2':
-			yield(E.run([
-				C.player_say(opt.text),
-				'Conejuno: Entonces ábrase'
-			]), 'completed')
-			D.emit_signal('dialog_finished')
+			yield(
+				E.run([
+					'Lagarto: Yo sé. Yo soy áspero.',
+					'Pato: Ajá...'
+				]),
+				'completed'
+			)
+			_show_options()
 			return
-	_show_options()
+		'Opt2':
+			yield(
+				E.run([
+					'Lagarto: Claro que sí. Le tengo estos temitas.'
+				]),
+				'completed'
+			)
+			D.finish_dialog()
+			D.show_dialog('SongList')
+		'Exit':
+			D.finish_dialog()

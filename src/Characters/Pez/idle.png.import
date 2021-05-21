@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grab.png-83d546c56bd30f3099bd9edd276b03f0.stex"
+path="res://.import/idle.png-467be392bdd68bf83711b8aac3a22a47.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Characters/Pato/grab.png"
-dest_files=[ "res://.import/grab.png-83d546c56bd30f3099bd9edd276b03f0.stex" ]
+source_file="res://src/Characters/Pez/idle.png"
+dest_files=[ "res://.import/idle.png-467be392bdd68bf83711b8aac3a22a47.stex" ]
 
 [params]
 

@@ -10,7 +10,8 @@ func _init() -> void:
 		has_mask = true,
 		has_dentures = true,
 		has_coat = true,
-		has_brooms = true
+		has_brooms = true,
+		dj_uses_mask = true
 	}
 
 
@@ -27,7 +28,7 @@ func on_room_entered() -> void:
 	elif C.player.last_room == 'Sea':
 		C.player.global_position = $Points/Sink.global_position
 	
-	if not state.has_mask:
+	if not state.has_mask or state.dj_uses_mask:
 		$Props/WolfMask.disable(false)
 	if not state.has_dentures:
 		$Props/GlassWithDentures.disable(false)
@@ -45,14 +46,20 @@ func on_room_exited() -> void:
 func on_room_transition_finished() -> void:
 	if visited_first_time:
 		E.run_cutscene([
-			C.player_say('Esta fiesta está re-buena...'),
-			C.player_walk_to($Points/NearDanceFloor.global_position),
+			G.display('Esta es Pato'),
+			'Pato: Esta fiesta está re-buena...',
+			C.player.face_left(),
+			'Pato: y está más buena porque Lobo está aquí',
+			G.display('Y está enamorada de Lobo'),
+			C.change_camera_owner(C.get_character('Lobo')),
 			'...',
+			C.change_camera_owner(C.player),
 			C.player.face_right(),
-			'...',
-			C.player_say('y está más buena porque Lobo está aquí'),
-			C.player_say('Hoy es el día.'),
-			C.player_say('¡HOY LE HABLARÉ A LOBO!'),
+			'Pato: Hoy es el día.',
+			'Pato: ¡HOY LE HABLARÉ A LOBO!',
+			G.display('Dale coraje para que le hable a Lobo'),
+			G.display('Puedes disfrazarla'),
+			G.display('O vivir ensoñaciones'),
 		])
 	elif C.player.last_room == 'Sea':
 		Globals.courage += 25

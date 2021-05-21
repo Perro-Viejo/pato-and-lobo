@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle.png-cdb5f0c12aa605f3c29f269387411b35.stex"
+path="res://.import/dance.png-0b9d2b28763816d78b11d56b175892a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Characters/Pato/idle.png"
-dest_files=[ "res://.import/idle.png-cdb5f0c12aa605f3c29f269387411b35.stex" ]
+source_file="res://src/Characters/Pato/Sprites/dance.png"
+dest_files=[ "res://.import/dance.png-0b9d2b28763816d78b11d56b175892a9.stex" ]
 
 [params]
 

@@ -3,7 +3,6 @@ extends Character
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	yield(C.walk_to_clicked(false), 'completed')
 	D.show_dialog('ChatWithConejuno')
 
 
@@ -13,3 +12,7 @@ func on_look() -> void:
 		'...',
 		C.player_say('Sirve tragos y escucha historias mierdas todos los días')
 	])
+
+
+func get_dialog_pos() -> float:
+	return $AnimatedSprite.position.y + 16.0

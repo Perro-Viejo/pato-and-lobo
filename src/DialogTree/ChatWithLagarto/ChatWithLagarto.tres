@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://src/DialogTree/ChatWithLagarto/ChatWithLagarto.gd" type="Script" id=1]
+[ext_resource path="res://src/DialogTree/DialogOption.gd" type="Script" id=2]
+
+[sub_resource type="Resource" id=1]
+resource_name = "Opt1"
+script = ExtResource( 2 )
+id = "Opt1"
+text = "Está muy buena la música"
+visible = true
+
+[sub_resource type="Resource" id=2]
+resource_name = "Opt2"
+script = ExtResource( 2 )
+id = "Opt2"
+text = "¿Le puedo pedir un temita?"
+visible = true
+
+[sub_resource type="Resource" id=3]
+resource_name = "Exit"
+script = ExtResource( 2 )
+id = "Exit"
+text = "Bueno... me voy"
+visible = true
+
+[resource]
+script = ExtResource( 1 )
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+script_name = "ChatWithLagarto"

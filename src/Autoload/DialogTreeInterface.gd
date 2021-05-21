@@ -23,3 +23,7 @@ func show_dialog(script_name: String) -> void:
 			G.done()
 	# Por si no se encuentra el diálogo
 	yield(get_tree(), 'idle_frame')
+
+
+func finish_dialog() -> void:
+	emit_signal('dialog_finished')

@@ -136,6 +136,14 @@ func get_point(point_name: String) -> Vector2:
 	return Vector2.ZERO
 
 
+func get_prop(prop_name: String) -> Prop:
+	for p in $Props.get_children():
+		if p.script_name == prop_name or p.name == prop_name:
+			return p as Prop
+	printerr('Room[%s].get_prop: No se encontró la Prop %s' % [script_name, prop_name])
+	return null
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _move_along_path(distance):
 	var last_point = _moving_character.position

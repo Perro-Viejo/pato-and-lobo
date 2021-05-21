@@ -8,8 +8,9 @@ signal character_spoke(character, message)
 signal character_move_ended(character)
 signal character_say(chr_name, dialog)
 
-var player: Character = null
+var player: Character = null setget _set_player
 var characters := []
+var camera_owner: Character = null
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
@@ -69,5 +70,23 @@ func get_character(script_name: String) -> Character:
 			return c
 	return null
 
+
+func change_camera_owner(c: Character, is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	camera_owner = c
+	yield(get_tree(), 'idle_frame')
+
+
+func face_clicked(is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	
+	if E.clicked.global_position < C.player.global_position:
+		yield(C.player.face_left(false), 'completed')
+	else:
+		yield(C.player.face_right(false), 'completed')
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
-# ???
+func _set_player(value: Character) -> void:
+	player = value
+	camera_owner = value

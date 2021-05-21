@@ -5,9 +5,10 @@ signal shown
 signal hidden
 
 export var wrap_width := 192.0
+export var narrator_name := ''
 
-var _min_width := rect_size.x
-var _dflt_height := rect_size.y
+onready var _min_width := rect_min_size.x
+onready var _dflt_height := rect_min_size.y
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
@@ -21,9 +22,14 @@ func _ready() -> void:
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _show_box(msg := '') -> void:
+	text = ''
 	rect_size = Vector2(_min_width, _dflt_height)
+	rect_min_size = Vector2(_min_width, _dflt_height)
 	autowrap = false
-	text = msg
+	if narrator_name:
+		text = narrator_name + ': ' + msg
+	else:
+		text = msg
 
 	if msg:
 		show()

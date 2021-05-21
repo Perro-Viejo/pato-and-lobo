@@ -1,12 +1,141 @@
-[gd_scene load_steps=130 format=2]
+[gd_scene load_steps=158 format=2]
 
 [ext_resource path="res://src/Nodes/Character/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Characters/Pato/Pato.gd" type="Script" id=2]
-[ext_resource path="res://src/Characters/Pato/pato.png" type="Texture" id=3]
-[ext_resource path="res://src/Characters/Pato/walk.png" type="Texture" id=4]
-[ext_resource path="res://src/Characters/Pato/idle.png" type="Texture" id=5]
-[ext_resource path="res://src/Characters/Pato/grab.png" type="Texture" id=6]
-[ext_resource path="res://src/Characters/Pato/scared.png" type="Texture" id=7]
+[ext_resource path="res://src/Characters/Pato/Sprites/walk.png" type="Texture" id=4]
+[ext_resource path="res://src/Characters/Pato/Sprites/idle.png" type="Texture" id=5]
+[ext_resource path="res://src/Characters/Pato/Sprites/grab.png" type="Texture" id=6]
+[ext_resource path="res://src/Characters/Pato/Sprites/scared.png" type="Texture" id=7]
+[ext_resource path="res://src/Characters/Pato/Sprites/dance.png" type="Texture" id=8]
+[ext_resource path="res://src/Characters/Pato/Sprites/back.png" type="Texture" id=9]
+
+[sub_resource type="Animation" id=148]
+resource_name = "dance_l"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimatedSprite:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "dance" ]
+}
+
+[sub_resource type="Animation" id=147]
+resource_name = "dance_r"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimatedSprite:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimatedSprite:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "dance" ]
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "grab_l"
@@ -346,9 +475,11 @@ tracks/4/keys = {
 "values": [ "idle" ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=150]
+resource_name = "idle_u"
+length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -357,7 +488,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ false ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AnimatedSprite:visible")
@@ -369,7 +500,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("AnimatedSprite:playing")
@@ -381,10 +512,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:visible")
+tracks/3/path = NodePath("AnimatedSprite:flip_h")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -393,10 +524,22 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimatedSprite:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "back" ]
 }
 
-[sub_resource type="Animation" id=123]
+[sub_resource type="Animation" id=7]
 resource_name = "scare_l"
 length = 0.5
 tracks/0/type = "value"
@@ -472,7 +615,7 @@ tracks/5/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=124]
+[sub_resource type="Animation" id=8]
 resource_name = "scare_r"
 length = 0.5
 tracks/0/type = "value"
@@ -548,7 +691,7 @@ tracks/5/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=125]
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -562,7 +705,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=126]
+[sub_resource type="Animation" id=10]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -624,7 +767,7 @@ tracks/4/keys = {
 "values": [ "idle" ]
 }
 
-[sub_resource type="Animation" id=127]
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -686,7 +829,7 @@ tracks/4/keys = {
 "values": [ "idle" ]
 }
 
-[sub_resource type="Animation" id=128]
+[sub_resource type="Animation" id=12]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -700,7 +843,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=129]
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -762,7 +905,7 @@ tracks/4/keys = {
 "values": [ "walk" ]
 }
 
-[sub_resource type="Animation" id=130]
+[sub_resource type="Animation" id=14]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -823,6 +966,11 @@ tracks/4/keys = {
 "update": 1,
 "values": [ "walk" ]
 }
+
+[sub_resource type="AtlasTexture" id=149]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 341, 635 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
@@ -1359,8 +1507,133 @@ flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 0, 3915, 642, 783 )
 
+[sub_resource type="AtlasTexture" id=123]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=124]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 642, 0, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=125]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1284, 0, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=126]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1926, 0, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=127]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2568, 0, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=128]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 3210, 0, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=129]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 782, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=130]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 642, 782, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=131]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1284, 782, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=132]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1926, 782, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=133]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2568, 782, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=134]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 3210, 782, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=135]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 1564, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=136]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 642, 1564, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=137]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1284, 1564, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=138]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1926, 1564, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=139]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2568, 1564, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=140]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 3210, 1564, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=141]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 2346, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=142]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 642, 2346, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=143]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1284, 2346, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=144]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 1926, 2346, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=145]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 2568, 2346, 642, 782 )
+
+[sub_resource type="AtlasTexture" id=146]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 3210, 2346, 642, 782 )
+
 [sub_resource type="SpriteFrames" id=122]
 animations = [ {
+"frames": [ SubResource( 149 ) ],
+"loop": false,
+"name": "back",
+"speed": 1.0
+}, {
 "frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
 "loop": true,
 "name": "idle",
@@ -1380,6 +1653,11 @@ animations = [ {
 "loop": false,
 "name": "scare",
 "speed": 30.0
+}, {
+"frames": [ SubResource( 123 ), SubResource( 124 ), SubResource( 125 ), SubResource( 126 ), SubResource( 127 ), SubResource( 128 ), SubResource( 129 ), SubResource( 130 ), SubResource( 131 ), SubResource( 132 ), SubResource( 133 ), SubResource( 134 ), SubResource( 135 ), SubResource( 136 ), SubResource( 137 ), SubResource( 138 ), SubResource( 139 ), SubResource( 140 ), SubResource( 141 ), SubResource( 142 ), SubResource( 143 ), SubResource( 144 ), SubResource( 145 ), SubResource( 146 ) ],
+"loop": true,
+"name": "dance",
+"speed": 30.0
 } ]
 
 [node name="Pato" instance=ExtResource( 1 )]
@@ -1389,35 +1667,35 @@ script_name = "Pato"
 text_color = Color( 0.8, 0.254902, 0.0980392, 1 )
 walk_speed = 600.0
 is_player = true
-texture = ExtResource( 3 )
 vo_name = "vo_duck"
 
 [node name="AnimationPlayer" parent="." index="3"]
+anims/dance_l = SubResource( 148 )
+anims/dance_r = SubResource( 147 )
 anims/grab_l = SubResource( 1 )
 anims/grab_r = SubResource( 2 )
 anims/idle_d = SubResource( 3 )
 anims/idle_l = SubResource( 4 )
 anims/idle_r = SubResource( 5 )
-anims/idle_u = SubResource( 6 )
-anims/scare_l = SubResource( 123 )
-anims/scare_r = SubResource( 124 )
-anims/talk_d = SubResource( 125 )
-anims/talk_l = SubResource( 126 )
-anims/talk_r = SubResource( 127 )
-anims/talk_u = SubResource( 128 )
-anims/walk_l = SubResource( 129 )
-anims/walk_r = SubResource( 130 )
+anims/idle_u = SubResource( 150 )
+anims/scare_l = SubResource( 7 )
+anims/scare_r = SubResource( 8 )
+anims/talk_d = SubResource( 9 )
+anims/talk_l = SubResource( 10 )
+anims/talk_r = SubResource( 11 )
+anims/talk_u = SubResource( 12 )
+anims/walk_l = SubResource( 13 )
+anims/walk_r = SubResource( 14 )
 
 [node name="Sprite" parent="." index="4"]
 visible = false
 position = Vector2( 0, -128 )
-texture = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="5"]
 position = Vector2( 0, -128 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 122 )
 animation = "idle"
-frame = 5
+frame = 18
 playing = true
 flip_h = true

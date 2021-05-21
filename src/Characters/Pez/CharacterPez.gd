@@ -5,9 +5,13 @@ extends Character
 func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
-		'Pato: Hola señora',
-		'Viejo: Hola.',
-		'Viejo: ¿Qué se le ofrece?'
+		C.player.face_right(),
+		'Pato: Emmm....',
+		'Pato: Hola',
+		C.get_character('Pez').face_left(),
+		'Pez: Quiubo mijo. ¿Ta fiesta ta como buena no?',
+		'Pato: Pos sí',
+		C.get_character('Pez').face_right(),
 	])
 
 
