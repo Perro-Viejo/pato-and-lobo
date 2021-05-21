@@ -42,10 +42,11 @@ position = Vector2( 0, -540 )
 texture = ExtResource( 3 )
 
 [node name="HomesPlantation" parent="Props" index="1" instance=ExtResource( 1 )]
-position = Vector2( 500.685, -160.362 )
+position = Vector2( 508.685, -88.362 )
+scale = Vector2( 0.15, 0.15 )
 script = ExtResource( 9 )
 description = "Plantación de casas"
-baseline = 123
+baseline = -1636
 walk_to_point = Vector2( 137.315, -46.638 )
 cursor = 1
 texture = ExtResource( 5 )
@@ -54,17 +55,17 @@ texture = ExtResource( 5 )
 polygon = PoolVector2Array( -166.244, -143.942, -5.20593, -203.272, 113.454, -188.44, 200.33, -97.3259, 198.211, 99.7343, 107.097, 197.205, -5.20593, 220.513, -115.39, 190.848, -202.266, 99.7343, -221.336, -29.5203 )
 
 [node name="BaselineHelper" parent="Props/HomesPlantation" index="1"]
-position = Vector2( 0, 123 )
+position = Vector2( 0, -1637 )
 
 [node name="WalkToHelper" parent="Props/HomesPlantation" index="2"]
 position = Vector2( 137.315, -46.638 )
 
 [node name="Sprite" parent="Props/HomesPlantation" index="3"]
-scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 5 )
 
 [node name="Luna" parent="Props" index="2" instance=ExtResource( 1 )]
 position = Vector2( -494, -231 )
+scale = Vector2( 0.9, 0.9 )
 script = ExtResource( 10 )
 description = "Luna"
 baseline = 96
@@ -81,7 +82,10 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 7 )
 
 [node name="Amanita" parent="Props" index="3" instance=ExtResource( 1 )]
+visible = false
 position = Vector2( -619, 264 )
+scale = Vector2( 0.5, 0.5 )
+input_pickable = false
 script = ExtResource( 8 )
 description = "Amanita"
 baseline = 163
@@ -101,18 +105,19 @@ position = Vector2( -156, -2 )
 texture = ExtResource( 6 )
 
 [node name="Marrano" parent="Props" index="4" instance=ExtResource( 1 )]
-position = Vector2( 377, 310 )
+position = Vector2( -15, 262 )
+scale = Vector2( 0.1, 0.1 )
 script = ExtResource( 11 )
 description = "Marrano"
-baseline = 194
+baseline = 834
 walk_to_point = Vector2( 70, 113 )
 texture = ExtResource( 12 )
 
 [node name="CollisionPolygon2D" parent="Props/Marrano" index="0"]
-polygon = PoolVector2Array( -130, -93, 24.5096, -74.9739, 26, -149, 73, -201, 146, -166, 157, -108, 94, -67, 177, -34, 219, 23, 222, 88, 194, 153, -99, 192, -205, 122, -225, 60, -210, -12 )
+polygon = PoolVector2Array( -694.774, -388.995, -338.008, -637.493, -92.3861, -665.869, 236.869, -388.995, 524.968, -250.558, 667.146, 26.3162, 644.697, 333.122, 147.073, 740.95, -447.832, 677.344, -844.436, 153.528 )
 
 [node name="BaselineHelper" parent="Props/Marrano" index="1"]
-position = Vector2( 0, 194 )
+position = Vector2( 0, 834 )
 
 [node name="WalkToHelper" parent="Props/Marrano" index="2"]
 position = Vector2( 70, 113 )
@@ -123,6 +128,7 @@ texture = ExtResource( 12 )
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
+position = Vector2( -1.49835, 0 )
 navpoly = SubResource( 1 )
 
 [editable path="Props/Bg"]
