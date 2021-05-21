@@ -399,6 +399,7 @@ walk_to_point = Vector2( -218, 0 )
 cursor = 8
 script_name = "Pez"
 text_color = Color( 0.764706, 0.388235, 0.176471, 1 )
+vo_name = "vo_fish"
 
 [node name="CollisionPolygon2D" parent="." index="0"]
 polygon = PoolVector2Array( -18, -311, -75, -290, -89, -230, -66, -170, -52, -153, -66, -125, -81, -80, -60, -61, -41, -55, -50, 6, 37, 3, 28, -51, 44, -66, 40, -127, 59, -123, 109, -146, 100, -175, 77, -177, 70, -158, 51, -149, 46, -167, 72, -248, 48, -295 )
@@ -418,7 +419,7 @@ position = Vector2( 0, -144 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 30 )
 animation = "idle"
-frame = 3
+frame = 10
 playing = true
 
 [node name="DialogPos" parent="." index="6"]

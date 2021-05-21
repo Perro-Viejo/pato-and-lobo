@@ -39,5 +39,6 @@ func on_item_used(item: Item) -> void:
 
 func sleep(is_in_queue := true) -> void:
 	if is_in_queue: yield()
+	A.play('sfx_granny_sleep', global_position, false)
 	$AnimationPlayer.play('sleep')
 	yield(E.wait(1.0, false), 'completed')

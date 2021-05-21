@@ -28,6 +28,8 @@ func option_selected(opt: DialogOption) -> void:
 				'Conejuno: Le advierto que ese la puede dejar tirada en el piso',
 				'Conejuno: Así que tómeselo con despacio... con calmación',
 				'Pato: Tabuenoeñor',
+				A.play('sfx_prepare_drink', C.player.global_position, true, true),
+				A.play('sfx_cocktail_pu', C.player.global_position),
 				I.add_item('CocktailGolem'),
 			]), 'completed')
 		'Opt2':
@@ -44,8 +46,9 @@ func option_selected(opt: DialogOption) -> void:
 				'Conejuno: ¿Así que conoce nuestra carta secreta?',
 				'Conejuno: Me cae bien esta pelada.',
 				'Conejuno: Péreme tantico lo preparo',
-				E.wait(2),
+				A.play('sfx_prepare_drink', C.player.global_position, true, true),
 				'Conejuno: Aquí está. Un sabor clásico, pero no muy fuerte.',
+				A.play('sfx_cocktail_pu', C.player.global_position),
 				I.add_item('CocktailSecret')
 			]), 'completed')
 		'Exit':

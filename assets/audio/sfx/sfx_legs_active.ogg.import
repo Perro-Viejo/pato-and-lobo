@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_legs_active.ogg-4e225263a8a778bd81312810e1103be1.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_legs_active.ogg"
+dest_files=[ "res://.import/sfx_legs_active.ogg-4e225263a8a778bd81312810e1103be1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

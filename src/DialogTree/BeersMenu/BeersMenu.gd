@@ -20,7 +20,9 @@ func option_selected(opt: DialogOption) -> void:
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
 				'Pato: Gracias.',
+				A.play('sfx_beer', C.player.global_position),
 				G.display('Pato se tomó la cerveza rápido'),
+				A.play('sfx_drink_beer', C.player.global_position),
 				'Pato: glup glup glup glup',
 				'...',
 				'Pato: Pues no me dio un brinco'
@@ -29,7 +31,9 @@ func option_selected(opt: DialogOption) -> void:
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
 				'Pato: Gracias.',
+				A.play('sfx_beer', C.player.global_position),
 				G.display('Pato se tomó la cerveza lentamente'),
+				A.play('sfx_drink_beer', C.player.global_position),
 				'Pato: glup glup glup glup glup glup glup glup glup glup',
 				'...',
 				'Pato: Ay juepuerca... esta Patada al espacio...'
@@ -41,7 +45,9 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt3':
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
+				A.play('sfx_beer', C.player.global_position),
 				'Pato: Gracias.',
+				A.play('sfx_drink_beer', C.player.global_position),
 				'Pato: glup glup.... glup...... glup',
 				'...',
 				'Pato: ¡Qué cerveza más fea!',

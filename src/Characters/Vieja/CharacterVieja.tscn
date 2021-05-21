@@ -632,16 +632,17 @@ cursor = 8
 script_name = "Vieja"
 always_on_top = true
 text_color = Color( 0.701961, 0.682353, 0.639216, 1 )
+vo_name = "vo_granny"
 
 [node name="CollisionPolygon2D" parent="." index="0"]
 scale = Vector2( 0.5, 0.5 )
 polygon = PoolVector2Array( -110, -454, -120, -394, -148, -372, -146, -276, -110, -240, -126, 0, 112, 0, 130, -54, 104.08, -78.7241, 76, -56, 34, -186, 32, -234, 60, -262, 106, -248, 132, -274, 156, -336, 122, -360, 60, -348, 44, -458, 12, -462, -24, -398, -38, -400, -78, -462 )
-disabled = true
 
 [node name="Sleep" type="CollisionPolygon2D" parent="." index="1"]
 visible = false
 scale = Vector2( 0.5, 0.5 )
 polygon = PoolVector2Array( -243, -179, -351, -161, -353, -130, -292, -97, -292, -85, -349, -38, -343, -15, -281, -10, -273, 18, -235, 32, -196, 20, -181, 23, -137, -14, -108, -3, 141, 3, 144, -18, 225, -21, 235, -77, 216, -90, 215, -133, 183, -136, 182, -118, 155, -120, 135, -188, 18, -201, -93, -157, -137, -156, -164, -187, -166, -245, -220, -281, -252, -266 )
+disabled = true
 
 [node name="WalkToHelper" parent="." index="3"]
 position = Vector2( -210, 61 )
@@ -655,12 +656,11 @@ anims/talk_d = SubResource( 3 )
 visible = false
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="6"]
-position = Vector2( 0, -57 )
-rotation = -1.5708
+position = Vector2( 0, -48 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 51 )
-animation = "sleep"
-frame = 4
+animation = "idle"
+frame = 21
 playing = true
 offset = Vector2( -16, -56 )
 

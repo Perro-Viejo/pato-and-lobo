@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_cocktail_pu.ogg-16efbac28541307ebfbf5f9bb3537ba4.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_cocktail_pu.ogg"
+dest_files=[ "res://.import/sfx_cocktail_pu.ogg-16efbac28541307ebfbf5f9bb3537ba4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

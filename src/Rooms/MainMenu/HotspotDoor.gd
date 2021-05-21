@@ -5,7 +5,8 @@ extends Hotspot
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
 	yield(E.run([
-		C.walk_to_clicked()
+		C.walk_to_clicked(),
+		A.play('sfx_door_open', global_position),
 	]), 'completed')
 	E.goto_room('Bar')
 
