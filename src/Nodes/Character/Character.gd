@@ -131,7 +131,7 @@ func grab(is_in_queue := true) -> void:
 
 
 func get_dialog_pos() -> float:
-	return sprite.position.y
+	return $DialogPos.position.y
 
 
 # Quita un ítem del inventario del personaje (¿o del jugador?)

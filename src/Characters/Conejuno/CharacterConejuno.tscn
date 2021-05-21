@@ -260,5 +260,8 @@ position = Vector2( 0, -106 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 27 )
 animation = "idle"
-frame = 14
+frame = 20
 playing = true
+
+[node name="DialogPos" parent="." index="6"]
+position = Vector2( 0, -226 )

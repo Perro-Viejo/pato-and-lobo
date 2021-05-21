@@ -37,6 +37,8 @@ func on_room_entered() -> void:
 		$Props/Coat.disable(false)
 	if not state.has_brooms:
 		$Props/Brooms.disable(false)
+	if state.vieja_sleeping:
+		$Characters/CharacterVieja.sleep()
 
 func on_room_exited() -> void:
 	A.stop('bg_bar', 0, false)

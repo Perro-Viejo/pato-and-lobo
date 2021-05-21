@@ -51,10 +51,6 @@ func on_look() -> void:
 		E.run(['Pato: Hay algo de angustia en sus mirada.'])
 
 
-func get_dialog_pos() -> float:
-	return $AnimatedSprite.position.y - 16.0
-
-
 func remove_mask(is_in_queue := true) -> void:
 	if is_in_queue: yield()
 	yield(_toggle_mask(false), 'completed')

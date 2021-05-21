@@ -8,7 +8,3 @@ func on_interact() -> void:
 
 func on_look() -> void:
 	.on_look()
-
-
-func get_dialog_pos() -> float:
-	return $AnimatedSprite.position.y - 32.0

@@ -12,7 +12,3 @@ func on_look() -> void:
 		'...',
 		C.player_say('Sirve tragos y escucha historias mierdas todos los días')
 	])
-
-
-func get_dialog_pos() -> float:
-	return $AnimatedSprite.position.y + 16.0

@@ -19,6 +19,7 @@ func on_look() -> void:
 func on_item_used(item: Item) -> void:
 	if item.script_name == 'CocktailSuper':
 		E.current_room.state.vieja_sleeping = true
+		E.current_room.state.has_dentures = true
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.face_clicked(),
@@ -34,10 +35,6 @@ func on_item_used(item: Item) -> void:
 			E.current_room.get_prop('GlassWithDentures').enable(),
 			'Pato: ¡Ferpecto! Alcanzó a dejar sus muelas en el vaso.'
 		]), 'completed')
-
-
-func get_dialog_pos() -> float:
-	return $AnimatedSprite.position.y - 72.0
 
 
 func sleep(is_in_queue := true) -> void:
