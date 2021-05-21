@@ -14,9 +14,11 @@ func on_room_entered() -> void:
 	I.add_item('Pato', false)
 	I.add_item('Lobo', false)
 
+
 func on_room_exited() -> void:
 	C.get_character('Lobo').enable(false)
 	.on_room_exited()
+
 
 func on_room_transition_finished() -> void:
 	if Globals.has_done(Globals.GameState.DOME_SPOTTED):

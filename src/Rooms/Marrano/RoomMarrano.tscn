@@ -26,7 +26,7 @@ characters = [ {
 "position": Vector2( 0, 20 ),
 "script_name": "Lobo"
 }, {
-"position": Vector2( -317, 150 ),
+"position": Vector2( -300, -163 ),
 "script_name": "Marrano"
 } ]
 limit_left = -960.0
