@@ -59,13 +59,13 @@ func option_selected(opt: DialogOption) -> void:
 					'Pez: Podrías... si no estuvieras tan sucia.',
 					'Pato: ¡YO NO ESTOY SUCIA!',
 					G.display('Pato se enojó como hace mucho no lo hacía'),
-					G.display('Ora sí estaba dispuesta a derrotarlo en la pelea de miradas'),
+					G.display('Ora sí estaba dispuesta a derrotar a Pez en la pelea de miradas'),
 					'Pez: Estás muuuuuy sucia. Lo noto desde aquí.',
-					'Pato: Ya... ¿y qué tengo sucio?',
-					'Pez: Tus alas... ¡guagh!',
+					'Pato: Qué qué... ¿Qué tengo sucio?',
+					'Pez: Las alas... ¡guagh!',
 					pez.face_right(),
 					'...',
-					'Pez: No sé cómo puedes vivir así'
+					'Pez: No sé cómo puedes vivir así.',
 				]), 'completed')
 				opt.visible = false
 				show_option('Opt4')
@@ -80,27 +80,38 @@ func option_selected(opt: DialogOption) -> void:
 				opt.visible = false
 				show_option('Opt4')
 		'Opt4':
-			E.shake_camera({strength = 5.0, duration = 5.0})
-			E.main_camera.offset_v = -2.0
-			yield(E.tween_zoom(Vector2.ONE * 0.3, 5.0, false), 'completed')
-			yield(E.run([
-				'Pez: ¡NO PUEDE SER!',
-				E.tween_zoom(Vector2.ONE, 0.5),
-				pez.face_right(),
-				'...',
-				'Pez: Me has derrotado...',
-				G.display('Para Pato fue algo realmente fácil.'),
-				G.display('El viejo truco de mirar el entrecejo, no los ojos.'),
-				'Pato: ¡Pues sí! Ahora dame tu aparato',
-				'Pez: No puedo darte todo, porque si lo hago no podré volver a casa.',
-				'Pez: Te daré sólo las piernas.'
-			]), 'completed')
-			opt.visible = false
+			if not Globals.has_done(Globals.GameState.SEA_DREAMED):
+				yield(E.run([
+					pez.face_left(),
+					G.display('Pez miró las alas de Pato.'),
+					'Pez: Primero quítate el mugre de las alas... y lucharemos',
+					pez.face_right()
+				]), 'completed')
+				D.finish_dialog()
+				return
+			else:
+				E.shake_camera({strength = 5.0, duration = 5.0})
+				E.main_camera.offset_v = -2.0
+				yield(E.tween_zoom(Vector2.ONE * 0.3, 5.0, false), 'completed')
+				yield(E.run([
+					'Pez: ¡NO PUEDE SER!',
+					E.tween_zoom(Vector2.ONE, 0.5),
+					pez.face_right(),
+					'...',
+					'Pez: Me has derrotado...',
+					G.display('Para Pato fue algo realmente fácil.'),
+					G.display('El viejo truco de mirar el entrecejo, no los ojos.'),
+					'Pato: ¡Pues sí! Ahora dame tu aparato',
+					'Pez: No puedo darte todo, porque si lo hago no podré volver a casa.',
+					'Pez: Te daré sólo las piernas.'
+				]), 'completed')
+				opt.visible = false
+				show_option('Opt7')
 		'Opt5':
 			yield(E.run([
-				'Pez: ¿Y oler el sudor... y ver los cuerpo sucios?',
-				'Pez: Ni porque me pagaran un chirrión de pesos',
-				'Pato: ¿Qué haces en un lugar así entonces?',
+				'Pez: Este no es el bar que conocí hace unos años.',
+				'Pez: Ha cambiado...pa peor.',
+				'Pato: ¿Por qué vienes entonces?',
 				pez.face_right(),
 				'...',
 				'Pez: Algo me dijo que debía venir esta noche...',
@@ -108,9 +119,10 @@ func option_selected(opt: DialogOption) -> void:
 				G.display('...pasaron muchos minutos...'),
 				pez.face_left(),
 				'...',
-				'Pez: Sólo sé que debo responder a una pregunta.',
-				'Pez: Pero no sé cuál es la pregunta...'
+				'Pez: Tal vez para contar sobre el pasado de este lugar.',
+				'Pez: Puede que así vuelva a ser como solía ser...'
 			]), 'completed')
+			opt.visible = false
 			show_option('Opt6')
 		'Opt6':
 			yield(E.run([
@@ -118,7 +130,27 @@ func option_selected(opt: DialogOption) -> void:
 			]), 'completed')
 			D.show_dialog('PezQuestions')
 			return
+		'Opt7':
+			if E.current_room.state.cocktail_unlocked:
+				yield(E.run([
+					'Pez: Bien. Pues es la hora de cumplir.',
+					'Pez: Aquí están...',
+					I.add_item('Legs'),
+					'Pez: Y no siendo más mi propósito en este lugar...',
+					'Pez: Mmmmme voy.',
+					pez.disable(),
+					'...',
+					'Pato: A juepuerca. Desapareció...',
+					G.display('Pato sorprendida, pero Pato con patas de lobo.')
+				]), 'completed')
+				D.finish_dialog()
+				return
+			else:
+				yield(E.run([
+					'Pez: Antes de darte mis patas, hay algo que debemos resolver'
+				]), 'completed')
 		'Exit':
+			yield(E.run([pez.face_right()]), 'completed')
 			D.finish_dialog()
 			return
 	_show_options()

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" load_steps=9 format=2]
 
 [ext_resource path="res://src/DialogTree/PezQuestions/PezQuestions.gd" type="Script" id=1]
 [ext_resource path="res://src/DialogTree/DialogOption.gd" type="Script" id=2]
@@ -7,31 +7,45 @@
 resource_name = "TheQuestion"
 script = ExtResource( 2 )
 id = "TheQuestion"
-text = "¿Qué puede tumbar a la vieja?"
+text = "¿Cuál era esa bebida prohibida especial?"
 visible = false
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "¿Qué le dijo un perico a una paloma?"
+text = "¿Cómo era este lugar antes?"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "Opt3"
 script = ExtResource( 2 )
 id = "Opt3"
-text = "¿A qué vinimos a este mundo?"
+text = "¿Qué es lo que más extrañas?"
 visible = true
 
 [sub_resource type="Resource" id=4]
 resource_name = "Opt4"
 script = ExtResource( 2 )
 id = "Opt4"
-text = "¿Cuánto cuesta el litro de Nectar?"
+text = "¿Esconde algún secreto el bar?"
+visible = true
+
+[sub_resource type="Resource" id=5]
+resource_name = "Opt5"
+script = ExtResource( 2 )
+id = "Opt5"
+text = "¿Bebidas prohibidas?"
+visible = false
+
+[sub_resource type="Resource" id=6]
+resource_name = "Exit"
+script = ExtResource( 2 )
+id = "Exit"
+text = "Ya no quiero hablar más del pasado bar"
 visible = true
 
 [resource]
 script = ExtResource( 1 )
-options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ]
 script_name = "PezQuestions"
