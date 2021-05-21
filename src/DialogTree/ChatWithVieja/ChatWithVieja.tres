@@ -7,28 +7,28 @@
 resource_name = "Opt1"
 script = ExtResource( 2 )
 id = "Opt1"
-text = "Opción 1"
+text = "¿Cómo la está pasando señora?"
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "Opción 2"
+text = "¿Qué está tomando?"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "Opt3"
 script = ExtResource( 2 )
 id = "Opt3"
-text = "Opción 3"
-visible = true
+text = "¿Qué le gustaría tomar?"
+visible = false
 
 [sub_resource type="Resource" id=4]
 resource_name = "Opt4"
 script = ExtResource( 2 )
 id = "Opt4"
-text = "Opción 4"
+text = "Tiene usted unos dientes muy bonitos"
 visible = true
 
 [sub_resource type="Resource" id=5]

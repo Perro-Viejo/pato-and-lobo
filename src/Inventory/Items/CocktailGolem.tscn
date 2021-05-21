@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/Inventory/InventoryItem.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Inventory/Items/Cocktail.gd" type="Script" id=2]
-[ext_resource path="res://src/Inventory/Items/cocktail.png" type="Texture" id=3]
+[ext_resource path="res://src/Inventory/Items/CocktailGolem.gd" type="Script" id=2]
+[ext_resource path="res://src/Inventory/Items/cocktail_golem.png" type="Texture" id=3]
 
-[node name="Cocktail" instance=ExtResource( 1 )]
+[node name="CocktailGolem" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 description = "Coctel Sueño del golem"
-script_name = "Cocktail"
+script_name = "CocktailGolem"
 cursor = 1
 
 [node name="Icon" parent="." index="0"]

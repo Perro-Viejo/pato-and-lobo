@@ -43,3 +43,11 @@ func show_dialog(script_name: String) -> void:
 
 func finish_dialog() -> void:
 	emit_signal('dialog_finished')
+
+
+func get_dialog_tree(script_name: String) -> DialogTree:
+	for t in trees:
+		var tree: DialogTree = t
+		if tree.script_name.to_lower() == script_name.to_lower():
+			return t
+	return null

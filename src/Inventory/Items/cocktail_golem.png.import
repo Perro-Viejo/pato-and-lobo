@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sleep.png-815eb226b9e721f624e67a4e89ac763d.stex"
+path="res://.import/cocktail_golem.png-36ca37f2bb7d98a0da4d9be82b5122ff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Characters/Viejo/sleep.png"
-dest_files=[ "res://.import/sleep.png-815eb226b9e721f624e67a4e89ac763d.stex" ]
+source_file="res://src/Inventory/Items/cocktail_golem.png"
+dest_files=[ "res://.import/cocktail_golem.png-36ca37f2bb7d98a0da4d9be82b5122ff.stex" ]
 
 [params]
 

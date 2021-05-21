@@ -22,6 +22,13 @@ func disconnect_option_selection() -> void:
 		D.disconnect('option_selected', self, 'option_selected')
 
 
+func show_option(id: String) -> void:
+	for o in options:
+		if (o as DialogOption).id == id:
+			o.visible = true
+			break
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _show_options() -> void:
 	D.emit_signal('dialog_requested', options)

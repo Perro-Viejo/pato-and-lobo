@@ -8,10 +8,11 @@ func _init() -> void:
 		visited_first_time = self.visited_first_time,
 		visited_times = self.visited_times,
 		has_mask = true,
-		has_dentures = true,
+		has_dentures = false,
 		has_coat = true,
 		has_brooms = true,
-		dj_uses_mask = true
+		dj_uses_mask = true,
+		vieja_sleeping = false,
 	}
 
 
@@ -46,24 +47,23 @@ func on_room_exited() -> void:
 func on_room_transition_finished() -> void:
 	if visited_first_time:
 		E.run_cutscene([
-			G.display('Esta es Pato'),
-			'Pato: Esta fiesta está re-buena...',
+			G.display('Ella es Pato.'),
+			'Pato: Esta fiesta está re-buena.',
 			C.player.face_left(),
-			'Pato: y está más buena porque Lobo está aquí',
-			G.display('Y está enamorada de Lobo'),
+			'Pato: Además Lobo está aquí.',
+			G.display('Está enamorada de Lobo.'),
 			C.change_camera_owner(C.get_character('Lobo')),
-			'...',
+			E.wait(2.0),
 			C.change_camera_owner(C.player),
-			G.display('Pero no se atreve a hablarle...'),
+			G.display('Pero no se atreve a hablarle.'),
 			C.player.face_right(),
-			'Pato: Hoy es el día.',
+			'Pato: Hoy es el día....',
+			G.display('Puedes disfrazarla.'),
+			G.display('O vivir sus ensoñaciones para que se llene de coraje.'),
 			'Pato: ¡HOY LE HABLARÉ A LOBO!',
-			G.display('Ayúdala a ganar coraje para que le hable a Lobo'),
-			G.display('Puedes disfrazarla'),
-			G.display('O vivir sus ensoñaciones'),
-			G.display('Haz clic para interactuar con los objetos'),
-			G.display('Y clic derecho para examinarlos'),
-			G.display('El inventario y la barra de coraje están arriba a la izquierda'),
+			G.display('Haz clic para interactuar con los objetos.'),
+			G.display('Y clic derecho para examinarlos.'),
+			G.display('El inventario y la barra de coraje están arriba a la izquierda.'),
 			G.show_inventory(2.0),
 		])
 	elif C.player.last_room == 'Sea':

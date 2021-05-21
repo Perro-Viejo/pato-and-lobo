@@ -44,7 +44,7 @@ characters = [ {
 "position": Vector2( -1292, 353 ),
 "script_name": "Lagarto"
 }, {
-"position": Vector2( 340, 276 ),
+"position": Vector2( 318, 221 ),
 "script_name": "Vieja"
 }, {
 "position": Vector2( 1300, 596 ),

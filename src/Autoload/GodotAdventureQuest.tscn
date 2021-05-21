@@ -12,7 +12,7 @@
 [ext_resource path="res://src/Rooms/Bar/RoomBar.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Characters/Marrano/Marrano.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Characters/Lagarto/CharacterLagarto.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/Characters/Viejo/CharacterVieja.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Characters/Vieja/CharacterVieja.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/Characters/Pez/CharacterPez.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Resource" id=1]

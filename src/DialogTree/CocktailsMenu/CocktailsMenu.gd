@@ -28,7 +28,7 @@ func option_selected(opt: DialogOption) -> void:
 				'Conejuno: Le advierto que ese la puede dejar tirada en el piso',
 				'Conejuno: Así que tómeselo con despacio... con calmación',
 				'Pato: Tabuenoeñor',
-				I.add_item('Cocktail'),
+				I.add_item('CocktailGolem'),
 			]), 'completed')
 		'Opt2':
 			yield(E.run([
@@ -38,6 +38,15 @@ func option_selected(opt: DialogOption) -> void:
 				G.display('Pato pensó en algo...'),
 				'Pato: Bueno pues... (sapo)',
 				#TODO: ¿Subirle el coraje cuando se tome este? (a.k.a. final alternativo)
+			]), 'completed')
+		'Opt3':
+			yield(E.run([
+				'Conejuno: ¿Así que conoce nuestra carta secreta?',
+				'Conejuno: Me cae bien esta pelada.',
+				'Conejuno: Péreme tantico lo preparo',
+				E.wait(2),
+				'Conejuno: Aquí está. Un sabor clásico, pero no muy fuerte.',
+				I.add_item('CocktailSecret')
 			]), 'completed')
 		'Exit':
 			D.show_dialog('ChatWithConejuno')
