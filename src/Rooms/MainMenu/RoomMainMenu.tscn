@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Rooms/MainMenu/RoomMainMenu.gd" type="Script" id=2]
@@ -6,22 +6,76 @@
 [ext_resource path="res://src/Rooms/MainMenu/bg.png" type="Texture" id=4]
 [ext_resource path="res://src/Rooms/MainMenu/HotspotDoor.gd" type="Script" id=5]
 [ext_resource path="res://src/Nodes/Hotspot/Hotspot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Rooms/MainMenu/PropCredits.gd" type="Script" id=7]
+[ext_resource path="res://src/Rooms/MainMenu/PropTitle.gd" type="Script" id=8]
+[ext_resource path="res://src/Rooms/MainMenu/credits.png" type="Texture" id=9]
+[ext_resource path="res://src/Rooms/MainMenu/title.png" type="Texture" id=10]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( -937, 521, -929, 298, -725, 370, 938, 519, 936, 368 )
+polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 0, 2, 4 ) ]
+outlines = [ PoolVector2Array( -929, 298, -725, 370, 936, 368, 938, 519, -937, 521 ) ]
 
 [node name="RoomMainMenu" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 script_name = "MainMenu"
-has_player = false
+limit_left = -960.0
+limit_right = 960.0
+limit_top = -540.0
+limit_bottom = 540.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 3 )]
 clickable = false
 texture = ExtResource( 4 )
 
+[node name="Credits" parent="Props" index="1" instance=ExtResource( 3 )]
+position = Vector2( 367, 91 )
+scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 7 )
+description = "The credits"
+cursor = 1
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" parent="Props/Credits" index="0"]
+polygon = PoolVector2Array( -583.75, -246.25, 587.5, -245, 561.25, 261.25, -585, 243.75 )
+
+[node name="Sprite" parent="Props/Credits" index="3"]
+texture = ExtResource( 9 )
+
+[node name="Title" parent="Props" index="2" instance=ExtResource( 3 )]
+position = Vector2( 365, -299 )
+script = ExtResource( 8 )
+description = "Zoorgibar"
+cursor = 1
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" parent="Props/Title" index="0"]
+polygon = PoolVector2Array( -438, -127, 441, -130, 431, 117, -425, 118 )
+
+[node name="Sprite" parent="Props/Title" index="3"]
+texture = ExtResource( 10 )
+
 [node name="Hotspot" parent="Hotspots" index="0" instance=ExtResource( 6 )]
 script = ExtResource( 5 )
 description = "Entrada al bar"
+walk_to_point = Vector2( -314, 377 )
 cursor = 1
 
 [node name="CollisionPolygon2D" parent="Hotspots/Hotspot" index="0"]
 polygon = PoolVector2Array( -505, -36, -497, 363, -139, 363, -153, -48 )
 
+[node name="WalkToHelper" parent="Hotspots/Hotspot" index="2"]
+position = Vector2( -314, 377 )
+
+[node name="Entry" type="Position2D" parent="Points" index="0"]
+position = Vector2( -795, 432 )
+
+[node name="Entrance" type="Position2D" parent="Points" index="1"]
+position = Vector2( -314, 377 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
+navpoly = SubResource( 1 )
+
+[editable path="Props/Credits"]
+[editable path="Props/Title"]
 [editable path="Hotspots/Hotspot"]

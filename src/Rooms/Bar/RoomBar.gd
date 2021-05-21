@@ -63,10 +63,6 @@ func on_room_transition_finished() -> void:
 			G.display('Puedes disfrazarla.'),
 			G.display('O vivir sus ensoñaciones para que se llene de coraje.'),
 			'Pato: ¡HOY LE HABLARÉ A LOBO!',
-			G.display('Haz clic para interactuar con los objetos.'),
-			G.display('Y clic derecho para examinarlos.'),
-			G.display('El inventario y la barra de coraje están arriba a la izquierda.'),
-			G.show_inventory(2.0),
 		])
 	elif C.player.last_room == 'Sea':
 		Globals.courage += 25

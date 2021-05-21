@@ -84,7 +84,9 @@ texture = ExtResource( 20 )
 range_item_cull_mask = 6
 
 [node name="Brooms" parent="Props" index="1" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( -980.978, -383.2 )
+input_pickable = false
 script = ExtResource( 14 )
 walk_to_point = Vector2( -67.022, 200.2 )
 cursor = 1

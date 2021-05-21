@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/costume.png-309555c87bc05aebf60cb47441483805.stex"
+path="res://.import/credits.png-eabb4dddc7b2fbeef6cd42b3d58eaf94.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Characters/Pato/Sprites/costume.png"
-dest_files=[ "res://.import/costume.png-309555c87bc05aebf60cb47441483805.stex" ]
+source_file="res://src/Rooms/MainMenu/credits.png"
+dest_files=[ "res://.import/credits.png-eabb4dddc7b2fbeef6cd42b3d58eaf94.stex" ]
 
 [params]
 
