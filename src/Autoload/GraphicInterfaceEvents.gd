@@ -10,6 +10,8 @@ signal continue_clicked
 signal freed
 signal blocked
 signal interface_hidden
+signal inventory_show_requested(time)
+signal inventory_shown
 
 var blocked := false
 
@@ -20,6 +22,7 @@ var blocked := false
 # no hace parte del mundo del juego (o sea, que no ha sido dicho por un personaje).
 func display(msg: String, is_in_queue := true) -> void:
 	if is_in_queue: yield()
+
 	if E.cutscene_skipped:
 		yield(get_tree(), 'idle_frame')
 		return
@@ -51,3 +54,14 @@ func block() -> void:
 
 func hide_interface() -> void:
 	emit_signal('interface_hidden')
+
+
+func show_inventory(time := 1.0, is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	
+	if E.cutscene_skipped:
+		yield(get_tree(), 'idle_frame')
+		return
+	
+	emit_signal('inventory_show_requested', time)
+	yield(self, 'inventory_shown')

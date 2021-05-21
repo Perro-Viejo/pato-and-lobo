@@ -73,6 +73,11 @@ func get_character(script_name: String) -> Character:
 
 func change_camera_owner(c: Character, is_in_queue := true) -> void:
 	if is_in_queue: yield()
+	
+	if E.cutscene_skipped:
+		yield(get_tree(), 'idle_frame')
+		return
+	
 	camera_owner = c
 	yield(get_tree(), 'idle_frame')
 

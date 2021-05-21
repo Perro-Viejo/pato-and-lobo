@@ -8,14 +8,12 @@ func start() -> void:
 	# opciones del diálogo
 	# P.e. Hacer que el personaje jugable mire al personaje con el que va a hablar,
 	# camine hasta éste y lo salude (o sea saludado).
-	yield(
-		E.run([
-			C.walk_to_clicked(),
-			C.player.face_up(),
-			'Conejuno: ¿Qué le sirvo mijita?'
-		]),
-		'completed'
-	)
+	yield(E.run([
+		C.walk_to_clicked(),
+		C.face_clicked(),
+		'Pato: Hola señora',
+		'Vieja: Hola.',
+	]), 'completed')
 	
 	# La llamada al método start del padre hace que se muestren las opciones
 	.start()
@@ -24,15 +22,6 @@ func start() -> void:
 func option_selected(opt: DialogOption) -> void:
 	yield(E.run([C.player_say(opt.text)]), 'completed')
 	match opt.id:
-		'Opt1':
-			D.show_dialog('BeersMenu')
-			return
-		'Opt2':
-			D.show_dialog('CocktailsMenu')
-			return
 		'Exit':
-			yield(E.run([
-				C.player_say(opt.text),
-				'Conejuno: Entonces ábrase'
-			]), 'completed')
+			yield(E.run(['Vieja: Que se diviertas... jijijijijiji']), 'completed')
 			D.finish_dialog()

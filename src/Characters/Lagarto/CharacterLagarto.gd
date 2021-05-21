@@ -23,7 +23,7 @@ func on_interact() -> void:
 	elif _can_put_mask():
 		yield(
 			E.run([
-				'Lagarto: Un momento. Una estrella no habla cara a cara con la chusma',
+				'Lagarto: Un momento. Una estrella no habla cara a cara con la chusma.',
 				put_mask(),
 				'Lagarto: Listo. ¿Qué pasó?'
 			]),
@@ -44,10 +44,11 @@ func on_interact() -> void:
 
 func on_look() -> void:
 	if _using_mask:
-		E.run([
-			'Pato: Esa máscara del DJ podría servirme como disfraz',
-			'Pato: Así podría acercarme a Lobo...'
-		])
+		E.run(['Pato: Esa máscara del DJ puede servirme como disfraz.'])
+	elif _can_put_mask():
+		E.run(['Pato: Con razón usaba esa máscara... está todo llevado.'])
+	else:
+		E.run(['Pato: Hay algo de angustia en sus mirada.'])
 
 
 func get_dialog_pos() -> float:

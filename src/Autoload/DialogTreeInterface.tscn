@@ -1,11 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Autoload/DialogTreeInterface.gd" type="Script" id=1]
 [ext_resource path="res://src/DialogTree/ChatWithConejuno/ChatWithConejuno.tres" type="Resource" id=2]
 [ext_resource path="res://src/DialogTree/ChatWithMarrano/ChatWithMarrano.tres" type="Resource" id=3]
 [ext_resource path="res://src/DialogTree/ChatWithLagarto/ChatWithLagarto.tres" type="Resource" id=4]
 [ext_resource path="res://src/DialogTree/SongList/SongList.tres" type="Resource" id=5]
+[ext_resource path="res://src/DialogTree/BeersMenu/BeersMenu.tres" type="Resource" id=6]
+[ext_resource path="res://src/DialogTree/CocktailsMenu/CocktailsMenu.tres" type="Resource" id=7]
+[ext_resource path="res://src/DialogTree/ChatWithVieja/ChatWithVieja.tres" type="Resource" id=8]
 
 [node name="DialogTreeInterface" type="Node"]
 script = ExtResource( 1 )
-trees = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ]
+trees = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]

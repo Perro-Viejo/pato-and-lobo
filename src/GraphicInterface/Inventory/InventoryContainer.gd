@@ -29,6 +29,7 @@ func _ready():
 	I.connect('item_added', self, '_add_item')
 	I.connect('item_removed', self, '_remove_item')
 	I.connect('courage_updated', self, '_show_courage')
+	G.connect('inventory_show_requested', self, '_show_and_hide')
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
@@ -122,3 +123,12 @@ func _show_courage(courage: int) -> void:
 	_close()
 	yield($Tween, 'tween_all_completed')
 	I.emit_signal('courage_update_shown')
+
+
+func _show_and_hide(time := 1.0) -> void:
+	_open()
+	yield($Tween, 'tween_all_completed')
+	yield(E.wait(time, false), 'completed')
+	_close()
+	yield($Tween, 'tween_all_completed')
+	G.emit_signal('inventory_shown')

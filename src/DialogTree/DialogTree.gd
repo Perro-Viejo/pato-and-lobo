@@ -10,11 +10,16 @@ export var script_name := ''
 func start() -> void:
 	_show_options()
 	yield(D, 'dialog_finished')
-	D.disconnect('option_selected', self, 'option_selected')
+	disconnect_option_selection()
 
 
 func option_selected(_opt: DialogOption) -> void:
 	pass
+
+
+func disconnect_option_selection() -> void:
+	if D.is_connected('option_selected', self, 'option_selected'):
+		D.disconnect('option_selected', self, 'option_selected')
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

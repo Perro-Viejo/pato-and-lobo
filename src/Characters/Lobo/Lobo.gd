@@ -23,15 +23,11 @@ func on_interact() -> void:
 		E.goto_room('End')
 	else:
 		E.run([
+			C.face_clicked(),
 			C.player_say('¡¡¡Ayyyy pero qué guapote!!!'),
-#			'...',
-			C.player.face_left(),
-#			'...',
-			C.player.face_right(),
-#			'...',
 			'Pato: Nunca seré capaz de hablarle',
 			face_left(),
-			C.player.face_left(),
+			C.face_clicked(),
 			dance(),
 			'Pato: Ayyyy... qué rico se mueve... \/( > __ < \\)'
 		])

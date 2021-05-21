@@ -42,7 +42,7 @@ func option_selected(opt: DialogOption) -> void:
 				C.player_say(opt.text),
 				C.character_say('Marrano', 'Ábrase de aquí')
 			]), 'completed')
-			D.emit_signal('dialog_finished')
+			D.finish_dialog()
 			return
 			
 	_show_options()

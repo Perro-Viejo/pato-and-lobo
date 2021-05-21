@@ -54,12 +54,17 @@ func on_room_transition_finished() -> void:
 			C.change_camera_owner(C.get_character('Lobo')),
 			'...',
 			C.change_camera_owner(C.player),
+			G.display('Pero no se atreve a hablarle...'),
 			C.player.face_right(),
 			'Pato: Hoy es el día.',
 			'Pato: ¡HOY LE HABLARÉ A LOBO!',
-			G.display('Dale coraje para que le hable a Lobo'),
+			G.display('Ayúdala a ganar coraje para que le hable a Lobo'),
 			G.display('Puedes disfrazarla'),
-			G.display('O vivir ensoñaciones'),
+			G.display('O vivir sus ensoñaciones'),
+			G.display('Haz clic para interactuar con los objetos'),
+			G.display('Y clic derecho para examinarlos'),
+			G.display('El inventario y la barra de coraje están arriba a la izquierda'),
+			G.show_inventory(2.0),
 		])
 	elif C.player.last_room == 'Sea':
 		Globals.courage += 25

@@ -27,9 +27,9 @@
 [ext_resource path="res://src/Rooms/Bar/Sprites/sofas.png" type="Texture" id=27]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 859, 892, 1315, 946, -1871, 933, 335, 892, 1371, -180, 1829, 225, 938, 288, 841, 118, 1302, 508, 1556, 759, 1217, 775, 1014.21, 513.794, 779, 18, 641, -144, 477, 200, -206, -246, -222, -284, 475, -261, 758, 127, 677, 27, -209, -176, 48, 211, -1020, -274, -941, -275, -915, -177, -1008, 267, -1319, 253, -875, -178, -834, -60, -1144, 709, -304, -63, -1571, 671, -254, -177 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 11 ), PoolIntArray( 12, 13, 4 ), PoolIntArray( 11, 10, 1, 0, 14 ), PoolIntArray( 15, 16, 17 ), PoolIntArray( 18, 11, 14, 19 ), PoolIntArray( 12, 4, 7, 18 ), PoolIntArray( 19, 12, 18 ), PoolIntArray( 20, 15, 17, 19, 14, 21 ), PoolIntArray( 22, 23, 24, 25, 26 ), PoolIntArray( 24, 27, 28, 25 ), PoolIntArray( 21, 3, 29, 25, 28, 30 ), PoolIntArray( 29, 3, 2, 31 ), PoolIntArray( 31, 2, 22, 26 ), PoolIntArray( 20, 21, 30, 32 ) ]
-outlines = [ PoolVector2Array( -941, -275, -1020, -274, -1871, 933, 1315, 946, 1217, 775, 1556, 759, 1302, 508, 1014.21, 513.794, 758, 127, 841, 118, 938, 288, 1829, 225, 1371, -180, 641, -144, 779, 18, 677, 27, 475, -261, -222, -284, -206, -246, -209, -176, -254, -177, -304, -63, -834, -60, -875, -178, -915, -177 ), PoolVector2Array( -1571, 671, -1144, 709, -1008, 267, -1319, 253 ), PoolVector2Array( 48, 211, 335, 892, 859, 892, 477, 200 ) ]
+vertices = PoolVector2Array( 859, 892, 1315, 946, -1871, 933, 335, 892, 1371, -180, 1829, 225, 938, 288, 841, 118, 1302, 508, 1556, 759, 1217, 775, 1014.21, 513.794, -120, -182, -192, -276, 475, -261, 779, 18, 641, -144, 477, 200, 677, 27, 48, 211, -234, 36, -218, -68, 758, 127, -1008, 267, -409, 41, -1144, 709, -481, 36, -648, 40, -686, 35, -856, 36, -1020, -274, -941, -275, -946, -170, -1319, 253, -234, -170, -272, -21, -887, -63, -388, -22, -889, -169, -638, -14, -712, -18, -515, -12, -836, -15, -1571, 671 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 11 ), PoolIntArray( 12, 13, 14 ), PoolIntArray( 15, 16, 4 ), PoolIntArray( 11, 10, 1, 0, 17 ), PoolIntArray( 12, 14, 18, 17, 19, 20, 21 ), PoolIntArray( 22, 11, 17, 18 ), PoolIntArray( 15, 4, 7, 22 ), PoolIntArray( 18, 15, 22 ), PoolIntArray( 23, 24, 20, 19, 3, 25 ), PoolIntArray( 26, 24, 23, 27 ), PoolIntArray( 28, 27, 23, 29 ), PoolIntArray( 30, 31, 32, 23, 33 ), PoolIntArray( 21, 34, 12 ), PoolIntArray( 21, 20, 35 ), PoolIntArray( 36, 21, 35, 37 ), PoolIntArray( 32, 38, 36 ), PoolIntArray( 39, 27, 28, 40 ), PoolIntArray( 37, 24, 26, 41 ), PoolIntArray( 36, 37, 41, 39, 40 ), PoolIntArray( 36, 40, 42 ), PoolIntArray( 25, 3, 2, 43 ), PoolIntArray( 43, 2, 30, 33 ), PoolIntArray( 29, 23, 32, 36 ), PoolIntArray( 29, 36, 42 ) ]
+outlines = [ PoolVector2Array( -941, -275, -1020, -274, -1871, 933, 1315, 946, 1217, 775, 1556, 759, 1302, 508, 1014.21, 513.794, 758, 127, 841, 118, 938, 288, 1829, 225, 1371, -180, 641, -144, 779, 18, 677, 27, 475, -261, -192, -276, -120, -182, -234, -170, -218, -68, -887, -63, -889, -169, -946, -170 ), PoolVector2Array( -1571, 671, -1144, 709, -1008, 267, -1319, 253 ), PoolVector2Array( 48, 211, 335, 892, 859, 892, 477, 200 ), PoolVector2Array( -856, 36, -686, 35, -712, -18, -836, -15 ), PoolVector2Array( -638, -14, -515, -12, -481, 36, -648, 40 ), PoolVector2Array( -388, -22, -409, 41, -234, 36, -272, -21 ) ]
 
 [node name="RoomBar" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
@@ -45,7 +45,7 @@ characters = [ {
 "script_name": "Lagarto"
 }, {
 "position": Vector2( 340, 276 ),
-"script_name": "Viejo"
+"script_name": "Vieja"
 }, {
 "position": Vector2( 1300, 596 ),
 "script_name": "Pez"
@@ -112,7 +112,9 @@ position = Vector2( 90, 184 )
 texture = ExtResource( 16 )
 
 [node name="LunaPoster" parent="Props" index="3" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 1179, -564 )
+input_pickable = false
 script = ExtResource( 17 )
 description = "Póster de La Luna"
 baseline = -406

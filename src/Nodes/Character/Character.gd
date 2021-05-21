@@ -62,6 +62,11 @@ func walk(target_pos: Vector2, is_in_queue := true) -> void:
 func idle(is_in_queue := true) -> void:
 	if is_in_queue: yield()
 	$AnimationPlayer.play('idle_%s' % _looking_dir)
+	
+	if E.cutscene_skipped:
+		yield(get_tree(), 'idle_frame')
+		return
+	
 	yield(get_tree().create_timer(0.2), 'timeout')
 
 
