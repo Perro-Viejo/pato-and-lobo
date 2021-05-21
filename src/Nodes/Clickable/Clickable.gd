@@ -13,6 +13,7 @@ export var walk_to_point: Vector2 setget _set_walk_to_point
 export var look_at_point: Vector2
 export(Cursor.Type) var cursor
 export var script_name := ''
+export var always_on_top := false
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░

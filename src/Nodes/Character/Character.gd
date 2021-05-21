@@ -27,12 +27,14 @@ func _ready():
 	# Conectarse a señales del cielo
 	idle(false)
 	set_process(follow_player)
+	
+	if Engine.editor_hint:
+		set_process(true)
 
 
 func _process(_delta: float) -> void:
-	if Engine.editor_hint: return
-
-	if is_instance_valid(C.player):
+	if Engine.editor_hint: ._process(_delta)
+	elif is_instance_valid(C.player):
 		global_position = C.player.global_position
 
 
@@ -121,6 +123,10 @@ func grab(is_in_queue := true) -> void:
 		yield($AnimationPlayer, 'animation_finished')
 
 	idle(false)
+
+
+func get_dialog_pos() -> float:
+	return sprite.position.y
 
 
 # Quita un ítem del inventario del personaje (¿o del jugador?)

@@ -8,11 +8,10 @@ func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
 		C.player.face_left(),
-		'...',
-		C.player.grab(),
 		C.player_say('Qué bueno que el DJ trajo esta máscara'),
 		C.player_say('La tomaré prestada un rato.'),
 		A.play('sfx_mask_pu', global_position),
+		C.player.grab(),
 		disable(),
 		I.add_item('Mask')
 	])

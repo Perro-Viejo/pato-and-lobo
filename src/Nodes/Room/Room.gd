@@ -50,7 +50,7 @@ func _process(delta):
 		return
 	
 	for c in $Characters.get_children():
-		character_moved(c as Character)
+		_check_z_indexes(c as Character)
 		
 	if _path.empty(): return
 
@@ -98,16 +98,6 @@ func _get_property_list():
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
 func get_walkable_area() -> Navigation2D:
 	return $WalkableAreas.get_child(0) as Navigation2D
-
-
-func character_moved(chr: Character) -> void:
-	var y_pos := chr.global_position.y
-	
-	for p in $Props.get_children():
-		_check_baseline(p, y_pos, 2)
-	
-	for c in $Characters.get_children():
-		_check_baseline(c, y_pos)
 
 
 # Aquí es donde se deben cargar los personajes de la habitación para que sean
@@ -219,3 +209,16 @@ func _get_state() -> Dictionary:
 	state.visited_times = self.visited_times
 
 	return state
+
+
+func _check_z_indexes(chr: Character) -> void:
+	var y_pos := chr.global_position.y
+	
+	for p in $Props.get_children():
+		_check_baseline(p, y_pos, 2)
+	
+	for c in $Characters.get_children():
+		if not c.always_on_top:
+			_check_baseline(c, y_pos)
+		else:
+			c.z_index = 3

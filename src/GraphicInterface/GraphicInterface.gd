@@ -34,7 +34,7 @@ func _show_dialog_text(chr: Character, msg := '') -> void:
 		text = msg,
 		color = chr.text_color,
 		position = Utils.get_screen_coords_for(chr),
-		offset_y = chr.sprite.position.y
+		offset_y = chr.get_dialog_pos()
 	})
 
 
