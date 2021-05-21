@@ -9,7 +9,7 @@
 [ext_resource path="res://src/Characters/Pato/Sprites/dance.png" type="Texture" id=8]
 [ext_resource path="res://src/Characters/Pato/Sprites/back.png" type="Texture" id=9]
 
-[sub_resource type="Animation" id=150]
+[sub_resource type="Animation" id=1]
 resource_name = "dance_l"
 length = 0.001
 tracks/0/type = "value"
@@ -73,7 +73,7 @@ tracks/4/keys = {
 "values": [ "dance" ]
 }
 
-[sub_resource type="Animation" id=151]
+[sub_resource type="Animation" id=2]
 resource_name = "dance_r"
 length = 0.001
 tracks/0/type = "value"
@@ -137,7 +137,7 @@ tracks/4/keys = {
 "values": [ "dance" ]
 }
 
-[sub_resource type="Animation" id=152]
+[sub_resource type="Animation" id=3]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
@@ -212,7 +212,7 @@ tracks/5/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=153]
+[sub_resource type="Animation" id=4]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
@@ -287,7 +287,7 @@ tracks/5/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=154]
+[sub_resource type="Animation" id=5]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -411,7 +411,7 @@ tracks/4/keys = {
 "values": [ "idle" ]
 }
 
-[sub_resource type="Animation" id=155]
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -473,7 +473,7 @@ tracks/4/keys = {
 "values": [ "idle" ]
 }
 
-[sub_resource type="Animation" id=156]
+[sub_resource type="Animation" id=8]
 resource_name = "idle_u"
 length = 0.001
 tracks/0/type = "value"
@@ -537,7 +537,7 @@ tracks/4/keys = {
 "values": [ "back" ]
 }
 
-[sub_resource type="Animation" id=157]
+[sub_resource type="Animation" id=9]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
@@ -612,7 +612,7 @@ tracks/5/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=158]
+[sub_resource type="Animation" id=10]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
@@ -687,7 +687,7 @@ tracks/5/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=159]
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -701,7 +701,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=160]
+[sub_resource type="Animation" id=12]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -763,7 +763,7 @@ tracks/4/keys = {
 "values": [ "idle" ]
 }
 
-[sub_resource type="Animation" id=161]
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -825,7 +825,7 @@ tracks/4/keys = {
 "values": [ "idle" ]
 }
 
-[sub_resource type="Animation" id=162]
+[sub_resource type="Animation" id=14]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -839,7 +839,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=163]
+[sub_resource type="Animation" id=15]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -901,7 +901,7 @@ tracks/4/keys = {
 "values": [ "walk" ]
 }
 
-[sub_resource type="Animation" id=164]
+[sub_resource type="Animation" id=16]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:visible")
 tracks/0/interp = 1
@@ -1666,22 +1666,22 @@ is_player = true
 vo_name = "vo_duck"
 
 [node name="AnimationPlayer" parent="." index="3"]
-anims/dance_l = SubResource( 150 )
-anims/dance_r = SubResource( 151 )
-anims/grab_l = SubResource( 152 )
-anims/grab_r = SubResource( 153 )
-anims/idle_d = SubResource( 154 )
+anims/dance_l = SubResource( 1 )
+anims/dance_r = SubResource( 2 )
+anims/grab_l = SubResource( 3 )
+anims/grab_r = SubResource( 4 )
+anims/idle_d = SubResource( 5 )
 anims/idle_l = SubResource( 6 )
-anims/idle_r = SubResource( 155 )
-anims/idle_u = SubResource( 156 )
-anims/scare_l = SubResource( 157 )
-anims/scare_r = SubResource( 158 )
-anims/talk_d = SubResource( 159 )
-anims/talk_l = SubResource( 160 )
-anims/talk_r = SubResource( 161 )
-anims/talk_u = SubResource( 162 )
-anims/walk_l = SubResource( 163 )
-anims/walk_r = SubResource( 164 )
+anims/idle_r = SubResource( 7 )
+anims/idle_u = SubResource( 8 )
+anims/scare_l = SubResource( 9 )
+anims/scare_r = SubResource( 10 )
+anims/talk_d = SubResource( 11 )
+anims/talk_l = SubResource( 12 )
+anims/talk_r = SubResource( 13 )
+anims/talk_u = SubResource( 14 )
+anims/walk_l = SubResource( 15 )
+anims/walk_r = SubResource( 16 )
 
 [node name="Sprite" parent="." index="4"]
 visible = false

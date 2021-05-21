@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/GraphicInterface/GraphicInterface.gd" type="Script" id=1]
-[ext_resource path="res://src/Resources/DynamicFonts/KgHappySolid24.tres" type="DynamicFont" id=2]
 [ext_resource path="res://src/GraphicInterface/Dialog/DialogText.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/GraphicInterface/Inventory/InventoryContainer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/GraphicInterface/DialogMenu/DialogMenu.tscn" type="PackedScene" id=5]
@@ -34,13 +33,10 @@ __meta__ = {
 }
 
 [node name="InfoBar" parent="MainContainer" instance=ExtResource( 9 )]
-custom_fonts/font = ExtResource( 2 )
 
 [node name="DialogText" parent="MainContainer" instance=ExtResource( 3 )]
 margin_right = 0.0
 margin_bottom = 0.0
-wrap_width = 720
-min_wrap_width = 400
 
 [node name="DisplayBox" parent="MainContainer" instance=ExtResource( 11 )]
 

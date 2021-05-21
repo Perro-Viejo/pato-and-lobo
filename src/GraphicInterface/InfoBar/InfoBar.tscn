@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/Resources/GAQTheme.tres" type="Theme" id=1]
 [ext_resource path="res://src/GraphicInterface/InfoBar/InfoBar.gd" type="Script" id=2]
+[ext_resource path="res://src/Resources/DynamicFonts/KgHappySolid48.tres" type="DynamicFont" id=3]
 
 [node name="InfoBar" type="Label"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -39.0
+margin_top = -77.0
 theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.709804, 0.690196, 0.603922, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "pa' mostrar info."
