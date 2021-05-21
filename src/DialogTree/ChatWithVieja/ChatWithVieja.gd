@@ -49,7 +49,6 @@ func option_selected(opt: DialogOption) -> void:
 				'Pato: Emmm....mmmm......mmmmmmm.....',
 				G.display('Pato se sonrojó'),
 				'Vieja: En mis tiempos no había cocteles. Tomábamos todo puro.',
-				'Vieja: ¿CÓMO ES POSIBLE QUE EN ESTE LUGAR NO VENDAN ALGO ASÍ?',
 			]), 'completed')
 		'Opt4':
 			yield(E.run([

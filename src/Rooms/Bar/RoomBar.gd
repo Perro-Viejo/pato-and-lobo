@@ -13,6 +13,8 @@ func _init() -> void:
 		has_brooms = true,
 		dj_uses_mask = true,
 		vieja_sleeping = false,
+		last_player_pos = Vector2.ZERO,
+		cocktail_unlocked = false
 	}
 
 
@@ -28,6 +30,8 @@ func on_room_entered() -> void:
 		C.player.face_left(false)
 	elif C.player.last_room == 'Sea':
 		C.player.global_position = $Points/Sink.global_position
+	else:
+		C.player.global_position = state.last_player_pos
 	
 	if not state.has_mask or state.dj_uses_mask:
 		$Props/WolfMask.disable(false)
@@ -41,6 +45,8 @@ func on_room_entered() -> void:
 		$Characters/CharacterVieja.sleep()
 
 func on_room_exited() -> void:
+	state.last_player_pos = C.player.global_position
+	
 	A.stop('bg_bar', 0, false)
 	A.stop('mx_bar_01', 0, false)
 	A.stop('mx_bar_02', 0, false)
