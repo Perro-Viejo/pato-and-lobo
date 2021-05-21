@@ -1,9 +1,10 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://src/Rooms/Bar/RoomBar.gd" type="Script" id=1]
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Rooms/Bar/Sprites/bg.png" type="Texture" id=3]
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Rooms/Bar/Sprites/dance_floor.png" type="Texture" id=5]
 [ext_resource path="res://src/Rooms/Bar/PropGlassWithDentures.gd" type="Script" id=7]
 [ext_resource path="res://src/Rooms/Bar/Sprites/glass_with_dentures.png" type="Texture" id=8]
 [ext_resource path="res://src/Nodes/Hotspot/Hotspot.tscn" type="PackedScene" id=9]
@@ -65,18 +66,22 @@ position = Vector2( 0, -540 )
 light_mask = 2
 texture = ExtResource( 3 )
 
-[node name="Filter" type="Light2D" parent="Props/Bg" index="4"]
-position = Vector2( -6, 0 )
+[node name="DanceFloor" type="Sprite" parent="Props/Bg" index="4"]
+light_mask = 6
+position = Vector2( -476, 547 )
+texture = ExtResource( 5 )
+
+[node name="Filter" type="Light2D" parent="Props/Bg" index="5"]
+position = Vector2( -5, 4 )
 texture = ExtResource( 19 )
 energy = 1.2
 mode = 2
 range_item_cull_mask = 2
 
-[node name="DanceFloorLight" type="Light2D" parent="Props/Bg" index="5"]
-position = Vector2( -481, 521 )
+[node name="DanceFloorLight" type="Light2D" parent="Props/Bg" index="6"]
+position = Vector2( -478, 522 )
 texture = ExtResource( 20 )
-mode = 2
-range_item_cull_mask = 3
+range_item_cull_mask = 6
 
 [node name="Brooms" parent="Props" index="1" instance=ExtResource( 4 )]
 position = Vector2( -980.978, -383.2 )

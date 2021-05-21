@@ -21,6 +21,10 @@ var current_room: Room = null
 var clicked: Node
 var cutscene_skipped := false
 
+var _is_camera_shaking := false
+var _camera_shake_amount := 15.0
+var _shake_timer := 0.0
+
 onready var game_width := get_viewport().get_visible_rect().end.x
 onready var game_height := get_viewport().get_visible_rect().end.y
 onready var half_width := game_width / 2.0
@@ -52,8 +56,18 @@ func _ready() -> void:
 		DebugOverlay.visible = true
 
 
-func _process(_delta: float) -> void:
-	if not Engine.editor_hint and is_instance_valid(C.camera_owner):
+func _process(delta: float) -> void:
+	if _is_camera_shaking:
+		_shake_timer -= delta
+		main_camera.offset = Vector2.ZERO + Vector2(
+			rand_range(-1.0, 1.0) * _camera_shake_amount,
+			rand_range(-1.0, 1.0) * _camera_shake_amount
+		)
+
+		if _shake_timer <= 0.0:
+			_is_camera_shaking = false
+			main_camera.offset = Vector2.ZERO
+	elif not Engine.editor_hint and is_instance_valid(C.camera_owner):
 		main_camera.position = C.camera_owner.position
 
 
@@ -197,6 +211,24 @@ func room_readied(room: Room) -> void:
 	# Esto también hace que la habitación empiece a escuchar eventos de Input
 	room.on_room_transition_finished()
 
+
+func tween_zoom(target: Vector2, duration := 1.0, is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	$Tween.interpolate_property(
+		main_camera, 'zoom',
+		main_camera.zoom, target,
+		duration, Tween.TRANS_SINE, Tween.EASE_OUT
+	)
+	$Tween.start()
+	yield($Tween, 'tween_all_completed')
+
+
+func shake_camera(props := {}) -> void:
+	if props.has('strength'):
+		_camera_shake_amount = props.strength
+	if props.has('duration'):
+		_shake_timer = props.duration
+	_is_camera_shaking = true
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=5 format=2]
+[gd_resource type="Resource" load_steps=9 format=2]
 
 [ext_resource path="res://src/DialogTree/ChatWithPez/ChatWithPez.gd" type="Script" id=1]
 [ext_resource path="res://src/DialogTree/DialogOption.gd" type="Script" id=2]
@@ -7,17 +7,45 @@
 resource_name = "Opt1"
 script = ExtResource( 2 )
 id = "Opt1"
-text = "¿Qué se cuenta?"
+text = "Eso que llevas puesto está áspero"
 visible = true
 
 [sub_resource type="Resource" id=2]
-resource_name = "Exit"
+resource_name = "Opt2"
 script = ExtResource( 2 )
-id = "Exit"
-text = "Chao."
+id = "Opt2"
+text = "¿Cómo puedo conseguir uno?"
+visible = false
+
+[sub_resource type="Resource" id=3]
+resource_name = "Opt3"
+script = ExtResource( 2 )
+id = "Opt3"
+text = "¿Y puedo retarte a una pelea de miradas?"
+visible = false
+
+[sub_resource type="Resource" id=4]
+resource_name = "Opt4"
+script = ExtResource( 2 )
+id = "Opt4"
+text = "Te reto a una pelea de miradas por tu... aparato"
 visible = true
+
+[sub_resource type="Resource" id=5]
+resource_name = "Opt5"
+script = ExtResource( 2 )
+id = "Opt5"
+text = "¿Por qué no entras?"
+visible = true
+
+[sub_resource type="Resource" id=6]
+resource_name = "Opt6"
+script = ExtResource( 2 )
+id = "Opt6"
+text = "Acerca de la misteriosa pregunta"
+visible = false
 
 [resource]
 script = ExtResource( 1 )
-options = [ SubResource( 1 ), SubResource( 2 ) ]
+options = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ]
 script_name = "ChatWithPez"

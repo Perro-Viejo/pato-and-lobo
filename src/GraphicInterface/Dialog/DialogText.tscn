@@ -43,7 +43,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 wrap_width = 960
-min_wrap_width = 640
+min_wrap_width = 840
 
 [node name="Tween" type="Tween" parent="."]
 

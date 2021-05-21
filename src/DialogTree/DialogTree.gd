@@ -22,10 +22,10 @@ func disconnect_option_selection() -> void:
 		D.disconnect('option_selected', self, 'option_selected')
 
 
-func show_option(id: String) -> void:
+func show_option(id: String, is_visible := true) -> void:
 	for o in options:
 		if (o as DialogOption).id == id:
-			o.visible = true
+			o.visible = is_visible
 			break
 
 

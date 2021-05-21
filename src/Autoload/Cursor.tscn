@@ -52,6 +52,7 @@ animations = [ {
 [node name="Cursor" type="CanvasLayer"]
 layer = 100
 script = ExtResource( 2 )
+hotspot = Vector2( 30, 32 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )

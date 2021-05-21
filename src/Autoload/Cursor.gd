@@ -14,6 +14,8 @@ enum Type {
 	USE,
 }
 
+export var hotspot := Vector2.ZERO
+
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready():
@@ -24,6 +26,8 @@ func _ready():
 func _process(_delta):
 	$AnimatedSprite.position = $AnimatedSprite.get_global_mouse_position()
 	$Sprite.position = $AnimatedSprite.get_global_mouse_position()
+	$AnimatedSprite.position += hotspot
+	$Sprite.position += hotspot
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
