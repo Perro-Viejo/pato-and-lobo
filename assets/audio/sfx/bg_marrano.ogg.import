@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bg_marrano.ogg-5fb8c7b88e57c728c68a86e9e9592ce5.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/bg_marrano.ogg"
+dest_files=[ "res://.import/bg_marrano.ogg-5fb8c7b88e57c728c68a86e9e9592ce5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

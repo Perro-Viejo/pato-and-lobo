@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_spaceship_hook.ogg-cb4551fa81f277a05dc953c0a42fb3b0.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_spaceship_hook.ogg"
+dest_files=[ "res://.import/sfx_spaceship_hook.ogg-cb4551fa81f277a05dc953c0a42fb3b0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_spaceship_idle.ogg-2a73244c59d1c0eda468e0d20610dcd9.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_spaceship_idle.ogg"
+dest_files=[ "res://.import/sfx_spaceship_idle.ogg-2a73244c59d1c0eda468e0d20610dcd9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

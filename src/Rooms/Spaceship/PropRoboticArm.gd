@@ -10,6 +10,7 @@ func on_interact() -> void:
 				E.run([
 				'Lobo: Usaré este gancho para jalar nuestra maticasita',
 				'Pato: ¡Qué emoción tan amarilla!',
+				A.play('sfx_spaceship_hook', global_position, false)
 			]), 'completed')
 			E.goto_room('HomesPlantation')
 		else:

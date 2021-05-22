@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_watercase_active.ogg-b78902c973e37d8979c8263292e92798.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_watercase_active.ogg"
+dest_files=[ "res://.import/sfx_watercase_active.ogg-b78902c973e37d8979c8263292e92798.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

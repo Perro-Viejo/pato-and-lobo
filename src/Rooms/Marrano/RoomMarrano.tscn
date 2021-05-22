@@ -29,10 +29,6 @@ characters = [ {
 "position": Vector2( -300, -163 ),
 "script_name": "Marrano"
 } ]
-limit_left = -960.0
-limit_right = 960.0
-limit_top = -540.0
-limit_bottom = 540.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 4 )]
 position = Vector2( 0.840881, 0.840881 )

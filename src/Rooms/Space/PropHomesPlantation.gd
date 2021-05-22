@@ -7,6 +7,7 @@ func on_interact() -> void:
 	yield(E.run([
 		C.walk_to_clicked()
 	]), 'completed')
+	A.play('sfx_spaceship_transition', Vector2.ZERO, false)
 	E.goto_room('HomesPlantation')
 
 

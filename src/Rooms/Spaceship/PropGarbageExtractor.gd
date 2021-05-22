@@ -17,6 +17,7 @@ func on_interact() -> void:
 					E.run([
 					'Lobo: Ahí voy, espero estes Patopreparade',
 					'Pato: ¡Suelteloooo!',
+					A.play('sfx_spaceship_garbage', global_position)
 				]), 'completed')
 				Globals.did(Globals.GameState.GARBAGE_THROWN)
 				E.goto_room('Marrano')

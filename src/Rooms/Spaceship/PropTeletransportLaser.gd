@@ -14,6 +14,7 @@ func on_interact() -> void:
 				E.run([
 				'Lobo: Preparate Pato, ahí va la tecnología',
 				'Pato: Ya me estaba preocupando',
+				A.play('sfx_spaceship_teleport', global_position),
 			]), 'completed')
 			E.goto_room('Luna')
 

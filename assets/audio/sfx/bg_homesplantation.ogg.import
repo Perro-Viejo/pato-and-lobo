@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bg_homesplantation.ogg-4ad8a2a54c520175e60d2f23c252255c.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/bg_homesplantation.ogg"
+dest_files=[ "res://.import/bg_homesplantation.ogg-4ad8a2a54c520175e60d2f23c252255c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

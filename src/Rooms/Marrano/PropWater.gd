@@ -14,6 +14,7 @@ func on_interact() -> void:
 			E.run([
 			'Pato: ¡Ya lo tengo!',
 			disable(),
+			A.play('sfx_watercase_pu', global_position),
 			I.add_item('WaterCase'),
 			'Pato: ¡Telestransportame con prontitud!',
 			'Lobo: Listongolo',

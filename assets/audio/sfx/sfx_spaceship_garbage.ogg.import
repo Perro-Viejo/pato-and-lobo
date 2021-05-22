@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_spaceship_garbage.ogg-12647715ec03b34c1b15bdfbed516ff9.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_spaceship_garbage.ogg"
+dest_files=[ "res://.import/sfx_spaceship_garbage.ogg-12647715ec03b34c1b15bdfbed516ff9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
