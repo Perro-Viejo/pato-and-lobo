@@ -36,7 +36,7 @@ texture = ExtResource( 4 )
 [node name="Spaceship" parent="Props" index="1" instance=ExtResource( 1 )]
 position = Vector2( -339, -342 )
 script = ExtResource( 6 )
-description = "Nave espacial del amor"
+description = "Love spaceship"
 baseline = -598
 cursor = 1
 texture = ExtResource( 7 )
@@ -58,9 +58,11 @@ baseline = -1080
 texture = ExtResource( 5 )
 
 [node name="HomeSeed" parent="Props" index="3" instance=ExtResource( 1 )]
+visible = false
 position = Vector2( 225, -438 )
+input_pickable = false
 script = ExtResource( 8 )
-description = "Semilla-casa"
+description = "Home-seed"
 walk_to_point = Vector2( -108, 122 )
 cursor = 1
 texture = ExtResource( 9 )
@@ -80,7 +82,7 @@ texture = ExtResource( 9 )
 visible = false
 position = Vector2( 286, -645 )
 input_pickable = false
-description = "Nuestro hogar"
+description = "Our home"
 texture = ExtResource( 10 )
 
 [node name="Sprite" parent="Props/Home" index="3"]

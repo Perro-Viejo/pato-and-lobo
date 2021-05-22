@@ -6,21 +6,21 @@ extends Prop
 func on_interact() -> void:
 	if not Globals.has_done(Globals.GameState.DOME_SPOTTED):
 		E.run([
-			'Pato: Mmmm, ese cerdo no se quita de ahí',
-			'Pato: No se si pueda convencerlo...',
+			'Pato: That pig is not gonna move',
+			'Pato: And I don\'t know if I can convince him...',
 		])
 	else:
-		yield(
-			E.run([
-			'Pato: ¡Ya lo tengo!',
+		yield(E.run([
+			C.walk_to_clicked(),
+			'Pato: It is mine!!!',
 			disable(),
 			A.play('sfx_watercase_pu', global_position),
 			I.add_item('WaterCase'),
-			'Pato: ¡Telestransportame con prontitud!',
-			'Lobo: Listongolo',
+			'Pato: Use the teleport ray to take me out of here.',
+			'Lobo: As you command, love of my loves',
 		]), 'completed')
-		E.goto_room('Spaceship')
 		Globals.did(Globals.GameState.WATER_TAKEN)
+		E.goto_room('Spaceship')
 
 
 func on_look() -> void:

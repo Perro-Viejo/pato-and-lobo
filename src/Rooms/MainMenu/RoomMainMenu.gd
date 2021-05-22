@@ -21,9 +21,9 @@ func on_room_exited() -> void:
 func on_room_transition_finished() -> void:
 	if visited_first_time:
 		E.run([
-			G.display('Left clic to interact with objects and characters.'),
-			G.display('Right clic to take a look.'),
-			G.display('Your inventory and courage value will be in the top left corner.'),
+			G.display('Use left click to interact with objects and characters.'),
+			G.display('Use right click to take a look on objects and characters.'),
+			G.display('Your inventory and courage bar will be in the top-left corner.'),
 			G.show_inventory(2.0),
 		])
 

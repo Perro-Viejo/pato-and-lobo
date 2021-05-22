@@ -6,12 +6,12 @@ extends Prop
 func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
-		C.player_say('A ver el sombrillín.'),
+		'Pato: I take this.',
 		A.play('sfx_umbrella_pu', global_position),
 		disable(),
 		I.add_item('Umbrella'),
-		C.player_say('El mango parece un gancho.'),
-		C.player_say('Puedo intentar jalar a Lobo con esto...')
+		'Pato: The handle looks like a hook.',
+		'Pato: I can try to pull Lobo with this...'
 	])
 
 

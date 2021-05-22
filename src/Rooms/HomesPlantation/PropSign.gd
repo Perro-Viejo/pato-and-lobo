@@ -8,9 +8,9 @@ func on_interact() -> void:
 		yield(
 			E.run([
 				C.walk_to_clicked(),
-				'Pato: Echele ojo a esta, está re kiut ^^',
-				'Lobo: Awwwww, es la casa de nuestros sueños',
-				'Pato: Tengamos relaciones sepsuales en ella :3'
+				'Pato: What do you think of this one?',
+				'Lobo: Awwwww, is our dream-home.',
+				'Pato: So this one will be.'
 			]), 'completed'
 		)
 		E.goto_room('Spaceship')
@@ -18,7 +18,7 @@ func on_interact() -> void:
 
 func on_look() -> void:
 	E.run([
-		'Pato: Fue plantada hace 8 meses, antejardín, dos habitaciones, baño con tina...'
+		'Pato: Planted 8 months ago, front garden, two bedrooms, bathroom with tub...'
 	])
 
 

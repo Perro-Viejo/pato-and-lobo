@@ -5,9 +5,9 @@ extends Prop
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
 	yield(E.run([
-		'Pato: Vamos a navegar la infinitud amor mío.',
+		'Pato: Let\'s traverse the cosmos, my love.',
 		C.walk_to_clicked(),
-		'Lobo: Uiiiiiiiiii',
+		'Lobo: Yeyyyyyyyyyy',
 		C.character_walk_to('Lobo', to_global(E.clicked.walk_to_point))
 	]), 'completed')
 	E.goto_room('Space')

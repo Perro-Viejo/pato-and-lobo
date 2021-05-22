@@ -22,25 +22,25 @@ func option_selected(opt: DialogOption) -> void:
 	match opt.id:
 		'TheQuestion':
 			yield(E.run([
-				G.display('Pez abrió sus ojotes como si hubiera visto un muerto'),
+				G.display('Pez opened his eyes as if he had seen a dead being'),
 				E.wait(3),
-				'Pez: Eso era...',
+				'Pez: That was...',
 				'...',
-				'Pez: Eso era lo que tenía que contar.',
+				'Pez: That was what I had to tell.',
 				pez.face_right(),
 				'...',
-				'Pez: La razón de estar aquí...',
+				'Pez: The purpose of being here...',
 				pez.face_left(),
 				'...',
-				'Pez: Su nombre era Sudor de Hércules...',
-				'Pez: Uno de los tragos más antiguos del continente',
-				'Pez: Se sentía como...',
+				'Pez: It\'s name was Hercules sweat...',
+				'Pez: One of the oldest drinks of the continent',
+				'Pez: It felt like...',
 				'...',
 				pez.face_right(),
-				'Pez: Como estar tomando sudor de un viejo muy viejo...',
+				'Pez: Like being drinking the sweat of an old man so old...',
 				E.wait(2),
 				pez.face_left(),
-				'Pez: No quiero hablar más del pasado de este lugar.',
+				'Pez: I don\'t want to talk about the past of this place anymore.',
 				pez.face_right()
 			]), 'completed')
 			E.current_room.state.cocktail_unlocked = true
@@ -51,41 +51,41 @@ func option_selected(opt: DialogOption) -> void:
 			return
 		'Opt2':
 			yield(E.run([
-				'Pez: Ponían otro tipo de música, algo más relajado',
-				'Pez: Y las personas que venían solían ser más sociables'
+				'Pez: They played another type of music, something looser',
+				'Pez: And people that would come used to be more social'
 			]), 'completed')
 			opt.visible = false
 		'Opt3':
 			yield(E.run([
-				'Pez: Sin duda las bebidas que vendía el anterior dueño',
-				'Pez: Solían ser más...',
+				'Pez: Without any doubt the drinks that the last owner sold',
+				'Pez: Used to be...',
 				pez.face_right(),
 				'...',
-				'Pez: Mejores',
+				'Pez: Better',
 				E.wait(2),
 				pez.face_left()
 			]), 'completed')
 			opt.visible = false
 		'Opt4':
 			yield(E.run([
-				'Pez: Ciertamente más de uno.',
-				'Pez: Antes solía haber un pasadizo secreto donde ahora hay baños.',
-				'Pez: Y también estaban las bebidas prohibidas.'
+				'Pez: Certainly two or more.',
+				'Pez: Before, there was a secret passage where the washroom is located.',
+				'Pez: And also the forbidden drinks.'
 			]), 'completed')
 			opt.visible = false
 			show_option('Opt5')
 		'Opt5':
 			yield(E.run([
-				'Pez: Sí. Eran muy fuertes y generaron muchos problemas.',
-				'Pez: Al final, sólo algunos podíamos beberlas.',
+				'Pez: Yeah. Those were very strong and made a lot of issues.',
+				'Pez: At the end, only a few (me included, of course) could drink them.',
 				'...',
 				pez.face_right(),
-				'Pez: Y entre todas... había una. La más especial de las especiales.'
+				'Pez: And between them all... There was one. The most special of the specials.'
 			]), 'completed')
 			opt.visible = false
 			show_option('TheQuestion')
 		'Exit':
-			yield(E.run(['Pez: Como quieras quiero']), 'completed')
+			yield(E.run(['Pez: As you want I want']), 'completed')
 			D.show_dialog('ChatWithPez')
 			return
 	_show_options()

@@ -17,7 +17,7 @@ func on_item_used(item: Item) -> void:
 			I.remove_item(item.script_name),
 			I.remove_item(script_name),
 			A.play('sfx_tape_use', Vector2.ZERO),
-			C.player_say('Amarrao'),
+			'Pato: Put the tape in the tip of the umbrella',
 			I.add_item('UmbrellaTape'),
 		])
 	elif item.script_name == 'Mop':
@@ -25,6 +25,6 @@ func on_item_used(item: Item) -> void:
 			I.remove_item(item.script_name),
 			I.remove_item(script_name),
 			A.play('sfx_tape_use', Vector2.ZERO),
-			C.player_say('Amarrao'),
+			'Pato: Put the tape in the tip of the mop',
 			I.add_item('MopTape'),
 		])

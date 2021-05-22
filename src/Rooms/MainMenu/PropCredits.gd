@@ -4,7 +4,7 @@ extends Prop
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	E.run(['Pato: This are the developers of me... of we all...'])
+	E.run(['Pato: The developers that made us'])
 
 
 func on_look() -> void:

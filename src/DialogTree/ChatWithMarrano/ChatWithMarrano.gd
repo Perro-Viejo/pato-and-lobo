@@ -20,27 +20,27 @@ func option_selected(opt: DialogOption) -> void:
 			yield(E.run([
 					C.player_say(opt.text),
 					'Marrano: ...',
-					'Marrano: Aléjate de mi domo y de mí',
-					'Pato: Óigame éste... groseris',
+					'Marrano: Get away from my dome and me',
+					'Pato: You are so... mean',
 				]), 'completed')
 		'OptB':
 			yield(E.run([
 					C.player_say(opt.text),
-					'Marrano: Pero si me lambe el rabo',
-					'Marrano: No vendo nada ni comparto mi precioso domo...',
+					'Marrano: Lick my balls',
+					'Marrano: Don\'t sell, don\'t share. All for me. ',
 					'Pato: ...',
 				]), 'completed')
 		'OptC':
 			yield(E.run([
 					C.player_say(opt.text),
-					'Marrano: La única persona aquí la mande lejos por no respetar mi privacidad...',
-					'Pato: jojojo',
-					'Marrano: Seré Marrano pero no huevón...',
+					'Marrano: What a stupid trick...',
+					'Pato: glup',
+					'Marrano: Leave my lands. NOW!',
 				]), 'completed')
 		'OptD':
 			yield(E.run([
 				C.player_say(opt.text),
-				C.character_say('Marrano', 'Ábrase de aquí')
+				'Marrano: LEEEEAVE!!!!'
 			]), 'completed')
 			D.finish_dialog()
 			return

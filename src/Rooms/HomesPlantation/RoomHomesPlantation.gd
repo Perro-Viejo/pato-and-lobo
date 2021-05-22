@@ -39,20 +39,20 @@ func on_room_transition_finished() -> void:
 	if Globals.has_done(Globals.GameState.GOT_HOME):
 		yield(
 			E.run_cutscene([
-			'Pato: Hagale con cariño',
-			'Pato: Eso, eso. Baje el bracito',
-			'Lobo: Voy voy voy...',
+			'Pato: Do it calmly',
+			'Pato: Good, good. Now take down the arm.',
+			'Lobo: Doing so. Doing so...',
 			E.wait(2),
-			'Pato: Listo. Ya tenemos la semilla-casa. Vamos a Luna a sembrarla.',
+			'Pato: Done! We have our home-seed. Let\'s go to Luna and sow it.',
 		]), 'completed')
 		E.goto_room('Luna')
 	else:
 		yield(E.run([
-			'Pato: Lobo y yo necesitamos un hogar para vivir y darnos amor',
-			'Pato: En este planeta se siembran casas.',
-			'Pato: Debemos escoger la más bonita para llevarla a la Luna.',
-			'Pato: ¿Cierto amor mío?',
-			'Lobo: Sí madrecita'
+			'Pato: Lobo and I need a home to live and give each other love.',
+			'Pato: Houses are planted on this planet.',
+			'Pato: We must choose the most beautiful one to take to Luna.',
+			'Pato: Is that true, love of mine?',
+			'Lobo: Yes-it-is'
 		]), 'completed')
 
 

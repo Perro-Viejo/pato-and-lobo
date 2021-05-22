@@ -29,30 +29,30 @@ func on_room_transition_finished() -> void:
 		if Globals.has_done(Globals.GameState.WATER_TAKEN):
 			yield(
 				E.run_cutscene([
-				'Pato: Ahora podremos regar nuestra plantita',
-				'Lobo: Nuestro sueño mojoso hecho realité',
+				'Pato: We can water our home-seed now.',
+				'Lobo: Our dream come true.',
 				'Pato: ...',
-				'Lobo: Echele agua y ámamame',
+				'Lobo: Water it. Then have me.',
 			]), 'completed')
 		else:
 			yield(E.run([
-				'Pato: Debemos encontrar agüita pa crecer nuestrogare',
-				'Lobo: he oido hablar que el agua espacial es especial :3',
+				'Pato: We need to find water to water our future home.',
+				'Lobo: I\'ve hear thar space water is special. ',
 			]), 'completed')
 			E.goto_room('Bar')
 	elif Globals.has_done(Globals.GameState.WATER_TAKEN):
 		yield(
 			E.run_cutscene([
-			'Pato: Ahora solo necesitamos unas de esas planticasas de moda',
-			'Lobo: Creo haber visto un planeta plantación a unos cuantos parsecs de aquí',
-			'Pato: Uuuu allí no mai',
-			'Lobo: Vamos juntis',
+			'Pato: All we need now is one of those home-seeds.',
+			'Lobo: I\'m sure I saw a homes plantation planet a couple of parsecs from here.',
+			'Pato: So what are we waiting for.',
+			'Lobo: To consume our love a little before leaving.',
 		]), 'completed')
 		E.goto_room('Bar')
 	else:
 		E.run([
-			'Pato: Qué tranquilo y silencioso es por aquí',
-			'Lobo: Si... me dan ganas de bareto y arrunchis'
+			'Pato: How calm and quiet it is around here',
+			'Lobo: Yes... makes you want to... T.D.A.F.'
 		])
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 # TODO: Poner aquí los métodos privados

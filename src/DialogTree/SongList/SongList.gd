@@ -20,14 +20,14 @@ func option_selected(opt: DialogOption) -> void:
 			if E.current_room.state.has_mask:
 				yield(
 					E.run([
-						'Lagarto: Buena eletción. Ya mismo se la pongo',
-						'Lagarto: Pero me voy a quitar esto porque esa me hace sudar',
+						'Lagarto: Great choice. Will play it now.',
+						'Lagarto: But I\'m taking this off because that one makes me sweat',
 						C.get_character('Lagarto').remove_mask(),
 						A.stop('mx_bar_01'),
 						A.stop('mx_bar_02'),
 						A.stop('mx_frolic'),
 						A.play_music('mx_frolic'),
-						'Lagarto: ¡Ora sí! A gozaaaaaaar',
+						'Lagarto: Woooooooooooooooooooooo',
 					]),
 					'completed'
 				)
@@ -35,7 +35,7 @@ func option_selected(opt: DialogOption) -> void:
 			else:
 				yield(
 					E.run([
-						'Lagarto: No... esa canción me trae malos recuerdos',
+						'Lagarto: Don\'t gonna play that. Memories.',
 					]),
 					'completed'
 				)
@@ -44,9 +44,9 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt2', 'Opt4':
 			yield(
 				E.run([
-					'Lagarto: ¡De una!',
+					'Lagarto: Sure!',
 					'...',
-					'Lagarto: ¡Ah juepuerca! Se me quedó ese disco'
+					'Lagarto: FOCK! I didn\'t bring that record'
 				]),
 				'completed'
 			)
@@ -54,7 +54,7 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt3':
 			yield(
 				E.run([
-					'Lagarto: Uffffffffff... mi canción más favorita',
+					'Lagarto: Yeyyyyyyyyy... my favorite song',
 					A.stop('mx_bar_01'),
 					A.stop('mx_bar_02'),
 					A.stop('mx_frolic'),
@@ -62,9 +62,9 @@ func option_selected(opt: DialogOption) -> void:
 					C.player_walk_to(E.current_room.get_point('DanceFloor2')),
 					C.player.dance(),
 					E.wait(3),
-					'Pato: Esta música mí gustar mucho muy',
+					'Pato: I love this music so much',
 					'...',
-					'Pato: Y si...'
+					'Pato: What if...'
 				]),
 				'completed'
 			)
@@ -72,5 +72,5 @@ func option_selected(opt: DialogOption) -> void:
 			A.play('sfx_dream_transition', Vector2.ZERO, false)
 			E.goto_room('Space')
 		'Exit':
-			yield(E.run(['Lagarto: Ta bueno.']), 'completed')
+			yield(E.run(['Lagarto: Sure.']), 'completed')
 			D.finish_dialog()

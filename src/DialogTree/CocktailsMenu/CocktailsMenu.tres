@@ -7,28 +7,28 @@
 resource_name = "Opt1"
 script = ExtResource( 2 )
 id = "Opt1"
-text = "Sueño del golem"
+text = "Golem Dream"
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "El desolvido"
+text = "The forgotter"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "Opt3"
 script = ExtResource( 2 )
 id = "Opt3"
-text = "Sudor de Hércules"
+text = "Hercules sweat"
 visible = false
 
 [sub_resource type="Resource" id=4]
 resource_name = "Exit"
 script = ExtResource( 2 )
 id = "Exit"
-text = "Mejor otra cosianfira."
+text = "Changed my mind."
 visible = true
 
 [resource]

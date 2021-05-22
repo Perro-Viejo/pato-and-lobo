@@ -51,7 +51,7 @@ texture = ExtResource( 12 )
 [node name="Container" parent="Props" index="2" instance=ExtResource( 4 )]
 position = Vector2( 334.863, -81.3031 )
 script = ExtResource( 11 )
-description = "Contenedor protegido con rashos láser"
+description = "Light-vault-3000X"
 baseline = 350
 walk_to_point = Vector2( 137.388, 380.736 )
 cursor = 1
@@ -72,7 +72,7 @@ texture = ExtResource( 10 )
 [node name="Water" parent="Props" index="3" instance=ExtResource( 4 )]
 position = Vector2( -457.58, -367.103 )
 script = ExtResource( 13 )
-description = "Agua para crecer cosas rápido"
+description = "Fast-growing-water"
 walk_to_point = Vector2( 0, 267.27 )
 cursor = 1
 script_name = "Water"
@@ -91,11 +91,11 @@ texture = ExtResource( 5 )
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]
 position = Vector2( -554.425, 319.569 )
 
+[node name="Middle" type="Position2D" parent="Points" index="1"]
+position = Vector2( -295.256, 184.139 )
+
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
 navpoly = SubResource( 1 )
-
-[node name="Position2D" type="Position2D" parent="." index="6"]
-position = Vector2( -295.256, 184.139 )
 
 [editable path="Props/Surface"]
 [editable path="Props/Container"]

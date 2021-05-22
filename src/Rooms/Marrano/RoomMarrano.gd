@@ -48,10 +48,10 @@ func on_room_transition_finished() -> void:
 			A.play('sfx_garbage_fall', Vector2.ZERO, true, true),
 			A.play('sfx_alarm', Vector2.ZERO),
 			A.stop('sfx_dome', 0),
-			'Pato: Beep Beep Alerta',
-			'Pato: Aquí el marrano corre pero el dev es lento',
-			'Pato: ...',
-			'Pato: Dejó la rancha sola... es mi momento',
+			G.display('Beep Beep Beep Beep Beep'),
+			C.character_walk_to('Marrano', get_point('Middle')),
+			'Pato: The pig moved... this is my chance!',
+			C.character_walk_to('Marrano', get_prop('Container').walk_to_point),
 		]), 'completed')
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

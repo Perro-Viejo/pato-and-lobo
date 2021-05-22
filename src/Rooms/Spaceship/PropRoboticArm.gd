@@ -8,30 +8,28 @@ func on_interact() -> void:
 		if Globals.has_done(Globals.GameState.GOT_HOME):
 			yield(
 				E.run([
-				'Lobo: Usaré este gancho para jalar nuestra maticasita',
-				'Pato: ¡Qué emoción tan amarilla!',
+				'Lobo: I will use the picker to pull our home-seed.',
+				'Pato: This is so exciting my love!',
 				A.play('sfx_spaceship_hook', global_position, false)
 			]), 'completed')
 			E.goto_room('HomesPlantation')
 		else:
 			E.run([
-			'Lobo: Pero... ¿Cuál agarro Pato de mis amores? '
+			'Lobo: I don\'t know which one to pick my love.'
 			])
 	elif C.player.last_room == 'Marrano':
 		if Globals.has_done(Globals.GameState.WATER_TAKEN):
 			E.run([
-				'Lobo: Es muy fuerte para agarrar a Pato... podría hacerle daño :('
+				'Lobo: I do not want to hurt Pato.'
 			])
 	else:
 		E.run([
-			'Lobo: No se que hacer con el gancho roboto'
+			'Lobo: I do not know what to do with the picker'
 		])
 
 
 func on_look() -> void:
-	E.run([
-			'Lobo: Este gancho agarra cosas con muchas fuerzas'
-		])
+	E.run(['Lobo: The picker can pull things with amazing force'])
 
 
 func on_item_used(item: Item) -> void:

@@ -7,35 +7,35 @@
 resource_name = "Opt1"
 script = ExtResource( 1 )
 id = "Opt1"
-text = "El regreso del maestro de las acrobacias"
+text = "Return of the stunt master"
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 1 )
 id = "Opt2"
-text = "La chucha"
+text = "The opossum"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "Opt3"
 script = ExtResource( 1 )
 id = "Opt3"
-text = "Tus ojos me llevan a la luna"
+text = "Your eyes take me to the moon"
 visible = true
 
 [sub_resource type="Resource" id=4]
 resource_name = "Opt4"
 script = ExtResource( 1 )
 id = "Opt4"
-text = "El embolatao"
+text = "The mess-man"
 visible = true
 
 [sub_resource type="Resource" id=5]
 resource_name = "Exit"
 script = ExtResource( 1 )
 id = "Exit"
-text = "Pos mejor no"
+text = "Nope"
 visible = true
 
 [resource]

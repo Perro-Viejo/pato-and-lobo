@@ -7,28 +7,28 @@
 resource_name = "Opt1"
 script = ExtResource( 2 )
 id = "Opt1"
-text = "Cerveza fresa"
+text = "Pink Beer"
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "Patada al espacio exterior"
+text = "Cosmos Kick"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "Opt3"
 script = ExtResource( 2 )
 id = "Opt3"
-text = "Café++"
+text = "Cooffee"
 visible = true
 
 [sub_resource type="Resource" id=4]
 resource_name = "Exit"
 script = ExtResource( 2 )
 id = "Exit"
-text = "Como que mejor quiero otra cosa"
+text = "I don't want beer"
 visible = true
 
 [resource]

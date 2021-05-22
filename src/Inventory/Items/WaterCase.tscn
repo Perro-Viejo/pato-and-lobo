@@ -6,7 +6,7 @@
 
 [node name="WaterCase" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
-description = "Un recipiente con agua espacial"
+description = "Fast-growing-water"
 script_name = "WaterCase"
 cursor = 1
 

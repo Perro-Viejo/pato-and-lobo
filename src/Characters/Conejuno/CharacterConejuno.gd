@@ -8,7 +8,7 @@ func on_interact() -> void:
 
 func on_look() -> void:
 	E.run([
-		C.player_say('Es el de la barra'),
+		'Pato: The barman',
 		'...',
-		C.player_say('Sirve tragos y escucha historias mierdas todos los días')
+		'Pato: The one who serves drinks and listens to nonsense stories every night'
 	])

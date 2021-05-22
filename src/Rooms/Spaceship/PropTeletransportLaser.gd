@@ -6,14 +6,13 @@ extends Prop
 func on_interact() -> void:
 	if C.player.last_room == 'HomesPlantation':
 		E.run([
-			'Lobo: Es muy pesado para transportarlo con esto...'
+			'Lobo: Can not use the ray for that...'
 		])
 	elif C.player.last_room == 'Marrano':
 		if Globals.has_done(Globals.GameState.WATER_TAKEN):
-			yield(
-				E.run([
-				'Lobo: Preparate Pato, ahí va la tecnología',
-				'Pato: Ya me estaba preocupando',
+			yield(E.run([
+				'Lobo: See the teletransport-ray in action!!!',
+				'Pato: Pffff... the pig was already comming.',
 				A.play('sfx_spaceship_teleport', global_position),
 			]), 'completed')
 			E.goto_room('Luna')

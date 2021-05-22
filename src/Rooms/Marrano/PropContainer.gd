@@ -8,16 +8,16 @@ func on_interact() -> void:
 		yield(
 			E.run([
 				C.walk_to_clicked(),
-				'Pato: Can de mis amores, abrase el shut aquí',
-				'Lobo: =O ¿Vámos a delinquír?',
-				'Pato: Pero solo un poquito...'
+				'Pato: Lobo my love, open the garbage gates here',
+				'Lobo: Are we going to make a mess?',
+				'Pato: Just a bit...'
 			]), 'completed'
 		)
 		E.goto_room('Spaceship')
 		Globals.did(Globals.GameState.DOME_SPOTTED)
 	else:
 		E.run([
-			'Pato: ¡No hay tiempo que perder, a por el agua!'
+			'Pato: Now is the time. I\'ll stole the Fast-growing-water.'
 		])
 
 func on_look() -> void:

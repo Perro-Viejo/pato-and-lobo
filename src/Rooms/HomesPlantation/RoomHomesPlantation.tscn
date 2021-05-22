@@ -45,7 +45,7 @@ texture = ExtResource( 7 )
 [node name="Sign" parent="Props" index="2" instance=ExtResource( 3 )]
 position = Vector2( -345.367, -50.5573 )
 script = ExtResource( 6 )
-description = "Una descripción de esta plantaciao"
+description = "Details about this home-seed"
 baseline = 64
 walk_to_point = Vector2( 96, 96 )
 cursor = 1

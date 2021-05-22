@@ -9,19 +9,19 @@ func on_interact() -> void:
 				if Globals.has_done(Globals.GameState.DISGUISED):
 					# El jugador decidió hablarle a Lobo teniendo el disfraz
 					yield(E.run([
-						'Pato: Así con el disfraz sentiré menos meyo',
+						'Pato: Now that I have my disguise I won\'t fear.',
 						C.walk_to_clicked(),
 						C.face_clicked(),
 						'...',
-						'Pato: Ho.',
-						'Pato: Hola',
-						'Lobo: Hola... ¿para qué es el disfraz?',
-						'Pato: Emmmmmmm'
+						'Pato: Hi.',
+						'Pato: Hell',
+						'Lobo: Ey!... What\'s the costume for?',
+						'Pato: Well...'
 					]), 'completed')
 				else:
 					yield(E.run([
-						'Pato: Ya no le daré más vueltas',
-						'Pato: Voy con toda a hablarle a Lobo',
+						'Pato: I will not hesitate anymore.',
+						'Pato: I\'m gonna talk with Lobo NOW!',
 						C.walk_to_clicked(),
 						C.player.face_right(),
 						'...',
@@ -32,7 +32,7 @@ func on_interact() -> void:
 						'...',
 						C.player.face_right(),
 						'...',
-						'Pato: Ho..... ho..... ho.....',
+						'Pato: He..... he..... h.....',
 						A.play_music('mx_frolic'),
 					]), 'completed')
 
@@ -40,34 +40,34 @@ func on_interact() -> void:
 			else:
 				E.run([
 					C.face_clicked(),
-					C.player_say('¡¡¡Ayyyy pero qué guapote!!!'),
-					'Pato: Nunca seré capaz de hablarle',
+					'Pato: He is sooooo handsome!!!',
+					'Pato: I\'ll never have the guts to talk him',
 					face_left(),
 					C.face_clicked(),
 					dance(),
-					'Pato: Ayyyy... qué rico se mueve... \/( > __ < \\)'
+					'Pato: And look how he moves...... \/( > __ < \\)'
 				])
 		'Sea':
 			E.run([
-				'Lobo: Aiuudaaaaaaaaaaaaaaaaaaaaaaaa',
-				'Lobo: Mi hogo!!!',
-				'Pato: Aguanta amor meo. Te sacaré de ahí.'
+				'Lobo: Heeeeeeeeeeeeeeeeelp',
+				'Lobo: I\'m drowning!!!',
+				'Pato: Hang on there my love. I\'ll get you out of there.'
 			])
 		'Luna':
 			E.run([
-				'Lobo: Vamos a buscar cositas para hacer nuestra casa en la Luna',
-				'Pato: Sí sí. Ya vamos.'
+				'Lobo: Let\'s search for materials to build our home in the Luna.',
+				'Pato: Yes yes yes. Let\'s do it.'
 			])
 
 
 func on_look() -> void:
-	E.run(['Pato: Está más bueno que el pan con chocolate'])
+	E.run(['Pato: He is soooooooooo hot!!!'])
 
 
 func on_item_used(item: Item) -> void:
 	if item.script_name == 'Mopbrella':
 			yield(E.run([
-				C.player_say('Te salve de la desgracía Lobo de mis amores'),
+				'Pato: I\'ve saved your life, love of my.',
 			]), 'completed')
 			A.stop('bg_dream_boat', 0, false)
 			I.remove_item(item.script_name, false)
@@ -75,7 +75,7 @@ func on_item_used(item: Item) -> void:
 			E.goto_room('Bar')
 	else:
 		E.run([
-			C.player_say('No alcanzo hasta allá'),
+			'Pato: I can not reach you',
 		])
 
 

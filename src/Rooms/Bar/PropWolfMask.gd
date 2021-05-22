@@ -9,8 +9,8 @@ func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		'Pato: Es el momento. Está distraído drogándose.',
-		'Pato: La tomaré prestada un ratito',
+		'Pato: This is my chance. The guy is dancing.',
+		'Pato: I\'ll borrow it for a moment',
 		A.play('sfx_mask_pu', global_position),
 		C.player.grab(),
 		disable(),

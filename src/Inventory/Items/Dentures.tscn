@@ -6,7 +6,7 @@
 
 [node name="Dentures" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-description = "Dentadura postiza"
+description = "Dentures"
 script_name = "Dentures"
 cursor = 1
 

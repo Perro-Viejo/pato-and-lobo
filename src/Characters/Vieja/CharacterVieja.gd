@@ -5,8 +5,8 @@ extends Character
 func on_interact() -> void:
 	if E.current_room.state.vieja_sleeping:
 		E.run([
-			'Pato: La vieja quedó foquiada con mi super coctel.',
-			'Pato: Ojalá no le hagan cosas malas.'
+			'Pato: That cocktail made the job. She fell asleep.',
+			'Pato: I hope she\' be fine.'
 		])
 		return
 	D.show_dialog('ChatWithVieja')
@@ -23,36 +23,36 @@ func on_item_used(item: Item) -> void:
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.face_clicked(),
-			'Pato: Vea señora. Le invito este traguito.',
+			'Pato: Old-y. I invite you this drink.',
 			I.remove_item('CocktailSuper'),
-			'Pato: Fuerte y con sabor a viejo.',
-			'Vieja: Que el santo pollo la bendiga mija.',
+			'Pato: Strong and with the flavor of an elder so old...',
+			'Vieja: Glob bless you, my girl.',
 			'Vieja: glup glup glup glup glup.',
 			E.wait(3.0),
-			'Vieja: Oh sí... como en los viejos tiempos.',
-			'Vieja: Ahora sólo queda esperar a que....',
+			'Vieja: FOCK YEAH!... like old times.',
+			'Vieja: All I have to do now is wait for....',
 			sleep(),
 			E.current_room.get_prop('GlassWithDentures').enable(),
-			'Pato: ¡Ferpecto! Alcanzó a dejar sus muelas en el vaso.'
+			'Pato: Great! She put her dentures in the glass.'
 		]), 'completed')
 	elif item.script_name == 'CocktailSecret':
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.face_clicked(),
-			'Pato: ¿Qué opina de este trago?',
+			'Pato: What do you think of this drink old-y?',
 			I.remove_item('CocktailSecret'),
-			'Vieja: Mmmmm... no está nada mal... pero',
-			'Vieja: Como que le falta alguito. Sabe a viejo, pero no está tan fuerte.'
+			'Vieja: Mmmmm... not bad at all... but',
+			'Vieja: But it lacks of something. It tastes like an elder, but it isn\'t strong.'
 		]), 'completed')
 	elif item.script_name == 'CocktailGolem':
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.face_clicked(),
-			'Pato: Tómese este',
+			'Pato: Drink this!',
 			I.remove_item('CocktailGolem'),
 			'Vieja: Pfffffffff.......',
-			'Vieja: Está fuerte pero mucho lo dulce.',
-			'Vieja: El Gólem no me gusta por eso. Le falta el sabor a viejo.',
+			'Vieja: What da fock. This is as sweet as a little pink baby.',
+			'Vieja: I told you I don\'t like Golem cocktail. It lacks of the elder flavor.',
 		]), 'completed')
 
 

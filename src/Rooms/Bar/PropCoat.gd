@@ -8,10 +8,10 @@ func on_interact() -> void:
 	Globals.did(Globals.GameState.TAIL_TAKEN)
 	E.run([
 		C.walk_to_clicked(),
-		C.player_say('Nadie esta viendo... es el momento'),
+		'Pato: Now is the time... no one is looking.',
 		C.player.grab(),
 		A.play('sfx_tail_pu', global_position),
-		C.player_say('¡Túmbilis!'),
+		'Pato: Now it is mine!',
 		disable(),
 		I.add_item('Tail')
 	])

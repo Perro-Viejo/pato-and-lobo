@@ -17,7 +17,7 @@ func on_item_used(item: Item) -> void:
 			I.remove_item(item.script_name),
 			I.remove_item(script_name),
 			A.play('sfx_mopbrella_pu', Vector2.ZERO),
-			C.player_say('¡Listo el pollo, esto si es largor!'),
+			'Pato: Great! I can reach Lobo with this. No doubt!',
 			I.add_item('Mopbrella'),
-			C.player_say('¡Aguanta! ¡Te salvares!'),
+			'Pato: Hold on! I\'m comming for you!',
 		])

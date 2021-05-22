@@ -7,28 +7,28 @@
 resource_name = "OptA"
 script = ExtResource( 1 )
 id = "OptA"
-text = "Buenas, Buenas"
+text = "Hi-ya"
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "OptB"
 script = ExtResource( 1 )
 id = "OptB"
-text = "¿Me vende un tin de esa agüita?"
+text = "Could you sell me some water?"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "OptC"
 script = ExtResource( 1 )
 id = "OptC"
-text = "Creo que lo están llamando..."
+text = "Look behind you...A three headed mokey!"
 visible = true
 
 [sub_resource type="Resource" id=4]
 resource_name = "OptD"
 script = ExtResource( 1 )
 id = "OptD"
-text = "Usted está muy choncho..."
+text = "You are very fat..."
 visible = true
 
 [resource]

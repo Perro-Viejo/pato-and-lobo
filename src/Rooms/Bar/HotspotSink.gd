@@ -8,15 +8,15 @@ func on_interact() -> void:
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.player.face_up(),
-			'Pato: Me voy a lavar las alitas',
+			'Pato: I\'ll wash my wings.',
 			A.play('sfx_sink_head', global_position),
 			A.play('sfx_sink_loop', global_position),
 			E.wait(),
-			'Pato: ¡Ay qué rico!',
+			'Pato: It feels so gooood.',
 			A.play('sfx_sink_wash', global_position),
 			'...',
 			A.play('sfx_sink_wash', global_position),
-			'Pato: ...y si',
+			'Pato: ...what if.',
 			A.play('sfx_sink_wash', global_position),
 			A.stop('sfx_sink_loop')
 		], false), 'completed')
@@ -24,8 +24,8 @@ func on_interact() -> void:
 		E.goto_room('Sea')
 	else:
 		E.run([
-			C.player_say('Ya no me quiero lavar las alitas'),
-			C.player_say('Tan limpias limpieciticas')
+			C.player_say('I don\'t want to wash my wings again.'),
+			C.player_say('They are already clean.')
 		])
 
 

@@ -16,7 +16,7 @@ func on_room_transition_finished() -> void:
 	E.run_cutscene([
 		C.player_walk_to($Points/ProwPoint.global_position),
 		C.player.face_right(),
-		'Pato: No se me preocupes...',
+		'Pato: Do not worries...',
 		'...',
 		C.player.face_left(),
 		'...',
@@ -26,10 +26,10 @@ func on_room_transition_finished() -> void:
 		'...',
 		C.player.face_right(),
 		'...',
-		'Pato: ¡¡¡Buscaré la forma de sacarte de ahí!!!',
+		'Pato: I\'ll find a way to take you out!!!',
 		C.player.face_left(),
 		'...',
-		'Pato: Tiene que haber algo que pueda hacer'
+		'Pato: There must be something I can do'
 	])
 
 

@@ -15,27 +15,27 @@ func on_interact() -> void:
 	yield(E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		'Pato: Hola',
+		'Pato: Hi-ya',
 	]), 'completed')
 	
 	if _using_mask:
-		yield(E.run(['Lagarto: Punchis punchis. Hola.']), 'completed')
+		yield(E.run(['Lagarto: Punchis punchis. Hi.']), 'completed')
 	elif _can_put_mask():
 		yield(
 			E.run([
-				'Lagarto: Un momento. Una estrella no habla cara a cara con la chusma.',
+				'Lagarto: Wait. A star can\'t talk to nobody without a mask.',
 				put_mask(),
-				'Lagarto: Listo. ¿Qué pasó?'
+				'Lagarto: So. What do you want?'
 			]),
 			'completed'
 		)
 	else:
 		yield(
 			E.run([
-				'Lagarto: Me lleva la verdura. Me robaron mi máscara.',
-				'Lagarto: Puedes hablarme, pero no me mires a la cara.',
+				'Lagarto: Fock. Someone stole my mask.',
+				'Lagarto: You can talk to me, but don\'t dare to look at me.',
 				C.player.face_right(),
-				'Pato: Está bien...'
+				'Pato: Aaaaall right...'
 			]),
 			'completed'
 		)
@@ -44,11 +44,11 @@ func on_interact() -> void:
 
 func on_look() -> void:
 	if _using_mask:
-		E.run(['Pato: Esa máscara del DJ puede servirme como disfraz.'])
+		E.run(['Pato: I can use the DJ\'s wolf mask for my costume.'])
 	elif _can_put_mask():
-		E.run(['Pato: Con razón usaba esa máscara... está todo llevado.'])
+		E.run(['Pato: So that\'s why he uses the mask. Drogs!'])
 	else:
-		E.run(['Pato: Hay algo de angustia en sus mirada.'])
+		E.run(['Pato: His gaze is full of anguish.'])
 
 
 func remove_mask(is_in_queue := true) -> void:

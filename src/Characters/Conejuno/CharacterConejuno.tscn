@@ -238,7 +238,7 @@ animations = [ {
 
 [node name="CharacterConejuno" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
-description = "Barista"
+description = "Barman"
 walk_to_point = Vector2( 108, 246 )
 cursor = 8
 script_name = "Conejuno"
@@ -260,7 +260,7 @@ position = Vector2( 0, -106 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 27 )
 animation = "idle"
-frame = 23
+frame = 8
 playing = true
 
 [node name="DialogPos" parent="." index="6"]

@@ -108,7 +108,7 @@ texture = ExtResource( 7 )
 [node name="Umbrella" parent="Props" index="6" instance=ExtResource( 2 )]
 position = Vector2( -645.776, -254.313 )
 script = ExtResource( 11 )
-description = "Un sombrillón con un ganchín"
+description = "An umbrella with hook"
 baseline = 98
 walk_to_point = Vector2( 118.794, 135.765 )
 cursor = 1
@@ -130,7 +130,7 @@ texture = ExtResource( 12 )
 [node name="Tape" parent="Props" index="7" instance=ExtResource( 2 )]
 position = Vector2( -405.632, -266.124 )
 script = ExtResource( 10 )
-description = "Un lugar lleno de chécheres"
+description = "A room full of things"
 walk_to_point = Vector2( 16.8642, 151.627 )
 cursor = 1
 
@@ -144,7 +144,7 @@ position = Vector2( 16.8642, 151.627 )
 [node name="Mop" parent="Props" index="8" instance=ExtResource( 2 )]
 position = Vector2( 257.624, -161.516 )
 script = ExtResource( 9 )
-description = "Un traperocho pa alcanzar al lobacho tal vez"
+description = "A long ragpicker"
 baseline = -112
 walk_to_point = Vector2( -57.3982, 53.3936 )
 cursor = 1

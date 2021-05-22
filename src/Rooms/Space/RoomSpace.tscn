@@ -45,7 +45,7 @@ texture = ExtResource( 3 )
 position = Vector2( 508.685, -88.362 )
 scale = Vector2( 0.15, 0.15 )
 script = ExtResource( 9 )
-description = "Plantación de casas"
+description = "Homes plantation"
 baseline = -1637
 walk_to_point = Vector2( 137.315, -46.638 )
 cursor = 1
@@ -69,6 +69,7 @@ scale = Vector2( 0.9, 0.9 )
 script = ExtResource( 10 )
 description = "Luna"
 baseline = 96
+cursor = 1
 texture = ExtResource( 7 )
 
 [node name="CollisionPolygon2D" parent="Props/Luna" index="0"]
@@ -106,23 +107,25 @@ texture = ExtResource( 6 )
 
 [node name="Marrano" parent="Props" index="4" instance=ExtResource( 1 )]
 position = Vector2( -15, 262 )
-scale = Vector2( 0.1, 0.1 )
 script = ExtResource( 11 )
-description = "Marrano"
+description = "Pig Planet"
 baseline = 834
-walk_to_point = Vector2( 70, 113 )
+walk_to_point = Vector2( -22, 5 )
+cursor = 1
 texture = ExtResource( 12 )
 
 [node name="CollisionPolygon2D" parent="Props/Marrano" index="0"]
+scale = Vector2( 0.1, 0.1 )
 polygon = PoolVector2Array( -694.774, -388.995, -338.008, -637.493, -92.3861, -665.869, 236.869, -388.995, 524.968, -250.558, 667.146, 26.3162, 644.697, 333.122, 147.073, 740.95, -447.832, 677.344, -844.436, 153.528 )
 
 [node name="BaselineHelper" parent="Props/Marrano" index="1"]
 position = Vector2( 0, 834 )
 
 [node name="WalkToHelper" parent="Props/Marrano" index="2"]
-position = Vector2( 70, 113 )
+position = Vector2( -22, 5 )
 
 [node name="Sprite" parent="Props/Marrano" index="3"]
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 12 )
 
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]

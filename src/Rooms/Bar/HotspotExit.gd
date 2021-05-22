@@ -9,7 +9,7 @@ func on_interact() -> void:
 			C.walk_to_clicked(),
 			C.player.face_left(),
 			'...',
-			'Pato: Creo que saldré a tomar aire...',
+			'Pato: I\'ll go out to take some air...',
 			A.play('sfx_door_open', global_position),
 			A.stop('bg_bar'),
 			A.stop('mx_bar_01')

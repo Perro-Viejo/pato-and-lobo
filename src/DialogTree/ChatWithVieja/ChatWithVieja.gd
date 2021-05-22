@@ -11,8 +11,8 @@ func start() -> void:
 	yield(E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		'Pato: Hola señora',
-		'Vieja: Hola.',
+		'Pato: Hi ma\'am',
+		'Vieja: Hi',
 	]), 'completed')
 	
 	# La llamada al método start del padre hace que se muestren las opciones
@@ -24,43 +24,43 @@ func option_selected(opt: DialogOption) -> void:
 	match opt.id:
 		'Opt1':
 			yield(E.run([
-				'Vieja: Pues la pasaba mejor cuando era más joven. Como tú.',
-				'Vieja: Ahora es muy difícil levantar polvo, aunque a veces se logra.',
-				'Vieja: Pero cuando era joven...',
-				'Vieja: no había noche en la que no me revolcara.',
-				'Pato: ¡Ay santo pollo!'
+				'Vieja: Well, I had a better time when I was younger. Like you.',
+				'Vieja: Now it is very difficult to flirt, although sometimes it is achieved.',
+				'Vieja: But in my younger days...',
+				'Vieja: Ouuueeeee!',
+				'Pato: Oh my!'
 			]), 'completed')
 			opt.visible = false
 		'Opt2':
 			yield(E.run([
-				'Vieja: Una mierda como para bebés.',
-				'Vieja: Necesito emociones más fuertes en mi vida.',
-				'Vieja: Un aventura que me recuerde los locos años de la juventú.',
+				'Vieja: Something for babies.',
+				'Vieja: I need stronger emotions in my life.',
+				'Vieja: An adventure that reminds me of the crazy youth years.',
 			]), 'completed')
 			opt.visible = false
 			show_option('Opt3')
 		'Opt3':
 			yield(E.run([
-				'Vieja: Algo que sea fuerte, pero que sepa a viejo.',
-				'Vieja: Ese tal trago del gólem sabe a fresa... guácatelas.',
-				'Pato: Fuerte y...',
-				'Vieja: Viejo, sí.',
-				'Vieja: ¿También te gustan así?',
+				'Vieja: Something strong, but that tastes old.',
+				'Vieja: That Golem cocktail is a poop',
+				'Pato: Strong that...',
+				'Vieja: tastes old.',
+				'Vieja: Do you like them like that too?',
 				'Pato: Emmm....mmmm......mmmmmmm.....',
-				G.display('Pato se sonrojó'),
-				'Vieja: En mis tiempos no había cocteles. Tomábamos todo puro.',
+				G.display('Pato blushed'),
+				'Vieja: In my time there were no cocktails. We drank everything pure.',
 			]), 'completed')
 		'Opt4':
 			yield(E.run([
-				'Vieja: jijijijijiji.... gracias por el cumplido, pero son postizos.',
-				'Vieja: Aprovecha tus dientes mientras puedas.',
-				'Vieja: jijijijijiji',
-				G.display('La vieja se sacó la dentadura e hizo piruetas'),
-				'Pato: ....(vieja puerca)'
+				'Vieja: hihihihihihi.... thanks for the compliment, but I use dentures.',
+				'Vieja: Take advantage of your teeth while you can.',
+				'Vieja: hihihihihihi',
+				G.display('The old woman took out her dentures and played with them'),
+				'Pato: ....'
 			]), 'completed')
 			opt.visible = false
 		'Exit':
-			yield(E.run(['Vieja: Que se diviertas... jijijijijiji']), 'completed')
+			yield(E.run(['Vieja: Have fun young and pretty laidy... hihihihihihi']), 'completed')
 			D.finish_dialog()
 			return
 	_show_options()

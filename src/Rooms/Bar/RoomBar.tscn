@@ -104,7 +104,7 @@ texture = ExtResource( 13 )
 [node name="Coat" parent="Props" index="2" instance=ExtResource( 4 )]
 position = Vector2( -138, -449 )
 script = ExtResource( 15 )
-description = "Este peluchin parece una cola..."
+description = "A coat"
 walk_to_point = Vector2( 90, 184 )
 cursor = 1
 texture = ExtResource( 16 )
@@ -195,7 +195,7 @@ texture = ExtResource( 25 )
 [node name="WolfMask" parent="Props" index="8" instance=ExtResource( 4 )]
 position = Vector2( -1322, 497 )
 script = ExtResource( 12 )
-description = "Máscara de lobo"
+description = "A wolf mask"
 baseline = 63
 walk_to_point = Vector2( 87, 193 )
 cursor = 1
@@ -243,7 +243,7 @@ texture = ExtResource( 27 )
 [node name="GlassWithDentures" parent="Props" index="11" instance=ExtResource( 4 )]
 position = Vector2( 276, 241 )
 script = ExtResource( 7 )
-description = "Vaso con dentadura postiza"
+description = "Glass with dentures"
 baseline = 36
 walk_to_point = Vector2( -242, 76 )
 cursor = 1
@@ -264,7 +264,7 @@ texture = ExtResource( 8 )
 [node name="Sink" parent="Hotspots" index="0" instance=ExtResource( 9 )]
 position = Vector2( 842, -271 )
 script = ExtResource( 10 )
-description = "Lavamanos"
+description = "Handwash"
 walk_to_point = Vector2( 48, 150 )
 cursor = 1
 
@@ -279,7 +279,7 @@ polygon = PoolVector2Array( 153, -52, 187, -54, 189, -33, 197, -48, 225, -50, 24
 
 [node name="Exit" parent="Hotspots" index="1" instance=ExtResource( 9 )]
 script = ExtResource( 21 )
-description = "Salir a tomar aire"
+description = "The exit"
 walk_to_point = Vector2( 159, -238 )
 cursor = 1
 

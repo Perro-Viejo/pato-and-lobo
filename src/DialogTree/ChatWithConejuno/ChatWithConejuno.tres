@@ -7,21 +7,21 @@
 resource_name = "Opt1"
 script = ExtResource( 2 )
 id = "Opt1"
-text = "Deme una pola"
+text = "A beer"
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "Quiero algo fuerte"
+text = "Something strong"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "Exit"
 script = ExtResource( 2 )
 id = "Exit"
-text = "No quiero nada. Gracias."
+text = "Nothing. Thanks."
 visible = true
 
 [resource]

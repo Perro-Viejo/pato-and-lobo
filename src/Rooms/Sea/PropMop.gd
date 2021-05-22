@@ -6,12 +6,12 @@ extends Prop
 func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
-		C.player_say('Esta re puerco pero creo que me servirá.'),
+		'Pato: It is disgusting... but can help.',
 		A.play('sfx_mop_pu', global_position),
 		disable(),
 		I.add_item('Mop'),
-		C.player_say('Esto huele a miaos... :('),
-		C.player_say('Pero es medio largo.')
+		'Pato: It stinks... :S',
+		'Pato: But is long'
 	])
 
 

@@ -52,29 +52,29 @@ func on_room_exited() -> void:
 func on_room_transition_finished() -> void:
 	if visited_first_time:
 		E.run_cutscene([
-			G.display('Ella es Pato.'),
-			'Pato: Esta fiesta está re-buena.',
+			G.display('She is Pato.'),
+			'Pato: What an awesome party.',
 			C.player.face_left(),
-			'Pato: Además Lobo está aquí.',
-			G.display('Está enamorada de Lobo.'),
+			'Pato: And Lobo is here <3.',
+			G.display('She is in love with him.'),
 			C.change_camera_owner(C.get_character('Lobo')),
 			E.wait(2.0),
 			C.change_camera_owner(C.player),
-			G.display('Pero no se atreve a hablarle.'),
+			G.display('But she doesn\'t has the guts to talk him.'),
 			C.player.face_right(),
-			'Pato: Hoy es el día....',
-			G.display('Puedes disfrazarla.'),
-			G.display('O vivir sus ensoñaciones para que se llene de coraje.'),
-			'Pato: ¡HOY LE HABLARÉ A LOBO!',
+			'Pato: Today will be the day....',
+			G.display('You can help her with a costume.'),
+			G.display('Or by living her daydreams to increase her courage.'),
+			'Pato: I WILL TALK WITH LOBO TODAY!',
 		])
 	elif C.player.last_room == 'Sea':
 		Globals.courage += 25
 		yield(I, 'courage_update_shown')
-		E.run(['Pato: Siento que ora sí le voy a hablar'])
+		E.run(['Pato: I feel I can talk to Lobo now'])
 	elif Globals.has_done(Globals.GameState.GOT_HOME):
 		Globals.courage += 25
 		yield(I, 'courage_update_shown')
-		E.run(['Pato: Que bonito sueño...'])
+		E.run(['Pato: What a romantic dream...'])
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

@@ -8,7 +8,7 @@ func start() -> void:
 	# opciones del diálogo
 	# P.e. Hacer que el personaje jugable mire al personaje con el que va a hablar,
 	# camine hasta éste y lo salude (o sea saludado).
-	yield(E.run(['Conejuno: ¿De qué pola quiere?']), 'completed')
+	yield(E.run(['Conejuno: Which beer?']), 'completed')
 	
 	# La llamada al método start del padre hace que se muestren las opciones
 	.start()
@@ -19,24 +19,24 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt1':
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
-				'Pato: Gracias.',
+				'Pato: Thanks.',
 				A.play('sfx_beer', C.player.global_position),
-				G.display('Pato se tomó la cerveza rápido'),
+				G.display('Pato drank the beer quickly'),
 				A.play('sfx_drink_beer', C.player.global_position),
 				'Pato: glup glup glup glup',
 				'...',
-				'Pato: Pues no me dio un brinco'
+				'Pato: Nothing happened'
 			]), 'completed')
 		'Opt2':
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
-				'Pato: Gracias.',
+				'Pato: Thanks.',
 				A.play('sfx_beer', C.player.global_position),
-				G.display('Pato se tomó la cerveza lentamente'),
+				G.display('Pato drank the beer slowly'),
 				A.play('sfx_drink_beer', C.player.global_position),
 				'Pato: glup glup glup glup glup glup glup glup glup glup',
 				'...',
-				'Pato: Ay juepuerca... esta Patada al espacio...'
+				'Pato: Wow... now I feel the KICK TO THE COSM...'
 			]), 'completed')
 			D.finish_dialog()
 			A.play('sfx_dream_transition', Vector2.ZERO, false)
@@ -46,12 +46,12 @@ func option_selected(opt: DialogOption) -> void:
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
 				A.play('sfx_beer', C.player.global_position),
-				'Pato: Gracias.',
+				'Pato: Thanks.',
 				A.play('sfx_drink_beer', C.player.global_position),
 				'Pato: glup glup.... glup...... glup',
 				'...',
-				'Pato: ¡Qué cerveza más fea!',
-				G.display('Pato regó lo que quedaba de la cerveza')
+				'Pato: What a disgusting beer',
+				G.display('Pato watered what was left of the beer')
 			]), 'completed')
 		'Exit':
 			D.finish_dialog()
@@ -62,7 +62,7 @@ func option_selected(opt: DialogOption) -> void:
 
 func _ask_beer(beer_name: String) -> void:
 	yield(E.run([
-		'Pato: Que sea una...',
-		C.player_say(beer_name + ', por favor.'),
-		'Conejuno: Sale una ' + beer_name.to_lower()
+		'Pato: I want a...',
+		C.player_say(beer_name + ', please.'),
+		'Conejuno: Serving a ' + beer_name.to_lower()
 	]), 'completed')

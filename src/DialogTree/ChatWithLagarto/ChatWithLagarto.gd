@@ -19,8 +19,8 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt1':
 			yield(
 				E.run([
-					'Lagarto: Yo sé. Yo soy áspero.',
-					'Pato: Ajá...'
+					'Lagarto: I know. I am the best.',
+					'Pato: Yup...'
 				]),
 				'completed'
 			)
@@ -29,7 +29,7 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt2':
 			yield(
 				E.run([
-					'Lagarto: Claro que sí. Le tengo estos temitas.'
+					'Lagarto: Yes of course. This are the options.'
 				]),
 				'completed'
 			)

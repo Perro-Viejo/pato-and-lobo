@@ -7,56 +7,56 @@
 resource_name = "Opt1"
 script = ExtResource( 2 )
 id = "Opt1"
-text = "Eso que llevas puesto está áspero"
+text = "That suit you're using looks cool."
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "¿Cómo puedo conseguir una cosa de esas?"
+text = "How can I get one?"
 visible = false
 
 [sub_resource type="Resource" id=3]
 resource_name = "Opt3"
 script = ExtResource( 2 )
 id = "Opt3"
-text = "¿Y puedo retarte a una pelea de miradas?"
+text = "Can I challenge you to a stare fight."
 visible = false
 
 [sub_resource type="Resource" id=4]
 resource_name = "Opt4"
 script = ExtResource( 2 )
 id = "Opt4"
-text = "Te reto a una pelea de miradas por tu... aparato"
+text = "I challenge you to a stare fight... for your suit."
 visible = false
 
 [sub_resource type="Resource" id=5]
 resource_name = "Opt5"
 script = ExtResource( 2 )
 id = "Opt5"
-text = "¿Por qué no entras?"
+text = "Why don't you come in?"
 visible = true
 
 [sub_resource type="Resource" id=6]
 resource_name = "Opt6"
 script = ExtResource( 2 )
 id = "Opt6"
-text = "Acerca del pasado del bar"
+text = "Talking about this place's past."
 visible = false
 
 [sub_resource type="Resource" id=7]
 resource_name = "Opt7"
 script = ExtResource( 2 )
 id = "Opt7"
-text = "A ver esas patas"
+text = "Give me da legs."
 visible = false
 
 [sub_resource type="Resource" id=8]
 resource_name = "Exit"
 script = ExtResource( 2 )
 id = "Exit"
-text = "Bueno. Me voy. Chao"
+text = "Well. I've to... bye."
 visible = true
 
 [resource]
