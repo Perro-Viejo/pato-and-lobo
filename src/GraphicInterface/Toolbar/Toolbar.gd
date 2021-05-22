@@ -3,6 +3,7 @@ extends NinePatchRect
 
 export(Cursor.Type) var cursor
 export var script_name := ''
+export var used_in_game := true
 
 var is_disabled := false
 
@@ -33,6 +34,8 @@ func _ready() -> void:
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
 func disable() -> void:
+	if not used_in_game: return
+	
 	is_disabled = true
 	$Tween.interpolate_property(
 		self, 'rect_position:y',
@@ -43,6 +46,8 @@ func disable() -> void:
 
 
 func enable() -> void:
+	if not used_in_game: return
+	
 	is_disabled = false
 	$Tween.interpolate_property(
 		self, 'rect_position:y',
@@ -54,6 +59,8 @@ func enable() -> void:
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _open() -> void:
+	if not used_in_game: return
+	
 	if not is_disabled and rect_position.y != _hide_y: return
 	$Tween.interpolate_property(
 		self, 'rect_position:y',
@@ -64,6 +71,8 @@ func _open() -> void:
 
 
 func _close() -> void:
+	if not used_in_game: return
+	
 	yield(get_tree(), 'idle_frame')
 	if not _can_hide: return
 	$Tween.interpolate_property(

@@ -3,34 +3,61 @@ extends Character
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	if Globals.courage >= 50:
-		yield(E.run([
-			'Pato: Ya no le daré más vueltas',
-			'Pato: Voy con toda a hablarle a Lobo',
-			C.walk_to_clicked(),
-			C.player.face_right(),
-			'...',
-			'Pato: ...',
-			'Pato: ........',
-			'Pato: ......................',
-			C.player.face_left(),
-			'...',
-			C.player.face_right(),
-			'...',
-			'Pato: Ho..... ho..... ho.....',
-			A.play_music('mx_frolic'),
-		]), 'completed')
-		E.goto_room('End')
-	else:
-		E.run([
-			C.face_clicked(),
-			C.player_say('¡¡¡Ayyyy pero qué guapote!!!'),
-			'Pato: Nunca seré capaz de hablarle',
-			face_left(),
-			C.face_clicked(),
-			dance(),
-			'Pato: Ayyyy... qué rico se mueve... \/( > __ < \\)'
-		])
+	match E.current_room.script_name:
+		'Bar':
+			if Globals.courage >= 50:
+				if Globals.has_done(Globals.GameState.DISGUISED):
+					# El jugador decidió hablarle a Lobo teniendo el disfraz
+					yield(E.run([
+						'Pato: Así con el disfraz sentiré menos meyo',
+						C.walk_to_clicked(),
+						C.face_clicked(),
+						'...',
+						'Pato: Ho.',
+						'Pato: Hola',
+						'Lobo: Hola... ¿para qué es el disfraz?',
+						'Pato: Emmmmmmm'
+					]), 'completed')
+				else:
+					yield(E.run([
+						'Pato: Ya no le daré más vueltas',
+						'Pato: Voy con toda a hablarle a Lobo',
+						C.walk_to_clicked(),
+						C.player.face_right(),
+						'...',
+						'Pato: ...',
+						'Pato: ........',
+						'Pato: ......................',
+						C.player.face_left(),
+						'...',
+						C.player.face_right(),
+						'...',
+						'Pato: Ho..... ho..... ho.....',
+						A.play_music('mx_frolic'),
+					]), 'completed')
+
+				E.goto_room('End')
+			else:
+				E.run([
+					C.face_clicked(),
+					C.player_say('¡¡¡Ayyyy pero qué guapote!!!'),
+					'Pato: Nunca seré capaz de hablarle',
+					face_left(),
+					C.face_clicked(),
+					dance(),
+					'Pato: Ayyyy... qué rico se mueve... \/( > __ < \\)'
+				])
+		'Sea':
+			E.run([
+				'Lobo: Aiuudaaaaaaaaaaaaaaaaaaaaaaaa',
+				'Lobo: Mi hogo!!!',
+				'Pato: Aguanta amor meo. Te sacaré de ahí.'
+			])
+		'Luna':
+			E.run([
+				'Lobo: Vamos a buscar cositas para hacer nuestra casa en la Luna',
+				'Pato: Sí sí. Ya vamos.'
+			])
 
 
 func on_look() -> void:

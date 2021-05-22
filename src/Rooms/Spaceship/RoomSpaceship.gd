@@ -8,7 +8,7 @@ extends Room
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
-	C.player.global_position = Vector2.ZERO
+	C.player.global_position = $Points/PlayerPos.global_position
 	C.player.disable(false)
 	C.get_character('Lobo').scale = Vector2.ONE * 0.8
 	I.add_item('Pato', false)

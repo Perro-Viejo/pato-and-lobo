@@ -7,7 +7,12 @@ enum GameState {
 	DOME_SPOTTED,
 	GARBAGE_THROWN,
 	WATER_TAKEN,
-	WON_GAME
+	WON_GAME,
+	MASK_TAKEN,
+	DENTURES_TAKEN,
+	LEGS_TAKEN,
+	TAIL_TAKEN,
+	DISGUISED
 }
 
 var game_progress := [GameState.NONE]
