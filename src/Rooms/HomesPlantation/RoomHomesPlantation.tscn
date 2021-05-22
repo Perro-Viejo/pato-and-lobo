@@ -17,7 +17,7 @@ outlines = [ PoolVector2Array( 623.91, 157.426, 376.966, -39.1219, 11.5886, -124
 script = ExtResource( 2 )
 script_name = "HomesPlantation"
 characters = [ {
-"position": Vector2( 0, 20 ),
+"position": Vector2( 0, 40 ),
 "script_name": "Lobo"
 } ]
 limit_left = -960.0

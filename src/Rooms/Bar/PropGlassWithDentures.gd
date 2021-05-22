@@ -5,6 +5,7 @@ extends Prop
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
 	E.current_room.state.has_dentures = false
+	Globals.did(Globals.GameState.DENTURES_TAKEN)
 	E.run([
 		C.walk_to_clicked(),
 		C.player_say('Es el momento, ahora puedo tomar la dentadura.'),

@@ -132,6 +132,7 @@ func option_selected(opt: DialogOption) -> void:
 			return
 		'Opt7':
 			if E.current_room.state.cocktail_unlocked:
+				Globals.did(Globals.GameState.LEGS_TAKEN)
 				yield(E.run([
 					'Pez: Bien. Pues es la hora de cumplir.',
 					'Pez: Aquí están...',

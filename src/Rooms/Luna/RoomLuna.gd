@@ -9,14 +9,20 @@ extends Room
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
 	C.player.global_position = $Points/EntryPoint.global_position
+
 	C.player.enable(false)
 	C.player.scale = Vector2.ONE * 0.5
 	C.get_character('Lobo').scale = Vector2.ONE * 0.5
+	
+	if Globals.has_done(Globals.GameState.GOT_HOME):
+		$Props/HomeSeed.enable(false)
+
 
 func on_room_exited() -> void:
 	C.player.scale = Vector2.ONE
 	C.get_character('Lobo').scale = Vector2.ONE
 	.on_room_exited()
+
 
 func on_room_transition_finished() -> void:
 	if Globals.has_done(Globals.GameState.GOT_HOME):
@@ -29,10 +35,11 @@ func on_room_transition_finished() -> void:
 				'Lobo: Echele agua y ámamame',
 			]), 'completed')
 		else:
-			E.run([
-			'Pato: Debemos encontrar agüita pa crecer nuestrogare',
-			'Lobo: he oido hablar que el agua espacial es especial :3'
-		])
+			yield(E.run([
+				'Pato: Debemos encontrar agüita pa crecer nuestrogare',
+				'Lobo: he oido hablar que el agua espacial es especial :3',
+			]), 'completed')
+			E.goto_room('Bar')
 	elif Globals.has_done(Globals.GameState.WATER_TAKEN):
 		yield(
 			E.run_cutscene([

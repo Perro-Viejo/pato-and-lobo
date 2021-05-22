@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Rooms/Luna/RoomLuna.gd" type="Script" id=3]
 [ext_resource path="res://src/Rooms/Luna/Sprites/bg.png" type="Texture" id=4]
 [ext_resource path="res://src/Rooms/Luna/Sprites/luna.png" type="Texture" id=5]
+[ext_resource path="res://src/Rooms/Luna/PropSpaceship.gd" type="Script" id=6]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipbase.png" type="Texture" id=7]
+[ext_resource path="res://src/Rooms/Luna/PropHomeSeed.gd" type="Script" id=8]
+[ext_resource path="res://src/Rooms/Luna/Sprites/home_seed.png" type="Texture" id=9]
+[ext_resource path="res://src/Rooms/Luna/Sprites/home.png" type="Texture" id=10]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 497, -150, 618, -222, 686, -80, 465, -126, -79, -18, -77, -47, 408, -133, 658, 40, 454, 363, 367, 377, -350, -384, -301, -435, -202, -352, -169, -41, -237, -7, 540, -420, 433, -198, 436, -462, 365, -218, 232, -444, 530, 373, 700, 130, 714, 292, 504, 411, 340, -184, -4, -390, 90, -487, 305, 435, -181, 18, -317, 411, -642, 380, -740, 294, -700, 124, -658, 32, -237, 21, -307, 383, -101, -353, -618, -82, -560, -232, -446, -336, -652, -62, 442, 476, -91, 468, -154, 405, 321, 461, -273, 378, -132, 502, -156, 516, -207, 483, 421, 449 )
@@ -18,19 +23,75 @@ characters = [ {
 "position": Vector2( 20, 15 ),
 "script_name": "Lobo"
 } ]
+limit_left = -960.0
+limit_right = 960.0
+limit_top = -1080.0
+limit_bottom = 1080.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 1 )]
 clickable = false
 baseline = -1080
 texture = ExtResource( 4 )
 
-[node name="Luna" parent="Props" index="1" instance=ExtResource( 1 )]
+[node name="Spaceship" parent="Props" index="1" instance=ExtResource( 1 )]
+position = Vector2( -339, -342 )
+script = ExtResource( 6 )
+description = "Nave espacial del amor"
+baseline = -598
+cursor = 1
+texture = ExtResource( 7 )
+
+[node name="CollisionPolygon2D" parent="Props/Spaceship" index="0"]
+rotation = -0.785397
+polygon = PoolVector2Array( -137, -528, -3, -568, 257, -537, 328, -448, 235.467, 40.3048, 12.7279, -39.598, -231.931, -65.0535 )
+
+[node name="BaselineHelper" parent="Props/Spaceship" index="1"]
+position = Vector2( 0, -598 )
+
+[node name="Sprite" parent="Props/Spaceship" index="3"]
+rotation = -2.09439
+texture = ExtResource( 7 )
+
+[node name="Luna" parent="Props" index="2" instance=ExtResource( 1 )]
 clickable = false
 baseline = -1080
 texture = ExtResource( 5 )
+
+[node name="HomeSeed" parent="Props" index="3" instance=ExtResource( 1 )]
+position = Vector2( 225, -438 )
+script = ExtResource( 8 )
+description = "Semilla-casa"
+walk_to_point = Vector2( -108, 122 )
+cursor = 1
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" parent="Props/HomeSeed" index="0"]
+rotation = 1.309
+polygon = PoolVector2Array( -42, -70, 20, -50, 81, -55, 137, -8, 101, 83, 15, 133, -35, 116, -71, -31 )
+
+[node name="WalkToHelper" parent="Props/HomeSeed" index="2"]
+position = Vector2( -108, 122 )
+
+[node name="Sprite" parent="Props/HomeSeed" index="3"]
+rotation = 1.309
+texture = ExtResource( 9 )
+
+[node name="Home" parent="Props" index="4" instance=ExtResource( 1 )]
+visible = false
+position = Vector2( 286, -645 )
+input_pickable = false
+description = "Nuestro hogar"
+texture = ExtResource( 10 )
+
+[node name="Sprite" parent="Props/Home" index="3"]
+texture = ExtResource( 10 )
 
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]
 position = Vector2( 119, -438 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
 navpoly = SubResource( 1 )
+
+[editable path="Props/Spaceship"]
+[editable path="Props/HomeSeed"]
+[editable path="Props/Home"]

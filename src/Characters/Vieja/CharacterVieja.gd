@@ -35,6 +35,25 @@ func on_item_used(item: Item) -> void:
 			E.current_room.get_prop('GlassWithDentures').enable(),
 			'Pato: ¡Ferpecto! Alcanzó a dejar sus muelas en el vaso.'
 		]), 'completed')
+	elif item.script_name == 'CocktailSecret':
+		yield(E.run([
+			C.walk_to_clicked(),
+			C.face_clicked(),
+			'Pato: ¿Qué opina de este trago?',
+			I.remove_item('CocktailSecret'),
+			'Vieja: Mmmmm... no está nada mal... pero',
+			'Vieja: Como que le falta alguito. Sabe a viejo, pero no está tan fuerte.'
+		]), 'completed')
+	elif item.script_name == 'CocktailGolem':
+		yield(E.run([
+			C.walk_to_clicked(),
+			C.face_clicked(),
+			'Pato: Tómese este',
+			I.remove_item('CocktailGolem'),
+			'Vieja: Pfffffffff.......',
+			'Vieja: Está fuerte pero mucho lo dulce.',
+			'Vieja: El Gólem no me gusta por eso. Le falta el sabor a viejo.',
+		]), 'completed')
 
 
 func sleep(is_in_queue := true) -> void:

@@ -9,6 +9,7 @@ extends Clickable
 signal started_walk_to(character, start, end)
 
 var last_room := ''
+var anim_suffix := ''
 
 var _looking_dir := 'd'
 
@@ -54,14 +55,14 @@ func walk(target_pos: Vector2, is_in_queue := true) -> void:
 		E.main_camera.smoothing_enabled = true
 		return
 	
-	$AnimationPlayer.play('walk_%s' % _looking_dir)
+	$AnimationPlayer.play('walk_%s' % _looking_dir + anim_suffix)
 	emit_signal('started_walk_to', self, position, target_pos)
 	yield(C, 'character_move_ended')
 
 
 func idle(is_in_queue := true) -> void:
 	if is_in_queue: yield()
-	$AnimationPlayer.play('idle_%s' % _looking_dir)
+	$AnimationPlayer.play('idle_%s' % _looking_dir + anim_suffix)
 	
 	if E.cutscene_skipped:
 		yield(get_tree(), 'idle_frame')
@@ -107,7 +108,7 @@ func say(dialog: String, is_in_queue := true) -> void:
 
 	if vo_name:
 		A.play(vo_name, global_position, false)
-	$AnimationPlayer.play('talk_%s' % _looking_dir)
+	$AnimationPlayer.play('talk_%s' % _looking_dir + anim_suffix)
 
 	yield(G, 'continue_clicked')
 	idle(false)

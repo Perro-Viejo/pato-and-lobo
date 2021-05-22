@@ -1,15 +1,17 @@
-extends Item
+tool
+extends Prop
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	A.play('sfx_mask_active', Vector2.ZERO, false)
-	.on_interact()
+	pass
 
 
 func on_look() -> void:
-	.on_look()
+	pass
 
 
 func on_item_used(item: Item) -> void:
-	pass
+	if item.script_name == 'WaterCase':
+		E.current_room.get_prop('HomeSeed').disable(false)
+		E.current_room.get_prop('Home').enable(false)

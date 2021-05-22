@@ -10,7 +10,6 @@ func _init() -> void:
 		has_mask = true,
 		has_dentures = false,
 		has_coat = true,
-		has_brooms = true,
 		dj_uses_mask = true,
 		vieja_sleeping = false,
 		last_player_pos = Vector2.ZERO,
@@ -39,8 +38,6 @@ func on_room_entered() -> void:
 		$Props/GlassWithDentures.disable(false)
 	if not state.has_coat:
 		$Props/Coat.disable(false)
-	if not state.has_brooms:
-		$Props/Brooms.disable(false)
 	if state.vieja_sleeping:
 		$Characters/CharacterVieja.sleep()
 

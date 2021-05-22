@@ -21,6 +21,10 @@ characters = [ {
 "position": Vector2( 150, 150 ),
 "script_name": "Lobo"
 } ]
+limit_left = -960.0
+limit_right = 960.0
+limit_top = -540.0
+limit_bottom = 540.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 3 )]
 clickable = false
@@ -31,7 +35,13 @@ texture = ExtResource( 4 )
 position = Vector2( 15.7145, -42.6536 )
 script = ExtResource( 5 )
 clickable = false
-baseline = 540
+baseline = -496
+texture = ExtResource( 10 )
+
+[node name="BaselineHelper" parent="Props/Spaceship" index="1"]
+position = Vector2( -17.7145, -496.346 )
+
+[node name="Sprite" parent="Props/Spaceship" index="3"]
 texture = ExtResource( 10 )
 
 [node name="RoboticArm" parent="Props" index="2" instance=ExtResource( 3 )]
@@ -99,6 +109,10 @@ texture = ExtResource( 6 )
 [node name="Position2D" type="Position2D" parent="Characters" index="0"]
 position = Vector2( 150, 48 )
 
+[node name="PlayerPos" type="Position2D" parent="Points" index="0"]
+position = Vector2( 0, 703 )
+
+[editable path="Props/Spaceship"]
 [editable path="Props/RoboticArm"]
 [editable path="Props/TeletransportLaser"]
 [editable path="Props/GarbageExtractor"]

@@ -3,7 +3,13 @@ extends Room
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
-# TODO: Sobrescribir los métodos de Godot que hagan falta
+func _init() -> void:
+	state = {
+		visited = self.visited,
+		visited_first_time = self.visited_first_time,
+		visited_times = self.visited_times,
+		last_player_pos = Vector2.ZERO
+	}
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
@@ -11,17 +17,25 @@ func on_room_entered() -> void:
 	A.play('bg_marrano', Vector2.ZERO, false)
 	if not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
 		A.play('sfx_dome', $Props/Container.global_position, false)
-	C.player.global_position = $Points/EntryPoint.global_position
+	
+	if visited_first_time:
+		C.player.global_position = $Points/EntryPoint.global_position
+		I.add_item('Pato', false)
+		I.add_item('Lobo', false)
+	else:
+		C.player.global_position = state.last_player_pos
+
 	C.player.enable(false)
 	C.get_character('Lobo').disable(false)
-	I.add_item('Pato', false)
-	I.add_item('Lobo', false)
 
 
 func on_room_exited() -> void:
+	state.last_player_pos = C.player.global_position
+
 	A.stop('bg_marrano', 0, false)
 	if not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
 		A.stop('sfx_dome', 0, false)
+
 	C.get_character('Lobo').enable(false)
 	.on_room_exited()
 

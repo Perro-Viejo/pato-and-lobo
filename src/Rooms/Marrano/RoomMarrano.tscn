@@ -1,14 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Rooms/Marrano/RoomMarrano.gd" type="Script" id=2]
 [ext_resource path="res://src/Rooms/Marrano/Sprites/bg.png" type="Texture" id=3]
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Rooms/Marrano/Sprites/planetacerdoregadera.png" type="Texture" id=5]
-[ext_resource path="res://src/Rooms/Marrano/Sprites/swing_base.png" type="Texture" id=6]
-[ext_resource path="res://src/Rooms/Marrano/PropSwingBase.gd" type="Script" id=7]
-[ext_resource path="res://src/Rooms/Marrano/PropSwing.gd" type="Script" id=8]
-[ext_resource path="res://src/Rooms/Marrano/Sprites/swing.png" type="Texture" id=9]
 [ext_resource path="res://src/Rooms/Marrano/Sprites/planetacerdodomo.png" type="Texture" id=10]
 [ext_resource path="res://src/Rooms/Marrano/PropContainer.gd" type="Script" id=11]
 [ext_resource path="res://src/Rooms/Marrano/Sprites/planetacerdo.png" type="Texture" id=12]
@@ -48,56 +44,13 @@ position = Vector2( 0, -660 )
 [node name="Sprite" parent="Props/Surface" index="3"]
 texture = ExtResource( 12 )
 
-[node name="SwingBase" parent="Props" index="2" instance=ExtResource( 4 )]
-visible = false
-position = Vector2( -702.706, 37.4577 )
-input_pickable = false
-script = ExtResource( 7 )
-description = "Base del columpio"
-baseline = 187
-walk_to_point = Vector2( -145.216, 229.852 )
-texture = ExtResource( 6 )
-
-[node name="CollisionPolygon2D" parent="Props/SwingBase" index="0"]
-polygon = PoolVector2Array( -169.884, -162.382, -140.485, -164.164, -138.807, -121.214, 29.0008, -123.74, 126.094, -133.562, 126.199, -189.325, 157.523, -190.526, 174.072, 190.156, 120.133, 189.406, 125.533, -117.566, 30.1233, -106.061, -138.246, -105.5, -122.667, 183.287, -172.557, 182.396 )
-
-[node name="BaselineHelper" parent="Props/SwingBase" index="1"]
-position = Vector2( -29.3996, 187.089 )
-
-[node name="WalkToHelper" parent="Props/SwingBase" index="2"]
-position = Vector2( -145.216, 229.852 )
-
-[node name="Sprite" parent="Props/SwingBase" index="3"]
-texture = ExtResource( 6 )
-
-[node name="Swing" parent="Props" index="3" instance=ExtResource( 4 )]
-visible = false
-position = Vector2( -721.695, 41.0054 )
-input_pickable = false
-script = ExtResource( 8 )
-description = "Columpio"
-baseline = 113
-walk_to_point = Vector2( 83, 171 )
-texture = ExtResource( 9 )
-
-[node name="CollisionPolygon2D" parent="Props/Swing" index="0"]
-polygon = PoolVector2Array( -6.45654, -15.6937, 2.02057, -15.8327, 3.10967, -113.461, 17.7563, -113.303, 13.839, -16.0265, 22.3316, -16.1657, 65.7498, 27.2525, 59.6147, 91.9079, -10.232, 116.449, -64.0329, 79.6376, -57.4258, 22.0612 )
-
-[node name="BaselineHelper" parent="Props/Swing" index="1"]
-position = Vector2( 10.6787, 113.461 )
-
-[node name="WalkToHelper" parent="Props/Swing" index="2"]
-position = Vector2( 83, 171 )
-
-[node name="Sprite" parent="Props/Swing" index="3"]
-texture = ExtResource( 9 )
-
-[node name="Container" parent="Props" index="4" instance=ExtResource( 4 )]
+[node name="Container" parent="Props" index="2" instance=ExtResource( 4 )]
 position = Vector2( 334.863, -81.3031 )
 script = ExtResource( 11 )
 description = "Contenedor protegido con rashos láser"
 baseline = 350
 walk_to_point = Vector2( 137.388, 380.736 )
+cursor = 1
 texture = ExtResource( 10 )
 
 [node name="CollisionPolygon2D" parent="Props/Container" index="0"]
@@ -112,7 +65,7 @@ position = Vector2( 137.388, 380.736 )
 [node name="Sprite" parent="Props/Container" index="3"]
 texture = ExtResource( 10 )
 
-[node name="Water" parent="Props" index="5" instance=ExtResource( 4 )]
+[node name="Water" parent="Props" index="3" instance=ExtResource( 4 )]
 position = Vector2( -457.58, -367.103 )
 script = ExtResource( 13 )
 description = "Agua para crecer cosas rápido"
@@ -141,7 +94,5 @@ navpoly = SubResource( 1 )
 position = Vector2( -295.256, 184.139 )
 
 [editable path="Props/Surface"]
-[editable path="Props/SwingBase"]
-[editable path="Props/Swing"]
 [editable path="Props/Container"]
 [editable path="Props/Water"]
