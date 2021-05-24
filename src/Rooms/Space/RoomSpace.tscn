@@ -43,24 +43,24 @@ texture = ExtResource( 3 )
 
 [node name="HomesPlantation" parent="Props" index="1" instance=ExtResource( 1 )]
 position = Vector2( 508.685, -88.362 )
-scale = Vector2( 0.15, 0.15 )
 script = ExtResource( 9 )
 description = "Homes plantation"
-baseline = -1637
-walk_to_point = Vector2( 137.315, -46.638 )
+baseline = 111
+walk_to_point = Vector2( 18.315, 0.362 )
 cursor = 1
 texture = ExtResource( 5 )
 
 [node name="CollisionPolygon2D" parent="Props/HomesPlantation" index="0"]
-polygon = PoolVector2Array( -166.244, -143.942, -5.20593, -203.272, 113.454, -188.44, 200.33, -97.3259, 198.211, 99.7343, 107.097, 197.205, -5.20593, 220.513, -115.39, 190.848, -202.266, 99.7343, -221.336, -29.5203 )
+polygon = PoolVector2Array( -92.685, -81.638, -13.685, -107.638, 85.315, -102.638, 126.315, -26.638, 104.315, 65.362, 65.315, 118.362, -7.685, 120.362, -66.685, 110.362, -108.685, 62.362, -124.685, -4.638 )
 
 [node name="BaselineHelper" parent="Props/HomesPlantation" index="1"]
-position = Vector2( 0, -1637 )
+position = Vector2( 0, 111.362 )
 
 [node name="WalkToHelper" parent="Props/HomesPlantation" index="2"]
-position = Vector2( 137.315, -46.638 )
+position = Vector2( 18.315, 0.362 )
 
 [node name="Sprite" parent="Props/HomesPlantation" index="3"]
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 5 )
 
 [node name="Luna" parent="Props" index="2" instance=ExtResource( 1 )]

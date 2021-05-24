@@ -29,7 +29,8 @@ func _ready() -> void:
 		(b as TextureButton).connect('mouse_entered', self, '_disable_hide')
 		(b as TextureButton).connect('mouse_exited', self, '_enable_hide')
 
-	# TODO: conectarse a señales del universo Chimpoko
+	if not used_in_game:
+		hide()
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░

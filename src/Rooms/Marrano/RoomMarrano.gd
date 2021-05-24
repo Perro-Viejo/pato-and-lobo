@@ -35,6 +35,8 @@ func on_room_exited() -> void:
 	A.stop('bg_marrano', 0, false)
 	if not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
 		A.stop('sfx_dome', 0, false)
+	else:
+		A.stop('sfx_alarm', 0, false)
 
 	C.get_character('Lobo').enable(false)
 	.on_room_exited()

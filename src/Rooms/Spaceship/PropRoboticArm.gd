@@ -10,7 +10,8 @@ func on_interact() -> void:
 				E.run([
 				'Lobo: I will use the picker to pull our home-seed.',
 				'Pato: This is so exciting my love!',
-				A.play('sfx_spaceship_hook', global_position, false)
+				A.play('sfx_spaceship_hook', global_position),
+				E.wait(2)
 			]), 'completed')
 			E.goto_room('HomesPlantation')
 		else:

@@ -6,9 +6,9 @@ extends Prop
 func on_interact() -> void:
 	if not Globals.has_done(Globals.GameState.GOT_HOME):
 		yield(E.run([
+			A.play('sfx_spaceship_transition', Vector2.ZERO),
 			C.walk_to_clicked()
 		]), 'completed')
-		A.play('sfx_spaceship_transition', Vector2.ZERO, false)
 		E.goto_room('HomesPlantation')
 	else:
 		yield(E.run([

@@ -41,6 +41,8 @@ margin_bottom = 0.0
 [node name="DisplayBox" parent="MainContainer" instance=ExtResource( 11 )]
 
 [node name="InventoryContainer" parent="MainContainer" instance=ExtResource( 4 )]
+patch_margin_left = 11
+patch_margin_right = 371
 
 [node name="DialogMenu" parent="MainContainer" instance=ExtResource( 5 )]
 

@@ -5,9 +5,9 @@ extends Prop
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
 	yield(E.run([
+		A.play('sfx_spaceship_transition', Vector2.ZERO),
 		C.walk_to_clicked()
 	]), 'completed')
-	A.play('sfx_spaceship_transition', Vector2.ZERO, false)
 	E.goto_room('Marrano')
 
 

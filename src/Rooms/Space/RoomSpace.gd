@@ -10,6 +10,9 @@ extends Room
 func on_room_entered() -> void:
 	C.player.global_position = $Points/EntryPoint.global_position
 	C.player.disable(false)
+	
+	A.stop('bg_marrano', 0, false)
+	A.stop('bg_homesplantation', 0, false)
 	A.play('bg_space', Vector2.ZERO, false)
 
 

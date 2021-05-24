@@ -46,7 +46,7 @@ func play(cue_name: String, pos := Vector2.ZERO, is_in_queue := true, wait_audio
 	else:
 		printerr('AudioManager.play: No se encontró el sonido', cue_name)
 	
-	if wait_audio_complete:
+	if stream_player and wait_audio_complete:
 		yield(stream_player, 'finished')
 	else:
 		yield(get_tree(), 'idle_frame')
@@ -70,8 +70,11 @@ func stop(cue_name: String, _instance_i := 0, is_in_queue := true) -> void:
 
 	if _active.has(cue_name):
 		var stream_player: Node = (_active[cue_name] as Array).pop_front()
-
-		stream_player.stop()
+		
+		if is_instance_valid(stream_player):
+			stream_player.stop()
+		else:
+			_active.erase(cue_name)
 
 	yield(get_tree(), 'idle_frame')
 
@@ -93,6 +96,10 @@ func _play(cue: AudioCue, pos := Vector2.ZERO) -> Node:
 	
 	if cue.is_2d:
 		player = _get_free_stream($Positional)
+		
+		if not is_instance_valid(player):
+			prints('AudioManager._play(...): Nos quedamos sin AudioStreamPlayer2D')
+			return null
 
 		(player as AudioStreamPlayer2D).stream = cue.audio
 		(player as AudioStreamPlayer2D).pitch_scale = cue.get_pitch()
@@ -100,6 +107,10 @@ func _play(cue: AudioCue, pos := Vector2.ZERO) -> Node:
 		(player as AudioStreamPlayer2D).position = pos
 	else:
 		player = _get_free_stream($Generic)
+		
+		if not is_instance_valid(player):
+			prints('AudioManager._play(...): Nos quedamos sin AudioStreamPlayer')
+			return null
 
 		(player as AudioStreamPlayer).stream = cue.audio
 		(player as AudioStreamPlayer).pitch_scale = cue.get_pitch()
@@ -149,6 +160,8 @@ func _make_available(stream_player: Node, cue_name: String, debug_idx: int) -> v
 
 
 func _reparent(source: Node, target: Node, child_idx: int) -> Node:
+	if source.get_children().empty(): return null
+	
 	var node_to_reparent: Node = source.get_child(child_idx)
 
 	source.remove_child(node_to_reparent)

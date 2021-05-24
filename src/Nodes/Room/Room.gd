@@ -173,6 +173,9 @@ func _update_navigation_path(
 	# personajes moviéndose al tiempo. O que cada personaje controle su
 	# movimiento. (;￢＿￢)
 	_path = _nav_path.get_simple_path(start_position, end_position, true)
+	
+	if _path.empty(): return
+	
 	_path.remove(0)
 	_moving_character = character
 

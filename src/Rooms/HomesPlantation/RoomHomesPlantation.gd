@@ -29,6 +29,7 @@ func on_room_entered() -> void:
 func on_room_exited() -> void:
 	state.last_player_pos = C.player.global_position
 	
+	A.stop('sfx_spaceship_hook')
 	A.stop('bg_homesplantation', 0, false)
 	C.player.enable(false)
 	C.get_character('Lobo').enable(false)
@@ -46,7 +47,7 @@ func on_room_transition_finished() -> void:
 			'Pato: Done! We have our home-seed. Let\'s go to Luna and sow it.',
 		]), 'completed')
 		E.goto_room('Luna')
-	else:
+	elif visited_first_time:
 		yield(E.run([
 			'Pato: Lobo and I need a home to live and give each other love.',
 			'Pato: Houses are planted on this planet.',

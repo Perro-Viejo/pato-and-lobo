@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Rooms/Spaceship/RoomSpaceship.gd" type="Script" id=2]
@@ -14,7 +14,6 @@
 [ext_resource path="res://src/Rooms/Spaceship/PropGarbageExtractor.gd" type="Script" id=12]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipgancho2.png" type="Texture" id=13]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshippuertade.png" type="Texture" id=14]
-[ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipgancho.png" type="Texture" id=15]
 
 [node name="RoomSpaceship" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -50,7 +49,7 @@ position = Vector2( 0, -636 )
 
 [node name="Sprite" parent="Props/RoboticArm" index="3"]
 position = Vector2( 46.3268, -235.197 )
-texture = ExtResource( 15 )
+texture = ExtResource( 8 )
 
 [node name="Sprite2" type="Sprite" parent="Props/RoboticArm" index="4"]
 position = Vector2( 31.1127, -47.2525 )
