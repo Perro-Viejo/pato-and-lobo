@@ -30,7 +30,7 @@ func option_selected(opt: DialogOption) -> void:
 	match opt.id:
 		'Opt1':
 			yield(E.run([
-				'Pez: Thanks. I won it a while ago in a stare fight.',
+				'Pez: Thanks. I earn it a while ago in a stare fight.',
 				'Pato: A stare fight?',
 				'Pez: Yep. A stare fight.',
 				'Pato: And how do you play that?',
@@ -47,8 +47,8 @@ func option_selected(opt: DialogOption) -> void:
 			show_option('Opt2')
 		'Opt2':
 			yield(E.run([
-				'Pez: You can buy it or win it at a stare fight.',
-				'Pez: That\'s how i won mine.',
+				'Pez: You can buy it or earn it in a stare fight.',
+				'Pez: That\'s how i earn mine.',
 				'Pato: yep... you already said that.'
 			]), 'completed')
 			opt.visible = false
@@ -58,7 +58,7 @@ func option_selected(opt: DialogOption) -> void:
 				yield(E.run([
 					'Pez: You could... if you weren\'t so dirty.',
 					'Pato: I\'M NOT DIRTY!',
-					G.display('Pato got mad as she did not in a long time ago'),
+					G.display('Pato got mad as she did not in a long time'),
 					G.display('Now she was commited to defeat Pez in a stare fight'),
 					'Pez: You are sooo dirtyy. I can notice from here.',
 					'Pato: what what... what do you see dirty?',
@@ -75,7 +75,7 @@ func option_selected(opt: DialogOption) -> void:
 				yield(E.run([
 					'Pez: Let me see your wings',
 					G.display('Pato showed her wings to Pez'),
-					'Pez: All right. You meet the requirement. You can challenge me.'
+					'Pez: All right. You meet the requirements. You can challenge me.'
 				]), 'completed')
 				opt.visible = false
 				show_option('Opt4')
@@ -102,16 +102,16 @@ func option_selected(opt: DialogOption) -> void:
 					G.display('For Pato it was really easy.'),
 					G.display('That old trick of looking at the frown, not the eyes.'),
 					'Pato: Right! Now give me that thing',
-					'Pez: I can not give you all of it, If i do i can\'t return home.',
+					'Pez: I can not give you all of it, If I do, I can\'t return home.',
 					'Pez: I\'ll give you only the legs.'
 				]), 'completed')
 				opt.visible = false
 				show_option('Opt7')
 		'Opt5':
 			yield(E.run([
-				'Pez: This is not the place i met some years ago.',
+				'Pez: This is not the place I met some years ago.',
 				'Pez: It has changed...for worse.',
-				'Pato: Why do you come then?',
+				'Pato: Why did you come then?',
 				pez.face_right(),
 				'...',
 				'Pez: Something said to me i should come tonight...',
@@ -120,7 +120,7 @@ func option_selected(opt: DialogOption) -> void:
 				pez.face_left(),
 				'...',
 				'Pez: Maybe to share something about this place.',
-				'Pez: Maybe it could return to be as it was...'
+				'Pez: Maybe it could return to what it was...'
 			]), 'completed')
 			opt.visible = false
 			show_option('Opt6')
@@ -137,8 +137,8 @@ func option_selected(opt: DialogOption) -> void:
 					'Pez: Well, it\'s time to meet.',
 					'Pez: Here they are...',
 					I.add_item('Legs'),
-					'Pez: And being no longer my purpose in this place...',
-					'Pez: Immmm gone.',
+					'Pez: And having no longer a purpose in this place...',
+					'Pez: I\'mmmm gone.',
 					pez.disable(),
 					'...',
 					'Pato: Oh shoe. He vanished...',
@@ -148,7 +148,7 @@ func option_selected(opt: DialogOption) -> void:
 				return
 			else:
 				yield(E.run([
-					'Pez: Before giving you my legs, there is something i must tell'
+					'Pez: Before giving you my legs, there is something I must tell'
 				]), 'completed')
 		'Exit':
 			yield(E.run([pez.face_right()]), 'completed')

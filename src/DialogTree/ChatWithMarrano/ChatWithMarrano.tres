@@ -21,14 +21,14 @@ visible = true
 resource_name = "OptC"
 script = ExtResource( 1 )
 id = "OptC"
-text = "Look behind you...A three headed mokey!"
+text = "Look behind you...A three headed monkey!"
 visible = true
 
 [sub_resource type="Resource" id=4]
 resource_name = "OptD"
 script = ExtResource( 1 )
 id = "OptD"
-text = "You are very fat..."
+text = "You are too fat..."
 visible = true
 
 [resource]

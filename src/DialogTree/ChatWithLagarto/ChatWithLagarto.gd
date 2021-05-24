@@ -29,7 +29,7 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt2':
 			yield(
 				E.run([
-					'Lagarto: Yes of course. This are the options.'
+					'Lagarto: Yes of course. These are the options.'
 				]),
 				'completed'
 			)

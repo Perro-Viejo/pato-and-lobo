@@ -35,7 +35,7 @@ visible = true
 resource_name = "Exit"
 script = ExtResource( 2 )
 id = "Exit"
-text = "With permission ma'am"
+text = "With your permission ma'am"
 visible = true
 
 [resource]

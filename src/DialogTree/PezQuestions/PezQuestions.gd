@@ -52,7 +52,7 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt2':
 			yield(E.run([
 				'Pez: They played another type of music, something looser',
-				'Pez: And people that would come used to be more social'
+				'Pez: And people that came used to be more social'
 			]), 'completed')
 			opt.visible = false
 		'Opt3':
@@ -76,7 +76,7 @@ func option_selected(opt: DialogOption) -> void:
 			show_option('Opt5')
 		'Opt5':
 			yield(E.run([
-				'Pez: Yeah. Those were very strong and made a lot of issues.',
+				'Pez: Yeah. Those were very strong and meant a lot of issues.',
 				'Pez: At the end, only a few (me included, of course) could drink them.',
 				'...',
 				pez.face_right(),

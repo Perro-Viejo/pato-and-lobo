@@ -42,7 +42,7 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt3':
 			yield(E.run([
 				'Vieja: Something strong, but that tastes old.',
-				'Vieja: That Golem cocktail is a poop',
+				'Vieja: That Golem cocktail is poop',
 				'Pato: Strong that...',
 				'Vieja: tastes old.',
 				'Vieja: Do you like them like that too?',
@@ -60,7 +60,7 @@ func option_selected(opt: DialogOption) -> void:
 			]), 'completed')
 			opt.visible = false
 		'Exit':
-			yield(E.run(['Vieja: Have fun young and pretty laidy... hihihihihihi']), 'completed')
+			yield(E.run(['Vieja: Have fun young and pretty lady... hihihihihihi']), 'completed')
 			D.finish_dialog()
 			return
 	_show_options()
