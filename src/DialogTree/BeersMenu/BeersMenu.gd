@@ -40,7 +40,7 @@ func option_selected(opt: DialogOption) -> void:
 			]), 'completed')
 			D.finish_dialog()
 			A.play('sfx_dream_transition', Vector2.ZERO, false)
-			E.goto_room('Space')
+			E.goto_room('Luna')
 			return
 		'Opt3':
 			yield(_ask_beer(opt.text), 'completed')

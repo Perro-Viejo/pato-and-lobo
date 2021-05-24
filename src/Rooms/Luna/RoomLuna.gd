@@ -18,12 +18,6 @@ func on_room_entered() -> void:
 		$Props/HomeSeed.enable(false)
 
 
-func on_room_exited() -> void:
-	C.player.scale = Vector2.ONE
-	C.get_character('Lobo').scale = Vector2.ONE
-	.on_room_exited()
-
-
 func on_room_transition_finished() -> void:
 	if Globals.has_done(Globals.GameState.GOT_HOME):
 		if Globals.has_done(Globals.GameState.WATER_TAKEN):
@@ -37,9 +31,11 @@ func on_room_transition_finished() -> void:
 		else:
 			yield(E.run([
 				'Pato: We need to find water to water our future home.',
-				'Lobo: I\'ve hear thar space water is special. ',
+				'Lobo: I\'ve hear that space water is special. ',
 			]), 'completed')
-			E.goto_room('Bar')
+
+			if C.player.last_room != 'Bar':
+				E.goto_room('Bar')
 	elif Globals.has_done(Globals.GameState.WATER_TAKEN):
 		yield(
 			E.run_cutscene([
@@ -48,11 +44,21 @@ func on_room_transition_finished() -> void:
 			'Pato: So what are we waiting for.',
 			'Lobo: To consume our love a little before leaving.',
 		]), 'completed')
-		E.goto_room('Bar')
+		if C.player.last_room != 'Bar':
+			E.goto_room('Bar')
 	else:
 		E.run([
 			'Pato: How calm and quiet it is around here',
 			'Lobo: Yes... makes you want to... T.D.A.F.'
 		])
+
+
+func on_room_exited() -> void:
+	C.player.scale = Vector2.ONE
+	C.get_character('Lobo').scale = Vector2.ONE
+
+	.on_room_exited()
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 # TODO: Poner aquí los métodos privados

@@ -70,7 +70,7 @@ func option_selected(opt: DialogOption) -> void:
 			)
 			D.finish_dialog()
 			A.play('sfx_dream_transition', Vector2.ZERO, false)
-			E.goto_room('Space')
+			E.goto_room('Luna')
 		'Exit':
 			yield(E.run(['Lagarto: Sure.']), 'completed')
 			D.finish_dialog()
