@@ -62,12 +62,12 @@ func _process(_delta):
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	yield(G.display('No hay na\' pa\' hacer con esta mondá', false), 'completed')
+	yield(G.display('Pato doesn\'t know what to do with that', false), 'completed')
 	G.done()
 
 
 func on_look() -> void:
-	yield(G.display('No es nada...', false), 'completed')
+	yield(G.display('Paro has nothing to say about it', false), 'completed')
 	G.done()
 
 
@@ -96,7 +96,7 @@ func _toggle_description(display: bool) -> void:
 		if not I.active:
 			G.show_info(description)
 		else:
-			G.show_info('Usar %s en %s' % [I.active.description, description])
+			G.show_info('Use %s with %s' % [I.active.description, description])
 	else:
 		G.show_info()
 

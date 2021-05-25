@@ -69,10 +69,16 @@ func stop(cue_name: String, _instance_i := 0, is_in_queue := true) -> void:
 	if is_in_queue: yield()
 
 	if _active.has(cue_name):
-		var stream_player: Node = (_active[cue_name] as Array).pop_front()
+		var stream_player: Node = (_active[cue_name].players as Array).pop_front()
 		
 		if is_instance_valid(stream_player):
 			stream_player.stop()
+			
+			if stream_player is AudioStreamPlayer2D and _active[cue_name].loop:
+				# Cuando se detiene (.stop()) un audio en loop, por alguna razón
+				# no se llama la señal de 'finished'.
+				prints('Se detiene con manualidad')
+				stream_player.emit_signal('finished')
 		else:
 			_active.erase(cue_name)
 
@@ -123,9 +129,12 @@ func _play(cue: AudioCue, pos := Vector2.ZERO) -> Node:
 	player.connect('finished', self, '_make_available', [player, cue_name, debug_idx])
 	
 	if _active.has(cue_name):
-		_active[cue_name].append(player)
+		_active[cue_name].players.append(player)
 	else:
-		_active[cue_name] = [player]
+		_active[cue_name] = {
+			players = [player],
+			loop = cue.loop
+		}
 
 	return player
 
@@ -145,7 +154,7 @@ func _make_available(stream_player: Node, cue_name: String, debug_idx: int) -> v
 	else:
 		_reparent($Active, $Positional, stream_player.get_index())
 
-	var players: Array = _active[cue_name]
+	var players: Array = _active[cue_name].players
 	for idx in players.size():
 		if players[idx].get_instance_id() == stream_player.get_instance_id():
 			players.remove(idx)

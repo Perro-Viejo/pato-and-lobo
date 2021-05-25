@@ -33,5 +33,5 @@ func on_look() -> void:
 	E.run(['Lobo: The picker can pull things with amazing force'])
 
 
-func on_item_used(item: Item) -> void:
+func on_item_used(_item: Item) -> void:
 	pass

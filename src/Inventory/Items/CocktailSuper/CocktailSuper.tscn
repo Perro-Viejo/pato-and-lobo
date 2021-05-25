@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Inventory/Items/CocktailSuper/cocktail_super.png" type="Texture" id=1]
+[ext_resource path="res://src/Inventory/InventoryItem.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Inventory/Items/CocktailSuper/CocktailSuper.gd" type="Script" id=3]
+
+[node name="CocktailSuper" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+description = "Strong and classic"
+script_name = "CocktailSuper"
+cursor = 1
+
+[node name="Icon" parent="." index="0"]
+texture = ExtResource( 1 )

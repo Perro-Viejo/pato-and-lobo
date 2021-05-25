@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Inventory/InventoryItem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Inventory/Items/UmbrellaTape/UmbrellaTape.gd" type="Script" id=2]
+[ext_resource path="res://src/Inventory/Items/UmbrellaTape/umbrella_tape.png" type="Texture" id=3]
+
+[node name="UmbrellaTape" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+description = "Umbrella+Tape"
+script_name = "UmbrellaTape"
+cursor = 1
+
+[node name="Icon" parent="." index="0"]
+texture = ExtResource( 3 )

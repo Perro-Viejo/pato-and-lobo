@@ -95,11 +95,11 @@ texture = ExtResource( 6 )
 position = Vector2( 15.7145, -42.6536 )
 script = ExtResource( 5 )
 clickable = false
-baseline = 582
+baseline = 272
 texture = ExtResource( 10 )
 
 [node name="BaselineHelper" parent="Props/Spaceship" index="1"]
-position = Vector2( -17.7145, 582.654 )
+position = Vector2( 0, 272 )
 
 [node name="Sprite" parent="Props/Spaceship" index="3"]
 texture = ExtResource( 10 )

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Inventory/InventoryItem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Inventory/Items/WaterCase/water_case.png" type="Texture" id=2]
+[ext_resource path="res://src/Inventory/Items/WaterCase/WaterCase.gd" type="Script" id=3]
+
+[node name="WaterCase" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+description = "Fast-growing-water"
+script_name = "WaterCase"
+cursor = 1
+
+[node name="Icon" parent="." index="0"]
+margin_right = 128.0
+margin_bottom = 128.0
+texture = ExtResource( 2 )
+stretch_mode = 5

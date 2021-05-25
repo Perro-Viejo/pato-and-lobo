@@ -15,10 +15,12 @@ func on_room_entered() -> void:
 	I.add_item('Pato', false)
 	I.add_item('Lobo', false)
 
+
 func on_room_exited() -> void:
 	A.stop('sfx_spaceship_idle', 0, false)
 	A.stop('bg_space', 0, false)
 	.on_room_exited()
+
 
 func on_room_transition_finished() -> void:
 	pass

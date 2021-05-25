@@ -29,10 +29,11 @@ characters = [ {
 } ]
 limit_left = -960.0
 limit_right = 960.0
-limit_top = -540.0
-limit_bottom = 540.0
+limit_top = -960.0
+limit_bottom = 1.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 2 )]
+position = Vector2( 0, -540 )
 clickable = false
 baseline = -556
 texture = ExtResource( 3 )
@@ -59,6 +60,7 @@ texture = ExtResource( 8 )
 [node name="Boat" parent="Props" index="2" instance=ExtResource( 2 )]
 position = Vector2( -180, -83 )
 z_index = 1
+clickable = false
 baseline = -170
 texture = ExtResource( 4 )
 
@@ -83,6 +85,7 @@ texture = ExtResource( 16 )
 [node name="BoatFront" parent="Props" index="4" instance=ExtResource( 2 )]
 position = Vector2( -204, -86 )
 z_index = 1
+clickable = false
 baseline = 198
 texture = ExtResource( 17 )
 

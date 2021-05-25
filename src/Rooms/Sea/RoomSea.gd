@@ -11,6 +11,7 @@ func on_room_entered() -> void:
 	A.play('bg_dream_boat', Vector2.ZERO, false)
 	C.player.global_position = $Points/EntryPoint.global_position
 	C.get_character('Lobo').drowning()
+	E.main_camera.offset_v = -2.0
 
 
 func on_room_transition_finished() -> void:

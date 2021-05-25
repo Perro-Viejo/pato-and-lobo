@@ -56,6 +56,7 @@ func enable() -> void:
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _open() -> void:
 	if not is_disabled and rect_position.y != _hide_y: return
+
 	$Tween.interpolate_property(
 		self, 'rect_position:y',
 		_hide_y if not is_disabled else rect_position.y, 0.0,
@@ -66,11 +67,13 @@ func _open() -> void:
 
 func _close() -> void:
 	yield(get_tree(), 'idle_frame')
+
 	if not _can_hide_inventory: return
+
 	$Tween.interpolate_property(
 		self, 'rect_position:y',
 		0.0, _hide_y if not is_disabled else _hide_y - 3.5,
-		0.2, Tween.TRANS_SINE, Tween.EASE_IN
+		0.3, Tween.TRANS_SINE, Tween.EASE_IN
 	)
 	$Tween.start()
 
@@ -91,8 +94,11 @@ func _add_item(item: Item) -> void:
 	
 	if not G.blocked:
 		_open()
+		yield($Tween, 'tween_all_completed')
 		yield(get_tree().create_timer(2.0), 'timeout')
+		_can_hide_inventory = true
 		_close()
+		yield($Tween, 'tween_all_completed')
 
 	I.emit_signal('item_add_done', item)
 
@@ -103,6 +109,8 @@ func _remove_item(item: Item) -> void:
 	item.disconnect('description_toggled', self, '_show_item_info')
 	item.disconnect('selected', self, '_change_cursor')
 	_grid.remove_child(item)
+	
+	_can_hide_inventory = true
 	
 	yield(get_tree(), 'idle_frame')
 	

@@ -48,5 +48,5 @@ func start() -> void:
 		D.finish_dialog()
 
 
-func option_selected(opt: DialogOption) -> void:
+func option_selected(_opt: DialogOption) -> void:
 	pass

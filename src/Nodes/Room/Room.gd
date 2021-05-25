@@ -50,8 +50,9 @@ func _process(delta):
 		return
 	
 	for c in $Characters.get_children():
-		_check_z_indexes(c as Character)
-		
+		if c.visible:
+			_check_z_indexes(c as Character)
+
 	if _path.empty(): return
 
 	var walk_distance = _moving_character.walk_speed * delta
@@ -121,6 +122,7 @@ func on_room_exited() -> void:
 
 func add_character(chr: Character) -> void:
 	$Characters.add_child(chr)
+	#warning-ignore:return_value_discarded
 	chr.connect('started_walk_to', self, '_update_navigation_path')
 
 
@@ -225,11 +227,17 @@ func _get_state() -> Dictionary:
 func _check_z_indexes(chr: Character) -> void:
 	var y_pos := chr.global_position.y
 	
+	# Comparar la posición en Y del personaje con el baseline de cada Prop
 	for p in $Props.get_children():
-		_check_baseline(p, y_pos, 2)
-	
-	for c in $Characters.get_children():
-		if not c.always_on_top:
-			_check_baseline(c, y_pos)
+		if not p.always_on_top:
+			_check_baseline(p, y_pos, 2)
 		else:
-			c.z_index = 3
+			p.z_index = 4
+	
+	# Comparar la posición en Y del personaje con el baseline de cada Personaje
+	for c in $Characters.get_children():
+		if c.get_instance_id() != chr.get_instance_id():
+			if not c.always_on_top:
+				_check_baseline(c, y_pos)
+			else:
+				c.z_index = 3
