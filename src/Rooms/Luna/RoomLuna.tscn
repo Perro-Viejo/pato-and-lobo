@@ -91,6 +91,8 @@ texture = ExtResource( 10 )
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]
 position = Vector2( 119, -438 )
 
+[node name="WolfPoint" type="Position2D" parent="Points" index="1"]
+
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
 navpoly = SubResource( 1 )
 

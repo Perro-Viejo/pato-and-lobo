@@ -41,13 +41,6 @@ func on_room_entered() -> void:
 	if state.vieja_sleeping:
 		$Characters/CharacterVieja.sleep()
 
-func on_room_exited() -> void:
-	state.last_player_pos = C.player.global_position
-	
-	A.stop('bg_bar', 0, false)
-	A.stop('mx_bar_01', 0, false)
-	A.stop('mx_bar_02', 0, false)
-	.on_room_exited()
 
 func on_room_transition_finished() -> void:
 	if visited_first_time:
@@ -68,13 +61,31 @@ func on_room_transition_finished() -> void:
 			'Pato: I WILL TALK WITH LOBO TODAY!',
 		])
 	elif C.player.last_room == 'Sea':
-		Globals.courage += 25
+		yield(E.wait(0.5, false), 'completed')
+		Globals.courage += 20
 		yield(I, 'courage_update_shown')
-		E.run(['Pato: I feel I can talk to Lobo now'])
-	elif Globals.has_done(Globals.GameState.GOT_HOME):
-		Globals.courage += 25
+		yield(E.run(['Pato: The savior of my love...']), 'completed')
+	elif Globals.has_done(Globals.GameState.GOT_HOME) or Globals.has_done(Globals.GameState.WATER_TAKEN):
+		yield(E.wait(0.5, false), 'completed')
+		Globals.courage += 20
 		yield(I, 'courage_update_shown')
-		E.run(['Pato: What a romantic dream...'])
+		yield(E.run(['Pato: What a romantic dream...']), 'completed')
+	
+	if Globals.courage >= 60 \
+		and (C.player.last_room == 'Sea' or C.player.last_room == 'Luna'):
+		E.run(['Pato: I feel I have the courage to talk with Lobo'])
+
+
+func on_room_exited() -> void:
+	state.last_player_pos = C.player.global_position
+	
+	A.stop('bg_bar', 0, false)
+	A.stop('mx_bar_01', 0, false)
+	A.stop('mx_bar_02', 0, false)
+	
+	C.get_character('Lobo').idle(false)
+	
+	.on_room_exited()
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

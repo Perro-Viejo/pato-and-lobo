@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Rooms/Spaceship/RoomSpaceship.gd" type="Script" id=2]
@@ -7,10 +7,9 @@
 [ext_resource path="res://src/Rooms/Spaceship/PropSpaceship.gd" type="Script" id=5]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshippuertaiz.png" type="Texture" id=6]
 [ext_resource path="res://src/Rooms/Spaceship/PropRoboticArm.gd" type="Script" id=7]
-[ext_resource path="res://src/Rooms/Spaceship/Sprites/robotic_arm.png" type="Texture" id=8]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipgancho.png" type="Texture" id=8]
 [ext_resource path="res://src/Rooms/Spaceship/PropTeletransportLaser.gd" type="Script" id=9]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipbase.png" type="Texture" id=10]
-[ext_resource path="res://src/Rooms/Spaceship/Sprites/garbage_extractor.png" type="Texture" id=11]
 [ext_resource path="res://src/Rooms/Spaceship/PropGarbageExtractor.gd" type="Script" id=12]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipgancho2.png" type="Texture" id=13]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshippuertade.png" type="Texture" id=14]
@@ -39,7 +38,6 @@ description = "Picker"
 baseline = -636
 cursor = 1
 script_name = "RoboticArm"
-texture = ExtResource( 8 )
 
 [node name="CollisionPolygon2D" parent="Props/RoboticArm" index="0"]
 polygon = PoolVector2Array( 21.5094, -136.771, 44.1043, -137.961, 80.9697, -49.9593, 63.1316, -14.2831, 19.131, -9.52625, -1.08557, -45.2025 )
@@ -77,7 +75,6 @@ description = "Garbage gates"
 baseline = -612
 cursor = 1
 script_name = "GarbageExtractor"
-texture = ExtResource( 11 )
 
 [node name="CollisionPolygon2D" parent="Props/GarbageExtractor" index="0"]
 position = Vector2( -82, -16 )

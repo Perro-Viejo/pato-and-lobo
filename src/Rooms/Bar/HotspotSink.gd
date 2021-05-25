@@ -18,8 +18,9 @@ func on_interact() -> void:
 			A.play('sfx_sink_wash', global_position),
 			'Pato: ...what if.',
 			A.play('sfx_sink_wash', global_position),
-			A.stop('sfx_sink_loop')
-		], false), 'completed')
+			A.stop('sfx_sink_loop'),
+			'...'
+		]), 'completed')
 		A.play('sfx_dream_transition', Vector2.ZERO, false)
 		E.goto_room('Sea')
 	else:

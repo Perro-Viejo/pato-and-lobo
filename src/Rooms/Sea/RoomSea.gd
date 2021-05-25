@@ -10,6 +10,7 @@ extends Room
 func on_room_entered() -> void:
 	A.play('bg_dream_boat', Vector2.ZERO, false)
 	C.player.global_position = $Points/EntryPoint.global_position
+	C.get_character('Lobo').drowning()
 
 
 func on_room_transition_finished() -> void:
@@ -35,6 +36,10 @@ func on_room_transition_finished() -> void:
 
 func on_room_exited() -> void:
 	Globals.did(Globals.GameState.SEA_DREAMED)
+	
+	C.get_character('Lobo').anim_suffix = ''
+	C.get_character('Lobo').idle(false)
+	
 	.on_room_exited()
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

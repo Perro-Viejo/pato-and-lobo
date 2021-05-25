@@ -38,6 +38,7 @@ func option_selected(opt: DialogOption) -> void:
 				'...',
 				'Pato: Wow... now I feel the KICK TO THE COSM...'
 			]), 'completed')
+			opt.visible = false
 			D.finish_dialog()
 			A.play('sfx_dream_transition', Vector2.ZERO, false)
 			E.goto_room('Luna')

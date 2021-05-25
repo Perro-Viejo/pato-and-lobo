@@ -8,7 +8,7 @@ func on_interact() -> void:
 		if Globals.has_done(Globals.GameState.GOT_HOME):
 			yield(
 				E.run([
-				'Lobo: I will use the picker to pull our home-seed.',
+				'Lobo: I will use the picker to pull our house-seed.',
 				'Pato: This is so exciting my love!',
 				A.play('sfx_spaceship_hook', global_position),
 				E.wait(2)

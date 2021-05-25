@@ -44,7 +44,7 @@ func on_room_transition_finished() -> void:
 			'Pato: Good, good. Now take down the arm.',
 			'Lobo: Doing so. Doing so...',
 			E.wait(2),
-			'Pato: Done! We have our home-seed. Let\'s go to Luna and sow it.',
+			'Pato: Done! We have our house-seed. Let\'s go to Luna and sow it.',
 		]), 'completed')
 		E.goto_room('Luna')
 	elif visited_first_time:

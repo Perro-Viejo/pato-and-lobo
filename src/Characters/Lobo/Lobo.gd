@@ -1,6 +1,7 @@
 tool
 extends Character
 
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
 	match E.current_room.script_name:
@@ -45,7 +46,7 @@ func on_interact() -> void:
 					face_left(),
 					C.face_clicked(),
 					dance(),
-					'Pato: And look how he moves...... \/( > __ < \\)'
+					'Pato: And look how he moves..\n\/( > __ < \\)'
 				])
 		'Sea':
 			E.run([
@@ -54,10 +55,7 @@ func on_interact() -> void:
 				'Pato: Hang on there my love. I\'ll get you out of there.'
 			])
 		'Luna':
-			E.run([
-				'Lobo: Let\'s search for materials to build our home in the Luna.',
-				'Pato: Yes yes yes. Let\'s do it.'
-			])
+			D.show_dialog('ChatWithLoboInLuna')
 
 
 func on_look() -> void:
@@ -83,3 +81,8 @@ func dance(is_in_queue := true) -> void:
 	if is_in_queue: yield()
 	$AnimationPlayer.play('dance_%s' % _looking_dir)
 	yield(get_tree().create_timer(0.5), 'timeout')
+
+
+func drowning() -> void:
+	anim_suffix = '_drowning'
+	idle(false)

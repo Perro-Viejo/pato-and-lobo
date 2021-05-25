@@ -32,6 +32,8 @@ func semitone_to_pitch(pitch: float) -> float:
 
 
 func play(cue_name: String, pos := Vector2.ZERO, is_in_queue := true, wait_audio_complete := false) -> void:
+	if is_in_queue: yield()
+
 	var dic: Dictionary = {}
 	var stream_player: Node = null
 	
@@ -39,8 +41,6 @@ func play(cue_name: String, pos := Vector2.ZERO, is_in_queue := true, wait_audio
 	else: dic = _sfx_cues
 	
 	if dic.has(cue_name.to_lower()):
-		if is_in_queue: yield()
-
 		var cue: AudioCue = dic[cue_name.to_lower()]
 		stream_player = _play(cue, pos)
 	else:
