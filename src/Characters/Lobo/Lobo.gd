@@ -34,7 +34,7 @@ func on_interact() -> void:
 						C.player.face_right(),
 						'...',
 						'Pato: He..... he..... h.....',
-						A.play_music('mx_frolic'),
+						A.play_music('mx_bar_03'),
 					]), 'completed')
 
 				E.goto_room('End')

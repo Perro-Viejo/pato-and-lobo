@@ -73,6 +73,7 @@ texture = ExtResource( 4 )
 [node name="BoatCan" parent="Props" index="3" instance=ExtResource( 2 )]
 position = Vector2( -404, -284 )
 z_index = 1
+clickable = false
 baseline = 192
 texture = ExtResource( 16 )
 
@@ -139,7 +140,7 @@ cursor = 1
 
 [node name="CollisionPolygon2D" parent="Props/Tape" index="0"]
 position = Vector2( 196.278, -20.2272 )
-polygon = PoolVector2Array( -312.531, -110.856, -198.66, -151.311, -89.2835, -118.348, -86.2868, 61.4491, -305.04, 64.4457 )
+polygon = PoolVector2Array( -320.518, -116.516, -288.426, -143.888, -197.814, -156.159, -115.697, -152.383, -77.9424, -125.955, -73.223, 178.917, -309.192, 172.31 )
 
 [node name="WalkToHelper" parent="Props/Tape" index="2"]
 position = Vector2( 16.8642, 151.627 )

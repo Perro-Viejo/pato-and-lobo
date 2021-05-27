@@ -54,7 +54,7 @@ texture = ExtResource( 5 )
 
 [node name="CollisionPolygon2D" parent="Props/Sign" index="0"]
 position = Vector2( -110.873, -102.054 )
-polygon = PoolVector2Array( -10, -10, 225.57, -8.15881, 220.53, 105.234, 0.04422, 103.974 )
+polygon = PoolVector2Array( -49.76, 61.6113, 157.24, -64.3887, 208.24, 55.6113, 148.24, 98.6113, 194.24, 199.611, 148.24, 224.611, 93.24, 129.611, 21.24, 174.611 )
 
 [node name="BaselineHelper" parent="Props/Sign" index="1"]
 position = Vector2( 0, 64 )
@@ -63,6 +63,7 @@ position = Vector2( 0, 64 )
 position = Vector2( 96, 96 )
 
 [node name="Sprite" parent="Props/Sign" index="3"]
+rotation = -0.523598
 texture = ExtResource( 5 )
 
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]

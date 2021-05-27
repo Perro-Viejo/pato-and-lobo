@@ -19,7 +19,7 @@ func start() -> void:
 
 func option_selected(opt: DialogOption) -> void:
 	yield(
-		E.run([C.player_say(opt.text + ', por favor.')]),
+		E.run([C.player_say(opt.text + ', please.')]),
 		'completed'
 	)
 	match opt.id:

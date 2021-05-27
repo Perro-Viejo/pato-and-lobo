@@ -22,6 +22,15 @@ func on_room_entered() -> void:
 
 	if Globals.has_done(Globals.GameState.GOT_HOME):
 		$Props/HomeSeed.enable(false)
+	
+	if Globals.has_done(Globals.GameState.WATER_TAKEN):
+		I.add_item('WaterCase', false)
+	
+	# Quitar elementos del inventario que haya podido agarrar Pato en el bar
+	I.remove_item('Mask', false)
+	I.remove_item('Dentures', false)
+	I.remove_item('Tail', false)
+	I.remove_item('Legs', false)
 
 
 func on_room_transition_finished() -> void:

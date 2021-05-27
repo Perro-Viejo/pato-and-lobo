@@ -14,6 +14,7 @@ export var always_visible := false
 var _item_instances := []
 
 var active: Item
+var show_anims := true
 
 export(Array, PackedScene) var inventory_items
 

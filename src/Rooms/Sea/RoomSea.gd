@@ -12,6 +12,12 @@ func on_room_entered() -> void:
 	C.player.global_position = $Points/EntryPoint.global_position
 	C.get_character('Lobo').drowning()
 	E.main_camera.offset_v = -2.0
+	
+	# Quitar elementos del inventario que haya podido agarrar Pato en el bar
+	I.remove_item('Mask', false)
+	I.remove_item('Dentures', false)
+	I.remove_item('Tail', false)
+	I.remove_item('Legs', false)
 
 
 func on_room_transition_finished() -> void:

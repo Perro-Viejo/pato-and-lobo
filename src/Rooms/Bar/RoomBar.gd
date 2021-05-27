@@ -19,10 +19,17 @@ func _init() -> void:
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
+	# Quitar los elementos de inventario que hayan podido quedar del mundo de
+	# los sueños
 	I.remove_item('Pato', false)
 	I.remove_item('Lobo', false)
+	I.remove_item('WaterCase', false)
+	
+	# TODO: Que audio siga desde donde quedó antes de abandonar la habitación
 	A.play_music('mx_bar_01', false)
 	A.play('bg_bar', Vector2.ZERO, false)
+	if state.vieja_sleeping:
+		A.play('sfx_granny_sleep', C.get_character('Vieja').global_position, false)
 	
 	if visited_first_time:
 		C.player.global_position = $Points/Entrance.global_position
@@ -40,6 +47,16 @@ func on_room_entered() -> void:
 		$Props/Coat.disable(false)
 	if state.vieja_sleeping:
 		$Characters/CharacterVieja.sleep()
+
+	# Verificar qué cosas ya agarró
+	if Globals.has_done(Globals.GameState.LEGS_TAKEN):
+		I.add_item('Legs', false)
+	if Globals.has_done(Globals.GameState.DENTURES_TAKEN):
+		I.add_item('Dentures', false)
+	if Globals.has_done(Globals.GameState.MASK_TAKEN):
+		I.add_item('Mask', false)
+	if Globals.has_done(Globals.GameState.TAIL_TAKEN):
+		I.add_item('Tail', false)
 
 
 func on_room_transition_finished() -> void:
@@ -82,6 +99,8 @@ func on_room_exited() -> void:
 	A.stop('bg_bar', 0, false)
 	A.stop('mx_bar_01', 0, false)
 	A.stop('mx_bar_02', 0, false)
+	A.stop('mx_bar_03', 0, false)
+	A.stop('sfx_granny_sleep', 0, false)
 	
 	C.get_character('Lobo').idle(false)
 	
