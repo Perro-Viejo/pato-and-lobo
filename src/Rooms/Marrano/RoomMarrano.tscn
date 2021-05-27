@@ -1,19 +1,171 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Rooms/Marrano/RoomMarrano.gd" type="Script" id=2]
 [ext_resource path="res://src/Rooms/Marrano/Sprites/bg.png" type="Texture" id=3]
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Rooms/Marrano/Sprites/planetacerdoregadera.png" type="Texture" id=5]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/head.png" type="Texture" id=6]
+[ext_resource path="res://src/Vfx/Spin.gd" type="Script" id=7]
 [ext_resource path="res://src/Rooms/Marrano/Sprites/planetacerdodomo.png" type="Texture" id=10]
 [ext_resource path="res://src/Rooms/Marrano/PropContainer.gd" type="Script" id=11]
 [ext_resource path="res://src/Rooms/Marrano/Sprites/planetacerdo.png" type="Texture" id=12]
 [ext_resource path="res://src/Rooms/Marrano/PropWater.gd" type="Script" id=13]
 
+[sub_resource type="Animation" id=2]
+resource_name = "SETUP"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 335, -1122 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Container:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Container:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "fall"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 335, -0.25, 0, 0.25, 0, 405, -0.25, 0, 0.25, 0, 1132, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6, 3 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -1122, -0.25, 0, 0.25, 0, -201, -0.126797, 113.763, 0.434601, -331.187, 302, -0.980584, -834.187, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6, 3 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Container:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.847059 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.466667 ), Color( 1, 1, 1, 0.847059 ), Color( 1, 1, 1, 0.309804 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Container:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("VfxSpin")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "spin_all"
+} ]
+}
+
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 559.766, 606.989, 104.187, 134.651, 587.054, 271.85, 616.069, 611.727, 174.17, 859.275, 142.522, 822.577, -185.538, 919.683, -147.44, 875.235, -123.65, 567.731, -85.8952, 556.404, -785.112, 517.285, -694.343, 103.485, -357.964, -198.189, -109.683, -211.537 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 0, 3, 4, 5 ), PoolIntArray( 5, 4, 6, 7 ), PoolIntArray( 7, 6, 8, 9 ), PoolIntArray( 8, 10, 11, 12, 13, 9 ) ]
-outlines = [ PoolVector2Array( -694.343, 103.485, -357.964, -198.189, -109.683, -211.537, -85.8952, 556.404, -147.44, 875.235, 142.522, 822.577, 559.766, 606.989, 104.187, 134.651, 587.054, 271.85, 616.069, 611.727, 174.17, 859.275, -185.538, 919.683, -123.65, 567.731, -785.112, 517.285 ) ]
+vertices = PoolVector2Array( 110, 108, 539, 232, 601, 584, 557, 776, 359, 980, -84, 1127, -519, 978, -701, 708, -785.112, 517.285, -789, 302, -694.343, 103.485, -561, -76, -50, -202, -357.964, -198.189, -167, -264 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ), PoolIntArray( 12, 0, 11, 13, 14 ) ]
+outlines = [ PoolVector2Array( -694.343, 103.485, -561, -76, -357.964, -198.189, -167, -264, -50, -202, 110, 108, 539, 232, 601, 584, 557, 776, 359, 980, -84, 1127, -519, 978, -701, 708, -785.112, 517.285, -789, 302 ) ]
 
 [node name="RoomMarrano" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -52,8 +204,8 @@ texture = ExtResource( 12 )
 position = Vector2( 334.863, -81.3031 )
 script = ExtResource( 11 )
 description = "Light-vault-3000X"
-baseline = 350
-walk_to_point = Vector2( 137.388, 380.736 )
+baseline = 142
+walk_to_point = Vector2( 16.137, 291.303 )
 cursor = 1
 texture = ExtResource( 10 )
 
@@ -61,10 +213,10 @@ texture = ExtResource( 10 )
 polygon = PoolVector2Array( -325.12, -75.1602, -181.12, -269.16, 200.88, -269.16, 330.88, 164.84, 120.88, 254.84, -197.12, 150.84 )
 
 [node name="BaselineHelper" parent="Props/Container" index="1"]
-position = Vector2( 0, 350 )
+position = Vector2( 0, 142 )
 
 [node name="WalkToHelper" parent="Props/Container" index="2"]
-position = Vector2( 137.388, 380.736 )
+position = Vector2( 16.137, 291.303 )
 
 [node name="Sprite" parent="Props/Container" index="3"]
 texture = ExtResource( 10 )
@@ -88,11 +240,30 @@ position = Vector2( 0, 267.27 )
 [node name="Sprite" parent="Props/Water" index="3"]
 texture = ExtResource( 5 )
 
+[node name="Head" parent="Props" index="4" instance=ExtResource( 4 )]
+position = Vector2( 335, -1122 )
+always_on_top = true
+texture = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Props/Head" index="4"]
+anims/SETUP = SubResource( 2 )
+anims/fall = SubResource( 3 )
+
+[node name="VfxSpin" type="Tween" parent="Props/Head" index="5"]
+script = ExtResource( 7 )
+targets = [ NodePath("..") ]
+
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]
 position = Vector2( -554.425, 319.569 )
 
 [node name="Middle" type="Position2D" parent="Points" index="1"]
-position = Vector2( -295.256, 184.139 )
+position = Vector2( -98, 927 )
+
+[node name="Container" type="Position2D" parent="Points" index="2"]
+position = Vector2( 441, 230 )
+
+[node name="Water" type="Position2D" parent="Points" index="3"]
+position = Vector2( -274, -138 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
 navpoly = SubResource( 1 )

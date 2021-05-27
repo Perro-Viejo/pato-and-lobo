@@ -91,13 +91,16 @@ func enable(is_in_queue := true) -> void:
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _toggle_description(display: bool) -> void:
 	set_process_unhandled_input(display)
-	Cursor.set_cursor(cursor if display else null)
+
 	if display:
+		Cursor.set_cursor(cursor)
 		if not I.active:
 			G.show_info(description)
 		else:
 			G.show_info('Use %s with %s' % [I.active.description, description])
 	else:
+		if not G.waiting_click:
+			Cursor.set_cursor()
 		G.show_info()
 
 

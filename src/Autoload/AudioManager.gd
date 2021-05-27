@@ -77,7 +77,6 @@ func stop(cue_name: String, _instance_i := 0, is_in_queue := true) -> void:
 			if stream_player is AudioStreamPlayer2D and _active[cue_name].loop:
 				# Cuando se detiene (.stop()) un audio en loop, por alguna razón
 				# no se llama la señal de 'finished'.
-				prints('Se detiene con manualidad')
 				stream_player.emit_signal('finished')
 		else:
 			_active.erase(cue_name)

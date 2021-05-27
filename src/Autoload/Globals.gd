@@ -12,7 +12,8 @@ enum GameState {
 	DENTURES_TAKEN,
 	LEGS_TAKEN,
 	TAIL_TAKEN,
-	DISGUISED
+	DISGUISED,
+	CHARACTER_CHANGE_EXPLAINED,
 }
 
 var game_progress := [GameState.NONE]
@@ -31,6 +32,16 @@ func did(id := -1) -> void:
 	if game_progress.has(id): return
 
 	game_progress.append(id)
+
+
+func explain_character_change() -> void:
+	did(GameState.CHARACTER_CHANGE_EXPLAINED)
+	
+	yield(E.run([
+		G.display('In some daydreams you can switch characters'),
+		G.display('Just click the respective icon in the inventory'),
+		G.show_inventory()
+	]), 'completed')
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

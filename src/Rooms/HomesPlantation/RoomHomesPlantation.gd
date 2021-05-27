@@ -26,17 +26,10 @@ func on_room_entered() -> void:
 	C.player.enable(false)
 
 
-func on_room_exited() -> void:
-	state.last_player_pos = C.player.global_position
-	
-	A.stop('sfx_spaceship_hook')
-	A.stop('bg_homesplantation', 0, false)
-	C.player.enable(false)
-	C.get_character('Lobo').enable(false)
-	.on_room_exited()
-
-
 func on_room_transition_finished() -> void:
+	if not Globals.has_done(Globals.GameState.CHARACTER_CHANGE_EXPLAINED):
+		yield(Globals.explain_character_change(), 'completed')
+	
 	if Globals.has_done(Globals.GameState.GOT_HOME):
 		yield(
 			E.run_cutscene([
@@ -56,6 +49,15 @@ func on_room_transition_finished() -> void:
 			'Lobo: Yes-it-is'
 		]), 'completed')
 
+
+func on_room_exited() -> void:
+	state.last_player_pos = C.player.global_position
+	
+	A.stop('sfx_spaceship_hook')
+	A.stop('bg_homesplantation', 0, false)
+	C.player.enable(false)
+	C.get_character('Lobo').enable(false)
+	.on_room_exited()
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

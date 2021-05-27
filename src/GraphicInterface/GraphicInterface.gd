@@ -41,9 +41,11 @@ func _show_dialog_text(chr: Character, msg := '') -> void:
 func _disable_panels(props := { blocking = true }) -> void:
 	if props.blocking:
 		_click_handler.mouse_filter = Control.MOUSE_FILTER_STOP
+		G.waiting_click = true
 #		_info_bar.text = '- clic para avanzar -'
 	else:
 		_click_handler.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		G.waiting_click = false
 		_info_bar.hide()
 	
 	if _inventory_container.is_disabled: return
@@ -55,6 +57,7 @@ func _disable_panels(props := { blocking = true }) -> void:
 func _enable_panels() -> void:
 	# TODO: Usar Tween para que se oculte y aparezca con jugo
 	_click_handler.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	G.waiting_click = false
 	
 	_display_box.hide()
 	_dialog_text.hide()

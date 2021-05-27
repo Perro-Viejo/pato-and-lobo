@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/talk.png-3668aedb4ffd0a118e62d237181f66cd.stex"
+path="res://.import/head.png-9507859e22b4274c41f7fe85d5b1761f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/cursor/talk.png"
-dest_files=[ "res://.import/talk.png-3668aedb4ffd0a118e62d237181f66cd.stex" ]
+source_file="res://src/Rooms/Spaceship/Sprites/head.png"
+dest_files=[ "res://.import/head.png-9507859e22b4274c41f7fe85d5b1761f.stex" ]
 
 [params]
 

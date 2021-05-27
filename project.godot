@@ -88,6 +88,11 @@ _global_script_classes=[ {
 "class": "ToolbarButton",
 "language": "GDScript",
 "path": "res://src/GraphicInterface/Toolbar/ToolbarButton.gd"
+}, {
+"base": "Tween",
+"class": "VfxSpin",
+"language": "GDScript",
+"path": "res://src/Vfx/Spin.gd"
 } ]
 _global_script_class_icons={
 "AudioCue": "",
@@ -105,7 +110,8 @@ _global_script_class_icons={
 "Prop": "",
 "Room": "",
 "Toolbar": "",
-"ToolbarButton": ""
+"ToolbarButton": "",
+"VfxSpin": ""
 }
 
 [application]
@@ -118,7 +124,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Utils="*res://src/Autoload/Utils.gd"
-Cursor="*res://src/Autoload/Cursor.tscn"
+Cursor="*res://src/Cursor/Cursor.tscn"
 E="*res://src/Autoload/GodotAdventureQuest.tscn"
 C="*res://src/Autoload/CharacterInterface.gd"
 I="*res://src/Inventory/Inventory.tscn"

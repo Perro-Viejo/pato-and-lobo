@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/none.png-6c71b3e186827633aef8214ee7429726.stex"
+path="res://.import/cup.png-f63cdc395d06fdbeb5a2ad5a2798ad70.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/cursor/none.png"
-dest_files=[ "res://.import/none.png-6c71b3e186827633aef8214ee7429726.stex" ]
+source_file="res://src/Rooms/Spaceship/Sprites/cup.png"
+dest_files=[ "res://.import/cup.png-f63cdc395d06fdbeb5a2ad5a2798ad70.stex" ]
 
 [params]
 

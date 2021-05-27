@@ -8,6 +8,7 @@ func on_interact() -> void:
 		yield(
 			E.run([
 				C.walk_to_clicked(),
+				C.face_clicked(),
 				'Pato: Lobo my love, open the garbage gates here',
 				'Lobo: Are we going to make a mess?',
 				'Pato: Just a bit...'

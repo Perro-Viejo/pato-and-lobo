@@ -14,6 +14,7 @@ signal inventory_show_requested(time)
 signal inventory_shown
 
 var blocked := false
+var waiting_click := false
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
@@ -34,7 +35,7 @@ func display(msg: String, is_in_queue := true) -> void:
 # Notifica que ya se pueden desbloquear lo elementos de la Interfaz Gráfica del
 # Jugador porque una secuencia de eventos (o cinemática (cutscene)) ha terminado.
 func done() -> void:
-	blocked = false
+	Cursor.set_cursor()
 	emit_signal('freed')
 
 
@@ -48,7 +49,7 @@ func show_info(msg := '') -> void:
 
 
 func block() -> void:
-#	blocked = true
+	Cursor.set_cursor(Cursor.Type.WAIT)
 	emit_signal('blocked')
 
 

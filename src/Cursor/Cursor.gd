@@ -12,6 +12,7 @@ enum Type {
 	TALK,
 	UP,
 	USE,
+	WAIT,
 }
 
 export var hotspot := Vector2.ZERO

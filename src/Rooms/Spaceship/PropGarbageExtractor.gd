@@ -2,22 +2,33 @@ tool
 extends Prop
 
 
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
+func _ready() -> void:
+	if C.player.last_room == 'Marrano' \
+		and Globals.has_done(Globals.GameState.GARBAGE_THROWN):
+		play('garbage_floating', false)
+	else:
+		play('SETUP', false)
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
 	if C.player.last_room == 'HomesPlantation':
 		E.run([
-			'...',
+			'Lobo: Nope',
 			'Lobo: I won\'t trash our future home...'
 			
 		])
-	elif C.player.last_room == 'Marrano':
+#	elif C.player.last_room == 'Marrano':
+	else:
 		if Globals.has_done(Globals.GameState.DOME_SPOTTED):
-			if not Globals.has_done(Globals.GameState.WATER_TAKEN) and not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
+			if not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
 				yield(
 					E.run([
 					'Lobo: Here we go! A MESS!!!!',
+					A.play('sfx_spaceship_garbage', global_position),
+					play('open'),
 					'Pato: UUUUuuuUUUUuuuUUUuuu',
-					A.play('sfx_spaceship_garbage', global_position)
 				]), 'completed')
 				Globals.did(Globals.GameState.GARBAGE_THROWN)
 				E.goto_room('Marrano')
@@ -41,3 +52,11 @@ func on_look() -> void:
 
 func on_item_used(_item: Item) -> void:
 	pass
+
+
+func play(anim_name: String, is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	
+	$AnimationPlayer.play(anim_name)
+	yield($AnimationPlayer, 'animation_finished')
+

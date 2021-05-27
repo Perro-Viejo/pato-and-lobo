@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Rooms/Spaceship/RoomSpaceship.gd" type="Script" id=2]
@@ -10,9 +10,900 @@
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipgancho.png" type="Texture" id=8]
 [ext_resource path="res://src/Rooms/Spaceship/PropTeletransportLaser.gd" type="Script" id=9]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipbase.png" type="Texture" id=10]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/head.png" type="Texture" id=11]
 [ext_resource path="res://src/Rooms/Spaceship/PropGarbageExtractor.gd" type="Script" id=12]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipgancho2.png" type="Texture" id=13]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshippuertade.png" type="Texture" id=14]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/bottle_01.png" type="Texture" id=15]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/bottle_02.png" type="Texture" id=16]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/bag_01.png" type="Texture" id=17]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/bag_02.png" type="Texture" id=18]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/box.png" type="Texture" id=19]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/cup.png" type="Texture" id=20]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/pan_01.png" type="Texture" id=21]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/pan_02.png" type="Texture" id=22]
+[ext_resource path="res://src/Vfx/Spin.gd" type="Script" id=23]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/laser.png" type="Texture" id=24]
+
+[sub_resource type="Animation" id=4]
+resource_name = "SETUP"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Laser:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "turn_on"
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Laser:self_modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Laser:self_modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Laser:self_modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Laser:self_modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "SETUP"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -96, -119 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -78, -94 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 57, 81 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Bottle1:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 57, 81 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Bottle1:always_on_top")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Bottle2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 57, 81 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../Bottle2:always_on_top")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../Bag1:always_on_top")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../Bag1:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 57, 81 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../Bag2:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 57, 81 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../Box:always_on_top")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../Box:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 57, 81 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../Cup:always_on_top")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../Cup:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 18, -45 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("../Pan1:always_on_top")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("../Pan1:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 18, -45 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("../Pan2:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 18, -45 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "garbage_floating"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -96, -119 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -44.9999 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -78, -94 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite2:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 44.9999 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 63, 647 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Bottle1:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -90, 298 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Bottle1:always_on_top")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Bottle2:always_on_top")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("../Bottle2:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 344, -0.37529, 15.829, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("../Bottle2:position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 124, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../Bag1:always_on_top")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("../Bag1:position:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( -296, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("../Bag1:position:y")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 79, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("../Bag2:position:x")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 235.25, -0.382461, -190.912, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("../Bag2:position:y")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 307.487, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../Box:always_on_top")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("../Box:position:x")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( -43, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("../Box:position:y")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( -232, -0.291103, 410.492, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/18/type = "bezier"
+tracks/18/path = NodePath("../Cup:position:x")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"points": PoolRealArray( -312, -0.519846, 193.805, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/19/type = "bezier"
+tracks/19/path = NodePath("../Cup:position:y")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"points": PoolRealArray( 220, -0.301749, 151.984, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("../Cup:always_on_top")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("../Pan1:always_on_top")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/22/type = "bezier"
+tracks/22/path = NodePath("../Pan1:position:x")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"points": PoolRealArray( 219, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/23/type = "bezier"
+tracks/23/path = NodePath("../Pan1:position:y")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"points": PoolRealArray( -97, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("../Pan2:position")
+tracks/24/interp = 2
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 105, 375 ) ]
+}
+tracks/25/type = "method"
+tracks/25/path = NodePath("VfxSpin")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "spin_all"
+} ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "open"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -96, -119 ), Vector2( -96, -119 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -44.9999 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -78, -94 ), Vector2( -78, -94 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite2:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 44.9999 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2.2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 57, 81 ), Vector2( 57, 81 ), Vector2( 63, 647 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Bottle1:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.8, 1.6, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 57, 81 ), Vector2( 57, 81 ), Vector2( 60, 340 ), Vector2( -90, 298 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Bottle1:always_on_top")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Bottle2:always_on_top")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("../Bottle2:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 57, -0.25, 0, 0.25, 0, 57, -0.25, 0, 0.52991, -2.19924, 127, -0.211477, -100.865, 0.223393, 121.034, 344, -0.37529, 15.829, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.7, 2.5 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("../Bottle2:position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 81, -0.25, 0, 0.25, 0, 81, -0.25, 0, 0.25, 0, 376, -0.25, 0, 0.25, 0, 376, -0.25, 0, 0.25, 0, 124, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.6, 1.7, 2.5 )
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../Bag1:always_on_top")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("../Bag1:position:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 57, -0.25, 0, 0.25, 0, 57, -0.25, 0, 0.173031, -2.19924, -82, -0.161597, 83.053, 0.137327, -71.0237, -296, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.4, 2.2 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("../Bag1:position:y")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 81, -0.25, 0, 0.25, 0, 81, -0.25, 0, 0.25, 0, 311, -0.25, 0, 0.25, 0, 79, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.4, 2.2 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("../Bag2:position:x")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 57, -0.25, 0, 0.25, 0, 57, -0.25, 0, 0.417051, -2.34257, 235.25, -0.382461, -190.912, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.8 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("../Bag2:position:y")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 81, -0.25, 0, 0.25, 0, 81, -0.25, 0, 0.0174677, 328.536, 307.487, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.8 )
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../Box:always_on_top")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 1.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("../Box:position:x")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 57, -0.25, 0, 0.25, 0, 57, -0.25, 0, 0.25, 0, 74, -0.25, 0, 0.25, 0, -43, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.3, 2.7 )
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("../Box:position:y")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( 81, -0.25, 0, 0.25, 0, 81, -0.25, 0, 0.0195966, 112.971, 280, -0.0848002, 1.68777, 0.389161, 1.68777, -232, -0.291103, 410.492, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.3, 2.7 )
+}
+tracks/18/type = "bezier"
+tracks/18/path = NodePath("../Cup:position:x")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"points": PoolRealArray( 18, -0.25, 0, 0.25, 0, 18, -0.25, 0, 0.65398, -12.3605, -312, -0.519846, 193.805, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 2.2 )
+}
+tracks/19/type = "bezier"
+tracks/19/path = NodePath("../Cup:position:y")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"points": PoolRealArray( -45, -0.25, 0, 0.25, 0, -45, -0.25, 0, 0.258174, 458.262, 468, -0.25, 0, 0.25, 0, 220, -0.301749, 151.984, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.5, 2.2 )
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("../Cup:always_on_top")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("../Pan1:always_on_top")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/22/type = "bezier"
+tracks/22/path = NodePath("../Pan1:position:x")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"points": PoolRealArray( 18, -0.25, 0, 0.25, 0, 18, -0.25, 0, 0.25, 0, 118, -0.25, 0, 0.25, 0, 219, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.4, 2.3 )
+}
+tracks/23/type = "bezier"
+tracks/23/path = NodePath("../Pan1:position:y")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"points": PoolRealArray( -45, -0.25, 0, 0.25, 0, -45, -0.25, 0, 0.25, 0, 320, -0.25, 0, 0.25, 0, -97, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.4, 2.3 )
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("../Pan2:position")
+tracks/24/interp = 2
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 18, -45 ), Vector2( 18, -45 ), Vector2( 105, 375 ) ]
+}
+tracks/25/type = "method"
+tracks/25/path = NodePath("VfxSpin")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "spin_all"
+} ]
+}
 
 [node name="RoomSpaceship" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -68,30 +959,115 @@ polygon = PoolVector2Array( -66.991, -21.2736, -93.9768, -55.4027, -56.6729, -88
 [node name="BaselineHelper" parent="Props/TeletransportLaser" index="1"]
 position = Vector2( 0, 540 )
 
-[node name="GarbageExtractor" parent="Props" index="3" instance=ExtResource( 3 )]
+[node name="Laser" type="Sprite" parent="Props/TeletransportLaser" index="4"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -64, 78 )
+rotation = 1.0472
+texture = ExtResource( 24 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Props/TeletransportLaser" index="5"]
+anims/SETUP = SubResource( 4 )
+anims/turn_on = SubResource( 5 )
+
+[node name="Head" parent="Props" index="3" instance=ExtResource( 3 )]
+position = Vector2( 63, 647 )
+clickable = false
+baseline = -2000
+texture = ExtResource( 11 )
+
+[node name="Bottle1" parent="Props" index="4" instance=ExtResource( 3 )]
+position = Vector2( -90, 298 )
+clickable = false
+baseline = -2000
+always_on_top = true
+texture = ExtResource( 15 )
+
+[node name="Bottle2" parent="Props" index="5" instance=ExtResource( 3 )]
+position = Vector2( 344, 124 )
+clickable = false
+baseline = -2000
+always_on_top = true
+texture = ExtResource( 16 )
+
+[node name="Bag1" parent="Props" index="6" instance=ExtResource( 3 )]
+position = Vector2( -296, 79 )
+clickable = false
+baseline = -2000
+always_on_top = true
+texture = ExtResource( 17 )
+
+[node name="Bag2" parent="Props" index="7" instance=ExtResource( 3 )]
+position = Vector2( 235.25, 307.487 )
+clickable = false
+baseline = -2000
+texture = ExtResource( 18 )
+
+[node name="Box" parent="Props" index="8" instance=ExtResource( 3 )]
+position = Vector2( -43, -232 )
+clickable = false
+baseline = -2000
+always_on_top = true
+texture = ExtResource( 19 )
+
+[node name="Cup" parent="Props" index="9" instance=ExtResource( 3 )]
+position = Vector2( -312, 220 )
+clickable = false
+baseline = -2000
+always_on_top = true
+texture = ExtResource( 20 )
+
+[node name="Pan1" parent="Props" index="10" instance=ExtResource( 3 )]
+position = Vector2( 219, -97 )
+clickable = false
+baseline = -2000
+always_on_top = true
+texture = ExtResource( 21 )
+
+[node name="Pan2" parent="Props" index="11" instance=ExtResource( 3 )]
+position = Vector2( 105, 375 )
+clickable = false
+baseline = -2000
+texture = ExtResource( 22 )
+
+[node name="GarbageExtractor" parent="Props" index="12" instance=ExtResource( 3 )]
 position = Vector2( 153, 268 )
 script = ExtResource( 12 )
 description = "Garbage gates"
 baseline = -612
 cursor = 1
 script_name = "GarbageExtractor"
+texture = ExtResource( 14 )
 
 [node name="CollisionPolygon2D" parent="Props/GarbageExtractor" index="0"]
 position = Vector2( -82, -16 )
-polygon = PoolVector2Array( -117, -62, 91, -102, 50, -17, 9, 7, -40, -6 )
+polygon = PoolVector2Array( -122, -70, 95, -94, 86, -61, 58, -22, 6, 18, -61, -3, -100, -23 )
 
 [node name="BaselineHelper" parent="Props/GarbageExtractor" index="1"]
 position = Vector2( 0, -612 )
 
 [node name="Sprite" parent="Props/GarbageExtractor" index="3"]
-position = Vector2( -43.9692, -64.6886 )
+position = Vector2( -96, -119 )
+rotation = -0.785397
 texture = ExtResource( 14 )
+offset = Vector2( 52.0308, 54.3114 )
 
 [node name="Sprite2" type="Sprite" parent="Props/GarbageExtractor" index="4"]
-position = Vector2( -137.525, -53.9182 )
+position = Vector2( -78, -94 )
+rotation = 0.785397
 texture = ExtResource( 6 )
+offset = Vector2( -59.525, 40.0818 )
 
-[node name="Spaceship" parent="Props" index="4" instance=ExtResource( 3 )]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Props/GarbageExtractor" index="5"]
+anims/SETUP = SubResource( 2 )
+anims/garbage_floating = SubResource( 3 )
+anims/open = SubResource( 1 )
+
+[node name="VfxSpin" type="Tween" parent="Props/GarbageExtractor" index="6"]
+script = ExtResource( 23 )
+targets = [ NodePath("../../Bottle1"), NodePath("../../Bottle2"), NodePath("../../Bag1"), NodePath("../../Bag2"), NodePath("../../Box"), NodePath("../../Cup"), NodePath("../../Pan1"), NodePath("../../Pan2") ]
+turn_duration = 6.0
+
+[node name="Spaceship" parent="Props" index="13" instance=ExtResource( 3 )]
 position = Vector2( 15.7145, -42.6536 )
 script = ExtResource( 5 )
 clickable = false

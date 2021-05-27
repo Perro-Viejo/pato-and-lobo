@@ -147,6 +147,7 @@ func goto_room(path := '') -> void:
 	self.in_room = false
 
 	G.block()
+	G.blocked = true
 
 	$TransitionLayer.play_transition('fade_in')
 	yield($TransitionLayer, 'transition_finished')
@@ -206,6 +207,7 @@ func room_readied(room: Room) -> void:
 	if not room.hide_gi:
 		G.done()
 
+	G.blocked = false
 	self.in_room = true
 
 	# Esto también hace que la habitación empiece a escuchar eventos de Input

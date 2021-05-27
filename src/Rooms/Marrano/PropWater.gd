@@ -12,6 +12,7 @@ func on_interact() -> void:
 	else:
 		yield(E.run([
 			C.walk_to_clicked(),
+			C.face_clicked(),
 			'Pato: It is mine!!!',
 			disable(),
 			A.play('sfx_watercase_pu', global_position),

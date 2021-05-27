@@ -26,29 +26,33 @@ func dance(is_in_queue := true) -> void:
 
 
 func _check_costume_completion(item: Item) -> void:
-	if E.current_room.script_name == 'Bar' \
-		and Globals.has_done(Globals.GameState.MASK_TAKEN) \
-		and Globals.has_done(Globals.GameState.DENTURES_TAKEN) \
-		and Globals.has_done(Globals.GameState.LEGS_TAKEN) \
-		and Globals.has_done(Globals.GameState.TAIL_TAKEN):
-		
-		if not disguised and is_instance_valid(item):
-			Globals.did(Globals.GameState.DISGUISED)
-			disguised = true
-			yield(E.run([
-				'Pato: WEEEEEEEEEE!',
-				'Pato: I completed the costume',
-				'Pato: Now... wolf transformation'
-			]), 'completed')
-			I.remove_item('Mask', false)
-			I.remove_item('Dentures', false)
-			I.remove_item('Tail', false)
-			I.remove_item('Legs', false)
-			anim_suffix = '_costume'
-			idle(false)
-			Globals.courage += 50
-			yield(I, 'courage_update_shown')
-			E.run(['Pato: I feel I\'m ready to talk with Lobo!'])
-	else:
-		anim_suffix = ''
-		idle(false)
+	if not is_instance_valid(item): return
+	
+	match item.script_name:
+		'Mask', 'Dentures', 'Legs', 'Tail':
+			if E.current_room.script_name == 'Bar' \
+				and Globals.has_done(Globals.GameState.MASK_TAKEN) \
+				and Globals.has_done(Globals.GameState.DENTURES_TAKEN) \
+				and Globals.has_done(Globals.GameState.LEGS_TAKEN) \
+				and Globals.has_done(Globals.GameState.TAIL_TAKEN):
+				
+				if not disguised:
+					Globals.did(Globals.GameState.DISGUISED)
+					disguised = true
+					yield(E.run([
+						'Pato: WEEEEEEEEEE!',
+						'Pato: I completed the costume',
+						'Pato: Now... wolf transformation'
+					]), 'completed')
+					I.remove_item('Mask', false)
+					I.remove_item('Dentures', false)
+					I.remove_item('Tail', false)
+					I.remove_item('Legs', false)
+					anim_suffix = '_costume'
+					idle(false)
+					Globals.courage += 50
+					yield(I, 'courage_update_shown')
+					E.run(['Pato: I feel I\'m ready to talk with Lobo!'])
+			else:
+				anim_suffix = ''
+				idle(false)
