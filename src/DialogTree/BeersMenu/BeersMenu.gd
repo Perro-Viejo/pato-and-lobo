@@ -36,13 +36,20 @@ func option_selected(opt: DialogOption) -> void:
 				A.play('sfx_drink_beer', C.player.global_position),
 				'Pato: glup glup glup glup glup glup glup glup glup glup',
 				'...',
-				'Pato: Wow... now I feel the KICK TO THE COSM...'
 			]), 'completed')
-			opt.visible = false
-			D.finish_dialog()
-			A.play('sfx_dream_transition', Vector2.ZERO, false)
-			E.goto_room('Luna')
-			return
+			
+			if not Globals.cosmo_kick_drunk:
+				Globals.cosmo_kick_drunk = true
+				yield(E.run(['Pato: Wow... now I feel the KICK TO THE COSM...']), 'completed')
+				opt.visible = false
+				D.finish_dialog()
+				A.play('sfx_dream_transition', Vector2.ZERO, false)
+				E.goto_room('Luna')
+				return
+			else:
+				yield(Globals.moon_daydream_repeated(), 'completed')
+				_show_options()
+				return
 		'Opt3':
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
@@ -55,7 +62,7 @@ func option_selected(opt: DialogOption) -> void:
 				G.display('Pato watered what was left of the beer')
 			]), 'completed')
 		'Exit':
-			D.finish_dialog()
+			yield(E.run([C.player_say(opt.text)]), 'completed')
 			D.show_dialog('ChatWithConejuno')
 			return
 	D.finish_dialog()

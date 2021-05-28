@@ -173,7 +173,7 @@ baseline = 51
 texture = ExtResource( 24 )
 
 [node name="BaselineHelper" parent="Props/Bench" index="1"]
-position = Vector2( 3, 51 )
+position = Vector2( 0, 51 )
 
 [node name="Sprite" parent="Props/Bench" index="3"]
 light_mask = 2
@@ -186,7 +186,7 @@ baseline = 29
 texture = ExtResource( 25 )
 
 [node name="BaselineHelper" parent="Props/Platform" index="1"]
-position = Vector2( 16, 29 )
+position = Vector2( 0, 29 )
 
 [node name="Sprite" parent="Props/Platform" index="3"]
 light_mask = 2

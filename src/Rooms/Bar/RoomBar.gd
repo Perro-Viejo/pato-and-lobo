@@ -78,14 +78,14 @@ func on_room_transition_finished() -> void:
 			'Pato: I WILL TALK WITH LOBO TODAY!',
 		])
 	elif C.player.last_room == 'Sea':
-		yield(E.wait(0.5, false), 'completed')
 		Globals.courage += 20
 		yield(I, 'courage_update_shown')
+
 		yield(E.run(['Pato: The savior of my love...']), 'completed')
 	elif Globals.has_done(Globals.GameState.GOT_HOME) or Globals.has_done(Globals.GameState.WATER_TAKEN):
-		yield(E.wait(0.5, false), 'completed')
 		Globals.courage += 20
 		yield(I, 'courage_update_shown')
+
 		yield(E.run(['Pato: What a romantic dream...']), 'completed')
 	
 	if Globals.courage >= 60 \

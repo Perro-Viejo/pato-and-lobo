@@ -39,6 +39,7 @@ func add_item(item_name: String, is_in_queue := true) -> void:
 		i.in_inventory = true
 		emit_signal('item_added', i)
 		return yield(self, 'item_add_done')
+	yield(get_tree(), 'idle_frame')
 
 
 func add_item_as_active(item_name: String, is_in_queue := true) -> void:

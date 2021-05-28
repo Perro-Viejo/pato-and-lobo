@@ -20,6 +20,8 @@ var game_progress := [GameState.NONE]
 var asked_polas := 0
 var courage := 0 setget _set_courage
 var rooms_states := {}
+var moon_song_played := false
+var cosmo_kick_drunk := false
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
@@ -44,7 +46,18 @@ func explain_character_change() -> void:
 	]), 'completed')
 
 
+func moon_daydream_repeated() -> void:
+	yield(E.run([
+		G.display('Pato was waiting to daydream with the moon again'),
+		G.display('But did not happen'),
+		'Pato: It\'s not the same anymore'
+	]), 'completed')
+
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _set_courage(value: int) -> void:
 	courage = value
+	
+	yield(E.wait(0.5, false), 'completed')
 	I.emit_signal('courage_updated', courage)

@@ -76,6 +76,8 @@ func _create_options(options := [], autoshow := false) -> void:
 			btn.add_color_override('font_color', used)
 
 		btn.connect('pressed', self, '_on_option_clicked', [dialog_option])
+		btn.connect('mouse_entered', Cursor, 'set_cursor', [Cursor.Type.ACTIVE])
+		btn.connect('mouse_exited', Cursor, 'set_cursor', [Cursor.Type.IDLE])
 
 		_options.add_child(btn)
 
@@ -128,6 +130,7 @@ func remove_options() -> void:
 #
 func show_options() -> void:
 	show()
+	Cursor.set_cursor()
 	emit_signal('shown')
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Rooms/HomesPlantation/RoomHomesPlantation.gd" type="Script" id=2]
@@ -7,11 +7,132 @@
 [ext_resource path="res://src/Rooms/HomesPlantation/Sprites/planet_sign.png" type="Texture" id=5]
 [ext_resource path="res://src/Rooms/HomesPlantation/PropSign.gd" type="Script" id=6]
 [ext_resource path="res://src/Rooms/Space/Sprites/planet_homes_plantation.png" type="Texture" id=7]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipgancho.png" type="Texture" id=8]
+[ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipgancho2.png" type="Texture" id=9]
+[ext_resource path="res://src/Rooms/Luna/Sprites/home_seed.png" type="Texture" id=10]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 719.664, 686.593, 497.702, 1135.26, 137.702, 1291.26, -258.298, 1251.26, -606.298, 1035.26, -744.364, 535.402, -547.816, 124.668, -361.348, -24.0029, 11.5886, -124.797, 376.966, -39.1219, 623.91, 157.426 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ) ]
 outlines = [ PoolVector2Array( 623.91, 157.426, 376.966, -39.1219, 11.5886, -124.797, -361.348, -24.0029, -547.816, 124.668, -744.364, 535.402, -606.298, 1035.26, -258.298, 1251.26, 137.702, 1291.26, 497.702, 1135.26, 719.664, 686.593 ) ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "SETUP"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Props/RoboticArm:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -547, -765 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Props/RoboticArm/Sprite2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -23, 186 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Props/HouseSeed:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -575, 99 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Props/HouseSeed:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "pull"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Props/RoboticArm:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4.4, 7.1, 10.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -547, -765 ), Vector2( -547, -188 ), Vector2( -547, -188 ), Vector2( -547, -1080 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Props/RoboticArm/Sprite2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5, 5.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -23, 186 ), Vector2( -23, 186 ), Vector2( -14, 186 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Props/HouseSeed:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 7.1, 10.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -575, 99 ), Vector2( -575, 99 ), Vector2( -575, -795 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Props/HouseSeed:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 5.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 5.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "shake_camera"
+} ]
+}
 
 [node name="RoomHomesPlantation" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -66,6 +187,39 @@ position = Vector2( 96, 96 )
 rotation = -0.523598
 texture = ExtResource( 5 )
 
+[node name="RoboticArm" parent="Props" index="3" instance=ExtResource( 3 )]
+position = Vector2( -547, -765 )
+clickable = false
+baseline = 2000
+texture = ExtResource( 8 )
+
+[node name="BaselineHelper" parent="Props/RoboticArm" index="1"]
+position = Vector2( 0, 2000 )
+
+[node name="Sprite" parent="Props/RoboticArm" index="3"]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 57, 441 )
+
+[node name="Sprite2" type="Sprite" parent="Props/RoboticArm" index="4"]
+position = Vector2( -23, 186 )
+texture = ExtResource( 9 )
+region_rect = Rect2( 1, 0, 57, 69 )
+
+[node name="Sprite3" type="Sprite" parent="Props/RoboticArm" index="5"]
+position = Vector2( 0, -437 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 8 )
+
+[node name="HouseSeed" parent="Props" index="4" instance=ExtResource( 3 )]
+visible = false
+position = Vector2( -575, 99 )
+clickable = false
+texture = ExtResource( 10 )
+
+[node name="Sprite" parent="Props/HouseSeed" index="3"]
+rotation = 0.785397
+texture = ExtResource( 10 )
+
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]
 position = Vector2( 288.826, 322.817 )
 
@@ -75,5 +229,11 @@ position = Vector2( 0, -11 )
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
 navpoly = SubResource( 1 )
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
+anims/SETUP = SubResource( 2 )
+anims/pull = SubResource( 3 )
+
 [editable path="Props/Planet"]
 [editable path="Props/Sign"]
+[editable path="Props/RoboticArm"]
+[editable path="Props/HouseSeed"]

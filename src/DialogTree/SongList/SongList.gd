@@ -63,15 +63,21 @@ func option_selected(opt: DialogOption) -> void:
 					C.player.dance(),
 					E.wait(3),
 					'Pato: I love this music so much',
-					'...',
-					'Pato: What if...'
+					'...'
 				]),
 				'completed'
 			)
-			opt.visible = false
-			D.finish_dialog()
-			A.play('sfx_dream_transition', Vector2.ZERO, false)
-			E.goto_room('Luna')
+			
+			if not Globals.moon_song_played:
+				Globals.moon_song_played = true
+				yield(E.run(['Pato: What if...']), 'completed')
+				opt.visible = false
+				D.finish_dialog()
+				A.play('sfx_dream_transition', Vector2.ZERO, false)
+				E.goto_room('Luna')
+			else:
+				yield(Globals.moon_daydream_repeated(), 'completed')
+				D.finish_dialog()
 		'Exit':
 			yield(E.run(['Lagarto: Sure.']), 'completed')
 			D.finish_dialog()

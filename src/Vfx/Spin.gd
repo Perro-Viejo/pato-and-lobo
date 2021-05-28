@@ -21,6 +21,7 @@ func spin_all() -> void:
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
+#warning-ignore-all:return_value_discarded
 func _spin(target: Node2D) -> void:
 	interpolate_property(
 		target, 'rotation_degrees',

@@ -50,8 +50,10 @@ func _check_costume_completion(item: Item) -> void:
 					I.remove_item('Legs', false)
 					anim_suffix = '_costume'
 					idle(false)
+
 					Globals.courage += 50
 					yield(I, 'courage_update_shown')
+
 					E.run(['Pato: I feel I\'m ready to talk with Lobo!'])
 			else:
 				anim_suffix = ''

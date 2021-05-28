@@ -24,6 +24,8 @@ var cutscene_skipped := false
 var _is_camera_shaking := false
 var _camera_shake_amount := 15.0
 var _shake_timer := 0.0
+var _running := false
+var _use_transition_on_room_change := true
 
 onready var game_width := get_viewport().get_visible_rect().end.x
 onready var game_height := get_viewport().get_visible_rect().end.y
@@ -94,31 +96,32 @@ func break_run() -> void:
 
 
 func run(instructions: Array, show_gi := true) -> void:
+	if _running:
+		yield(get_tree(), 'idle_frame')
+		return run(instructions, show_gi)
+	
 	G.block()
+	
+	_running = true
 	
 	for idx in instructions.size():
 		var instruction = instructions[idx]
 
 		if instruction is String:
-			var i := instruction as String
-			
-			# TODO: Mover esto a una función que se encargue de evaluar cadenas
-			# de texto
-			if i == '...':
-				yield(wait(1.0, false), 'completed')
-			else:
-				var char_talk: int = i.find(':')
-				if char_talk:
-					var char_name: String = i.substr(0, char_talk)
-					if not C.is_valid_character(char_name): continue
-					var char_line: String = i.substr(char_talk + 1)
-					yield(C.character_say(char_name, char_line, false), 'completed')
+			yield(_eval_string(instruction as String), 'completed')
+		elif instruction is Dictionary:
+			if instruction.has('dialog'):
+				_eval_string(instruction.dialog)
+				yield(self.wait(instruction.time, false), 'completed')
+				G.emit_signal('continue_clicked')
 		elif instruction is GDScriptFunctionState and instruction.is_valid():
 			instruction.resume()
 			yield(instruction, 'completed')
 	
 	if not D.active and show_gi:
 		G.done()
+	
+	_running = false
 
 
 # Es como run, pero salta la secuencia de acciones si se presiona la acción 'skip'.
@@ -141,7 +144,7 @@ func show_inline_dialog(opts: Array) -> String:
 	return yield(D, 'option_selected')
 
 
-func goto_room(path := '') -> void:
+func goto_room(path := '', use_transition := true) -> void:
 # warning-ignore:return_value_discarded
 	if not in_room: return
 	self.in_room = false
@@ -149,8 +152,10 @@ func goto_room(path := '') -> void:
 	G.block()
 	G.blocked = true
 
-	$TransitionLayer.play_transition('fade_in')
-	yield($TransitionLayer, 'transition_finished')
+	_use_transition_on_room_change = use_transition
+	if use_transition:
+		$TransitionLayer.play_transition('fade_in')
+		yield($TransitionLayer, 'transition_finished')
 	
 	C.player.last_room = current_room.script_name
 	
@@ -200,9 +205,12 @@ func room_readied(room: Room) -> void:
 	
 	room.on_room_entered()
 
-	$TransitionLayer.play_transition('fade_out')
-	yield($TransitionLayer, 'transition_finished')
-	yield(wait(0.3, false), 'completed')
+	if _use_transition_on_room_change:
+		$TransitionLayer.play_transition('fade_out')
+		yield($TransitionLayer, 'transition_finished')
+		yield(wait(0.3, false), 'completed')
+	else:
+		yield(get_tree(), 'idle_frame')
 	
 	if not room.hide_gi:
 		G.done()
@@ -242,3 +250,19 @@ func _set_in_room(value: bool) -> void:
 func _set_text_speed_idx(value: int) -> void:
 	text_speed_idx = value
 	emit_signal('text_speed_changed', text_speed_idx)
+
+
+func _eval_string(text: String) -> void:
+	if text == '...':
+		yield(wait(1.0, false), 'completed')
+	else:
+		var char_talk: int = text.find(':')
+		if char_talk:
+			var char_name: String = text.substr(0, char_talk)
+			if C.is_valid_character(char_name):
+				var char_line: String = text.substr(char_talk + 1)
+				yield(C.character_say(char_name, char_line, false), 'completed')
+			else:
+				yield(get_tree(), 'idle_frame')
+		else:
+			yield(get_tree(), 'idle_frame')

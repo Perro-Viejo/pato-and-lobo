@@ -33,10 +33,11 @@ func on_room_transition_finished() -> void:
 	if Globals.has_done(Globals.GameState.GOT_HOME):
 		yield(
 			E.run_cutscene([
-			'Pato: Do it calmly',
-			'Pato: Good, good. Now take down the arm.',
-			'Lobo: Doing so. Doing so...',
-			E.wait(2),
+			_play(),
+			{ dialog = 'Pato: Do it calmly', time = 2 },
+			{ dialog = 'Pato: Good, good. Now take down the arm.', time = 3 },
+			{ dialog = 'Lobo: Doing so. Doing so...', time = 3 },
+			E.wait(3),
 			'Pato: Done! We have our house-seed. Let\'s go to Luna and sow it.',
 		]), 'completed')
 		E.goto_room('Luna')
@@ -60,5 +61,15 @@ func on_room_exited() -> void:
 	.on_room_exited()
 
 
+func shake_camera() -> void:
+	E.shake_camera({
+		strength = 3.0,
+		duration = 0.4
+	})
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
-# TODO: Poner aquí los métodos privados
+func _play() -> void:
+	yield()
+	$AnimationPlayer.play('pull')
+	yield(get_tree(), 'idle_frame')
