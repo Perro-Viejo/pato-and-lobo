@@ -29,6 +29,13 @@ func show_option(id: String, is_visible := true) -> void:
 			break
 
 
+func is_option_visible(id: String) -> bool:
+	for o in options:
+		if (o as DialogOption).id == id:
+			return o.visible
+	return false
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _show_options() -> void:
 	D.emit_signal('dialog_requested', options)

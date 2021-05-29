@@ -77,6 +77,12 @@ func face_up(is_in_queue := true) -> void:
 	yield(idle(false), 'completed')
 
 
+func face_up_right(is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	_looking_dir = 'ur'
+	yield(idle(false), 'completed')
+
+
 func face_down(is_in_queue := true) -> void:
 	if is_in_queue: yield()
 	_looking_dir = 'd'

@@ -46,7 +46,8 @@ func on_interact() -> void:
 					face_left(),
 					C.face_clicked(),
 					dance(),
-					'Pato: And look how he moves..\n\/( > __ < \\)'
+					'Pato: And look how he moves...',
+					'Pato: /( > __ < \\)'
 				])
 		'Sea':
 			E.run([

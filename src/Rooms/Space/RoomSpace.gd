@@ -23,7 +23,24 @@ func on_room_transition_finished() -> void:
 func on_room_exited() -> void:
 	A.stop('bg_space', 0, false)
 	C.player.enable(false)
+	C.get_character('Spaceship').enable(false)
 	.on_room_exited()
+
+
+func goto_planet(planet_name: String) -> void:
+	yield()
+	var path_follow: PathFollow2D = $Paths.get_node(planet_name).get_child(0)
+	var spaceship_copy: Character = C.get_character('Spaceship').duplicate()
+	C.get_character('Spaceship').disable(false)
+	path_follow.add_child(spaceship_copy)
+	$Paths/Tween.interpolate_property(
+		path_follow, 'unit_offset',
+		0.0, 1.0,
+		4.0, Tween.TRANS_CUBIC, Tween.EASE_OUT
+	)
+	$Paths/Tween.start()
+	yield($Paths/Tween, 'tween_all_completed')
+	spaceship_copy.queue_free()
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

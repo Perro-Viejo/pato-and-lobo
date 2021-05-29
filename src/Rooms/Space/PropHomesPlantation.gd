@@ -7,7 +7,7 @@ func on_interact() -> void:
 	if not Globals.has_done(Globals.GameState.GOT_HOME):
 		yield(E.run([
 			A.play('sfx_spaceship_transition', Vector2.ZERO),
-			C.walk_to_clicked()
+			E.current_room.goto_planet(script_name)
 		]), 'completed')
 		E.goto_room('HomesPlantation')
 	else:

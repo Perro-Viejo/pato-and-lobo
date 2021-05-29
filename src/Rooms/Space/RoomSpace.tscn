@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=2]
@@ -18,6 +18,21 @@ vertices = PoolVector2Array( 703.151, -507.424, 883.151, -429.424, 915.151, 348.
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7 ) ]
 outlines = [ PoolVector2Array( -658.849, -485.424, -906.849, -281.424, -906.849, 360.576, -772.849, 500.576, 845.151, 510.576, 915.151, 348.576, 883.151, -429.424, 703.151, -507.424 ) ]
 
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1, -2, 60.0274, 160.252, -60.0274, -160.252, -846, 189, 4.37334, 100.689, -4.37334, -100.689, -567, 41, -43.4729, 154.061, 43.4729, -154.061, -897, -129, -101.371, 43.1535, 101.371, -43.1535, -641, -163, 172.834, -153.235, -172.834, 153.235, -666, -468, 0, 0, 0, 0, -502, -210 )
+}
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -6, -1, 90.8168, -166.497, -90.8168, 166.497, -603, 263, -87.4532, 1.68179, 87.4532, -1.68179, -382, 461, 42.0448, -164.816, -42.0448, 164.816, 250, 392, 0, 0, 0, 0, -12, 263 )
+}
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1, -3, 16.8179, 184.997, -16.8179, -184.997, 316, -383, 131.18, -188.361, -131.18, 188.361, -36, -438, -147.998, 0, 147.998, 0, 524, 238, 1.68179, 151.361, -1.68179, -151.361, 818, -245, -84.0896, -264.041, 84.0896, 264.041, 618, -341, 0, 0, 0, 0, 507, -94 )
+}
+
 [node name="RoomSpace" instance=ExtResource( 2 )]
 script = ExtResource( 4 )
 script_name = "RoomSpace"
@@ -25,10 +40,6 @@ characters = [ {
 "position": Vector2( 0, 0 ),
 "script_name": "Spaceship"
 } ]
-limit_left = -960.0
-limit_right = 960.0
-limit_top = -540.0
-limit_bottom = 540.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 1 )]
 clickable = false
@@ -48,13 +59,15 @@ description = "Homes plantation"
 baseline = 111
 walk_to_point = Vector2( 18.315, 0.362 )
 cursor = 1
+script_name = "HomesPlantation"
+always_on_top = true
 texture = ExtResource( 5 )
 
 [node name="CollisionPolygon2D" parent="Props/HomesPlantation" index="0"]
 polygon = PoolVector2Array( -92.685, -81.638, -13.685, -107.638, 85.315, -102.638, 126.315, -26.638, 104.315, 65.362, 65.315, 118.362, -7.685, 120.362, -66.685, 110.362, -108.685, 62.362, -124.685, -4.638 )
 
 [node name="BaselineHelper" parent="Props/HomesPlantation" index="1"]
-position = Vector2( 0, 111.362 )
+position = Vector2( 0, 111 )
 
 [node name="WalkToHelper" parent="Props/HomesPlantation" index="2"]
 position = Vector2( 18.315, 0.362 )
@@ -70,6 +83,8 @@ script = ExtResource( 10 )
 description = "Luna"
 baseline = 96
 cursor = 1
+script_name = "Luna"
+always_on_top = true
 texture = ExtResource( 7 )
 
 [node name="CollisionPolygon2D" parent="Props/Luna" index="0"]
@@ -112,6 +127,8 @@ description = "Pig Planet"
 baseline = 834
 walk_to_point = Vector2( -22, 5 )
 cursor = 1
+script_name = "Marrano"
+always_on_top = true
 texture = ExtResource( 12 )
 
 [node name="CollisionPolygon2D" parent="Props/Marrano" index="0"]
@@ -130,9 +147,38 @@ texture = ExtResource( 12 )
 
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]
 
+[node name="WalkableAreas" parent="." index="5"]
+visible = false
+
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
 position = Vector2( -1.49835, 0 )
 navpoly = SubResource( 1 )
+enabled = false
+
+[node name="Paths" type="Node2D" parent="." index="6"]
+
+[node name="Tween" type="Tween" parent="Paths" index="0"]
+
+[node name="Luna" type="Path2D" parent="Paths" index="1"]
+curve = SubResource( 2 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/Luna" index="0"]
+position = Vector2( -1, -2 )
+rotation = 2.72367
+
+[node name="Marrano" type="Path2D" parent="Paths" index="2"]
+curve = SubResource( 3 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/Marrano" index="0"]
+position = Vector2( -6, -1 )
+rotation = 2.94604
+
+[node name="HomesPlantation" type="Path2D" parent="Paths" index="3"]
+curve = SubResource( 4 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/HomesPlantation" index="0"]
+position = Vector2( -1, -3 )
+rotation = -0.538083
 
 [editable path="Props/Bg"]
 [editable path="Props/HomesPlantation"]

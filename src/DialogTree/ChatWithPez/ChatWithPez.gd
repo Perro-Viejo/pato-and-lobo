@@ -60,12 +60,15 @@ func option_selected(opt: DialogOption) -> void:
 					'Pato: I\'M NOT DIRTY!',
 					G.display('Pato got mad as she did not in a long time'),
 					G.display('Now she was commited to defeat Pez in a stare fight'),
-					'Pez: You are sooo dirtyy. I can notice from here.',
-					'Pato: what what... what do you see dirty?',
-					'Pez: Those wings... guagh!',
+					'Pez: You are sooooooo dirtyy. I can notice from here.',
+					'Pato: Wha... what... what do you see dirty?',
+					'Pez: Those... wings... ewwwwww!',
 					pez.face_right(),
 					'...',
 					'Pez: I don\'t know how can you live like that.',
+					'Pato: Why should I clean my wings for a stare fight?',
+					'Pez: Because we clean our eyes after it.',
+					'Pez: And you don\'t want your eyes to get infected. Trust me.',
 				]), 'completed')
 				opt.visible = false
 				show_option('Opt4')
@@ -74,6 +77,12 @@ func option_selected(opt: DialogOption) -> void:
 			else:
 				yield(E.run([
 					'Pez: Let me see your wings',
+					'Pato: What for?',
+					'Pez: Every staring fight requires opponents to have their hands clean.',
+					'Pato: Why?',
+					'Pez: Because we clean our eyes after it.',
+					'Pez: And you don\'t want your eyes to get infected. Trust me.',
+					'Pato: Oooook.',
 					G.display('Pato showed her wings to Pez'),
 					'Pez: All right. You meet the requirements. You can challenge me.'
 				]), 'completed')

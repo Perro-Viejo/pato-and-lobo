@@ -12,7 +12,7 @@
 [ext_resource path="res://src/Rooms/Marrano/Sprites/planetacerdo.png" type="Texture" id=12]
 [ext_resource path="res://src/Rooms/Marrano/PropWater.gd" type="Script" id=13]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "SETUP"
 length = 0.001
 tracks/0/type = "value"
@@ -76,7 +76,7 @@ tracks/4/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "fall"
 length = 3.0
 tracks/0/type = "bezier"
@@ -162,7 +162,7 @@ tracks/6/keys = {
 } ]
 }
 
-[sub_resource type="NavigationPolygon" id=1]
+[sub_resource type="NavigationPolygon" id=3]
 vertices = PoolVector2Array( 110, 108, 539, 232, 601, 584, 557, 776, 359, 980, -84, 1127, -519, 978, -701, 708, -785.112, 517.285, -789, 302, -694.343, 103.485, -561, -76, -50, -202, -357.964, -198.189, -167, -264 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ), PoolIntArray( 12, 0, 11, 13, 14 ) ]
 outlines = [ PoolVector2Array( -694.343, 103.485, -561, -76, -357.964, -198.189, -167, -264, -50, -202, 110, 108, 539, 232, 601, 584, 557, 776, 359, 980, -84, 1127, -519, 978, -701, 708, -785.112, 517.285, -789, 302 ) ]
@@ -203,7 +203,7 @@ texture = ExtResource( 12 )
 [node name="Container" parent="Props" index="2" instance=ExtResource( 4 )]
 position = Vector2( 334.863, -81.3031 )
 script = ExtResource( 11 )
-description = "Light-vault-3000X"
+description = "Pretty flowers covered by something"
 baseline = 142
 walk_to_point = Vector2( 16.137, 291.303 )
 cursor = 1
@@ -246,8 +246,8 @@ always_on_top = true
 texture = ExtResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Props/Head" index="4"]
-anims/SETUP = SubResource( 2 )
-anims/fall = SubResource( 3 )
+anims/SETUP = SubResource( 1 )
+anims/fall = SubResource( 2 )
 
 [node name="VfxSpin" type="Tween" parent="Props/Head" index="5"]
 script = ExtResource( 7 )
@@ -266,7 +266,7 @@ position = Vector2( 441, 230 )
 position = Vector2( -274, -138 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
-navpoly = SubResource( 1 )
+navpoly = SubResource( 3 )
 
 [editable path="Props/Surface"]
 [editable path="Props/Container"]

@@ -25,7 +25,6 @@ description = "Nave espacial"
 clickable = false
 script_name = "Spaceship"
 texture = ExtResource( 3 )
-follow_player = true
 
 [node name="AnimationPlayer" parent="." index="3"]
 anims/idle_d = SubResource( 1 )

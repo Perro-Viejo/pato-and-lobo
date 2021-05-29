@@ -576,6 +576,7 @@ animations = [ {
 [node name="Marrano" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 description = "Pres. Duque"
+walk_to_point = Vector2( -198, 19 )
 cursor = 8
 script_name = "Marrano"
 text_color = Color( 1, 0.670588, 0.6, 1 )
@@ -585,6 +586,9 @@ vo_name = "vo_pig"
 [node name="CollisionPolygon2D" parent="." index="0"]
 position = Vector2( 48.0833, -162.787 )
 polygon = PoolVector2Array( 55.9167, 161.787, 64.9167, 133.787, 67.9167, 43.787, 16.9167, -3.213, -10.0833, -6.213, 19.9167, -50.213, 1.9167, -122.213, -76.0833, -147.213, -139.083, -105.213, -138.083, -33.213, -116.083, -2.213, -132.083, 51.787, -150.083, 62.787, -113.083, 161.787 )
+
+[node name="WalkToHelper" parent="." index="2"]
+position = Vector2( -198, 19 )
 
 [node name="AnimationPlayer" parent="." index="3"]
 anims/idle_d = SubResource( 1 )
@@ -607,6 +611,6 @@ position = Vector2( 0, -139 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 32 )
 animation = "idle"
-frame = 19
+frame = 14
 playing = true
 flip_h = true

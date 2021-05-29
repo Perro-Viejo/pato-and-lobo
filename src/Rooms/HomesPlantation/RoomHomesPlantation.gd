@@ -63,7 +63,7 @@ func on_room_exited() -> void:
 
 func shake_camera() -> void:
 	E.shake_camera({
-		strength = 3.0,
+		strength = 10.0,
 		duration = 0.4
 	})
 

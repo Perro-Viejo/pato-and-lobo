@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg.png-2a8a11e0229bd925477aaee843c0e017.stex"
+path="res://.import/planet.png-2cb6518bbeb14fda3ba3d47c4d806dac.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Rooms/HomesPlantation/Sprites/bg.png"
-dest_files=[ "res://.import/bg.png-2a8a11e0229bd925477aaee843c0e017.stex" ]
+source_file="res://src/Rooms/HomesPlantation/Sprites/planet.png"
+dest_files=[ "res://.import/planet.png-2cb6518bbeb14fda3ba3d47c4d806dac.stex" ]
 
 [params]
 
