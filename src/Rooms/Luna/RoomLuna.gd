@@ -34,7 +34,7 @@ func on_room_entered() -> void:
 
 
 func on_room_transition_finished() -> void:
-	if visited_first_time:
+	if visited_first_time and C.player.last_room == 'Bar':
 		E.run([
 			'Pato: How calm and quiet it is around here',
 			'Lobo: Yes... makes you want to... T.D.A.F.',

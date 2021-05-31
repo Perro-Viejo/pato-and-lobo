@@ -25,7 +25,7 @@ func on_interact() -> void:
 			if not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
 				yield(
 					E.run([
-					'Lobo: Here we go! A MESS!!!!',
+					'Lobo: Here we go! DESTRUCTION TIME!!!!',
 					A.play('sfx_spaceship_garbage', global_position),
 					play('open'),
 					'Pato: UUUUuuuUUUUuuuUUUuuu',

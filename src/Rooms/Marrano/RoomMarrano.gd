@@ -33,6 +33,11 @@ func on_room_entered() -> void:
 	# Verificar el estado de la habitación
 	if state.container_weakness_revealed:
 		get_prop('Container').description = 'Light-vault-3000X'
+	
+	if Globals.has_done(Globals.GameState.DOME_DESTROYED):
+		C.get_character('Marrano').global_position = get_point('Container')
+		C.get_character('Marrano').face_right(false)
+		get_prop('Container').visible = false
 
 
 func on_room_transition_finished() -> void:
@@ -45,7 +50,9 @@ func on_room_transition_finished() -> void:
 			C.player.face_up_right(),
 			'Pato: We need that water to water our house-seed.'
 		])
-	elif Globals.has_done(Globals.GameState.GARBAGE_THROWN):
+	elif Globals.has_done(Globals.GameState.GARBAGE_THROWN) \
+		and not Globals.has_done(Globals.GameState.DOME_DESTROYED):
+		Globals.did(Globals.GameState.DOME_DESTROYED)
 		yield(E.run_cutscene([
 			A.play('sfx_dome', $Props/Container.global_position),
 			'Pato: I better hide.',

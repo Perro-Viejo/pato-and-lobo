@@ -67,7 +67,7 @@ func on_interact() -> void:
 
 
 func on_look() -> void:
-	yield(G.display('Paro has nothing to say about it', false), 'completed')
+	yield(G.display('Pato has nothing to say about it', false), 'completed')
 	G.done()
 
 

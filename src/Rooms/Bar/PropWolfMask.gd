@@ -9,7 +9,7 @@ func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		'Pato: This is my chance. The guy is dancing.',
+		'Pato: This is my chance. The guy is taking drugs.',
 		'Pato: I\'ll borrow it for a moment',
 		A.play('sfx_mask_pu', global_position),
 		C.player.grab(),

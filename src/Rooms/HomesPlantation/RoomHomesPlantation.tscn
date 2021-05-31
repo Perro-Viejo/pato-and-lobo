@@ -171,6 +171,7 @@ limit_top = -540.0
 limit_bottom = 540.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 3 )]
+position = Vector2( 6, 3 )
 clickable = false
 baseline = -540
 texture = ExtResource( 4 )
@@ -189,30 +190,162 @@ texture = ExtResource( 7 )
 hframes = 2
 
 [node name="Sign" parent="Props" index="2" instance=ExtResource( 3 )]
-position = Vector2( -345.367, -50.5573 )
+position = Vector2( -423, -43 )
 script = ExtResource( 6 )
 description = "Details about this home-seed"
 baseline = 64
-walk_to_point = Vector2( 96, 96 )
+walk_to_point = Vector2( 66, 113 )
 cursor = 1
 script_name = "Sign"
 texture = ExtResource( 5 )
+is_the_one = true
+details = "Planted 8 months ago. Front garden, two bedrooms, bathroom with tub."
+lobo_reaction = "Awwwww, is our dream-house."
 
 [node name="CollisionPolygon2D" parent="Props/Sign" index="0"]
 position = Vector2( -110.873, -102.054 )
-polygon = PoolVector2Array( -49.76, 61.6113, 157.24, -64.3887, 208.24, 55.6113, 148.24, 98.6113, 194.24, 199.611, 148.24, 224.611, 93.24, 129.611, 21.24, 174.611 )
+polygon = PoolVector2Array( -38.76, 60.6113, 45.24, -5.3887, 149.24, -56.3887, 208.24, 55.6113, 148.24, 98.6113, 194.24, 199.611, 148.24, 224.611, 93.24, 129.611, 21.24, 174.611 )
 
 [node name="BaselineHelper" parent="Props/Sign" index="1"]
 position = Vector2( 0, 64 )
 
 [node name="WalkToHelper" parent="Props/Sign" index="2"]
-position = Vector2( 96, 96 )
+position = Vector2( 66, 113 )
 
 [node name="Sprite" parent="Props/Sign" index="3"]
 rotation = -0.523598
 texture = ExtResource( 5 )
 
-[node name="RoboticArm" parent="Props" index="3" instance=ExtResource( 3 )]
+[node name="Sign2" parent="Props" index="3" instance=ExtResource( 3 )]
+position = Vector2( 53, -138 )
+script = ExtResource( 6 )
+description = "Details about this home-seed"
+baseline = 64
+walk_to_point = Vector2( 0, 136 )
+cursor = 1
+script_name = "Sign"
+texture = ExtResource( 5 )
+details = "Planted 6 months ago. Two floors, four bedrooms, two bathrooms."
+lobo_reaction = "Nope. Too big."
+
+[node name="CollisionPolygon2D" parent="Props/Sign2" index="0"]
+position = Vector2( -110.873, -102.054 )
+polygon = PoolVector2Array( 4.873, -8.946, 108.873, -21.946, 218.873, -15.946, 221.873, 109.054, 142.873, 113.054, 134.873, 225.054, 81.873, 226.054, 85.873, 115.054, 3.873, 111.054 )
+
+[node name="BaselineHelper" parent="Props/Sign2" index="1"]
+position = Vector2( 0, 64 )
+
+[node name="WalkToHelper" parent="Props/Sign2" index="2"]
+position = Vector2( 0, 136 )
+
+[node name="Sprite" parent="Props/Sign2" index="3"]
+texture = ExtResource( 5 )
+
+[node name="Sign3" parent="Props" index="4" instance=ExtResource( 3 )]
+position = Vector2( 412, -54 )
+script = ExtResource( 6 )
+description = "Details about this home-seed"
+baseline = 64
+walk_to_point = Vector2( -71, 117 )
+cursor = 1
+script_name = "Sign"
+texture = ExtResource( 5 )
+details = "Planted 4 months ago. Backyard, one bedroom, bathroom..."
+lobo_reaction = "We want one with a front garden."
+
+[node name="CollisionPolygon2D" parent="Props/Sign3" index="0"]
+position = Vector2( -110.873, -102.054 )
+polygon = PoolVector2Array( 73.873, -50.946, 174.873, -2.946, 261.873, 53.054, 198.873, 163.054, 129.873, 124.054, 67.873, 217.054, 25.873, 195.054, 87.873, 101.054, 14.873, 54.054 )
+
+[node name="BaselineHelper" parent="Props/Sign3" index="1"]
+position = Vector2( 0, 64 )
+
+[node name="WalkToHelper" parent="Props/Sign3" index="2"]
+position = Vector2( -71, 117 )
+
+[node name="Sprite" parent="Props/Sign3" index="3"]
+rotation = 0.523598
+texture = ExtResource( 5 )
+
+[node name="Sign4" parent="Props" index="5" instance=ExtResource( 3 )]
+position = Vector2( 637, 292 )
+script = ExtResource( 6 )
+description = "Details about this home-seed"
+baseline = 64
+walk_to_point = Vector2( -130, 65 )
+cursor = 1
+script_name = "Sign"
+texture = ExtResource( 5 )
+details = "Planted 2 months ago. Two bedrooms, bathroom, terrace."
+lobo_reaction = "Two bedrooms sounds good, but don't like the terrace."
+
+[node name="CollisionPolygon2D" parent="Props/Sign4" index="0"]
+position = Vector2( -110.873, -102.054 )
+polygon = PoolVector2Array( 159.873, -49.946, 219.873, 40.054, 266.873, 135.054, 157.873, 202.054, 114.873, 134.054, 15.873, 181.054, -9.12701, 139.054, 87.873, 89.054, 47.873, 15.054 )
+
+[node name="BaselineHelper" parent="Props/Sign4" index="1"]
+position = Vector2( 0, 64 )
+
+[node name="WalkToHelper" parent="Props/Sign4" index="2"]
+position = Vector2( -130, 65 )
+
+[node name="Sprite" parent="Props/Sign4" index="3"]
+rotation = 1.0472
+texture = ExtResource( 5 )
+
+[node name="Sign5" parent="Props" index="6" instance=ExtResource( 3 )]
+position = Vector2( -127, 49 )
+script = ExtResource( 6 )
+description = "Details about this home-seed"
+baseline = 64
+walk_to_point = Vector2( 32, 129 )
+cursor = 1
+script_name = "Sign"
+texture = ExtResource( 5 )
+details = "Planted 2 months ago. Studio apartment, balcony."
+lobo_reaction = "A studio? NO WAY!"
+
+[node name="CollisionPolygon2D" parent="Props/Sign5" index="0"]
+position = Vector2( -110.873, -102.054 )
+polygon = PoolVector2Array( 181.873, -39.946, 217.873, 87.054, 139.873, 108.054, 163.873, 215.054, 116.873, 227.054, 89.873, 119.054, 7.873, 140.054, -19.127, 19.054, 76.873, -15.946 )
+
+[node name="BaselineHelper" parent="Props/Sign5" index="1"]
+position = Vector2( 0, 64 )
+
+[node name="WalkToHelper" parent="Props/Sign5" index="2"]
+position = Vector2( 32, 129 )
+
+[node name="Sprite" parent="Props/Sign5" index="3"]
+rotation = -0.261799
+texture = ExtResource( 5 )
+
+[node name="Sign6" parent="Props" index="7" instance=ExtResource( 3 )]
+position = Vector2( -559, 304 )
+script = ExtResource( 6 )
+description = "Details about this home-seed"
+baseline = 64
+walk_to_point = Vector2( 117, 68 )
+cursor = 1
+script_name = "Sign"
+texture = ExtResource( 5 )
+details = "Planted a month ago. One bedroom, bathroom with tub, balcony."
+lobo_reaction = "We want a bathroom with tub, but we need something bigger."
+
+[node name="CollisionPolygon2D" parent="Props/Sign6" index="0"]
+position = Vector2( -110.873, -102.054 )
+polygon = PoolVector2Array( 58.873, -48.946, 169.873, 12.054, 130.873, 83.054, 226.873, 142.054, 202.873, 186.054, 108.873, 127.054, 66.873, 200.054, -38.127, 141.054, 7.87299, 37.054 )
+
+[node name="BaselineHelper" parent="Props/Sign6" index="1"]
+position = Vector2( 0, 64 )
+
+[node name="WalkToHelper" parent="Props/Sign6" index="2"]
+position = Vector2( 117, 68 )
+
+[node name="Sprite" parent="Props/Sign6" index="3"]
+rotation = -1.0472
+texture = ExtResource( 5 )
+
+[node name="RoboticArm" parent="Props" index="8" instance=ExtResource( 3 )]
 position = Vector2( -547, -765 )
 clickable = false
 baseline = 2000
@@ -235,7 +368,7 @@ position = Vector2( 0, -437 )
 scale = Vector2( 1, -1 )
 texture = ExtResource( 8 )
 
-[node name="HouseSeed" parent="Props" index="4" instance=ExtResource( 3 )]
+[node name="HouseSeed" parent="Props" index="9" instance=ExtResource( 3 )]
 visible = false
 position = Vector2( -575, 99 )
 clickable = false
@@ -247,6 +380,9 @@ texture = ExtResource( 10 )
 
 [node name="EntryPoint" type="Position2D" parent="Points" index="0"]
 position = Vector2( 288.826, 322.817 )
+
+[node name="WalkableAreas" parent="." index="5"]
+visible = false
 
 [node name="Navigation2D" parent="WalkableAreas" index="0"]
 position = Vector2( 0, -11 )
@@ -260,5 +396,10 @@ anims/pull = SubResource( 3 )
 
 [editable path="Props/Planet"]
 [editable path="Props/Sign"]
+[editable path="Props/Sign2"]
+[editable path="Props/Sign3"]
+[editable path="Props/Sign4"]
+[editable path="Props/Sign5"]
+[editable path="Props/Sign6"]
 [editable path="Props/RoboticArm"]
 [editable path="Props/HouseSeed"]

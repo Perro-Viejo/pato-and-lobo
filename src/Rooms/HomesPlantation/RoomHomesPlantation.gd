@@ -34,7 +34,7 @@ func on_room_transition_finished() -> void:
 		yield(
 			E.run_cutscene([
 			_play(),
-			{ dialog = 'Pato: Do it calmly', time = 2 },
+			{ dialog = 'Pato: Do it slowly', time = 2 },
 			{ dialog = 'Pato: Good, good. Now take down the arm.', time = 3 },
 			{ dialog = 'Lobo: Doing so. Doing so...', time = 3 },
 			E.wait(3),
