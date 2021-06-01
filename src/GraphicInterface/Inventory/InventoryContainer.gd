@@ -1,5 +1,6 @@
 class_name InventoryContainer
 extends Control
+# warning-ignore-all:return_value_discarded
 
 var is_disabled := false
 
@@ -9,8 +10,9 @@ onready var _hide_y := rect_position.y - (rect_size.y - 26)
 onready var _foreground: TextureRect = find_node('InventoryForeground')
 onready var _grid: GridContainer = find_node('InventoryGrid')
 onready var _courage: TextureProgress = find_node('Courage')
+onready var _courage_label: Label = find_node('CourageLabel') as Label
+onready var _courage_code: String = _courage_label.text
 
-# warning-ignore-all:return_value_discarded
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready():
@@ -30,6 +32,9 @@ func _ready():
 	I.connect('item_removed', self, '_remove_item')
 	I.connect('courage_updated', self, '_show_courage')
 	G.connect('inventory_show_requested', self, '_show_and_hide')
+	E.connect('language_changed', self, '_translate')
+	
+	_translate()
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
@@ -140,3 +145,7 @@ func _show_and_hide(time := 1.0) -> void:
 	_close()
 	yield($Tween, 'tween_all_completed')
 	G.emit_signal('inventory_shown')
+
+
+func _translate() -> void:
+	_courage_label.text = E.get_text(_courage_code)

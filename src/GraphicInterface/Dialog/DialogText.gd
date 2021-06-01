@@ -9,7 +9,6 @@ export var wrap_width := 200
 export var min_wrap_width := 120
 
 var _secs_per_character := 1.0
-var _wrapper := '[center]%s[/center]'
 var _is_waiting_input := false
 #  Estos valores se toman de la configuración hecha en el Editor --------------
 var _max_width := rect_size.x
@@ -40,9 +39,10 @@ func _ready() -> void:
 func play_text(props: Dictionary) -> void:
 	# Establecer el estado por defecto
 	_is_waiting_input = false
+	var msg: String = E.get_text(props.text)
 	clear()
 	push_color(props.color)
-	append_bbcode(_wrapper % props.text)
+	append_bbcode(msg)
 	rect_size = Vector2(wrap_width, _dflt_height)
 
 	# Se usa un Label para saber el ancho y alto que tendrá el RichTextLabel
@@ -67,18 +67,24 @@ func play_text(props: Dictionary) -> void:
 		_target_size.x = min_wrap_width
 		_target_size.y = _dflt_height + (($Label.get_line_count() - 1) * 14.0)
 		rect_size = _target_size
+		push_align(RichTextLabel.ALIGN_LEFT)
 		$Label.rect_size = _target_size
 
-		rect_position.x = 0.0
+		rect_position.x = 4.0
 		rect_position.y -= 12.0
 	elif rect_position.x + rect_size.x > E.game_width + 16.0:
 		_target_size.x = min_wrap_width
 		_target_size.y = _dflt_height + (($Label.get_line_count() - 1) * 14.0)
 		rect_size = _target_size
+		push_align(RichTextLabel.ALIGN_RIGHT)
 		$Label.rect_size = _target_size
 
 		rect_position.x = E.game_width - rect_size.x
 		rect_position.y -= 12.0
+	else:
+		push_align(RichTextLabel.ALIGN_CENTER)
+	
+	pop()
 	
 	# Ajustar la posición en Y del texto que dice el personaje	
 	rect_position.y -= _target_size.y

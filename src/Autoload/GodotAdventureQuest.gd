@@ -4,6 +4,7 @@ extends Node
 # warning-ignore-all:unused_signal
 signal inline_dialog_requested(options)
 signal text_speed_changed(idx)
+signal language_changed
 
 export(Array, Resource) var rooms = []
 export(Array, PackedScene) var characters = []
@@ -12,6 +13,9 @@ export(Array, Resource) var dialog_trees = []
 export var skip_cutscene_time := 0.2
 export var text_speeds := [0.1, 0.01, 0.0]
 export var text_speed_idx := 0 setget _set_text_speed_idx
+export var languages := ['es_CO', 'es', 'en']
+export(int, 'co', 'es', 'en') var language_idx := 0 setget _set_language_idx
+export var use_translations := false
 
 var in_run := false
 # Se usa para que no se pueda cambiar de escena si está se ha cargado por completo,
@@ -56,6 +60,10 @@ func _ready() -> void:
 	
 	if OS.has_feature('editor'):
 		DebugOverlay.visible = true
+	
+	# Creo que esto no debería ser necesario, pero el Godoto se volvió loco y no
+	# mostraba bien el idioma por defecto.
+	_set_language_idx(language_idx)
 
 
 func _process(delta: float) -> void:
@@ -241,6 +249,10 @@ func shake_camera(props := {}) -> void:
 	_is_camera_shaking = true
 
 
+func get_text(msg: String) -> String:
+	return tr(msg) if use_translations else msg
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _set_in_room(value: bool) -> void:
 	in_room = value
@@ -260,9 +272,15 @@ func _eval_string(text: String) -> void:
 		if char_talk:
 			var char_name: String = text.substr(0, char_talk)
 			if C.is_valid_character(char_name):
-				var char_line: String = text.substr(char_talk + 1)
+				var char_line: String = text.substr(char_talk + 1).trim_prefix(' ')
 				yield(C.character_say(char_name, char_line, false), 'completed')
 			else:
 				yield(get_tree(), 'idle_frame')
 		else:
 			yield(get_tree(), 'idle_frame')
+
+
+func _set_language_idx(value: int) -> void:
+	language_idx = value
+	TranslationServer.set_locale(languages[value])
+	emit_signal('language_changed')

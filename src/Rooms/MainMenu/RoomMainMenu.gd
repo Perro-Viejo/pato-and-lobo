@@ -14,18 +14,20 @@ func on_room_entered() -> void:
 	else:
 		C.player.global_position = $Points/Entrance.global_position
 
-func on_room_exited() -> void:
-	A.stop('bg_street', 0, false)
-	.on_room_exited()
 
 func on_room_transition_finished() -> void:
 	if visited_first_time:
 		E.run_cutscene([
-			G.display('Use left click to interact with objects and characters.'),
-			G.display('Use right click to take a look on objects and characters.'),
-			G.display('Your inventory and courage bar will be in the top-left corner.'),
+			G.display('RoomMainMenu-01'),
+			G.display('RoomMainMenu-02'),
+			G.display('RoomMainMenu-03'),
 			G.show_inventory(2.0),
 		])
+
+
+func on_room_exited() -> void:
+	A.stop('bg_street', 0, false)
+	.on_room_exited()
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

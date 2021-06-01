@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/conejuno.png-ff228fae3728eb732937f8b5c4b9f91d.stex"
+path="res://.import/btn_language_02.png-9b0d81f671387adb31cbf912ffff16fc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/characters/conejuno/conejuno.png"
-dest_files=[ "res://.import/conejuno.png-ff228fae3728eb732937f8b5c4b9f91d.stex" ]
+source_file="res://src/GraphicInterface/Toolbar/btn_language_02.png"
+dest_files=[ "res://.import/btn_language_02.png-9b0d81f671387adb31cbf912ffff16fc.stex" ]
 
 [params]
 

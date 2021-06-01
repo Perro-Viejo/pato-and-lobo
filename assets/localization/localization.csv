@@ -1,0 +1,48 @@
+id,es_CO,es,en
+INTERFAZ GRÁFICA,,,
+Toolbar-BtnDialogSpeed,Velocidá del texto,Velocidad del texto,Text speed
+Toolbar-BtnDialogSpeed-0,normal,normal,normal
+Toolbar-BtnDialogSpeed-1,rapidongo,rápido,quick
+Toolbar-BtnDialogSpeed-2,en bombas,inmediato,immediate
+Toolbar-BtnQuit,¡Vemos!,Salir,Quit
+Toolbar-BtnLanguage,Idioma,,Language
+InventoryContainer-Courage,Perrenque:,Valentía:,Courage:
+,,,
+,,,
+,,,
+HABITACIONES,,,
+RoomMainMenu-01,Clic izquierdo pa' INTERACTUAR con objetos y personajes.,Haz clic izquierdo para INTERACTUAR con objetos y personajes.,Use left click to interact with objects and characters.
+RoomMainMenu-02,Clic derecho pa' EXAMINAR objetos y personajes.,Haz clic derecho para OBSERVAR objetos y personajes.,Use right click to take a look on objects and characters.
+RoomMainMenu-03,El inventario y la barra de perrenque están arriba a la izquierda.,Tu inventario y barra de valentía están en la esquina superior izquierda.,Your inventory and courage bar will be in the top-left corner.
+RoomMainMenu-Credits,Créditos,,Credits
+RoomMainMenu-Title,Nombre del chuzo,Nombre del bar,Bar name
+RoomMainMenu-Entrance,Entrada,,Entrance
+RoomMainMenu-Credits-01,Los que nos crearon.,Los desarrolladores que nos crearon.,The developers that created us.
+,,,
+,,,
+,,,
+,,,
+,,,
+PERSONAJES,,,
+,,,
+,,,
+,,,
+,,,
+CONVERSACIONES,,,
+ChatWithPez-Opt1,,Eso que llevas puesto está áspero,That suit you're using looks cool.
+ChatWithPez-Opt2,,¿Cómo puedo conseguir una cosa de esas?,How can I get one?
+ChatWithPez-Opt3,,¿Y puedo retarte a una pelea de miradas?,Can I challenge you to a stare fight.
+ChatWithPez-Opt4,,Te reto a una pelea de miradas por tu... aparato,I challenge you to a stare fight... for your suit.
+ChatWithPez-Opt5,,¿Por qué no entras?,Why don't you come in?
+ChatWithPez-Opt6,,Acerca del pasado del bar,Talking about this place's past.
+ChatWithPez-Opt7,,A ver esas patas,Give me da legs.
+ChatWithPez-Exit,,Bueno. Me voy. Chao,Well. I've to... bye.
+ChatWithPez-Opt1,,,
+ChatWithPez-Opt1-Pez-1,,,
+ChatWithPez-Opt1-Pato-2,,,
+ChatWithPez-Opt1-Pez-3,,,
+ChatWithPez-Opt1-Pato-4,,,
+ChatWithPez-Opt1-Pez-5,,,
+ChatWithPez-Opt1-Pez-6,,,
+ChatWithPez-Opt1-Pez-7,,,
+ChatWithPez-Opt1-Pato-8,,,

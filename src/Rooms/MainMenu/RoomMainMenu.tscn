@@ -25,6 +25,7 @@ limit_top = -540.0
 limit_bottom = 540.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 3 )]
+description = "Bg"
 clickable = false
 texture = ExtResource( 4 )
 
@@ -32,7 +33,7 @@ texture = ExtResource( 4 )
 position = Vector2( 367, 91 )
 scale = Vector2( 0.8, 0.8 )
 script = ExtResource( 7 )
-description = "The credits"
+description = "Credits"
 cursor = 1
 texture = ExtResource( 9 )
 
@@ -45,7 +46,7 @@ texture = ExtResource( 9 )
 [node name="Title" parent="Props" index="2" instance=ExtResource( 3 )]
 position = Vector2( 365, -299 )
 script = ExtResource( 8 )
-description = "Zoorgibar"
+description = "Title"
 cursor = 1
 texture = ExtResource( 10 )
 
@@ -55,16 +56,16 @@ polygon = PoolVector2Array( -438, -127, 441, -130, 431, 117, -425, 118 )
 [node name="Sprite" parent="Props/Title" index="3"]
 texture = ExtResource( 10 )
 
-[node name="Hotspot" parent="Hotspots" index="0" instance=ExtResource( 6 )]
+[node name="Entrance" parent="Hotspots" index="0" instance=ExtResource( 6 )]
 script = ExtResource( 5 )
-description = "Bar entrance"
+description = "Entrance"
 walk_to_point = Vector2( -314, 377 )
 cursor = 1
 
-[node name="CollisionPolygon2D" parent="Hotspots/Hotspot" index="0"]
+[node name="CollisionPolygon2D" parent="Hotspots/Entrance" index="0"]
 polygon = PoolVector2Array( -505, -36, -497, 363, -139, 363, -153, -48 )
 
-[node name="WalkToHelper" parent="Hotspots/Hotspot" index="2"]
+[node name="WalkToHelper" parent="Hotspots/Entrance" index="2"]
 position = Vector2( -314, 377 )
 
 [node name="Entry" type="Position2D" parent="Points" index="0"]
@@ -78,4 +79,4 @@ navpoly = SubResource( 1 )
 
 [editable path="Props/Credits"]
 [editable path="Props/Title"]
-[editable path="Hotspots/Hotspot"]
+[editable path="Hotspots/Entrance"]

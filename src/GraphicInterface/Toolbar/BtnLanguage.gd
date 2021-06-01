@@ -1,25 +1,21 @@
 extends ToolbarButton
 
 export(Array, Texture) var btn_states := []
-export var states_descriptions := [
-	'Toolbar-BtnDialogSpeed-0',
-	'Toolbar-BtnDialogSpeed-1',
-	'Toolbar-BtnDialogSpeed-2'
-]
+export var states_descriptions := ['colombiano', 'español', 'english']
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready() -> void:
-	texture_normal = btn_states[E.text_speed_idx]
+	texture_normal = btn_states[E.language_idx]
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_pressed() -> void:
-	E.text_speed_idx = wrapi(E.text_speed_idx + 1, 0, btn_states.size())
-	texture_normal = btn_states[E.text_speed_idx]
+	E.language_idx = wrapi(E.language_idx + 1, 0, btn_states.size())
+	texture_normal = btn_states[E.language_idx]
 
 	G.show_info(self.description)
 
 
 func get_description() -> String:
-	return '%s: %s' % [description, E.get_text(states_descriptions[E.text_speed_idx])]
+	return '%s: %s' % [description, E.get_text(states_descriptions[E.language_idx])]

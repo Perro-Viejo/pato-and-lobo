@@ -167,6 +167,11 @@ skip={
  ]
 }
 
+[locale]
+
+fallback="es_CO"
+translations=PoolStringArray( "res://assets/localization/localization.es_CO.translation", "res://assets/localization/localization.es.translation", "res://assets/localization/localization.en.translation" )
+
 [physics]
 
 common/enable_pause_aware_picking=true

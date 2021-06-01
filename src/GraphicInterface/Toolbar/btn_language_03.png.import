@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/btn_power.png-50ead49a6f3bd82ccb5992bebade37a6.stex"
+path="res://.import/btn_language_03.png-4636b41e33f882585f28e4263024a044.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/GraphicInterface/Toolbar/btn_power.png"
-dest_files=[ "res://.import/btn_power.png-50ead49a6f3bd82ccb5992bebade37a6.stex" ]
+source_file="res://src/GraphicInterface/Toolbar/btn_language_03.png"
+dest_files=[ "res://.import/btn_language_03.png-4636b41e33f882585f28e4263024a044.stex" ]
 
 [params]
 

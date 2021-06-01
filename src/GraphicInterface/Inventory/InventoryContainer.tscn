@@ -63,18 +63,18 @@ size_flags_vertical = 8
 custom_constants/separation = 24
 alignment = 1
 
-[node name="Label" type="Label" parent="InventoryPanel/CourageContainer"]
-margin_left = 234.0
-margin_right = 420.0
+[node name="CourageLabel" type="Label" parent="InventoryPanel/CourageContainer"]
+margin_left = 35.0
+margin_right = 620.0
 margin_bottom = 52.0
 custom_fonts/font = SubResource( 1 )
-text = "Courage:"
+text = "InventoryContainer-Courage"
 valign = 1
 
 [node name="Courage" type="TextureProgress" parent="InventoryPanel/CourageContainer"]
-margin_left = 444.0
+margin_left = 644.0
 margin_top = 14.0
-margin_right = 844.0
+margin_right = 1044.0
 margin_bottom = 38.0
 mouse_filter = 2
 size_flags_vertical = 4

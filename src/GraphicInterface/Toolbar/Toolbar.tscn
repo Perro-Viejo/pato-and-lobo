@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/GraphicInterface/Toolbar/fg.png" type="Texture" id=1]
-[ext_resource path="res://src/GraphicInterface/Toolbar/btn_power.png" type="Texture" id=2]
+[ext_resource path="res://src/GraphicInterface/Toolbar/btn_quit.png" type="Texture" id=2]
 [ext_resource path="res://src/GraphicInterface/Toolbar/bg.png" type="Texture" id=3]
 [ext_resource path="res://src/GraphicInterface/Toolbar/btn_dialog_speed_01.png" type="Texture" id=4]
 [ext_resource path="res://src/GraphicInterface/Toolbar/Toolbar.gd" type="Script" id=5]
@@ -9,20 +9,23 @@
 [ext_resource path="res://src/GraphicInterface/Toolbar/btn_dialog_speed_03.png" type="Texture" id=7]
 [ext_resource path="res://src/GraphicInterface/Toolbar/BtnQuit.gd" type="Script" id=8]
 [ext_resource path="res://src/GraphicInterface/Toolbar/BtnDialogSpeed.gd" type="Script" id=9]
+[ext_resource path="res://src/GraphicInterface/Toolbar/btn_language_01.png" type="Texture" id=10]
+[ext_resource path="res://src/GraphicInterface/Toolbar/BtnLanguage.gd" type="Script" id=11]
+[ext_resource path="res://src/GraphicInterface/Toolbar/btn_language_02.png" type="Texture" id=12]
+[ext_resource path="res://src/GraphicInterface/Toolbar/btn_language_03.png" type="Texture" id=13]
 
 [node name="Toolbar" type="NinePatchRect"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -78.0
-margin_right = -4.0
-margin_bottom = 21.0
+margin_left = -416.0
+margin_bottom = 158.0
 rect_min_size = Vector2( 74, 21 )
 mouse_filter = 0
 texture = ExtResource( 3 )
-patch_margin_left = 64
-patch_margin_top = 10
-patch_margin_right = 5
-patch_margin_bottom = 7
+patch_margin_left = 19
+patch_margin_top = 108
+patch_margin_right = 294
+patch_margin_bottom = 25
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -33,49 +36,69 @@ __meta__ = {
 [node name="Panel" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 39.0
-margin_right = -2.0
-margin_bottom = -4.0
+margin_left = 108.0
 grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 2
 size_flags_vertical = 0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 4
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Grid" type="GridContainer" parent="Panel"]
-margin_right = 33.0
-margin_bottom = 16.0
+margin_left = 8.0
+margin_top = 4.0
+margin_right = 408.0
+margin_bottom = 158.0
 grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-custom_constants/hseparation = 1
-columns = 5
+custom_constants/hseparation = 8
+columns = 4
 
-[node name="BtnDialog" type="TextureButton" parent="Panel/Grid"]
-margin_right = 16.0
-margin_bottom = 16.0
+[node name="BtnDialogSpeed" type="TextureButton" parent="Panel/Grid"]
+margin_right = 128.0
+margin_bottom = 128.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource( 4 )
 script = ExtResource( 9 )
-description = "Velocidad del texto"
-cursor = 10
+description = "Toolbar-BtnDialogSpeed"
+cursor = 1
 btn_states = [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ) ]
 
+[node name="BtnLanguage" type="TextureButton" parent="Panel/Grid"]
+margin_left = 136.0
+margin_right = 264.0
+margin_bottom = 128.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 10 )
+script = ExtResource( 11 )
+description = "Toolbar-BtnLanguage"
+cursor = 1
+btn_states = [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 13 ) ]
+
 [node name="BtnQuit" type="TextureButton" parent="Panel/Grid"]
-margin_left = 17.0
-margin_right = 33.0
-margin_bottom = 16.0
+margin_left = 272.0
+margin_right = 400.0
+margin_bottom = 128.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource( 2 )
 script = ExtResource( 8 )
-description = "Salir"
-cursor = 10
+description = "Toolbar-BtnQuit"
+cursor = 1
 
 [node name="Foreground" type="TextureRect" parent="."]
-margin_right = 74.0
-margin_bottom = 21.0
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -416.0
+margin_bottom = 158.0
 mouse_filter = 2
 texture = ExtResource( 1 )
 __meta__ = {

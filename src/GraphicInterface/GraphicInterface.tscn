@@ -47,8 +47,6 @@ patch_margin_right = 371
 [node name="DialogMenu" parent="MainContainer" instance=ExtResource( 5 )]
 
 [node name="Toolbar" parent="MainContainer" instance=ExtResource( 6 )]
-visible = false
-used_in_game = false
 
 [node name="ClickHandler" type="Button" parent="MainContainer"]
 anchor_right = 1.0

@@ -6,7 +6,7 @@ extends Area2D
 
 # TODO: Hacer la lógica para el uso de objetos de inventario sobre este nodo
 
-export var description := ''
+export var description := '' setget ,get_description
 export var clickable := true
 export var baseline := 0 setget _set_baseline
 export var walk_to_point: Vector2 setget _set_walk_to_point
@@ -14,6 +14,8 @@ export var look_at_point: Vector2
 export(Cursor.Type) var cursor
 export var script_name := ''
 export var always_on_top := false
+
+onready var _description_code := description
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
@@ -24,12 +26,15 @@ func _ready():
 	if clickable:
 		connect('mouse_entered', self, '_toggle_description', [true])
 		connect('mouse_exited', self, '_toggle_description', [false])
+		
+		E.connect('language_changed', self, '_translate')
 	
 	if not Engine.editor_hint:
 		remove_child($BaselineHelper)
 		remove_child($WalkToHelper)
 	
 	set_process_unhandled_input(false)
+	_translate()
 
 
 func _unhandled_input(event):
@@ -88,6 +93,14 @@ func enable(is_in_queue := true) -> void:
 	yield(get_tree(), 'idle_frame')
 
 
+func get_description() -> String:
+	if Engine.editor_hint:
+		if not description:
+			description = name
+		return description
+	return E.get_text(description)
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _toggle_description(display: bool) -> void:
 	set_process_unhandled_input(display)
@@ -95,9 +108,9 @@ func _toggle_description(display: bool) -> void:
 	if display:
 		Cursor.set_cursor(cursor)
 		if not I.active:
-			G.show_info(description)
+			G.show_info(self.description)
 		else:
-			G.show_info('Use %s with %s' % [I.active.description, description])
+			G.show_info('Use %s with %s' % [I.active.description, self.description])
 	else:
 		if not G.waiting_click:
 			Cursor.set_cursor()
@@ -122,3 +135,8 @@ func _toggle_input() -> void:
 	if clickable:
 		input_pickable = visible
 		set_process_unhandled_input(false)
+
+
+func _translate() -> void:
+	if Engine.editor_hint: return
+	description = E.get_text('%s-%s' % [get_tree().current_scene.name, _description_code])

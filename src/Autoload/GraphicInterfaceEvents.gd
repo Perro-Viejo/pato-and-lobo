@@ -28,7 +28,7 @@ func display(msg: String, is_in_queue := true) -> void:
 		yield(get_tree(), 'idle_frame')
 		return
 	
-	emit_signal('show_box_requested', msg)
+	emit_signal('show_box_requested', E.get_text(msg))
 	yield(self, 'continue_clicked')
 
 

@@ -9,3 +9,7 @@ func get_screen_coords_for(node: Node) -> Vector2:
 func get_random_array_element(arr: Array):
 	randomize()
 	return arr[randi() % arr.size()]
+
+
+func in_editor() -> bool:
+	return OS.has_feature("editor")
