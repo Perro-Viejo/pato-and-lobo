@@ -24,7 +24,7 @@ func on_room_transition_finished() -> void:
 	E.run_cutscene([
 		C.player_walk_to($Points/ProwPoint.global_position),
 		C.player.face_right(),
-		'Pato: Do not worries...',
+		'Pato: RoomSea-Pato-01',
 		'...',
 		C.player.face_left(),
 		'...',
@@ -34,10 +34,10 @@ func on_room_transition_finished() -> void:
 		'...',
 		C.player.face_right(),
 		'...',
-		'Pato: I\'ll find a way to take you out!!!',
+		'Pato: RoomSea-Pato-02',
 		C.player.face_left(),
 		'...',
-		'Pato: There must be something I can do'
+		'Pato: RoomSea-Pato-03'
 	])
 
 

@@ -14,21 +14,21 @@ func on_interact() -> void:
 				C.walk_to_clicked(),
 				C.face_clicked(),
 				'Pato: ' + details,
-				'Pato: What do you think of this one?',
+				'Pato: RoomHomesPlantation-PropSign-Pato-01',
 				'Lobo: ' + lobo_reaction,
 			]), 'completed'
 		)
 		
 		if is_the_one:
-			yield(E.run(['Pato: So this one will be.']), 'completed')
+			yield(E.run(['Pato: RoomHomesPlantation-PropSign-Pato-02']), 'completed')
 			E.goto_room('Spaceship')
 			Globals.did(Globals.GameState.GOT_HOME)
 		else:
 			E.run(["Pato: " + Utils.get_random_array_element(
 				[
-					"Agree, my love. Let's check other one.",
-					"Yup. Maybe that one...",
-					"You're right. I'll look another one."
+					"RoomHomesPlantation-PropSign-Pato-03",
+					"RoomHomesPlantation-PropSign-Pato-04",
+					"RoomHomesPlantation-PropSign-Pato-05"
 				]
 			)])
 	else:
@@ -36,7 +36,7 @@ func on_interact() -> void:
 
 func on_look() -> void:
 	E.run([
-		'Pato: Is the sign with the detail of a house'
+		'Pato: RoomHomesPlantation-PropSign-Pato-06'
 	])
 
 

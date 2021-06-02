@@ -62,35 +62,35 @@ func on_room_entered() -> void:
 func on_room_transition_finished() -> void:
 	if visited_first_time:
 		E.run_cutscene([
-			G.display('She is Pato.'),
-			'Pato: What an awesome party.',
+			G.display('RoomBar-01'),
+			'Pato: RoomBar-Pato-01',
 			C.player.face_left(),
-			'Pato: And Lobo is here <3.',
-			G.display('She is in love with him.'),
+			'Pato: RoomBar-Pato-02',
+			G.display('RoomBar-02'),
 			C.change_camera_owner(C.get_character('Lobo')),
 			E.wait(2.0),
 			C.change_camera_owner(C.player),
-			G.display('But she doesn\'t has the guts to talk him.'),
+			G.display('RoomBar-03'),
 			C.player.face_right(),
-			'Pato: Today will be the day....',
-			G.display('You can help her with a costume.'),
-			G.display('Or by living her daydreams to increase her courage.'),
-			'Pato: I WILL TALK WITH LOBO TODAY!',
+			'Pato: RoomBar-Pato-03',
+			G.display('RoomBar-04'),
+			G.display('RoomBar-05	'),
+			'Pato: RoomBar-Pato-04',
 		])
 	elif C.player.last_room == 'Sea':
 		Globals.courage += 20
 		yield(I, 'courage_update_shown')
 
-		yield(E.run(['Pato: The savior of my love...']), 'completed')
+		yield(E.run(['Pato: RoomBar-Pato-05']), 'completed')
 	elif Globals.has_done(Globals.GameState.GOT_HOME) or Globals.has_done(Globals.GameState.WATER_TAKEN):
 		Globals.courage += 20
 		yield(I, 'courage_update_shown')
 
-		yield(E.run(['Pato: What a romantic dream...']), 'completed')
+		yield(E.run(['Pato: RoomBar-Pato-06']), 'completed')
 	
 	if Globals.courage >= 60 \
 		and (C.player.last_room == 'Sea' or C.player.last_room == 'Luna'):
-		E.run(['Pato: I feel I have the courage to talk with Lobo'])
+		E.run(['Pato: RoomBar-Pato-07'])
 
 
 func on_room_exited() -> void:

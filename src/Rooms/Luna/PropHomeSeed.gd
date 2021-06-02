@@ -5,13 +5,13 @@ extends Prop
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
 	E.run([
-		'Pato: This is the seed we choose for our home',
-		'Lobo: Yeeeyyyy... it has a front garden, two bedrooms, and bathroom with tub.'
+		'Pato: RoomLuna-HomeSeed-Pato-01',
+		'Lobo: RoomLuna-HomeSeed-Lobo-01'
 	])
 
 
 func on_look() -> void:
-	E.run(['Pato: Our house will be awesome!'])
+	E.run(['Pato: RoomLuna-HomeSeed-Pato-02'])
 
 
 func on_item_used(item: Item) -> void:
@@ -20,7 +20,7 @@ func on_item_used(item: Item) -> void:
 			I.remove_item('WaterCase'),
 			C.walk_to_clicked(),
 			C.face_clicked(),
-			'Pato: And here comes the water',
+			'Pato: RoomLuna-HomeSeed-Pato-03',
 			# TODO: Poner aquí un SFX de agua regándose sobre una planta
 			'...',
 			C.player_walk_to(E.current_room.get_point('WolfPoint')),
@@ -29,8 +29,8 @@ func on_item_used(item: Item) -> void:
 			E.current_room.get_prop('Home').enable(),
 			_offset_camera(),
 			'...',
-			'Pato: Look my love, is the house of our dreams.',
-			'Lobo: Now we can give us love and make children.'
+			'Pato: RoomLuna-HomeSeed-Pato-04',
+			'Lobo: RoomLuna-HomeSeed-Lobo-02'
 		]), 'completed')
 		E.goto_room('Bar')
 

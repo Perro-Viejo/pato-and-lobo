@@ -36,11 +36,11 @@ func on_room_entered() -> void:
 func on_room_transition_finished() -> void:
 	if visited_first_time and C.player.last_room == 'Bar':
 		E.run([
-			'Pato: How calm and quiet it is around here',
-			'Lobo: Yes... makes you want to... T.D.A.F.',
-			'Pato: Awwwwww....',
-			'Lobo: Let\'s search for materials to build our home here.',
-			'Pato: Yes yes yes. Let\'s do it.'
+			'Pato: RoomLuna-Pato-01',
+			'Lobo: RoomLuna-Lobo-01',
+			'Pato: RoomLuna-Pato-02',
+			'Lobo: RoomLuna-Lobo-02',
+			'Pato: RoomLuna-Pato-03'
 		])
 	else:
 		D.show_dialog('ChatWithLoboInLuna')

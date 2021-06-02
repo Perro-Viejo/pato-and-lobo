@@ -42,6 +42,7 @@ characters = [ {
 } ]
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 1 )]
+description = "Bg"
 clickable = false
 baseline = -540
 texture = ExtResource( 3 )
@@ -55,7 +56,7 @@ texture = ExtResource( 3 )
 [node name="HomesPlantation" parent="Props" index="1" instance=ExtResource( 1 )]
 position = Vector2( 508.685, -88.362 )
 script = ExtResource( 9 )
-description = "Homes plantation"
+description = "Homesplantation"
 baseline = 111
 walk_to_point = Vector2( 18.315, 0.362 )
 cursor = 1
@@ -123,7 +124,7 @@ texture = ExtResource( 6 )
 [node name="Marrano" parent="Props" index="4" instance=ExtResource( 1 )]
 position = Vector2( -15, 262 )
 script = ExtResource( 11 )
-description = "Pig Planet"
+description = "Marrano"
 baseline = 834
 walk_to_point = Vector2( -22, 5 )
 cursor = 1

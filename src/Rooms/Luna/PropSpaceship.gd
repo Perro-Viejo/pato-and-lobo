@@ -7,19 +7,19 @@ func on_interact() -> void:
 	if not Globals.has_done(Globals.GameState.GOT_HOME) \
 		or not Globals.has_done(Globals.GameState.WATER_TAKEN):
 		yield(E.run([
-			'Pato: Let\'s traverse the cosmos, my love.',
+			'Pato: RoomLuna-Spaceship-Pato-01',
 			C.walk_to_clicked(),
-			'Lobo: Yeyyyyyyyyyy',
+			'Lobo: RoomLuna-Spaceship-Lobo-01',
 			C.character_walk_to('Lobo', to_global(E.clicked.walk_to_point))
 		]), 'completed')
 		E.goto_room('Space')
 	else:
 		E.run([
-			'Lobo: Let\'s traverse the cosmos, my love.',
-			'Pato: Nope. We have all we need.',
-			'Pato: A house-seed and water for it.',
-			'Lobo: Then...',
-			'Lobo: Water it! water it!'
+			'Lobo: RoomLuna-Spaceship-Lobo-02',
+			'Pato: RoomLuna-Spaceship-Pato-02',
+			'Pato: RoomLuna-Spaceship-Pato-03',
+			'Lobo: RoomLuna-Spaceship-Lobo-03',
+			'Lobo: RoomLuna-Spaceship-Lobo-04'
 		])
 
 
