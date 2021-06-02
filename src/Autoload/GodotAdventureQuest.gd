@@ -211,6 +211,8 @@ func room_readied(room: Room) -> void:
 	if room.has_player:
 		room.add_character(C.player)
 	
+	yield(C.player.idle(false), 'completed')
+	
 	room.on_room_entered()
 
 	if _use_transition_on_room_change:
