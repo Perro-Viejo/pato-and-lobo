@@ -24,8 +24,8 @@ func _ready() -> void:
 	
 	# Conectarse a eventos de los evnetruchos
 	D.connect('dialog_requested', self, '_create_options', [true])
-	E.connect('inline_dialog_requested', self, '_create_dialog_options')
 	D.connect('dialog_finished', self, 'remove_options')
+	E.connect('inline_dialog_requested', self, '_create_dialog_options')
 
 	hide()
 
@@ -98,36 +98,14 @@ func remove_options() -> void:
 		current_options.clear()
 
 		for btn in _options.get_children():
-#			(btn as Button).call_deferred('queue_free')
 			_options.remove_child(btn as Button)
-#		hide()
-	
+
 	yield(get_tree(), 'idle_frame')
 
 	_panel.rect_size.y = 0
 	_options.rect_size.y = 0
-#
-#
-#func update_options(updates_cfg := {}) -> void:
-#	if not updates_cfg.empty():
-#		var idx := 0
-#		for btn in get_children():
-#			btn = (btn as Button)
-#			var id := String(btn.get_index())
-#			if updates_cfg.has(id):
-#				if not updates_cfg[id]:
-#					current_options[idx].show = false
-#					btn.hide()
-#				else:
-#					current_options[idx].show = true
-#					btn.show()
-#			if btn.is_in_group('FocusGroup'):
-#				btn.remove_from_group('FocusGroup')
-#				btn.remove_from_group('DialogMenu')
-#				guiBrain.gui_collect_focusgroup()
-#			idx+= 1
-#
-#
+
+
 func show_options() -> void:
 	show()
 	Cursor.set_cursor()

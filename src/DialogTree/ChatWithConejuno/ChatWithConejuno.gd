@@ -12,7 +12,7 @@ func start() -> void:
 		E.run([
 			C.walk_to_clicked(),
 			C.player.face_up(),
-			'Conejuno: What do you want?'
+			'Conejuno: ChatWithConejuno-Start-01'
 		]),
 		'completed'
 	)
@@ -32,7 +32,6 @@ func option_selected(opt: DialogOption) -> void:
 			return
 		'Exit':
 			yield(E.run([
-				C.player_say(opt.text),
-				'Conejuno: Don\'t bother me!'
+				'Conejuno: ChatWithConejuno-Exit-01'
 			]), 'completed')
 			D.finish_dialog()

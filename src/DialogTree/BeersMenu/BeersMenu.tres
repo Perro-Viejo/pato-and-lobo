@@ -7,28 +7,28 @@
 resource_name = "Opt1"
 script = ExtResource( 2 )
 id = "Opt1"
-text = "Pink Beer"
+text = "BeersMenu-Opt1"
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "Cosmos Kick"
+text = "BeersMenu-Opt2"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "Opt3"
 script = ExtResource( 2 )
 id = "Opt3"
-text = "Cooffee"
+text = "BeersMenu-Opt3"
 visible = true
 
 [sub_resource type="Resource" id=4]
 resource_name = "Exit"
 script = ExtResource( 2 )
 id = "Exit"
-text = "I don't want beer"
+text = "BeersMenu-Exit"
 visible = true
 
 [resource]

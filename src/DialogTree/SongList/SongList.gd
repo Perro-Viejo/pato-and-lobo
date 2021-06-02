@@ -20,14 +20,14 @@ func option_selected(opt: DialogOption) -> void:
 			if E.current_room.state.has_mask:
 				yield(
 					E.run([
-						'Lagarto: Great choice. Will play it now.',
-						'Lagarto: But I\'m taking this off because that one makes me sweat',
+						'Lagarto: SongList-Opt1-Lagarto-01',
+						'Lagarto: SongList-Opt1-Lagarto-02',
 						C.get_character('Lagarto').remove_mask(),
 						A.stop('mx_bar_01'),
 						A.stop('mx_bar_02'),
 						A.stop('mx_bar_03'),
 						A.play_music('mx_bar_03'),
-						'Lagarto: Woooooooooooooooooooooo',
+						'Lagarto: SongList-Opt1-Lagarto-03',
 					]),
 					'completed'
 				)
@@ -35,7 +35,7 @@ func option_selected(opt: DialogOption) -> void:
 			else:
 				yield(
 					E.run([
-						'Lagarto: Don\'t gonna play that. Memories.',
+						'Lagarto: SongList-Opt1-Lagarto-04',
 					]),
 					'completed'
 				)
@@ -44,9 +44,9 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt2', 'Opt4':
 			yield(
 				E.run([
-					'Lagarto: Sure!',
+					'Lagarto: SongList-Opt2-Lagarto-01',
 					'...',
-					'Lagarto: FOCK! I didn\'t bring that record'
+					'Lagarto: SongList-Opt2-Lagarto-02'
 				]),
 				'completed'
 			)
@@ -54,7 +54,7 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt3':
 			yield(
 				E.run([
-					'Lagarto: Yeyyyyyyyyy... my favorite song',
+					'Lagarto: SongList-Opt3-Lagarto-01',
 					A.stop('mx_bar_01'),
 					A.stop('mx_bar_02'),
 					A.stop('mx_bar_03'),
@@ -62,7 +62,7 @@ func option_selected(opt: DialogOption) -> void:
 					C.player_walk_to(E.current_room.get_point('DanceFloor2')),
 					C.player.dance(),
 					E.wait(3),
-					'Pato: I love this music so much',
+					'Pato: SongList-Opt3-Pato-02',
 					'...'
 				]),
 				'completed'
@@ -70,7 +70,7 @@ func option_selected(opt: DialogOption) -> void:
 			
 			if not Globals.moon_song_played:
 				Globals.moon_song_played = true
-				yield(E.run(['Pato: What if...']), 'completed')
+				yield(E.run(['Pato: SongList-Opt3-Pato-03']), 'completed')
 				opt.visible = false
 				D.finish_dialog()
 				A.play('sfx_dream_transition', Vector2.ZERO, false)
@@ -79,5 +79,5 @@ func option_selected(opt: DialogOption) -> void:
 				yield(Globals.moon_daydream_repeated(), 'completed')
 				D.finish_dialog()
 		'Exit':
-			yield(E.run(['Lagarto: Sure.']), 'completed')
+			yield(E.run(['Lagarto: SongList-Exit-Lagarto-01']), 'completed')
 			D.finish_dialog()

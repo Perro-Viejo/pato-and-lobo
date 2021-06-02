@@ -7,35 +7,35 @@
 resource_name = "Opt1"
 script = ExtResource( 2 )
 id = "Opt1"
-text = "How are you doing ma'am?"
+text = "ChatWithVieja-Opt1"
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "What are you drinking?"
+text = "ChatWithVieja-Opt2"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "Opt3"
 script = ExtResource( 2 )
 id = "Opt3"
-text = "Want a special drink?"
+text = "ChatWithVieja-Opt3"
 visible = false
 
 [sub_resource type="Resource" id=4]
 resource_name = "Opt4"
 script = ExtResource( 2 )
 id = "Opt4"
-text = "You have very nice teeth"
+text = "ChatWithVieja-Opt4"
 visible = true
 
 [sub_resource type="Resource" id=5]
 resource_name = "Exit"
 script = ExtResource( 2 )
 id = "Exit"
-text = "With your permission ma'am"
+text = "ChatWithVieja-Exit"
 visible = true
 
 [resource]

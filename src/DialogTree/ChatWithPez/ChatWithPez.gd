@@ -15,10 +15,10 @@ func start() -> void:
 	yield(E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		'Pato: Ehh....',
-		'Pato: Hi!',
+		'Pato: ChatWithPez-Start-Pato-01',
+		'Pato: ChatWithPez-Start-Pato-02',
 		pez.face_left(),
-		'Pez: Hey.',
+		'Pez: ChatWithPez-Start-Pez-03',
 	]), 'completed')
 	
 	# La llamada al método start del padre hace que se muestren las opciones
@@ -30,45 +30,45 @@ func option_selected(opt: DialogOption) -> void:
 	match opt.id:
 		'Opt1':
 			yield(E.run([
-				'Pez: Thanks. I earn it a while ago in a stare fight.',
-				'Pato: A stare fight?',
-				'Pez: Yep. A stare fight.',
-				'Pato: And how do you play that?',
-				'Pez: Play?',
+				'Pez: ChatWithPez-Opt1-Pez-01',
+				'Pato: ChatWithPez-Opt1-Pez-02',
+				'Pez: ChatWithPez-Opt1-Pez-03',
+				'Pato: ChatWithPez-Opt1-Pez-04',
+				'Pez: ChatWithPez-Opt1-Pez-05',
 				pez.face_right(),
 				E.wait(2),
-				'Pez: A stare fight is not a game, mate.',
-				'Pez: It is a guts and concentration test... so honorable.',
+				'Pez: ChatWithPez-Opt1-Pez-06',
+				'Pez: ChatWithPez-Opt1-Pez-07',
 				pez.face_left(),
 				'...',
-				'Pato: Got it, got it.'
+				'Pato: ChatWithPez-Opt1-Pato-08'
 			]), 'completed')
 			opt.visible = false
 			show_option('Opt2')
 		'Opt2':
 			yield(E.run([
-				'Pez: You can buy it or earn it in a stare fight.',
-				'Pez: That\'s how i earn mine.',
-				'Pato: yep... you already said that.'
+				'Pez: ChatWithPez-Opt2-Pez-01',
+				'Pez: ChatWithPez-Opt2-Pez-02',
+				'Pato: ChatWithPez-Opt2-Pato-03'
 			]), 'completed')
 			opt.visible = false
 			show_option('Opt3')
 		'Opt3':
 			if not Globals.has_done(Globals.GameState.SEA_DREAMED):
 				yield(E.run([
-					'Pez: You could... if you weren\'t so dirty.',
-					'Pato: I\'M NOT DIRTY!',
-					G.display('Pato got mad as she did not in a long time'),
-					G.display('Now she was commited to defeat Pez in a stare fight'),
-					'Pez: You are sooooooo dirtyy. I can notice from here.',
-					'Pato: Wha... what... what do you see dirty?',
-					'Pez: Those... wings... ewwwwww!',
+					'Pez: ChatWithPez-Opt3-Pez-01',
+					'Pato: ChatWithPez-Opt3-Pato-02',
+					G.display('ChatWithPez-Opt3-Game-03'),
+					G.display('ChatWithPez-Opt3-Game-04'),
+					'Pez: ChatWithPez-Opt3-Pez-05',
+					'Pato: ChatWithPez-Opt3-Pato-06',
+					'Pez: ChatWithPez-Opt3-Pez-07',
 					pez.face_right(),
 					'...',
-					'Pez: I don\'t know how can you live like that.',
-					'Pato: Why should I clean my wings for a stare fight?',
-					'Pez: Because we clean our eyes after it.',
-					'Pez: And you don\'t want your eyes to get infected. Trust me.',
+					'Pez: ChatWithPez-Opt3-Pez-08',
+					'Pato: ChatWithPez-Opt3-Pato-09',
+					'Pez: ChatWithPez-Opt3-Pez-10',
+					'Pez: ChatWithPez-Opt3-Pez-11',
 				]), 'completed')
 				opt.visible = false
 				show_option('Opt4')
@@ -76,15 +76,15 @@ func option_selected(opt: DialogOption) -> void:
 				return
 			else:
 				yield(E.run([
-					'Pez: Let me see your wings',
-					'Pato: What for?',
-					'Pez: Every staring fight requires opponents to have their hands clean.',
-					'Pato: Why?',
-					'Pez: Because we clean our eyes after it.',
-					'Pez: And you don\'t want your eyes to get infected. Trust me.',
-					'Pato: Oooook.',
-					G.display('Pato showed her wings to Pez'),
-					'Pez: All right. You meet the requirements. You can challenge me.'
+					'Pez: ChatWithPez-Opt3-Pez-12',
+					'Pato: ChatWithPez-Opt3-Pato-13',
+					'Pez: ChatWithPez-Opt3-Pez-14',
+					'Pato: ChatWithPez-Opt3-Pato-15',
+					'Pez: ChatWithPez-Opt3-Pez-16',
+					'Pez: ChatWithPez-Opt3-Pez-17',
+					'Pato: ChatWithPez-Opt3-Pato-18',
+					G.display('ChatWithPez-Opt3-Game-19'),
+					'Pez: ChatWithPez-Opt3-Pez-20'
 				]), 'completed')
 				opt.visible = false
 				show_option('Opt4')
@@ -92,8 +92,8 @@ func option_selected(opt: DialogOption) -> void:
 			if not Globals.has_done(Globals.GameState.SEA_DREAMED):
 				yield(E.run([
 					pez.face_left(),
-					G.display('Pez looked at Pato\'s wings.'),
-					'Pez: First, get that dirt out of your wings... and we\'ll fight',
+					G.display('ChatWithPez-Opt4-Game-01'),
+					'Pez: ChatWithPez-Opt4-Pez-02',
 					pez.face_right()
 				]), 'completed')
 				D.finish_dialog()
@@ -103,39 +103,39 @@ func option_selected(opt: DialogOption) -> void:
 				E.main_camera.offset_v = -2.0
 				yield(E.tween_zoom(Vector2.ONE * 0.3, 5.0, false), 'completed')
 				yield(E.run([
-					'Pez: IT CANNOT BE!',
+					'Pez: ChatWithPez-Opt4-Pez-03',
 					E.tween_zoom(Vector2.ONE, 0.5),
 					pez.face_right(),
 					'...',
-					'Pez: You... Defeated me...',
-					G.display('For Pato it was really easy.'),
-					G.display('That old trick of looking at the frown, not the eyes.'),
-					'Pato: Right! Now give me that thing',
-					'Pez: I can not give you all of it, If I do, I can\'t return home.',
-					'Pez: I\'ll give you only the legs.'
+					'Pez: ChatWithPez-Opt4-Pez-04',
+					G.display('ChatWithPez-Opt4-Game-05'),
+					G.display('ChatWithPez-Opt4-Game-06'),
+					'Pato: ChatWithPez-Opt4-Pato-07',
+					'Pez: ChatWithPez-Opt4-Pez-08',
+					'Pez: ChatWithPez-Opt4-Pez-09'
 				]), 'completed')
 				opt.visible = false
 				show_option('Opt7')
 		'Opt5':
 			yield(E.run([
-				'Pez: This is not the place I met some years ago.',
-				'Pez: It has changed...for worse.',
-				'Pato: Why did you come then?',
+				'Pez: ChatWithPez-Opt5-Pez-01',
+				'Pez: ChatWithPez-Opt5-Pez-02',
+				'Pato: ChatWithPez-Opt5-Pato-03',
 				pez.face_right(),
 				'...',
-				'Pez: Something said to me i should come tonight...',
-				G.display('Pez looked at the sky and closed his eyes'),
-				G.display('...several minutes went by...'),
+				'Pez: ChatWithPez-Opt5-Pez-04',
+				G.display('ChatWithPez-Opt5-Game-05'),
+				G.display('ChatWithPez-Opt5-Game-06'),
 				pez.face_left(),
 				'...',
-				'Pez: Maybe to share something about this place.',
-				'Pez: Maybe it could return to what it was...'
+				'Pez: ChatWithPez-Opt5-Pez-07',
+				'Pez: ChatWithPez-Opt5-Pez-08'
 			]), 'completed')
 			opt.visible = false
 			show_option('Opt6')
 		'Opt6':
 			yield(E.run([
-				'Pez: Sure...'
+				'Pez: ChatWithPez-Opt6-Pez-01'
 			]), 'completed')
 			D.show_dialog('PezQuestions')
 			return
@@ -143,21 +143,21 @@ func option_selected(opt: DialogOption) -> void:
 			if E.current_room.state.cocktail_unlocked:
 				Globals.did(Globals.GameState.LEGS_TAKEN)
 				yield(E.run([
-					'Pez: Well, it\'s time to meet.',
-					'Pez: Here they are...',
+					'Pez: ChatWithPez-Opt7-Pez-01',
+					'Pez: ChatWithPez-Opt7-Pez-02',
 					I.add_item('Legs'),
-					'Pez: And having no longer a purpose in this place...',
-					'Pez: I\'mmmm gone.',
+					'Pez: ChatWithPez-Opt7-Pez-03',
+					'Pez: ChatWithPez-Opt7-Pez-04',
 					pez.disable(),
 					'...',
-					'Pato: Oh shoe. He vanished...',
-					G.display('Pato surprised, but Pato with wolf legs.')
+					'Pato: ChatWithPez-Opt7-Pato-05',
+					G.display('ChatWithPez-Opt7-Game-06')
 				]), 'completed')
 				D.finish_dialog()
 				return
 			else:
 				yield(E.run([
-					'Pez: Before giving you my legs, there is something I must tell'
+					'Pez: ChatWithPez-Opt7-Pez-07'
 				]), 'completed')
 		'Exit':
 			yield(E.run([pez.face_right()]), 'completed')

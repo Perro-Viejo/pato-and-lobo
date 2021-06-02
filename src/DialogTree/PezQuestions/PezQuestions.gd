@@ -22,25 +22,25 @@ func option_selected(opt: DialogOption) -> void:
 	match opt.id:
 		'TheQuestion':
 			yield(E.run([
-				G.display('Pez opened his eyes as if he had seen a dead being'),
+				G.display(''),
 				E.wait(3),
-				'Pez: That was...',
+				'Pez: ',
 				'...',
-				'Pez: That was what I had to tell.',
+				'Pez: ',
 				pez.face_right(),
 				'...',
-				'Pez: The purpose of being here...',
+				'Pez: ',
 				pez.face_left(),
 				'...',
-				'Pez: It\'s name was Hercules sweat...',
-				'Pez: One of the oldest drinks of the continent',
-				'Pez: It felt like...',
+				'Pez: ',
+				'Pez: ',
+				'Pez: ',
 				'...',
 				pez.face_right(),
-				'Pez: Like being drinking the sweat of an old man so old...',
+				'Pez: ',
 				E.wait(2),
 				pez.face_left(),
-				'Pez: I don\'t want to talk about the past of this place anymore.',
+				'Pez: ',
 				pez.face_right()
 			]), 'completed')
 			E.current_room.state.cocktail_unlocked = true
@@ -51,41 +51,41 @@ func option_selected(opt: DialogOption) -> void:
 			return
 		'Opt2':
 			yield(E.run([
-				'Pez: They played another type of music, something looser',
-				'Pez: And people that came used to be more social'
+				'Pez: PezQuestions-Opt2-Pez-01',
+				'Pez: PezQuestions-Opt2-Pez-02'
 			]), 'completed')
 			opt.visible = false
 		'Opt3':
 			yield(E.run([
-				'Pez: Without any doubt the drinks that the last owner sold',
-				'Pez: Used to be...',
+				'Pez: PezQuestions-Opt3-Pez-01',
+				'Pez: PezQuestions-Opt3-Pez-02',
 				pez.face_right(),
 				'...',
-				'Pez: Better',
+				'Pez: PezQuestions-Opt3-Pez-03',
 				E.wait(2),
 				pez.face_left()
 			]), 'completed')
 			opt.visible = false
 		'Opt4':
 			yield(E.run([
-				'Pez: Certainly two or more.',
-				'Pez: Before, there was a secret passage where the washroom is located.',
-				'Pez: And also the forbidden drinks.'
+				'Pez: PezQuestions-Opt4-Pez-01',
+				'Pez: PezQuestions-Opt4-Pez-02',
+				'Pez: PezQuestions-Opt4-Pez-03'
 			]), 'completed')
 			opt.visible = false
 			show_option('Opt5')
 		'Opt5':
 			yield(E.run([
-				'Pez: Yeah. Those were very strong and meant a lot of issues.',
-				'Pez: At the end, only a few (me included, of course) could drink them.',
+				'Pez: PezQuestions-Opt5-Pez-01',
+				'Pez: PezQuestions-Opt5-Pez-02',
 				'...',
 				pez.face_right(),
-				'Pez: And between them all... There was one. The most special of the specials.'
+				'Pez: PezQuestions-Opt5-Pez-03'
 			]), 'completed')
 			opt.visible = false
 			show_option('TheQuestion')
 		'Exit':
-			yield(E.run(['Pez: As you want I want']), 'completed')
+			yield(E.run(['Pez: PezQuestions-Exit-Pez-01']), 'completed')
 			D.show_dialog('ChatWithPez')
 			return
 	_show_options()

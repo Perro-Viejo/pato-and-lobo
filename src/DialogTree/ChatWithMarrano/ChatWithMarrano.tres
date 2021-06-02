@@ -4,38 +4,38 @@
 [ext_resource path="res://src/DialogTree/ChatWithMarrano/ChatWithMarrano.gd" type="Script" id=2]
 
 [sub_resource type="Resource" id=1]
-resource_name = "OptA"
+resource_name = "Opt1"
 script = ExtResource( 1 )
-id = "OptA"
-text = "Hi-ya"
+id = "Opt1"
+text = "ChatWithMarrano-Opt1"
 visible = true
 
 [sub_resource type="Resource" id=2]
-resource_name = "OptB"
+resource_name = "Opt2"
 script = ExtResource( 1 )
-id = "OptB"
-text = "Can I take your water?"
+id = "Opt2"
+text = "ChatWithMarrano-Opt2"
 visible = true
 
 [sub_resource type="Resource" id=3]
-resource_name = "OptC"
+resource_name = "Opt3"
 script = ExtResource( 1 )
-id = "OptC"
-text = "Look behind you...A three headed monkey!"
+id = "Opt3"
+text = "ChatWithMarrano-Opt3"
 visible = false
 
 [sub_resource type="Resource" id=4]
-resource_name = "OptD"
+resource_name = "Opt4"
 script = ExtResource( 1 )
-id = "OptD"
-text = "What is that thing that covers your flowers?"
+id = "Opt4"
+text = "ChatWithMarrano-Opt4"
 visible = false
 
 [sub_resource type="Resource" id=5]
 resource_name = "Exit"
 script = ExtResource( 1 )
 id = "Exit"
-text = "I better go"
+text = "ChatWithMarrano-Exit"
 visible = true
 
 [resource]

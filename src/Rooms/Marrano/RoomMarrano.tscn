@@ -184,12 +184,14 @@ limit_bottom = 540.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 4 )]
 position = Vector2( 0.840881, 0.840881 )
+description = "Bg"
 clickable = false
 baseline = -540
 texture = ExtResource( 3 )
 
 [node name="Surface" parent="Props" index="1" instance=ExtResource( 4 )]
 position = Vector2( 0, 408 )
+description = "Surface"
 clickable = false
 baseline = -660
 texture = ExtResource( 12 )
@@ -242,6 +244,7 @@ texture = ExtResource( 5 )
 
 [node name="Head" parent="Props" index="4" instance=ExtResource( 4 )]
 position = Vector2( 335, -1122 )
+description = "Head"
 always_on_top = true
 texture = ExtResource( 6 )
 

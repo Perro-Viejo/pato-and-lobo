@@ -8,7 +8,7 @@ func start() -> void:
 	# opciones del diálogo
 	# P.e. Hacer que el personaje jugable mire al personaje con el que va a hablar,
 	# camine hasta éste y lo salude (o sea saludado).
-	yield(E.run(['Conejuno: Which beer?']), 'completed')
+	yield(E.run(['Conejuno: BeersMenu-Start-Conejuno-01']), 'completed')
 	
 	# La llamada al método start del padre hace que se muestren las opciones
 	.start()
@@ -19,28 +19,28 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt1':
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
-				'Pato: Thanks.',
+				'Pato: BeersMenu-Pato-Thanks',
 				A.play('sfx_beer', C.player.global_position),
-				G.display('Pato drank the beer quickly'),
+				G.display('BeersMenu-Opt1-Game-01'),
 				A.play('sfx_drink_beer', C.player.global_position),
-				'Pato: glup glup glup glup',
+				'Pato: BeersMenu-Opt1-Pato-02',
 				'...',
-				'Pato: Nothing happened'
+				'Pato: BeersMenu-Opt1-Pato-03'
 			]), 'completed')
 		'Opt2':
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
-				'Pato: Thanks.',
+				'Pato: BeersMenu-Pato-Thanks',
 				A.play('sfx_beer', C.player.global_position),
-				G.display('Pato drank the beer slowly'),
+				G.display('BeersMenu-Opt2-Game-01'),
 				A.play('sfx_drink_beer', C.player.global_position),
-				'Pato: glup glup glup glup glup glup glup glup glup glup',
+				'Pato: BeersMenu-Opt2-Pato-02',
 				'...',
 			]), 'completed')
 			
 			if not Globals.cosmo_kick_drunk:
 				Globals.cosmo_kick_drunk = true
-				yield(E.run(['Pato: Wow... now I feel the KICK TO THE COSM...']), 'completed')
+				yield(E.run(['Pato: BeersMenu-Opt2-Pato-03']), 'completed')
 				opt.visible = false
 				D.finish_dialog()
 				A.play('sfx_dream_transition', Vector2.ZERO, false)
@@ -54,12 +54,12 @@ func option_selected(opt: DialogOption) -> void:
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
 				A.play('sfx_beer', C.player.global_position),
-				'Pato: Thanks.',
+				'Pato: BeersMenu-Pato-Thanks',
 				A.play('sfx_drink_beer', C.player.global_position),
-				'Pato: glup glup.... glup...... glup',
+				'Pato: BeersMenu-Opt3-Pato-01',
 				'...',
-				'Pato: What a disgusting beer',
-				G.display('Pato watered what was left of the beer')
+				'Pato: BeersMenu-Opt3-Pato-02',
+				G.display('BeersMenu-Opt3-Game-03')
 			]), 'completed')
 		'Exit':
 			yield(E.run([C.player_say(opt.text)]), 'completed')
@@ -70,7 +70,7 @@ func option_selected(opt: DialogOption) -> void:
 
 func _ask_beer(beer_name: String) -> void:
 	yield(E.run([
-		'Pato: I want a...',
-		C.player_say(beer_name + ', please.'),
-		'Conejuno: Serving a ' + beer_name.to_lower()
+		'Pato: BeersMenu-Pato-01',
+		C.player_say(E.get_text(beer_name) + E.get_text('BeersMenu-Pato-02')),
+		'Conejuno: %s %s' % [E.get_text('BeersMenu-Conejuno-03'), E.get_text(beer_name)]
 	]), 'completed')

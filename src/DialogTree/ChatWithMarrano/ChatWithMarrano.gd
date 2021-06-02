@@ -11,7 +11,7 @@ func start() -> void:
 	yield(E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		"Marrano: Oink, oink."
+		"Marrano: ChatWithMarrano-Start-Marrano-01"
 	]), 'completed')
 	
 	# La llamada al método start del padre hace que se muestren las opciones
@@ -20,63 +20,63 @@ func start() -> void:
 
 func option_selected(opt: DialogOption) -> void:
 	match opt.id:
-		'OptA':
+		'Opt1':
 			yield(E.run([
 				C.player_say(opt.text),
-				"Marrano: What do you want?",
-				"Pato: I'm just saying hi.",
-				"Marrano: So you want to steal one of my flowers.",
-				"Pato: Of course not. Why would I do that?",
-				"Marrano: Because everyone wants to steal my flowers.",
-				"Marrano: But no one can.",
-				"Pato: I just said... hi.",
+				"Marrano: ChatWithMarrano-Opt1-Marrano-01",
+				"Pato: ChatWithMarrano-Opt1-Pato-02",
+				"Marrano: ChatWithMarrano-Opt1-Marrano-03",
+				"Pato: ChatWithMarrano-Opt1-Pato-04",
+				"Marrano: ChatWithMarrano-Opt1-Marrano-05",
+				"Marrano: ChatWithMarrano-Opt1-Marrano-06",
+				"Pato: ChatWithMarrano-Opt1-Pato-07",
 			]), 'completed')
 			opt.visible = false
-			show_option('OptD')
-		'OptB':
+			show_option('Opt4')
+		'Opt2':
 			yield(E.run([
 				C.player_say(opt.text),
-				"Marrano: No!",
-				"Pato: Can you sell me some?",
-				"Marrano: Don't sell, don't share. It is all for me and my precious flowers.",
-				"Pato: ...",
+				"Marrano: ChatWithMarrano-Opt2-Marrano-01",
+				"Pato: ChatWithMarrano-Opt2-Pato-02",
+				"Marrano: ChatWithMarrano-Opt2-Marrano-03",
+				"Pato: ChatWithMarrano-Opt2-Pato-04",
 			]), 'completed')
 			opt.visible = false
-			show_option('OptC')
-			if is_option_visible('OptA'):
-				show_option('OptA', false)
-				show_option('OptD')
-		'OptC':
+			show_option('Opt3')
+			if is_option_visible('Opt1'):
+				show_option('Opt1', false)
+				show_option('Opt4')
+		'Opt3':
 			yield(E.run([
 				C.player_say(opt.text),
-				"Marrano: What a stupid trick...",
-				"Pato: glup",
-				"Marrano: You're not trying to steal my water, don't ya?",
-				"Pato: I would never do that.",
-				"Marrano: Sure. I wouldn't want to have to kill you.",
-				"Pato: Why are you so mean?",
-				"Marrano: I am a staunch protector of private property.",
+				"Marrano: ChatWithMarrano-Opt3-Marrano-01",
+				"Pato: ChatWithMarrano-Opt3-Pato-02",
+				"Marrano: ChatWithMarrano-Opt3-Marrano-03",
+				"Pato: ChatWithMarrano-Opt3-Pato-04",
+				"Marrano: ChatWithMarrano-Opt3-Marrano-05",
+				"Pato: ChatWithMarrano-Opt3-Pato-06",
+				"Marrano: ChatWithMarrano-Opt3-Marrano-07",
 			]), 'completed')
 			opt.visible = false
-		'OptD':
+		'Opt4':
 			yield(E.run([
 				C.player_say(opt.text),
-				"Marrano: It is a Light-vault-3000X.",
-				"Marrano: It protects my flowers from being stolen.",
-				"Marrano: No one can even touch them... except...",
-				"Pato: You.",
-				"Marrano: Or something strong enough to break the shield.",
-				"Marrano: But that would be impossible.",
-				"Pato: Unless you are super strength.",
-				"Pato: (Or that you have something heavy enough).",
-				"Marrano: Yes."
+				"Marrano: ChatWithMarrano-Opt4-Marrano-01",
+				"Marrano: ChatWithMarrano-Opt4-Marrano-02",
+				"Marrano: ChatWithMarrano-Opt4-Marrano-03",
+				"Pato: ChatWithMarrano-Opt4-Pato-04",
+				"Marrano: ChatWithMarrano-Opt4-Marrano-05",
+				"Marrano: ChatWithMarrano-Opt4-Marrano-06",
+				"Pato: ChatWithMarrano-Opt4-Pato-07",
+				"Pato: ChatWithMarrano-Opt4-Pato-08",
+				"Marrano: ChatWithMarrano-Opt4-Marrano-09"
 			]), 'completed')
 			E.current_room.state.container_weakness_revealed = true
 			E.current_room.get_prop('Container').description = 'Light-vault-3000X'
 		'Exit':
 			yield(E.run([
 				C.player_say(opt.text),
-				'Marrano: Yes. You better LEEEEAVE FOREVER!!!!'
+				'Marrano: ChatWithMarrano-Exit-Marrano-01'
 			]), 'completed')
 			D.finish_dialog()
 			return

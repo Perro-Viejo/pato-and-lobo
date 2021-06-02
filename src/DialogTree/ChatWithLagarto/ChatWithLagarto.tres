@@ -7,21 +7,21 @@
 resource_name = "Opt1"
 script = ExtResource( 2 )
 id = "Opt1"
-text = "The music is very good"
+text = "ChatWithLagarto-Opt1"
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "Can I request a song?"
+text = "ChatWithLagarto-Opt2"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "Exit"
 script = ExtResource( 2 )
 id = "Exit"
-text = "Well... bye"
+text = "ChatWithLagarto-Exit"
 visible = true
 
 [resource]

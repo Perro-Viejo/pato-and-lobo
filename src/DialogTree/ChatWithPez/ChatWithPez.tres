@@ -7,56 +7,56 @@
 resource_name = "Opt1"
 script = ExtResource( 2 )
 id = "Opt1"
-text = "That suit you're using looks cool."
+text = "ChatWithPez-Opt1"
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "How can I get one?"
+text = "ChatWithPez-Opt2"
 visible = false
 
 [sub_resource type="Resource" id=3]
 resource_name = "Opt3"
 script = ExtResource( 2 )
 id = "Opt3"
-text = "Can I challenge you to a stare fight."
+text = "ChatWithPez-Opt3"
 visible = false
 
 [sub_resource type="Resource" id=4]
 resource_name = "Opt4"
 script = ExtResource( 2 )
 id = "Opt4"
-text = "I challenge you to a stare fight... for your suit."
+text = "ChatWithPez-Opt4"
 visible = false
 
 [sub_resource type="Resource" id=5]
 resource_name = "Opt5"
 script = ExtResource( 2 )
 id = "Opt5"
-text = "Why don't you come in?"
+text = "ChatWithPez-Opt5"
 visible = true
 
 [sub_resource type="Resource" id=6]
 resource_name = "Opt6"
 script = ExtResource( 2 )
 id = "Opt6"
-text = "Talking about this place's past."
+text = "ChatWithPez-Opt6"
 visible = false
 
 [sub_resource type="Resource" id=7]
 resource_name = "Opt7"
 script = ExtResource( 2 )
 id = "Opt7"
-text = "Give me da legs."
+text = "ChatWithPez-Opt7"
 visible = false
 
 [sub_resource type="Resource" id=8]
 resource_name = "Exit"
 script = ExtResource( 2 )
 id = "Exit"
-text = "Well. I've to... bye."
+text = "ChatWithPez-Exit"
 visible = true
 
 [resource]

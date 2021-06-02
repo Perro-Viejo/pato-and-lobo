@@ -41,17 +41,17 @@ func explain_character_change() -> void:
 	did(GameState.CHARACTER_CHANGE_EXPLAINED)
 	
 	yield(E.run([
-		G.display('In some daydreams you can switch characters'),
-		G.display('Just click the respective icon in the inventory'),
+		G.display('Globals-CharacterChange-Game-01'),
+		G.display('Globals-CharacterChange-Game-02'),
 		G.show_inventory()
 	]), 'completed')
 
 
 func moon_daydream_repeated() -> void:
 	yield(E.run([
-		G.display('Pato was waiting to daydream with the moon again'),
-		G.display('But did not happen'),
-		'Pato: It\'s not the same anymore'
+		G.display('Globals-MoonDaydreamRepeated-Game-01'),
+		G.display('Globals-MoonDaydreamRepeated-Game-02'),
+		'Pato: Globals-MoonDaydreamRepeated-Pato-03'
 	]), 'completed')
 
 

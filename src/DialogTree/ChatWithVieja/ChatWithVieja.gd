@@ -11,8 +11,8 @@ func start() -> void:
 	yield(E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		'Pato: Hi ma\'am',
-		'Vieja: Hi',
+		'Pato: ChatWithVieja-Start-Pato-01',
+		'Vieja: ChatWithVieja-Start-Vieja-02',
 	]), 'completed')
 	
 	# La llamada al método start del padre hace que se muestren las opciones
@@ -24,43 +24,43 @@ func option_selected(opt: DialogOption) -> void:
 	match opt.id:
 		'Opt1':
 			yield(E.run([
-				'Vieja: Well, I had a better time when I was younger. Like you.',
-				'Vieja: Now it is very difficult to flirt, although sometimes it is achieved.',
-				'Vieja: But in my younger days...',
-				'Vieja: Ouuueeeee!',
-				'Pato: Oh my!'
+				'Vieja: ChatWithVieja-Opt1-Vieja-01',
+				'Vieja: ChatWithVieja-Opt1-Vieja-02',
+				'Vieja: ChatWithVieja-Opt1-Vieja-03',
+				'Vieja: ChatWithVieja-Opt1-Vieja-04',
+				'Pato: ChatWithVieja-Opt1-Pato-05'
 			]), 'completed')
 			opt.visible = false
 		'Opt2':
 			yield(E.run([
-				'Vieja: Something for babies.',
-				'Vieja: I need stronger emotions in my life.',
-				'Vieja: An adventure that reminds me of the crazy youth years.',
+				'Vieja: ChatWithVieja-Opt2-Vieja-01',
+				'Vieja: ChatWithVieja-Opt2-Vieja-02',
+				'Vieja: ChatWithVieja-Opt2-Vieja-03',
 			]), 'completed')
 			opt.visible = false
 			show_option('Opt3')
 		'Opt3':
 			yield(E.run([
-				'Vieja: Something strong, but that tastes old.',
-				'Vieja: That Golem cocktail is poop',
-				'Pato: Strong that...',
-				'Vieja: tastes old.',
-				'Vieja: Do you like them like that too?',
-				'Pato: Emmm....mmmm......mmmmmmm.....',
-				G.display('Pato blushed'),
-				'Vieja: In my time there were no cocktails. We drank everything pure.',
+				'Vieja: ChatWithVieja-Opt3-Vieja-01',
+				'Vieja: ChatWithVieja-Opt3-Vieja-02',
+				'Pato: ChatWithVieja-Opt3-Pato-03',
+				'Vieja: ChatWithVieja-Opt3-Vieja-04',
+				'Vieja: ChatWithVieja-Opt3-Vieja-05',
+				'Pato: ChatWithVieja-Opt3-Pato-06',
+				G.display('ChatWithVieja-Opt3-Game-07'),
+				'Vieja: ChatWithVieja-Opt3-Vieja-08',
 			]), 'completed')
 		'Opt4':
 			yield(E.run([
-				'Vieja: hihihihihihi.... thanks for the compliment, but I use dentures.',
-				'Vieja: Take advantage of your teeth while you can.',
-				'Vieja: hihihihihihi',
-				G.display('The old woman took out her dentures and played with them'),
-				'Pato: ....'
+				'Vieja: ChatWithVieja-Opt4-Vieja-01',
+				'Vieja: ChatWithVieja-Opt4-Vieja-02',
+				'Vieja: ChatWithVieja-Opt4-Vieja-03',
+				G.display('ChatWithVieja-Opt4-Game-04'),
+				'Pato: ChatWithVieja-Opt4-Pato-05'
 			]), 'completed')
 			opt.visible = false
 		'Exit':
-			yield(E.run(['Vieja: Have fun young and pretty lady... hihihihihihi']), 'completed')
+			yield(E.run(['Vieja: ChatWithVieja-Exit-Vieja-01']), 'completed')
 			D.finish_dialog()
 			return
 	_show_options()

@@ -9,8 +9,8 @@ func start() -> void:
 	# P.e. Hacer que el personaje jugable mire al personaje con el que va a hablar,
 	# camine hasta éste y lo salude (o sea saludado).
 	yield(E.run([
-		'Conejuno: The bar is not responsible for what may happen',
-		'Conejuno: But I offer you these cocktails'
+		'Conejuno: CocktailsMenu-Start-Conejuno-01',
+		'Conejuno: CocktailsMenu-Start-Conejuno-02'
 	]), 'completed')
 	
 	# La llamada al método start del padre hace que se muestren las opciones
@@ -19,35 +19,37 @@ func start() -> void:
 
 func option_selected(opt: DialogOption) -> void:
 	yield(
-		E.run([C.player_say(opt.text + ', please.')]),
+		E.run([C.player_say(
+			'%s %s' % [E.get_text(opt.text), E.get_text('CocktailsMenu-Please')]
+		)]),
 		'completed'
 	)
 	match opt.id:
 		'Opt1':
 			yield(E.run([
-				'Conejuno: I warn you that this can KO you',
-				'Conejuno: Drink it slowly... no hurries',
-				'Pato: Ok. Thanks.',
+				'Conejuno: CocktailsMenu-Opt1-Conejuno-01',
+				'Conejuno: CocktailsMenu-Opt1-Conejuno-02',
+				'Pato: CocktailsMenu-Opt1-Pato-03',
 				A.play('sfx_prepare_drink', C.player.global_position, true, true),
 				A.play('sfx_cocktail_pu', C.player.global_position),
 				I.add_item('CocktailGolem'),
 			]), 'completed')
 		'Opt2':
 			yield(E.run([
-				'Conejuno: Wanna erase your memories, don\'t you?',
-				'Conejuno: Be careful',
-				'Pato: Mmmmmmm.....',
-				G.display('Pato had an idea...'),
-				'Pato: Ok... (nosy)',
+				'Conejuno: CocktailsMenu-Opt2-Conejuno-01',
+				'Conejuno: CocktailsMenu-Opt2-Conejuno-02',
+				'Pato: CocktailsMenu-Opt2-Pato-03',
+				G.display('CocktailsMenu-Opt2-Game-04'),
+				'Pato: CocktailsMenu-Opt2-Pato-05',
 				#TODO: ¿Subirle el coraje cuando se tome este? (a.k.a. final alternativo)
 			]), 'completed')
 		'Opt3':
 			yield(E.run([
-				'Conejuno: So you know about our forbidden drinks?',
-				'Conejuno: Now I like you.',
-				'Conejuno: Just... let me prepare the ingredients',
+				'Conejuno: CocktailsMenu-Opt3-Conejuno-01',
+				'Conejuno: CocktailsMenu-Opt3-Conejuno-02',
+				'Conejuno: CocktailsMenu-Opt3-Conejuno-03',
 				A.play('sfx_prepare_drink', C.player.global_position, true, true),
-				'Conejuno: Here it is. Classic flavor, but nothing strong.',
+				'Conejuno: CocktailsMenu-Opt3-Conejuno-04',
 				A.play('sfx_cocktail_pu', C.player.global_position),
 				I.add_item('CocktailSecret')
 			]), 'completed')

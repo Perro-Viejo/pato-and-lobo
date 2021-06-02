@@ -7,21 +7,21 @@
 resource_name = "Opt1"
 script = ExtResource( 2 )
 id = "Opt1"
-text = "A beer"
+text = "ChatWithConejuno-Opt1"
 visible = true
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "Something strong"
+text = "ChatWithConejuno-Opt2"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "Exit"
 script = ExtResource( 2 )
 id = "Exit"
-text = "Nothing. Thanks."
+text = "ChatWithConejuno-Exit"
 visible = true
 
 [resource]

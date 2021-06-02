@@ -7,42 +7,42 @@
 resource_name = "TheQuestion"
 script = ExtResource( 2 )
 id = "TheQuestion"
-text = "What was that forbidden drink?"
+text = "PezQuestions-TheQuestion"
 visible = false
 
 [sub_resource type="Resource" id=2]
 resource_name = "Opt2"
 script = ExtResource( 2 )
 id = "Opt2"
-text = "How was this place before?"
+text = "PezQuestions-Opt2"
 visible = true
 
 [sub_resource type="Resource" id=3]
 resource_name = "Opt3"
 script = ExtResource( 2 )
 id = "Opt3"
-text = "What do you miss the most?"
+text = "PezQuestions-Opt3"
 visible = true
 
 [sub_resource type="Resource" id=4]
 resource_name = "Opt4"
 script = ExtResource( 2 )
 id = "Opt4"
-text = "Is the bar hiding a secret?"
+text = "PezQuestions-Opt4"
 visible = true
 
 [sub_resource type="Resource" id=5]
 resource_name = "Opt5"
 script = ExtResource( 2 )
 id = "Opt5"
-text = "Forbidden drinks?"
+text = "PezQuestions-Opt5"
 visible = false
 
 [sub_resource type="Resource" id=6]
 resource_name = "Exit"
 script = ExtResource( 2 )
 id = "Exit"
-text = "I don't want to talk about this place's past anymore."
+text = "PezQuestions-Exit"
 visible = true
 
 [resource]
