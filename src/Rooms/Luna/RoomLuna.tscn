@@ -29,6 +29,7 @@ limit_top = -1080.0
 limit_bottom = 1080.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 1 )]
+description = "Bg"
 clickable = false
 baseline = -1080
 texture = ExtResource( 4 )
@@ -53,6 +54,7 @@ rotation = -2.09439
 texture = ExtResource( 7 )
 
 [node name="Luna" parent="Props" index="2" instance=ExtResource( 1 )]
+description = "Luna"
 clickable = false
 baseline = -1080
 texture = ExtResource( 5 )
@@ -62,7 +64,7 @@ visible = false
 position = Vector2( 225, -438 )
 input_pickable = false
 script = ExtResource( 8 )
-description = "Home-seed"
+description = "HomeSeed"
 baseline = 99
 walk_to_point = Vector2( -108, 122 )
 cursor = 1
@@ -86,7 +88,7 @@ texture = ExtResource( 9 )
 visible = false
 position = Vector2( 286, -645 )
 input_pickable = false
-description = "Our home"
+description = "Home"
 texture = ExtResource( 10 )
 
 [node name="Sprite" parent="Props/Home" index="3"]

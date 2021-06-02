@@ -13,11 +13,11 @@ func on_interact() -> void:
 	else:
 		var message := ''
 		if Globals.has_done(Globals.GameState.WATER_TAKEN):
-			message = 'Pato and Lobo wouldn\'t return to Luna without the house-seed'
+			message = 'RoomSpace-Luna-01'
 		elif Globals.has_done(Globals.GameState.GOT_HOME):
-			message = 'Pato and Lobo wouldn\'t return to Luna without the water'
+			message = 'RoomSpace-Luna-02'
 		else:
-			message = 'Pato and Lobo wouldn\'t return to Luna without the house-seed or the water'
+			message = 'RoomSpace-Luna-03'
 		E.run([
 			G.display(message)
 		])

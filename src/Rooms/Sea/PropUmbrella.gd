@@ -6,12 +6,12 @@ extends Prop
 func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
-		'Pato: I take this.',
+		'Pato: RoomSea-Umbrella-Pato-01',
 		A.play('sfx_umbrella_pu', global_position),
 		disable(),
 		I.add_item('Umbrella'),
-		'Pato: The handle looks like a hook.',
-		'Pato: I can try to pull Lobo with this...'
+		'Pato: RoomSea-Umbrella-Pato-02',
+		'Pato: RoomSea-Umbrella-Pato-03'
 	])
 
 

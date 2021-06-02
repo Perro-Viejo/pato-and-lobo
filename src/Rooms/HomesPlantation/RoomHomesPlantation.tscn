@@ -194,15 +194,15 @@ hframes = 2
 [node name="Sign" parent="Props" index="2" instance=ExtResource( 3 )]
 position = Vector2( -423, -43 )
 script = ExtResource( 6 )
-description = "Details about this home-seed"
+description = "Sign"
 baseline = 64
 walk_to_point = Vector2( 66, 113 )
 cursor = 1
 script_name = "Sign"
 texture = ExtResource( 5 )
 is_the_one = true
-details = "Planted 8 months ago. Front garden, two bedrooms, bathroom with tub."
-lobo_reaction = "Awwwww, is our dream-house."
+details = "RoomHomesPlantation-Sign-Details"
+lobo_reaction = "RoomHomesPlantation-Sign-Reaction"
 
 [node name="CollisionPolygon2D" parent="Props/Sign" index="0"]
 position = Vector2( -110.873, -102.054 )
@@ -221,14 +221,14 @@ texture = ExtResource( 5 )
 [node name="Sign2" parent="Props" index="3" instance=ExtResource( 3 )]
 position = Vector2( 53, -138 )
 script = ExtResource( 6 )
-description = "Details about this home-seed"
+description = "Sign"
 baseline = 64
 walk_to_point = Vector2( 0, 136 )
 cursor = 1
 script_name = "Sign"
 texture = ExtResource( 5 )
-details = "Planted 6 months ago. Two floors, four bedrooms, two bathrooms."
-lobo_reaction = "Nope. Too big."
+details = "RoomHomesPlantation-Sign2-Details"
+lobo_reaction = "RoomHomesPlantation-Sign2-Reaction"
 
 [node name="CollisionPolygon2D" parent="Props/Sign2" index="0"]
 position = Vector2( -110.873, -102.054 )
@@ -246,14 +246,14 @@ texture = ExtResource( 5 )
 [node name="Sign3" parent="Props" index="4" instance=ExtResource( 3 )]
 position = Vector2( 412, -54 )
 script = ExtResource( 6 )
-description = "Details about this home-seed"
+description = "Sign"
 baseline = 64
 walk_to_point = Vector2( -71, 117 )
 cursor = 1
 script_name = "Sign"
 texture = ExtResource( 5 )
-details = "Planted 4 months ago. Backyard, one bedroom, bathroom..."
-lobo_reaction = "We want one with a front garden."
+details = "RoomHomesPlantation-Sign3-Details"
+lobo_reaction = "RoomHomesPlantation-Sign3-Reaction"
 
 [node name="CollisionPolygon2D" parent="Props/Sign3" index="0"]
 position = Vector2( -110.873, -102.054 )
@@ -272,14 +272,14 @@ texture = ExtResource( 5 )
 [node name="Sign4" parent="Props" index="5" instance=ExtResource( 3 )]
 position = Vector2( 637, 292 )
 script = ExtResource( 6 )
-description = "Details about this home-seed"
+description = "Sign"
 baseline = 64
 walk_to_point = Vector2( -130, 65 )
 cursor = 1
 script_name = "Sign"
 texture = ExtResource( 5 )
-details = "Planted 2 months ago. Two bedrooms, bathroom, terrace."
-lobo_reaction = "Two bedrooms sounds good, but don't like the terrace."
+details = "RoomHomesPlantation-Sign4-Details"
+lobo_reaction = "RoomHomesPlantation-Sign4-Reaction"
 
 [node name="CollisionPolygon2D" parent="Props/Sign4" index="0"]
 position = Vector2( -110.873, -102.054 )
@@ -298,14 +298,14 @@ texture = ExtResource( 5 )
 [node name="Sign5" parent="Props" index="6" instance=ExtResource( 3 )]
 position = Vector2( -127, 49 )
 script = ExtResource( 6 )
-description = "Details about this home-seed"
+description = "Sign"
 baseline = 64
 walk_to_point = Vector2( 32, 129 )
 cursor = 1
 script_name = "Sign"
 texture = ExtResource( 5 )
-details = "Planted 2 months ago. Studio apartment, balcony."
-lobo_reaction = "A studio? NO WAY!"
+details = "RoomHomesPlantation-Sign5-Details"
+lobo_reaction = "RoomHomesPlantation-Sign5-Reaction"
 
 [node name="CollisionPolygon2D" parent="Props/Sign5" index="0"]
 position = Vector2( -110.873, -102.054 )
@@ -324,14 +324,14 @@ texture = ExtResource( 5 )
 [node name="Sign6" parent="Props" index="7" instance=ExtResource( 3 )]
 position = Vector2( -559, 304 )
 script = ExtResource( 6 )
-description = "Details about this home-seed"
+description = "Sign"
 baseline = 64
 walk_to_point = Vector2( 117, 68 )
 cursor = 1
 script_name = "Sign"
 texture = ExtResource( 5 )
-details = "Planted a month ago. One bedroom, bathroom with tub, balcony."
-lobo_reaction = "We want a bathroom with tub, but we need something bigger."
+details = "RoomHomesPlantation-Sign6-Reaction"
+lobo_reaction = "RoomHomesPlantation-Sign6-Reaction"
 
 [node name="CollisionPolygon2D" parent="Props/Sign6" index="0"]
 position = Vector2( -110.873, -102.054 )

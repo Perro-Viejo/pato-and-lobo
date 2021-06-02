@@ -34,20 +34,20 @@ func on_room_transition_finished() -> void:
 		yield(
 			E.run_cutscene([
 			_play(),
-			{ dialog = 'Pato: Do it slowly', time = 2 },
-			{ dialog = 'Pato: Good, good. Now take down the arm.', time = 3 },
-			{ dialog = 'Lobo: Doing so. Doing so...', time = 3 },
+			{ dialog = 'Pato: RoomHomesPlantation-Pato-01', time = 2 },
+			{ dialog = 'Pato: RoomHomesPlantation-Pato-02', time = 3 },
+			{ dialog = 'Lobo: RoomHomesPlantation-Lobo-01', time = 3 },
 			E.wait(3),
-			'Pato: Done! We have our house-seed. Let\'s go to Luna and sow it.',
+			'Pato: RoomHomesPlantation-Pato-03',
 		]), 'completed')
 		E.goto_room('Luna')
 	elif visited_first_time:
 		yield(E.run([
-			'Pato: Lobo and I need a home to live and give each other love.',
-			'Pato: Houses are planted on this planet.',
-			'Pato: We must choose the most beautiful one to take to Luna.',
-			'Pato: Is that true, love of mine?',
-			'Lobo: Yes-it-is'
+			'Pato: RoomHomesPlantation-Pato-04',
+			'Pato: RoomHomesPlantation-Pato-05',
+			'Pato: RoomHomesPlantation-Pato-06',
+			'Pato: RoomHomesPlantation-Pato-07',
+			'Lobo: RoomHomesPlantation-Lobo-02'
 		]), 'completed')
 
 

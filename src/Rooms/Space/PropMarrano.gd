@@ -12,7 +12,7 @@ func on_interact() -> void:
 		E.goto_room('Marrano')
 	else:
 		yield(E.run([
-			'Pato: We already have the water for the house-seed. No need to back.'
+			'Pato: RoomSpace-Marrano-Pato-01'
 		]), 'completed')
 
 

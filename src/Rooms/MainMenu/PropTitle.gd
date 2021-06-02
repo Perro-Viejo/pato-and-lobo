@@ -5,9 +5,9 @@ extends Prop
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
 	E.run([
-		'Pato: This might be the name of the game',
+		'Pato: RoomMainMenu-Title-Pato-01',
 		'...',
-		'Pato: Sounds exciting...'
+		'Pato: RoomMainMenu-Title-Pato-02'
 	])
 
 

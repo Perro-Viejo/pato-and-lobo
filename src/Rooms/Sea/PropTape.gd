@@ -6,12 +6,12 @@ extends Prop
 func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
-		'Pato: Maybe there is something here...',
+		'Pato: RoomSea-Tape-Pato-01',
 		A.play('sfx_tape_pu', global_position, true, true),
 		disable(),
 		I.add_item('Tape'),
-		'Pato: I\'ve found a tape.',
-		'Pato: Might be useful.'
+		'Pato: RoomSea-Tape-Pato-02',
+		'Pato: RoomSea-Tape-Pato-03'
 	])
 
 

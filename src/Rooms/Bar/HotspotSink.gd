@@ -8,15 +8,15 @@ func on_interact() -> void:
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.player.face_up(),
-			'Pato: I\'ll wash my wings.',
+			'Pato: RoomBar-Sink-Pato-01',
 			A.play('sfx_sink_head', global_position),
 			A.play('sfx_sink_loop', global_position),
 			E.wait(),
-			'Pato: It feels so gooood.',
+			'Pato: RoomBar-Sink-Pato-02',
 			A.play('sfx_sink_wash', global_position),
 			'...',
 			A.play('sfx_sink_wash', global_position),
-			'Pato: ...what if.',
+			'Pato: RoomBar-Sink-Pato-03',
 			A.play('sfx_sink_wash', global_position),
 			A.stop('sfx_sink_loop'),
 			'...'
@@ -25,8 +25,8 @@ func on_interact() -> void:
 		E.goto_room('Sea')
 	else:
 		E.run([
-			C.player_say('I don\'t want to wash my wings again.'),
-			C.player_say('They are already clean.')
+			C.player_say('RoomBar-Sink-Pato-04'),
+			C.player_say('RoomBar-Sink-Pato-05')
 		])
 
 
