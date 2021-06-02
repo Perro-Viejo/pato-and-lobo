@@ -4,7 +4,7 @@ extends Prop
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	if not Globals.has_done(Globals.GameState.DOME_SPOTTED):
+	if not Globals.has_done(Globals.GameState.DOME_DESTROYED):
 		E.run([
 			C.walk_to_clicked(),
 			C.player.face_up_right(),

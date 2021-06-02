@@ -30,7 +30,7 @@ func on_room_transition_finished() -> void:
 	if not Globals.has_done(Globals.GameState.CHARACTER_CHANGE_EXPLAINED):
 		yield(Globals.explain_character_change(), 'completed')
 	
-	if Globals.has_done(Globals.GameState.GOT_HOME):
+	if Globals.has_done(Globals.GameState.ARM_DOWN):
 		yield(
 			E.run_cutscene([
 			_play(),

@@ -172,12 +172,14 @@ limit_bottom = 540.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 3 )]
 position = Vector2( 6, 3 )
+description = "Bg"
 clickable = false
 baseline = -540
 texture = ExtResource( 4 )
 
 [node name="Planet" parent="Props" index="1" instance=ExtResource( 3 )]
 position = Vector2( 8.98987, 549.367 )
+description = "Planet"
 clickable = false
 baseline = -812
 texture = ExtResource( 7 )
@@ -347,6 +349,7 @@ texture = ExtResource( 5 )
 
 [node name="RoboticArm" parent="Props" index="8" instance=ExtResource( 3 )]
 position = Vector2( -547, -765 )
+description = "RoboticArm"
 clickable = false
 baseline = 2000
 texture = ExtResource( 8 )
@@ -371,6 +374,7 @@ texture = ExtResource( 8 )
 [node name="HouseSeed" parent="Props" index="9" instance=ExtResource( 3 )]
 visible = false
 position = Vector2( -575, 99 )
+description = "HouseSeed"
 clickable = false
 texture = ExtResource( 10 )
 

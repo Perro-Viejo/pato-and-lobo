@@ -19,6 +19,7 @@ func on_interact() -> void:
 				A.play('sfx_spaceship_hook', global_position),
 				E.wait(1.3)
 			]), 'completed')
+			Globals.did(Globals.GameState.ARM_DOWN)
 			E.goto_room('HomesPlantation', false)
 		else:
 			E.run([
