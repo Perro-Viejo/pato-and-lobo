@@ -1,7 +1,7 @@
 [gd_scene load_steps=96 format=2]
 
 [ext_resource path="res://src/Nodes/Character/Character.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Characters/Lobo/Lobo.gd" type="Script" id=2]
+[ext_resource path="res://src/Characters/Lobo/CharacterLobo.gd" type="Script" id=2]
 [ext_resource path="res://src/Characters/Lobo/lobo.png" type="Texture" id=3]
 [ext_resource path="res://src/Characters/Lobo/dance.png" type="Texture" id=4]
 [ext_resource path="res://src/Characters/Lobo/idle.png" type="Texture" id=5]
@@ -1785,7 +1785,7 @@ animations = [ {
 "speed": 30.0
 } ]
 
-[node name="Lobo" instance=ExtResource( 1 )]
+[node name="CharacterLobo" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 description = "Lobo"
 walk_to_point = Vector2( -232, -93 )
@@ -1826,11 +1826,11 @@ position = Vector2( 0, -178 )
 texture = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="5"]
-position = Vector2( 16, -182 )
+position = Vector2( -28, -182 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 89 )
-animation = "drowning"
-frame = 9
+animation = "idle"
+frame = 1
 playing = true
 
 [node name="DialogPos" parent="." index="6"]

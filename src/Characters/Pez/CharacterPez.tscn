@@ -394,7 +394,7 @@ animations = [ {
 
 [node name="CharacterPez" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-description = "Mecha-fish... it seems"
+description = "Pez"
 walk_to_point = Vector2( -218, 0 )
 cursor = 8
 script_name = "Pez"
@@ -419,7 +419,7 @@ position = Vector2( 0, -144 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 30 )
 animation = "idle"
-frame = 1
+frame = 17
 playing = true
 
 [node name="DialogPos" parent="." index="6"]

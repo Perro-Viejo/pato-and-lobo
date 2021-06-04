@@ -49,6 +49,7 @@ func _unhandled_input(event):
 			else:
 				on_interact()
 		elif event.is_action_pressed('look'):
+			E.clicked = self
 			if not I.active:
 				on_look()
 
@@ -67,12 +68,12 @@ func _process(_delta):
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	yield(G.display('Pato doesn\'t know what to do with that', false), 'completed')
+	yield(G.display('Clickable-OnInteract-Game-01', false), 'completed')
 	G.done()
 
 
 func on_look() -> void:
-	yield(G.display('Pato has nothing to say about it', false), 'completed')
+	yield(G.display('Clickable-OnLook-Game-01', false), 'completed')
 	G.done()
 
 

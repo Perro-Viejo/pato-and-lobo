@@ -626,7 +626,7 @@ animations = [ {
 
 [node name="CharacterVieja" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-description = "Old-y with dentures"
+description = "Vieja"
 walk_to_point = Vector2( -210, 61 )
 cursor = 8
 script_name = "Vieja"
@@ -660,7 +660,7 @@ position = Vector2( 0, -48 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 51 )
 animation = "idle"
-frame = 5
+frame = 17
 playing = true
 offset = Vector2( -16, -56 )
 

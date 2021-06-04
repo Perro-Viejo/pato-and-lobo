@@ -11,31 +11,30 @@ func _ready() -> void:
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	
 	yield(E.run([
 		C.walk_to_clicked(),
 		C.face_clicked(),
-		'Pato: Hi-ya',
+		'Pato: Character-Lagarto-OnInteract-Pato-01',
 	]), 'completed')
 	
 	if _using_mask:
-		yield(E.run(['Lagarto: Punchis punchis. Hi.']), 'completed')
+		yield(E.run(['Lagarto: Character-Lagarto-OnInteract-Lagarto-02']), 'completed')
 	elif _can_put_mask():
 		yield(
 			E.run([
-				'Lagarto: Wait. A star can\'t talk to nobody without a mask.',
+				'Lagarto: Character-Lagarto-OnInteract-Lagarto-03',
 				put_mask(),
-				'Lagarto: So. What do you want?'
+				'Lagarto: Character-Lagarto-OnInteract-Lagarto-04'
 			]),
 			'completed'
 		)
 	else:
 		yield(
 			E.run([
-				'Lagarto: Fock. Someone stole my mask.',
-				'Lagarto: You can talk to me, but don\'t dare to look at me.',
+				'Lagarto: Character-Lagarto-OnInteract-Lagarto-05',
+				'Lagarto: Character-Lagarto-OnInteract-Lagarto-06',
 				C.player.face_right(),
-				'Pato: Aaaaall right...'
+				'Pato: Character-Lagarto-OnInteract-Pato-07'
 			]),
 			'completed'
 		)
@@ -44,11 +43,11 @@ func on_interact() -> void:
 
 func on_look() -> void:
 	if _using_mask:
-		E.run(['Pato: I can use the DJ\'s wolf mask for my costume.'])
+		E.run(['Pato: Character-Lagarto-OnLook-Pato-01'])
 	elif _can_put_mask():
-		E.run(['Pato: So that\'s why he uses the mask. Drogs!'])
+		E.run(['Pato: Character-Lagarto-OnLook-Pato-02'])
 	else:
-		E.run(['Pato: His gaze is full of anguish.'])
+		E.run(['Pato: Character-Lagarto-OnLook-Pato-03'])
 
 
 func remove_mask(is_in_queue := true) -> void:

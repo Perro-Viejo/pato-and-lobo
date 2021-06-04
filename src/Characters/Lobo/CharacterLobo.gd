@@ -10,30 +10,30 @@ func on_interact() -> void:
 				if Globals.has_done(Globals.GameState.DISGUISED):
 					# El jugador decidió hablarle a Lobo teniendo el disfraz
 					yield(E.run([
-						'Pato: Now that I have my disguise I won\'t fear.',
+						'Pato: CharacterLobo-Bar-Pato-01',
 						C.walk_to_clicked(),
 						C.face_clicked(),
 						'...',
-						'Pato: Hi.',
-						'Pato: Hell',
-						'Lobo: Ey!... What\'s the costume for?',
-						'Pato: Well...'
+						'Pato: CharacterLobo-Bar-Pato-02',
+						'Pato: CharacterLobo-Bar-Pato-03',
+						'Lobo: CharacterLobo-Bar-Lobo-04',
+						'Pato: CharacterLobo-Bar-Pato-05'
 					]), 'completed')
 				else:
 					yield(E.run([
-						'Pato: I will not hesitate anymore.',
-						'Pato: I\'m gonna talk with Lobo NOW!',
+						'Pato: CharacterLobo-Bar-Pato-06',
+						'Pato: CharacterLobo-Bar-Pato-07',
 						C.walk_to_clicked(),
 						C.player.face_right(),
 						'...',
-						'Pato: ...',
-						'Pato: ........',
-						'Pato: ......................',
+						'Pato: CharacterLobo-Bar-Pato-08',
+						'Pato: CharacterLobo-Bar-Pato-09',
+						'Pato: CharacterLobo-Bar-Pato-10',
 						C.player.face_left(),
 						'...',
 						C.player.face_right(),
 						'...',
-						'Pato: He..... he..... h.....',
+						'Pato: CharacterLobo-Bar-Pato-11',
 						A.play_music('mx_bar_03'),
 					]), 'completed')
 
@@ -41,32 +41,32 @@ func on_interact() -> void:
 			else:
 				E.run([
 					C.face_clicked(),
-					'Pato: He is sooooo handsome!!!',
-					'Pato: I\'ll never have the guts to talk him',
+					'Pato: CharacterLobo-Bar-Pato-12',
+					'Pato: CharacterLobo-Bar-Pato-13',
 					face_left(),
 					C.face_clicked(),
 					dance(),
-					'Pato: And look how he moves...',
-					'Pato: /( > __ < \\)'
+					'Pato: CharacterLobo-Bar-Pato-14',
+					'Pato: CharacterLobo-Bar-Pato-15'
 				])
 		'Sea':
 			E.run([
-				'Lobo: Heeeeeeeeeeeeeeeeelp',
-				'Lobo: I\'m drowning!!!',
-				'Pato: Hang on there my love. I\'ll get you out of there.'
+				'Lobo: CharacterLobo-Sea-Lobo-01',
+				'Lobo: CharacterLobo-Sea-Lobo-02',
+				'Pato: CharacterLobo-Sea-Pato-03'
 			])
 		'Luna':
 			D.show_dialog('ChatWithLoboInLuna')
 
 
 func on_look() -> void:
-	E.run(['Pato: He is soooooooooo hot!!!'])
+	E.run(['Pato: CharacterLobo-Look-Pato-01'])
 
 
 func on_item_used(item: Item) -> void:
 	if item.script_name == 'Mopbrella':
 			yield(E.run([
-				'Pato: I\'ve saved your life, love of my.',
+				'Pato: CharacterLobo-Mopbrella-Pato-01',
 			]), 'completed')
 			A.stop('bg_dream_boat', 0, false)
 			I.remove_item(item.script_name, false)
@@ -74,7 +74,7 @@ func on_item_used(item: Item) -> void:
 			E.goto_room('Bar')
 	else:
 		E.run([
-			'Pato: I can not reach you',
+			'Pato: CharacterLobo-OnItemUsed-Pato-01',
 		])
 
 

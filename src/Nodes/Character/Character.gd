@@ -150,3 +150,8 @@ func remove_inventory() -> void:
 func _set_texture(value: Texture) -> void:
 	texture = value
 	$Sprite.texture = value
+
+
+func _translate() -> void:
+	if Engine.editor_hint or not is_inside_tree(): return
+	description = E.get_text('Character-%s' % _description_code)

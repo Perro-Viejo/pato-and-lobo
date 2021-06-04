@@ -12,7 +12,7 @@ func on_interact() -> void:
 	if not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
 		D.show_dialog('ChatWithMarrano')
 	else:
-		E.run(["Marrano: Go away! I'm searching the intruder."])
+		E.run(["Marrano: Character-Marrano-OnInteract-Marrano-01"])
 
 
 func on_look() -> void:

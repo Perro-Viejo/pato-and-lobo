@@ -1,15 +1,17 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Rooms/HomesPlantation/RoomHomesPlantation.gd" type="Script" id=2]
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Rooms/Space/Sprites/bg.png" type="Texture" id=4]
-[ext_resource path="res://src/Rooms/HomesPlantation/Sprites/planet_sign.png" type="Texture" id=5]
+[ext_resource path="res://src/Rooms/HomesPlantation/Sprites/planet_sign_01.png" type="Texture" id=5]
 [ext_resource path="res://src/Rooms/HomesPlantation/PropSign.gd" type="Script" id=6]
 [ext_resource path="res://src/Rooms/HomesPlantation/Sprites/planet.png" type="Texture" id=7]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipgancho.png" type="Texture" id=8]
 [ext_resource path="res://src/Rooms/Spaceship/Sprites/spaceshipgancho2.png" type="Texture" id=9]
 [ext_resource path="res://src/Rooms/Luna/Sprites/home_seed.png" type="Texture" id=10]
+[ext_resource path="res://src/Rooms/HomesPlantation/Sprites/planet_sign_03.png" type="Texture" id=11]
+[ext_resource path="res://src/Rooms/HomesPlantation/Sprites/planet_sign_02.png" type="Texture" id=12]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 719.664, 686.593, 497.702, 1135.26, 137.702, 1291.26, -258.298, 1251.26, -606.298, 1035.26, -744.364, 535.402, -547.816, 124.668, -361.348, -24.0029, 11.5886, -124.797, 376.966, -39.1219, 623.91, 157.426 )
@@ -223,77 +225,79 @@ position = Vector2( 53, -138 )
 script = ExtResource( 6 )
 description = "Sign"
 baseline = 64
-walk_to_point = Vector2( 0, 136 )
+walk_to_point = Vector2( 20, 150 )
 cursor = 1
 script_name = "Sign"
-texture = ExtResource( 5 )
+texture = ExtResource( 11 )
 details = "RoomHomesPlantation-Sign2-Details"
 lobo_reaction = "RoomHomesPlantation-Sign2-Reaction"
 
 [node name="CollisionPolygon2D" parent="Props/Sign2" index="0"]
 position = Vector2( -110.873, -102.054 )
-polygon = PoolVector2Array( 4.873, -8.946, 108.873, -21.946, 218.873, -15.946, 221.873, 109.054, 142.873, 113.054, 134.873, 225.054, 81.873, 226.054, 85.873, 115.054, 3.873, 111.054 )
+polygon = PoolVector2Array( -12.127, -5.946, 75.873, -6.946, 77.873, -32.946, 128.873, -30.946, 127.873, -7.946, 228.873, -9.946, 237.873, 102.054, 126.873, 98.054, 130.873, 237.054, 83.873, 236.054, 83.873, 96.054, -5.127, 96.054 )
 
 [node name="BaselineHelper" parent="Props/Sign2" index="1"]
 position = Vector2( 0, 64 )
 
 [node name="WalkToHelper" parent="Props/Sign2" index="2"]
-position = Vector2( 0, 136 )
+position = Vector2( 20, 150 )
 
 [node name="Sprite" parent="Props/Sign2" index="3"]
-texture = ExtResource( 5 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 11 )
 
 [node name="Sign3" parent="Props" index="4" instance=ExtResource( 3 )]
-position = Vector2( 412, -54 )
+position = Vector2( 404, -28 )
 script = ExtResource( 6 )
 description = "Sign"
 baseline = 64
-walk_to_point = Vector2( -71, 117 )
+walk_to_point = Vector2( -127, 88 )
 cursor = 1
 script_name = "Sign"
-texture = ExtResource( 5 )
+texture = ExtResource( 12 )
 details = "RoomHomesPlantation-Sign3-Details"
 lobo_reaction = "RoomHomesPlantation-Sign3-Reaction"
 
 [node name="CollisionPolygon2D" parent="Props/Sign3" index="0"]
 position = Vector2( -110.873, -102.054 )
-polygon = PoolVector2Array( 73.873, -50.946, 174.873, -2.946, 261.873, 53.054, 198.873, 163.054, 129.873, 124.054, 67.873, 217.054, 25.873, 195.054, 87.873, 101.054, 14.873, 54.054 )
+polygon = PoolVector2Array( 90.873, -42.946, 218.873, 108.054, 163.873, 189.054, 111.873, 127.054, 56.873, 206.054, 28.873, 176.054, 79.873, 92.054, 35.873, 37.054 )
 
 [node name="BaselineHelper" parent="Props/Sign3" index="1"]
 position = Vector2( 0, 64 )
 
 [node name="WalkToHelper" parent="Props/Sign3" index="2"]
-position = Vector2( -71, 117 )
+position = Vector2( -127, 88 )
 
 [node name="Sprite" parent="Props/Sign3" index="3"]
 rotation = 0.523598
-texture = ExtResource( 5 )
+texture = ExtResource( 12 )
 
 [node name="Sign4" parent="Props" index="5" instance=ExtResource( 3 )]
-position = Vector2( 637, 292 )
+position = Vector2( 612, 304 )
 script = ExtResource( 6 )
 description = "Sign"
 baseline = 64
-walk_to_point = Vector2( -130, 65 )
+walk_to_point = Vector2( -131, 17 )
 cursor = 1
 script_name = "Sign"
-texture = ExtResource( 5 )
+texture = ExtResource( 12 )
 details = "RoomHomesPlantation-Sign4-Details"
 lobo_reaction = "RoomHomesPlantation-Sign4-Reaction"
 
 [node name="CollisionPolygon2D" parent="Props/Sign4" index="0"]
 position = Vector2( -110.873, -102.054 )
-polygon = PoolVector2Array( 159.873, -49.946, 219.873, 40.054, 266.873, 135.054, 157.873, 202.054, 114.873, 134.054, 15.873, 181.054, -9.12701, 139.054, 87.873, 89.054, 47.873, 15.054 )
+polygon = PoolVector2Array( 154.873, -8.946, 184.873, 151.054, 112.873, 186.054, 99.873, 124.054, 29.873, 156.054, 20.873, 118.054, 91.873, 79.054, 85.873, 25.054 )
 
 [node name="BaselineHelper" parent="Props/Sign4" index="1"]
 position = Vector2( 0, 64 )
 
 [node name="WalkToHelper" parent="Props/Sign4" index="2"]
-position = Vector2( -130, 65 )
+position = Vector2( -131, 17 )
 
 [node name="Sprite" parent="Props/Sign4" index="3"]
 rotation = 1.0472
-texture = ExtResource( 5 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 12 )
 
 [node name="Sign5" parent="Props" index="6" instance=ExtResource( 3 )]
 position = Vector2( -127, 49 )
@@ -322,30 +326,30 @@ rotation = -0.261799
 texture = ExtResource( 5 )
 
 [node name="Sign6" parent="Props" index="7" instance=ExtResource( 3 )]
-position = Vector2( -559, 304 )
+position = Vector2( -531, 324 )
 script = ExtResource( 6 )
 description = "Sign"
 baseline = 64
-walk_to_point = Vector2( 117, 68 )
+walk_to_point = Vector2( 108, 45 )
 cursor = 1
 script_name = "Sign"
-texture = ExtResource( 5 )
+texture = ExtResource( 11 )
 details = "RoomHomesPlantation-Sign6-Reaction"
 lobo_reaction = "RoomHomesPlantation-Sign6-Reaction"
 
 [node name="CollisionPolygon2D" parent="Props/Sign6" index="0"]
 position = Vector2( -110.873, -102.054 )
-polygon = PoolVector2Array( 58.873, -48.946, 169.873, 12.054, 130.873, 83.054, 226.873, 142.054, 202.873, 186.054, 108.873, 127.054, 66.873, 200.054, -38.127, 141.054, 7.87299, 37.054 )
+polygon = PoolVector2Array( 83.873, -9.946, 154.873, 28.054, 116.873, 90.054, 195.873, 134.054, 177.873, 167.054, 100.873, 123.054, 67.873, 173.054, 1.87299, 139.054, 34.873, 85.054, 22.873, 75.054, 38.873, 47.054, 52.873, 53.054 )
 
 [node name="BaselineHelper" parent="Props/Sign6" index="1"]
 position = Vector2( 0, 64 )
 
 [node name="WalkToHelper" parent="Props/Sign6" index="2"]
-position = Vector2( 117, 68 )
+position = Vector2( 108, 45 )
 
 [node name="Sprite" parent="Props/Sign6" index="3"]
 rotation = -1.0472
-texture = ExtResource( 5 )
+texture = ExtResource( 11 )
 
 [node name="RoboticArm" parent="Props" index="8" instance=ExtResource( 3 )]
 position = Vector2( -547, -765 )

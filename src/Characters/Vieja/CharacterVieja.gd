@@ -5,8 +5,8 @@ extends Character
 func on_interact() -> void:
 	if E.current_room.state.vieja_sleeping:
 		E.run([
-			'Pato: That cocktail made the job. She fell asleep.',
-			'Pato: I hope she\' be fine.'
+			'Pato: ',
+			'Pato: '
 		])
 		return
 	D.show_dialog('ChatWithVieja')
@@ -23,36 +23,36 @@ func on_item_used(item: Item) -> void:
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.face_clicked(),
-			'Pato: Old-y. I invite you this drink.',
+			'Pato: Character-Vieja-CocktailSuper-Pato-01',
 			I.remove_item('CocktailSuper'),
-			'Pato: Strong and with the flavor of an elder so old...',
-			'Vieja: Glob bless you, my girl.',
-			'Vieja: glup glup glup glup glup.',
+			'Pato: Character-Vieja-CocktailSuper-Pato-02',
+			'Vieja: Character-Vieja-CocktailSuper-Vieja-03',
+			'Vieja: Character-Vieja-CocktailSuper-Vieja-04',
 			E.wait(3.0),
-			'Vieja: FOCK YEAH!... like old times.',
-			'Vieja: All I have to do now is wait for....',
+			'Vieja: Character-Vieja-CocktailSuper-Vieja-05',
+			'Vieja: Character-Vieja-CocktailSuper-Vieja-06',
 			sleep(),
 			E.current_room.get_prop('GlassWithDentures').enable(),
-			'Pato: Great! She put her dentures in the glass.'
+			'Pato: Character-Vieja-CocktailSuper-Pato-07'
 		]), 'completed')
 	elif item.script_name == 'CocktailSecret':
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.face_clicked(),
-			'Pato: What do you think of this drink old-y?',
+			'Pato: Character-Vieja-CocktailSecret-Pato-01',
 			I.remove_item('CocktailSecret'),
-			'Vieja: Mmmmm... not bad at all... but',
-			'Vieja: But it lacks of something. It tastes like an elder, but it isn\'t strong.'
+			'Vieja: Character-Vieja-CocktailSecret-Vieja-02',
+			'Vieja: Character-Vieja-CocktailSecret-Vieja-03'
 		]), 'completed')
 	elif item.script_name == 'CocktailGolem':
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.face_clicked(),
-			'Pato: Drink this!',
+			'Pato: Character-Vieja-CocktailGolem-Pato-01',
 			I.remove_item('CocktailGolem'),
-			'Vieja: Pfffffffff.......',
-			'Vieja: What da fock. This is as sweet as a little pink baby.',
-			'Vieja: I told you I don\'t like Golem cocktail. It lacks of the elder flavor.',
+			'Vieja: Character-Vieja-CocktailGolem-Vieja-02',
+			'Vieja: Character-Vieja-CocktailGolem-Vieja-03',
+			'Vieja: Character-Vieja-CocktailGolem-Vieja-04',
 		]), 'completed')
 
 

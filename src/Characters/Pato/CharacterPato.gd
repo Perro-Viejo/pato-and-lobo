@@ -40,9 +40,9 @@ func _check_costume_completion(item: Item) -> void:
 					Globals.did(Globals.GameState.DISGUISED)
 					disguised = true
 					yield(E.run([
-						'Pato: WEEEEEEEEEE!',
-						'Pato: I completed the costume',
-						'Pato: Now... wolf transformation'
+						'Pato: CharacterPato-CheckCostumeCompletion-Pato-01',
+						'Pato: CharacterPato-CheckCostumeCompletion-Pato-02',
+						'Pato: CharacterPato-CheckCostumeCompletion-Pato-03'
 					]), 'completed')
 					I.remove_item('Mask', false)
 					I.remove_item('Dentures', false)
@@ -54,7 +54,7 @@ func _check_costume_completion(item: Item) -> void:
 					Globals.courage += 50
 					yield(I, 'courage_update_shown')
 
-					E.run(['Pato: I feel I\'m ready to talk with Lobo!'])
+					E.run(['Pato: CharacterPato-CheckCostumeCompletion-Pato-04'])
 			else:
 				anim_suffix = ''
 				idle(false)

@@ -516,7 +516,7 @@ animations = [ {
 
 [node name="CharacterLagarto" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-description = "The DJ"
+description = "Lagarto"
 walk_to_point = Vector2( 257, 137 )
 cursor = 8
 script_name = "Lagarto"
@@ -544,7 +544,7 @@ position = Vector2( 0, -98 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 53 )
 animation = "idle_mask"
-frame = 8
+frame = 16
 playing = true
 
 [node name="DialogPos" parent="." index="6"]

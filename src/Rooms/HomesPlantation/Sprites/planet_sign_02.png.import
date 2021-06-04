@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/planet_sign.png-d241cc8f4f469a29be8686264bade95f.stex"
+path="res://.import/planet_sign_02.png-e376b010489cba0e269a2f1a3e34ce0a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Rooms/HomesPlantation/Sprites/planet_sign.png"
-dest_files=[ "res://.import/planet_sign.png-d241cc8f4f469a29be8686264bade95f.stex" ]
+source_file="res://src/Rooms/HomesPlantation/Sprites/planet_sign_02.png"
+dest_files=[ "res://.import/planet_sign_02.png-e376b010489cba0e269a2f1a3e34ce0a.stex" ]
 
 [params]
 

@@ -42,8 +42,8 @@ func explain_character_change() -> void:
 	did(GameState.CHARACTER_CHANGE_EXPLAINED)
 	
 	yield(E.run([
-		G.display('Globals-CharacterChange-Game-01'),
-		G.display('Globals-CharacterChange-Game-02'),
+		G.display('Globals-ExplainCharacterChange-Game-01'),
+		G.display('Globals-ExplainCharacterChange-Game-02'),
 		G.show_inventory()
 	]), 'completed')
 

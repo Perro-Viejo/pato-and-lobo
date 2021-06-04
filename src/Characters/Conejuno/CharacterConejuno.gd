@@ -8,7 +8,7 @@ func on_interact() -> void:
 
 func on_look() -> void:
 	E.run([
-		'Pato: The barman',
-		'...',
-		'Pato: The one who serves drinks and listens to nonsense stories every night'
+		C.face_clicked(),
+		'Pato: Character-Conejuno-OnLook-Pato-01',
+		'Pato: Character-Conejuno-OnLook-Pato-02'
 	])

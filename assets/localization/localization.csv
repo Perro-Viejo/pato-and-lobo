@@ -7,9 +7,8 @@ Toolbar-BtnDialogSpeed-2,en bombas,inmediato,immediate
 Toolbar-BtnQuit,¡Vemos!,Salir,Quit
 Toolbar-BtnLanguage,Idioma,,Language
 InventoryContainer-Courage,Perrenque:,Valentía:,Courage:
-,,,
-,,,
-,,,
+Clickable-OnInteract-Game-01,Pato no sabe qué hacer.,,Pato doesn't know what to do with that.
+Clickable-OnLook-Game-01,Pato no sabe qué decir.,,Pato has nothing to say about it.
 HABITACIONES,,,
 RoomMainMenu-01,Clic izquierdo pa' INTERACTUAR con objetos y personajes.,Haz clic izquierdo para INTERACTUAR con objetos y personajes.,Use left click to interact with objects and characters.
 RoomMainMenu-02,Clic derecho pa' EXAMINAR objetos y personajes.,Haz clic derecho para OBSERVAR objetos y personajes.,Use right click to take a look on objects and characters.
@@ -22,7 +21,7 @@ RoomMainMenu-Title-Pato-01,Este podría ser el nombre del juego,Este podría ser
 RoomMainMenu-Title-Pato-02,Rico...,Suena emocionante...,Sounds exciting...
 RoomBar-01,Ella es Pato.,Ella es Pato.,She is Pato.
 RoomBar-02,Está enamorada de Lobo.,Está enamorada de Lobo.,She is in love with him.
-RoomBar-03,Pero no se atreve a hablarle.,Pero no se atreve a hablarle.,But she doesn\'t has the guts to talk him.
+RoomBar-03,Pero no se atreve a hablarle.,Pero no se atreve a hablarle.,But she doesn't has the guts to talk him.
 RoomBar-04,Puedes disfrazarla.,Puedes disfrazarla.,You can help her with a costume.
 RoomBar-05,O vivir sus ensoñaciones para llenarla de perrenque.,O vivir sus ensoñaciones para que se llene de coraje.,Or by living her daydreams to increase her courage.
 RoomBar-Pato-01,Esta fiesta está re-buena.,Esta fiesta está muy buena.,What an awesome party.
@@ -37,22 +36,22 @@ RoomBar-Coat-Pato-01,Nadie esta viendo... es el momento,Nadie esta viendo... es 
 RoomBar-Coat-Pato-02,¡Túmbilis!,¡Ahora es mío!,Now it is mine!
 RoomBar-WolfMask,Una máscara de lobo,Una máscara de lobo,A wolf mask
 RoomBar-WolfMask-Pato-01,Ahora o nunca. Está distraído drogándose.,Es el momento. Está distraído drogándose.,This is my chance. The guy is taking drugs.
-RoomBar-WolfMask-Pato-02,Pedistes de máscara,La tomaré prestada un ratito,I\'ll borrow it for a moment
+RoomBar-WolfMask-Pato-02,Pedistes de máscara,La tomaré prestada un ratito,I'll borrow it for a moment
 RoomBar-GlassWithDentures,Un vaso con dientes,Un vaso con la dentadura,Glass with dentures
-RoomBar-GlassWithDentures-Pato-01,"Quedó foquiada, puedo choripapearme esos dientes ahora mismo.","Se quedó dormida, ahora puedo tomar la dentadura.",She won\'t miss her dentures. She is sleeping.
+RoomBar-GlassWithDentures-Pato-01,"Quedó foquiada, puedo choripapearme esos dientes ahora mismo.","Se quedó dormida, ahora puedo tomar la dentadura.",She won't miss her dentures. She is sleeping.
 RoomBar-GlassWithDentures-Pato-02,Listo el pollo.,Eso estuvo fácil.,Easy peasy.
-RoomBar-GlassWithDentures-Pato-03,Ya tengo los dientes pa\' parecer un lobo,Ahora tengo los dientes para mi disfráz,Now I have the fangs for my costume
+RoomBar-GlassWithDentures-Pato-03,Ya tengo los dientes pa' parecer un lobo,Ahora tengo los dientes para mi disfráz,Now I have the fangs for my costume
 RoomBar-GlassWithDentures-Pato-04,Es la dentadura postiza de esa loba vejete que duerme,Es la dentadura de la vieja loba,Those are the dentures of the old wolf.
 RoomBar-Sink,Un lavamanos.,Ese es el lavamanos.,Hand washer
-RoomBar-Sink-Pato-01,Me voy a juagar las alitas,Me voy a lavar las alitas,I\'ll wash my wings.
+RoomBar-Sink-Pato-01,Me voy a juagar las alitas,Me voy a lavar las alitas,I'll wash my wings.
 RoomBar-Sink-Pato-02,¡Ay qué rico!,Se siente bonitoooo.,It feels so gooood.
 RoomBar-Sink-Pato-03,...y qué tal si,...y qué tal si,...what if.
-RoomBar-Sink-Pato-04,Ya no me quiero lavar las alitas.,No me quiero lavar las alitas de nuevo.,I don\'t want to wash my wings again.
+RoomBar-Sink-Pato-04,Ya no me quiero lavar las alitas.,No me quiero lavar las alitas de nuevo.,I don't want to wash my wings again.
 RoomBar-Sink-Pato-05,Tan limpias limpieciticas,Ya están limpias.,They are already clean.
 RoomBar-Exit,La salida,La salida,The Exit
-RoomBar-Exit-Pato-01,voatomar algo de aire...,Creo que saldré a tomar aire...,I\'ll go out to take some air...
+RoomBar-Exit-Pato-01,voatomar algo de aire...,Creo que saldré a tomar aire...,I'll go out to take some air...
 RoomSea-Pato-01,No se me preocupes...,No te preocupes...,Do not worries...
-RoomSea-Pato-02,¡¡¡Voy a sacarte de ahí como sea!!!,¡¡¡Buscaré la forma de sacarte de ahí!!!,I\'ll find a way to take you out!!!
+RoomSea-Pato-02,¡¡¡Voy a sacarte de ahí como sea!!!,¡¡¡Buscaré la forma de sacarte de ahí!!!,I'll find a way to take you out!!!
 RoomSea-Pato-03,Debe haber algo porai ,Tiene que haber algo que pueda hacer,There must be something I can do
 RoomSea-Umbrella,Una sombrilla care gancho,Una sombrilla con gancho,An umbrella with hook
 RoomSea-Umbrella-Pato-01,A ver el sombrillín.,Tomaré la sombrilla.,I take this.
@@ -60,10 +59,10 @@ RoomSea-Umbrella-Pato-02,El mango parece un gancho.,El mango parece un gancho.,T
 RoomSea-Umbrella-Pato-03,Puedo intentar jalar a Lobo con esto...,Trataré de ayudar a Lobo con esto...,I can try to pull Lobo with this...
 RoomSea-Tape,Una cabina llena de chécheres,Una cabina llena de cosas varias,A room full of things
 RoomSea-Tape-Pato-01,A ver queai porai...,A ver si encuentro algo...,Maybe there is something here...
-RoomSea-Tape-Pato-02,Mencontré una cinta.,Encontré una cinta.,I\'ve found tape.
+RoomSea-Tape-Pato-02,Mencontré una cinta.,Encontré una cinta.,I've found tape.
 RoomSea-Tape-Pato-03,¡Péguelo perro!,Puede ser útil.,Might be useful.
 RoomSea-Mop,Un trapero jediondo,Un trapero sucio,A long dirty mop
-RoomSea-Mop-Pato-01,Esta re puerco... pero creo que me servirá.,Es desagradable... pero creo que será útil.,It\'s disgusting... but it can help.
+RoomSea-Mop-Pato-01,Esta re puerco... pero creo que me servirá.,Es desagradable... pero creo que será útil.,It's disgusting... but it can help.
 RoomSea-Mop-Pato-02,Esto huele a miaos... :S,Huele feo... :S,It stinks... :S
 RoomSea-Mop-Pato-03,Pero es medio largo.,Pero es largo.,But is long
 RoomSpace-Homesplantation,Plantación de casas,Plantación de casas,Homes plantation
@@ -74,69 +73,135 @@ RoomSpace-Luna-02,Pato y Lobo no volverán poallá  sin agua espacial,Pato y Lob
 RoomSpace-Luna-03,Pato y Lobo no volverán poallá  sin una semilla-hogar o agua espacial,Pato y Lobo no regresarán a Luna sin una semilla-hogar o agua espacial,Pato and Lobo will not return to Luna without the house-seed or the water
 RoomSpace-Marrano,Marrano,Marrano,Pig Planet
 RoomSpace-Marrano-Pato-01,Ya tenemos agüita fina pa' nuestra semiilla-hogar. No hay pa' qué volver.,Ya tenemos agua para nuestra semiilla-hogar. No es necesario volver.,We already have the water for the house-seed. No need to back.
-RoomHomesPlantation-Pato-01,,,Do it slowly
-RoomHomesPlantation-Pato-02,,,"Good, good. Now take down the arm."
-RoomHomesPlantation-Pato-03,,,Done! We have our house-seed. Let\'s go to Luna and sow it.
-RoomHomesPlantation-Pato-04,,,Lobo and I need a home to live and give each other love.
-RoomHomesPlantation-Pato-05,,,Houses are planted on this planet.
-RoomHomesPlantation-Pato-06,,,We must choose the most beautiful one to take to Luna.
-RoomHomesPlantation-Pato-07,,,"Is that true, love of mine?"
-RoomHomesPlantation-Lobo-01,,,Doing so. Doing so...
-RoomHomesPlantation-Lobo-02,,,Yes-it-is
-RoomHomesPlantation-PropSign-Pato-01,,,What do you think of this one?
-RoomHomesPlantation-PropSign-Pato-02,,,So this one will be.
-RoomHomesPlantation-PropSign-Pato-03,,,"Agree, my love. Let's check other one."
-RoomHomesPlantation-PropSign-Pato-04,,,Yup. Maybe that one...
-RoomHomesPlantation-PropSign-Pato-05,,,You're right. I'll look another one.
-RoomHomesPlantation-PropSign-Pato-06,,,Is the sign with the detail of a house
-RoomHomesPlantation-Sign,,,Details about this home-seed
-RoomHomesPlantation-Sign-Details,,,"Planted 8 months ago. Front garden, two bedrooms, bathroom with tub."
-RoomHomesPlantation-Sign-Reaction,,,"Awwwww, is our dream-house."
-RoomHomesPlantation-Sign2-Details,,,"Planted 6 months ago. Two floors, four bedrooms, two bathrooms."
-RoomHomesPlantation-Sign2-Reaction,,,Nope. Too big.
-RoomHomesPlantation-Sign3-Details,,,"Planted 4 months ago. Backyard, one bedroom, bathroom..."
-RoomHomesPlantation-Sign3-Reaction,,,We want one with a front garden.
-RoomHomesPlantation-Sign4-Details,,,"Planted 2 months ago. Two bedrooms, bathroom, terrace."
-RoomHomesPlantation-Sign4-Reaction,,,"Two bedrooms sounds good, but don't like the terrace."
-RoomHomesPlantation-Sign5-Details,,,"Planted 2 months ago. Studio apartment, balcony."
-RoomHomesPlantation-Sign5-Reaction,,,A studio? NO WAY!
-RoomHomesPlantation-Sign6-Details,,,"Planted a month ago. One bedroom, bathroom with tub, balcony."
-RoomHomesPlantation-Sign6-Reaction,,,"We want a bathroom with tub, but we need something bigger."
-RoomLuna-Pato-01,,,How calm and quiet it is around here
-RoomLuna-Pato-02,,,Awwwwww....
-RoomLuna-Pato-03,,,Yes yes yes. Let\'s do it.
-RoomLuna-Lobo-01,,,Yes... makes you want to... T.D.A.F.
-RoomLuna-Lobo-02,,,Let\'s search for materials to build our home here.
-RoomLuna-Spaceship-Pato-01,,,"Let\'s traverse the cosmos, my love."
-RoomLuna-Spaceship-Pato-02,,,Nope. We have all we need.
-RoomLuna-Spaceship-Pato-03,,,A house-seed and water for it.
-RoomLuna-Spaceship-Lobo-01,,,Yeyyyyyyyyyy
-RoomLuna-Spaceship-Lobo-02,,,"Let\'s traverse the cosmos, my love."
-RoomLuna-Spaceship-Lobo-03,,,Then...
-RoomLuna-Spaceship-Lobo-04,,,Water it! water it!
-RoomLuna-HomeSeed,,,Home-seed
-RoomLuna-HomeSeed-Pato-01,,,This is the seed we chose for our home
-RoomLuna-HomeSeed-Pato-02,,,Our house will be awesome!
-RoomLuna-HomeSeed-Pato-03,,,And here comes the water
-RoomLuna-HomeSeed-Pato-04,,,"Look my love, is the house of our dreams."
-RoomLuna-HomeSeed-Lobo-01,,,"Yeeeyyyy... it has a front garden, two bedrooms, and bathroom with tub."
-RoomLuna-HomeSeed-Lobo-02,,,Now we can give us love and make children.
-RoomLuna-Home,,,Our home
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
+RoomHomesPlantation-Pato-01,Hagale con cariño,Despacio,Do it slowly
+RoomHomesPlantation-Pato-02,"Eso, eso. Baje el bracito","Bien, bien. Ahora baja el robo brazo.","Good, good. Now take down the arm."
+RoomHomesPlantation-Pato-03,Listones. Ya tenemos la semilla-casa. Ora pa' Luna a sembrarla.,Listo. Ya tenemos la semilla-casa. Vamos a Luna a sembrarla.,Done! We have our house-seed. Let's go to Luna and sow it.
+RoomHomesPlantation-Pato-04,Lobo y yo necesitamos un hogar para vivir y darnos amor,Lobo y yo necesitamos un hogar para amarnos por siempre,Lobo and I need a home to live and give each other love.
+RoomHomesPlantation-Pato-05,En este planeta se siembran casas.,En este planeta se siembran casas.,Houses are planted on this planet.
+RoomHomesPlantation-Pato-06,Debemos escoger la más pispa pa' llevarla a la Luna.,Debemos escoger la más bonita para llevarla a la Luna.,We must choose the most beautiful one to take to Luna.
+RoomHomesPlantation-Pato-07,¿Si o qué mi rey?,¿Cierto amor mío?,"Is that true, love of mine?"
+RoomHomesPlantation-Lobo-01,Voy voy voy...,Ahí voy,Doing so. Doing so...
+RoomHomesPlantation-Lobo-02,Sí madrecita,Así es,Yes-it-is
+RoomHomesPlantation-PropSign-Pato-01,"Echele ojo a esta, está re kiut ^^",¿Qué piensas de ésta?,What do you think of this one?
+RoomHomesPlantation-PropSign-Pato-02,Tengamos relaciones sepsuales en ella :3,Entonces esta es la elegida.,So this one will be.
+RoomHomesPlantation-PropSign-Pato-03,"Deacuerdo, mi rey. Echemole ojo a otra.","Estoy de acuerdo, mi amor. Busquemos otra.","Agree, my love. Let's check other one."
+RoomHomesPlantation-PropSign-Pato-04,"Seh, depronto esa...",Si. Puede ser esa...,Yup. Maybe that one...
+RoomHomesPlantation-PropSign-Pato-05,Sicierto. Chsimosiemos otra.,Tienes razón. Buscaré otra.,You're right. I'll look another one.
+RoomHomesPlantation-PropSign-Pato-06,Es la señal con los detalles de la semilla-hogar,Es la señal con los detalles de la casa,Is the sign with the detail of a house
+RoomHomesPlantation-Sign,Detalles de esta semilla-hogar,Detalles de esta semilla-hogar,Details about this home-seed
+RoomHomesPlantation-Sign-Details,"Plantada hace 8 meses. Jardín frontal, dos habitaciones, baño con tina.","Plantada hace 8 meses. Jardín frontal, 2 habitaciones, baño con tina.","Planted 8 months ago. Front garden, two bedrooms, bathroom with tub."
+RoomHomesPlantation-Sign-Reaction,"Awwwww, el hogare que siempre soñamos","Awwwww, es la casa de nuestros sueños","Awwwww, is our dream-house."
+RoomHomesPlantation-Sign2-Details,"Plantada hace 6 meses. Dos pisos, cuatro habitaciones, dos baños.","Plantada hace 6 meses. Dos pisos, cuatro habitaciones, dos baños.","Planted 6 months ago. Two floors, four bedrooms, two bathrooms."
+RoomHomesPlantation-Sign2-Reaction,Nah. Ta re grande.,No. Muy grande.,Nope. Too big.
+RoomHomesPlantation-Sign3-Details,"Plantada hace 4 meses. Patio interior, una habitación, un baño...","Planta hace 4 meses. Patio interior, una habitación, un baño...","Planted 4 months ago. Backyard, one bedroom, bathroom..."
+RoomHomesPlantation-Sign3-Reaction,Pero más chimbita con jardín frontal.,Queremos una con jardín frontal.,We want one with a front garden.
+RoomHomesPlantation-Sign4-Details,"Plantada hace 2 meses. Dos habitaciones, baño, terraza.","Plantada hace 2 meses. Dos habitaciones, baño, terraza.","Planted 2 months ago. Two bedrooms, bathroom, terrace."
+RoomHomesPlantation-Sign4-Reaction,"Dos habitaciones pega, pero la terraza no me convence...","Dos habitaciones suena bien, pero no me gusta la terraza.","Two bedrooms sounds good, but don't like the terrace."
+RoomHomesPlantation-Sign5-Details,"Plantada hace 2 meses. Aparta estudio, balcón.","Plantada hace 2 meses. Aparta estudio, balcón.","Planted 2 months ago. Studio apartment, balcony."
+RoomHomesPlantation-Sign5-Reaction,¿Un estudio? ¡NI A PALO!,¿Estudio? ¡DE NINGUNA MANERA!,A studio? NO WAY!
+RoomHomesPlantation-Sign6-Details,"Plantada hace 1 mes. Una habitación, baño con tina, balcón.","Plantada hace 1 mes. Una habitación, baño con tina, balcón.","Planted a month ago. One bedroom, bathroom with tub, balcony."
+RoomHomesPlantation-Sign6-Reaction,"Queremos tina, pero esta muy chirriquitica.","Queremos baño con tina, pero necesitamos algo más grande.","We want a bathroom with tub, but we need something bigger."
+RoomLuna-Pato-01,Que relajao es por estos lares.,Qué tranquilo y silencioso es por aquí,How calm and quiet it is around here
+RoomLuna-Pato-02,Awwwwww...,Awwwwww...,Awwwwww....
+RoomLuna-Pato-03,Siii. hagámolo real.,Si si si. Hagamoslo.,Yes yes yes. Let's do it.
+RoomLuna-Lobo-01,Si... me dan ganas de bareto y arrunchis,Si... te hace querer... pasarla lindo.,Yes... makes you want to... T.D.A.F.
+RoomLuna-Lobo-02,Vamoa construir nuestra casa por aquí.,Busquemos materiales para construir nuestra casa aquí.,Let's search for materials to build our home here.
+RoomLuna-Spaceship-Pato-01,"Viaje cosmicooooo, cosita rica.","Vamos a viajar por el cosmos, amor mío.","Let's traverse the cosmos, my love."
+RoomLuna-Spaceship-Pato-02,Nopo. Ya estamos full equipo. ,No. Tenemos todo lo que necesitamos.,Nope. We have all we need.
+RoomLuna-Spaceship-Pato-03,Una semilla-hogar y agüita pa mi gente.,Una semilla-hogar y agua para regarla.,A house-seed and water for it.
+RoomLuna-Spaceship-Lobo-01,Esoooooo,Siiiii,Yeyyyyyyyyyy
+RoomLuna-Spaceship-Lobo-02,"Viaje cosmicooooo, patita sabrosa.","Vamos a viajar por el cosmos, amor mío.","Let's traverse the cosmos, my love."
+RoomLuna-Spaceship-Lobo-03,Y ora...,Ahora...,Then...
+RoomLuna-Spaceship-Lobo-04,¡Echeliagua! ¡Echeliagua!,¡Riegala! ¡Riegala!,Water it! water it!
+RoomLuna-HomeSeed,Semilla-hogar,Semilla-hogar,Home-seed
+RoomLuna-HomeSeed-Pato-01,Esta es la semilla que escogimos para nuestro hogar,Esta es la semilla que escogimos para nuestro hogar,This is the seed we chose for our home
+RoomLuna-HomeSeed-Pato-02,¡Nuestra ranchita será muy lindi!,¡Nuestra casa será increible!,Our house will be awesome!
+RoomLuna-HomeSeed-Pato-03,Agüita pa mi gente,Y aquí viene el agua,And here comes the water
+RoomLuna-HomeSeed-Pato-04,"Vea mi rey, es nuestro cambuchito ideal.","Mira amor mío, es la casa de nuestros sueños.","Look my love, is the house of our dreams."
+RoomLuna-HomeSeed-Lobo-01,"Chimbita omee... jardín frontal, dos habitaciónes, baño con tina... pa que más.","Siiiiiiiiii... tiene jardín frontal, dos habitaciones y un baño con tina.","Yeeeyyyy... it has a front garden, two bedrooms, and bathroom with tub."
+RoomLuna-HomeSeed-Lobo-02,Ahora tengamos relaciones y hagamos retoños.,Ahora podemos darnos amor y hacer hijos.,Now we can give us love and make children.
+RoomLuna-Home,Nuestra ranchita.,Nuestro hogar.,Our home
+RoomMarrano-01,,,Pato saw the water Pig was guarding.
+RoomMarrano-Pato-01,,,We need that water to water our house-seed.
+RoomMarrano-Pato-02,,,I better hide.
+RoomMarrano-Pato-03,,,lol... The only stupid here is him.
+RoomMarrano-Pig-01,,,MY FLOWERS!
+RoomMarrano-Pig-02,,,Where are you stupid flower thief?
+RoomMarrano-Container-Pato-01,,,There must be something we can do to break that shield.
+RoomMarrano-Container-Pato-02,,,"That will be risky, my love."
+RoomMarrano-Container-Pato-03,,,But maybe there's something we can use on it.
+RoomMarrano-Container-Pato-04,,,Look at those beautiful flowers.
+RoomMarrano-Container-Pato-05,,,They make a great contrast to their owner.
+RoomMarrano-Container-Pato-06,,,Now is the time. I'll stole the Fast-growing-water.
+RoomMarrano-Container-Lobo-01,,,What if I crash the spaceship on it?
+RoomMarrano-Water-Pato-01,,,Can I...
+RoomMarrano-Water-Pato-02,,,Ok ok...
+RoomMarrano-Water-Pato-03,,,It is mine!!!
+RoomMarrano-Water-Pato-04,,,My love. Use the teleport ray to take me out of here.
+RoomMarrano-Water-Lobo-01,"Erre, mi reina de reinas",,"As you command, love of my loves"
+RoomMarrano-Water-Pig-01,,,"You touch it, I kill you."
 ,,,
 PERSONAJES,,,
-,,,
-,,,
-,,,
-,,,
+CharacterPato-CheckCostumeCompletion-Pato-01,¡Síiiiiiiii!,¡Síiiiiiiiiiiiiiii!,WEEEEEEEEEE!
+CharacterPato-CheckCostumeCompletion-Pato-02,Ya tengo el disfracho.,Tengo el disfraz.,I completed the costume.
+CharacterPato-CheckCostumeCompletion-Pato-03,Ora sí... ¡transforlobación!,Ahora... ¡transformación en loba!,Now... wolf transformation.
+CharacterPato-CheckCostumeCompletion-Pato-04,Estoy listerine para hablar con Lobo.,Estoy lista para hablar con Lobo.,I feel I'm ready to talk with Lobo!
+Character-Lobo,"Lobo, mi traga.","Lobo, mi amor inalcanzable.","Lobo, my unattainable love."
+CharacterLobo-Bar-Pato-01,Ora que tengo el disfracho no tendré miedo.,"Ahora que parezco una Loba, no tendré miedo.",Now that I have my disguise I won't fear.
+CharacterLobo-Bar-Pato-02,Hola.,,Hi.
+CharacterLobo-Bar-Pato-03,Qué.... más....,Ho... la...,Hell....o....
+CharacterLobo-Bar-Lobo-04,¡Epa! ¿Por qué 'tá disfrazada?,¡Ey! ¿Para qué es el disfraz?,Ey!... What's the costume for?
+CharacterLobo-Bar-Pato-05,Pues...,Emmm...,Well...
+CharacterLobo-Bar-Pato-06,Ya no le daré más vueltas.,No lo dudaré más.,I will not hesitate anymore.
+CharacterLobo-Bar-Pato-07,Voy con toda a hablarle a Lobo.,¡Le hablaré a Lobo AHORA!,I'm gonna talk with Lobo NOW!
+CharacterLobo-Bar-Pato-08,...,,
+CharacterLobo-Bar-Pato-09,........,,
+CharacterLobo-Bar-Pato-10,......................,,
+CharacterLobo-Bar-Pato-11,Ho..... ho..... ho.....,,He..... he..... h.....
+CharacterLobo-Bar-Pato-12,¡Ayyyy pero qué guapote!,¡Es tan atractivo!,He is sooooo handsome!!!
+CharacterLobo-Bar-Pato-13,Nunca seré capaz de hablarle.,,I'll never have the guts to talk him
+CharacterLobo-Bar-Pato-14,Ayyyy... qué rico se mueve...,Ayyyy... qué bien baila...,And look how he moves...
+CharacterLobo-Bar-Pato-15,/( > __ < \\),,
+CharacterLobo-Sea-Lobo-01,[wave]Aiudaaaaaaaaaaaaaaaa[/wave],[wave]Ayuuudaaaaaaaaa[/wave],[wave]Heeeeeeeeeeeeeeeeelp[/wave]
+CharacterLobo-Sea-Lobo-02,¡¡¡Mi hogo!!!,¡¡¡Me ahogo!!!,I'm drowning!!!
+CharacterLobo-Sea-Pato-03,Aguanta amor meo. Te sacaré de ahí.,Aguanta amor mío. Te salvaré.,Hang on there my love. I'll get you out of there.
+CharacterLobo-Look-Pato-01,Está más bueno que el pan con chocolate.,Es muuuuuuuy atractivo.,He is soooooooooo hot!!!
+CharacterLobo-Mopbrella-Pato-01,"Te salve de la desgracía, Lobo de mis amores.",Te he salvado amor mío.,"I've saved your life, love of my."
+CharacterLobo-OnItemUsed-Pato-01,Tá muy lejos.,No alcanzo hasta allá.,I can not reach you.
+Character-Conejuno,El de la barra.,El camarero.,Barman.
+Character-Conejuno-OnLook-Pato-01,Es el de la barra.,Es el camarero.,The barman.
+Character-Conejuno-OnLook-Pato-02,Sirve tragos y escucha historias mierdas todos los días.,Sirve tragos y escucha historias.,The one who serves drinks and listens to nonsense stories every night.
+Character-Lagarto,El de la música.,El DJ.,The DJ
+Character-Lagarto-OnInteract-Pato-01,Hola.,,Hi-ya.
+Character-Lagarto-OnInteract-Lagarto-02,Punchis punchis. Hola.,,Pums pums pums. Hi.
+Character-Lagarto-OnInteract-Lagarto-03,Un momento. Una estrella no habla cara a cara con la chusma.,,Wait. A star can't talk to nobody without a mask.
+Character-Lagarto-OnInteract-Lagarto-04,Listo. ¿Qué pasó?,,So. What do you want?
+Character-Lagarto-OnInteract-Lagarto-05,Me lleva la verdura. Me robaron mi máscara.,,Fock. Someone stole my mask.
+Character-Lagarto-OnInteract-Lagarto-06,"Puedes hablarme, pero no me mires a la cara.",,"You can talk to me, but don't dare to look at me."
+Character-Lagarto-OnInteract-Pato-07,Está bien...,,Aaaaall right...
+Character-Lagarto-OnLook-Pato-01,Esa máscara del DJ puede servirme como disfraz.,,I can use the DJ's wolf mask for my costume.
+Character-Lagarto-OnLook-Pato-02,Con razón usaba esa máscara... está todo llevado.,,So that's why he uses the mask. Drogs!
+Character-Lagarto-OnLook-Pato-03,Hay algo de angustia en sus mirada.,,His gaze is full of anguish.
+Character-Marrano,¿Duque?,,Pres. Duque.
+Character-Marrano-OnInteract-Marrano-01,¡A la mierda! Estoy buscando al vándalo.,¡Vete! Estoy buscando al intruso.,Go away! I'm searching the intruder.
+Character-Pez,Un... pescado-guardian-robot.,,Mecha-fish... it seems.
+Character-Vieja,Una loba vieja.,,Old-y with dentures.
+Character-Vieja-OnInteract-Pato-01,La vieja quedó foquiada con mi super coctel.,,That cocktail made the job. She fell asleep.
+Character-Vieja-OnInteract-Pato-02,Ojalá no la irrespeten.,,I hope she'd be fine.
+Character-Vieja-CocktailSuper-Pato-01,Vea señora. Le invito este traguito.,,Old-y. I invite you this drink.
+Character-Vieja-CocktailSuper-Pato-02,Fuerte y con sabor a viejo.,,Strong and with the flavor of an elder so old...
+Character-Vieja-CocktailSuper-Vieja-03,Que el santo pollo la bendiga mija.,,"Glob bless you, my girl."
+Character-Vieja-CocktailSuper-Vieja-04,glup glup glup glup glup.,,gulp gulp gulp gulp.
+Character-Vieja-CocktailSuper-Vieja-05,Oh sí... como en los viejos tiempos.,,FOCK YEAH!... like old times.
+Character-Vieja-CocktailSuper-Vieja-06,Ahora sólo queda esperar a que...,,All I have to do now is wait for....
+Character-Vieja-CocktailSuper-Pato-07,¡Ferpecto! Alcanzó a dejar sus muelas en el vaso.,,Great! She put her dentures in the glass.
+Character-Vieja-CocktailSecret-Pato-01,¿Qué opina de este trago?,,What do you think of this drink old-y?
+Character-Vieja-CocktailSecret-Vieja-02,Mmmmm... no está nada mal... pero,,Mmmmm... not bad at all... but
+Character-Vieja-CocktailSecret-Vieja-03,"Como que le falta alguito. Sabe a viejo, pero no está tan fuerte.",,"But it lacks of something. It tastes like an elder, but it isn't strong."
+Character-Vieja-CocktailGolem-Pato-01,Tómese este.,,Drink this!
+Character-Vieja-CocktailGolem-Vieja-02,Pfffffffff.......,,
+Character-Vieja-CocktailGolem-Vieja-03,Está fuerte pero mucho lo dulce.,,What da fock. This is as sweet as a little pink baby.
+Character-Vieja-CocktailGolem-Vieja-04,El Tumbalocas no me gusta por eso. Le falta el sabor a viejo.,,I told you I don't like Golem cocktail. It lacks of the elder flavor.
 CONVERSACIONES,,,
 ChatWithConejuno-Start-01,A la orden.,¿Qué quieres?,What do you want?
 ChatWithConejuno-Opt1,Deme una pola,Quiero una cerveza.,A beer.
@@ -192,7 +257,7 @@ SongList-Opt3,Tus ojos me llevan a la luna.,,Your eyes take me to the moon.
 SongList-Opt4,El embolatao.,,The mess-man.
 SongList-Exit,Ninguna de esas.,Ninguna.,None.
 SongList-Opt1-Lagarto-01,Buena eletción. Ya mismo se la pongo.,¡Qué buena elección! La pondré ya mismo.,Great choice. Will play it now.
-SongList-Opt1-Lagarto-02,Pere me quito esto porque esa me hace sudar.,Pero primero me quitaré esto porque esa me gusta mucho.,But I\'m taking this off because that one makes me sweat.
+SongList-Opt1-Lagarto-02,Pere me quito esto porque esa me hace sudar.,Pero primero me quitaré esto porque esa me gusta mucho.,But I'm taking this off because that one makes me sweat.
 SongList-Opt1-Lagarto-03,¡Ora sí! A gozaaaaaaar.,¡Estoy listo! A gozaaaaaaaar.,Woooooooooooooooooooooo.
 SongList-Opt1-Lagarto-04,No quiero. Ahora me pone triste esa canción.,No... esa canción me trae malos recuerdos.,Don't gonna play that. Memories.
 SongList-Opt2-Lagarto-01,¡De una!,¡Con gusto!,Sure!
@@ -252,7 +317,7 @@ ChatWithPez-Opt1-Pato-08,"Entiendo, entiendo.",,"Got it, got it."
 ChatWithPez-Opt2-Pez-01,Puedes comprarla o ganarla en una pelea de miradas.,,You can buy it or earn it in a stare fight.
 ChatWithPez-Opt2-Pez-02,Así fue como gané la mía.,,That's how i earn mine.
 ChatWithPez-Opt2-Pato-03,Sí sí... ya lo dijites.,,Yep... you already said that.
-ChatWithPez-Opt3-Pez-01,Podrías... si no estuvieras tan sucia.,,You could... if you weren\'t so dirty.
+ChatWithPez-Opt3-Pez-01,Podrías... si no estuvieras tan sucia.,,You could... if you weren't so dirty.
 ChatWithPez-Opt3-Pato-02,¡YO NO ESTOY SUCIA!,,I'M NOT DIRTY!
 ChatWithPez-Opt3-Game-03,Pato se enojó como hace mucho no lo hacía.,,Pato got mad as she did not in a long time
 ChatWithPez-Opt3-Game-04,Ora sí estaba dispuesta a derrotar a Pez en la pelea de miradas.,,Now she was commited to defeat Pez in a stare fight
@@ -370,13 +435,6 @@ ChatWithMarrano-Opt4-Pato-07,A menos que lo haga alguien mucho muy fuerte.,,Unle
 ChatWithMarrano-Opt4-Pato-08,(O que algo bien pesado se lo tire).,,(Or that you have something heavy enough).
 ChatWithMarrano-Opt4-Marrano-09,Sí.,,Yes.
 ChatWithMarrano-Exit-Marrano-01,¡SÍIIIIII! ¡VÁYASE PA' LA MIERDA!,,Yes. You better LEEEEAVE FOREVER!!!!
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
 GLOBALS,,,
 Globals-ExplainCharacterChange-Game-01,Se puede cambiar de personaje en algunas ensoñaciones.,En algunas ensoñaciones podrás cambiar de personaje.,In some daydreams you can switch characters.
 Globals-ExplainCharacterChange-Game-02,Se hace clic en el personaje en el inventario.,Haz clic en el icono respectivo en el inventario.,Just click the respective icon in the inventory.
