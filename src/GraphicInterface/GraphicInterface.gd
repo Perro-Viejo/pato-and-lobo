@@ -6,7 +6,7 @@ onready var _display_box: DisplayBox = find_node('DisplayBox')
 onready var _inventory_container: InventoryContainer = find_node('InventoryContainer')
 onready var _click_handler: Button = $MainContainer/ClickHandler
 onready var _dialog_menu: DialogMenu = find_node('DialogMenu')
-#onready var _toolbar: Toolbar = find_node('Toolbar')
+onready var _toolbar: Toolbar = find_node('Toolbar')
 
 # warning-ignore-all:return_value_discarded
 
@@ -51,7 +51,7 @@ func _disable_panels(props := { blocking = true }) -> void:
 	if _inventory_container.is_disabled: return
 
 	_inventory_container.disable()
-#	_toolbar.disable()
+	_toolbar.disable()
 
 
 func _enable_panels() -> void:
@@ -59,22 +59,24 @@ func _enable_panels() -> void:
 	_click_handler.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	G.waiting_click = false
 	
-	_display_box.hide()
+	_display_box.dissapear()
 	_dialog_text.hide()
 
 #	_info_bar.text = ''
 	_info_bar.show()
-	_inventory_container.show()
-#	_toolbar.show()
 
-	_inventory_container.enable()
-#	_toolbar.enable()
+	if not E.current_room.hide_gi:
+		_inventory_container.show()
+		_inventory_container.enable()
+	
+	_toolbar.show()
+	_toolbar.enable()
 
 
 func _continue() -> void:
 	if _dialog_text.percent_visible == 1.0:
 		_dialog_text.hide()
-		_display_box.hide()
+		_display_box.dissapear()
 		G.emit_signal('continue_clicked')
 	else:
 		_dialog_text.stop()
@@ -83,10 +85,10 @@ func _continue() -> void:
 func _hide_panels() -> void:
 	_inventory_container.hide()
 	_info_bar.hide()
-#	_toolbar.hide()
+	_toolbar.hide()
 
 
 func _show_panels() -> void:
 	_inventory_container.show()
 	_info_bar.show()
-#	_toolbar.show()
+	_toolbar.show()

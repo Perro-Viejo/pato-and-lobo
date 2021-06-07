@@ -41,8 +41,19 @@ func option_selected(opt: DialogOption) -> void:
 				'Pato: CocktailsMenu-Opt2-Pato-03',
 				G.display('CocktailsMenu-Opt2-Game-04'),
 				'Pato: CocktailsMenu-Opt2-Pato-05',
-				#TODO: ¿Subirle el coraje cuando se tome este? (a.k.a. final alternativo)
+				G.display('CocktailsMenu-Opt2-Game-06'),
+				'Pato: CocktailsMenu-Opt2-Pato-06',
+				E.wait(3),
+				'Pato: CocktailsMenu-Opt2-Pato-07',
+				G.display('CocktailsMenu-Opt2-Game-08')
 			]), 'completed')
+			
+			Globals.did(Globals.GameState.GOT_DRUNK)
+			Globals.courage += 500
+			yield(I, 'courage_update_shown')
+			
+			yield(E.run(['Pato: CocktailsMenu-Opt2-Pato-09',]), 'completed')
+			C.get_character('Lobo').on_interact()
 		'Opt3':
 			yield(E.run([
 				'Conejuno: CocktailsMenu-Opt3-Conejuno-01',

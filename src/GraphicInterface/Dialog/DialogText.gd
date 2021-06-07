@@ -25,6 +25,7 @@ onready var _label_dflt_size: Vector2 = $Label.rect_size
 func _ready() -> void:
 	# Establecer la configuración inicial
 	clear()
+	$Label.text = ''
 	modulate.a = 0.0
 	_secs_per_character = E.text_speeds[E.text_speed_idx]
 	
@@ -40,26 +41,33 @@ func play_text(props: Dictionary) -> void:
 	# Establecer el estado por defecto
 	_is_waiting_input = false
 	var msg: String = E.get_text(props.text)
+
 	clear()
 	push_color(props.color)
+	$Label.text = ''
+	$Label.autowrap = false
+	$Label.rect_size.x = 0.0
+	yield(get_tree(), 'idle_frame') # Para que se pueda calcular bien el ancho
+	
 	append_bbcode(msg)
 	rect_size = Vector2(wrap_width, _dflt_height)
 
 	# Se usa un Label para saber el ancho y alto que tendrá el RichTextLabel
-	$Label.rect_size = Vector2(wrap_width, _dflt_height)
 	$Label.text = text
-	
 	rect_position = props.position
-
-	yield(get_tree(), 'idle_frame')
+	yield(get_tree(), 'idle_frame') # Para que se pueda calcular bien el ancho
+	
+	
+	if $Label.rect_size.x > wrap_width:
+		$Label.rect_size.x = wrap_width
+		$Label.autowrap = true
 	
 	_target_size = Vector2(
-		wrap_width,
+		$Label.rect_size.x,
 		_dflt_height + (($Label.get_line_count() - 1) * 14.0)
 	)
 	rect_size = _target_size
-	$Label.rect_size = _target_size
-	rect_position.y -= 6.0
+	rect_position.y -= 12.0
 
 	# Ajustar la posición en X del texto que dice el personaje
 	rect_position.x -= rect_size.x / 2
@@ -67,8 +75,6 @@ func play_text(props: Dictionary) -> void:
 		_target_size.x = min_wrap_width
 		_target_size.y = _dflt_height + (($Label.get_line_count() - 1) * 14.0)
 		rect_size = _target_size
-		push_align(RichTextLabel.ALIGN_LEFT)
-		$Label.rect_size = _target_size
 
 		rect_position.x = 4.0
 		rect_position.y -= 12.0
@@ -76,21 +82,21 @@ func play_text(props: Dictionary) -> void:
 		_target_size.x = min_wrap_width
 		_target_size.y = _dflt_height + (($Label.get_line_count() - 1) * 14.0)
 		rect_size = _target_size
-		push_align(RichTextLabel.ALIGN_RIGHT)
-		$Label.rect_size = _target_size
 
-		rect_position.x = E.game_width - rect_size.x
+		rect_position.x = E.game_width - rect_size.x - 4.0
 		rect_position.y -= 12.0
+
+		clear()
+		push_color(props.color)
+		append_bbcode('[right]%s[/right]' % msg)
 	else:
-		push_align(RichTextLabel.ALIGN_CENTER)
-	
-	pop()
+		clear()
+		push_color(props.color)
+		append_bbcode('[center]%s[/center]' % msg)
 	
 	# Ajustar la posición en Y del texto que dice el personaje	
 	rect_position.y -= _target_size.y
 	rect_position.y += props.offset_y
-#
-#	# Si se quiere hacer de otro modo en el Inspector
 
 	if _secs_per_character > 0.0:
 		# Que el texto aparezca animado

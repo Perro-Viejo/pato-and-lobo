@@ -17,7 +17,7 @@ RoomMainMenu-Credits,Créditos,,Credits
 RoomMainMenu-Title,Nombre del chuzo,Nombre del bar,Bar name
 RoomMainMenu-Entrance,Entrada,,Entrance
 RoomMainMenu-Credits-01,Los que nos crearon.,Los desarrolladores que nos crearon.,The developers that created us.
-RoomMainMenu-Title-Pato-01,Este podría ser el nombre del juego,Este podría ser el nombre del juego,This might be the name of the game
+RoomMainMenu-Title-Pato-01,Este podría ser el nombre del juego.,Este podría ser el nombre del juego.,This might be the name of the game.
 RoomMainMenu-Title-Pato-02,Rico...,Suena emocionante...,Sounds exciting...
 RoomBar-01,Ella es Pato.,Ella es Pato.,She is Pato.
 RoomBar-02,Está enamorada de Lobo.,Está enamorada de Lobo.,She is in love with him.
@@ -121,26 +121,52 @@ RoomLuna-HomeSeed-Pato-04,"Vea mi rey, es nuestro cambuchito ideal.","Mira amor 
 RoomLuna-HomeSeed-Lobo-01,"Chimbita omee... jardín frontal, dos habitaciónes, baño con tina... pa que más.","Siiiiiiiiii... tiene jardín frontal, dos habitaciones y un baño con tina.","Yeeeyyyy... it has a front garden, two bedrooms, and bathroom with tub."
 RoomLuna-HomeSeed-Lobo-02,Ahora tengamos relaciones y hagamos retoños.,Ahora podemos darnos amor y hacer hijos.,Now we can give us love and make children.
 RoomLuna-Home,Nuestra ranchita.,Nuestro hogar.,Our home
-RoomMarrano-01,,,Pato saw the water Pig was guarding.
-RoomMarrano-Pato-01,,,We need that water to water our house-seed.
-RoomMarrano-Pato-02,,,I better hide.
-RoomMarrano-Pato-03,,,lol... The only stupid here is him.
-RoomMarrano-Pig-01,,,MY FLOWERS!
-RoomMarrano-Pig-02,,,Where are you stupid flower thief?
-RoomMarrano-Container-Pato-01,,,There must be something we can do to break that shield.
-RoomMarrano-Container-Pato-02,,,"That will be risky, my love."
-RoomMarrano-Container-Pato-03,,,But maybe there's something we can use on it.
-RoomMarrano-Container-Pato-04,,,Look at those beautiful flowers.
-RoomMarrano-Container-Pato-05,,,They make a great contrast to their owner.
-RoomMarrano-Container-Pato-06,,,Now is the time. I'll stole the Fast-growing-water.
-RoomMarrano-Container-Lobo-01,,,What if I crash the spaceship on it?
-RoomMarrano-Water-Pato-01,,,Can I...
-RoomMarrano-Water-Pato-02,,,Ok ok...
-RoomMarrano-Water-Pato-03,,,It is mine!!!
-RoomMarrano-Water-Pato-04,,,My love. Use the teleport ray to take me out of here.
+RoomMarrano-01,Pato vio el agua que estaba cuidando Duque.,,Pato saw the water Pig was guarding.
+RoomMarrano-Pato-01,Nitamos esa agüita pa' regar nuestra semilla-hogar.,,We need that water to water our house-seed.
+RoomMarrano-Pato-02,Mejor me escondo.,,I better hide.
+RoomMarrano-Pato-03,Gran pendejo...,,lol... The only stupid here is him.
+RoomMarrano-Pig-01,¡Mis flores de mi propiedad!,,MY FLOWERS!
+RoomMarrano-Pig-02,¿Dónde está este vándalo-terrorista desgraciado?,,Where are you stupid flower thief?
+RoomMarrano-Container-Pato-01,Debe haber una forma de romper ese escudo.,,There must be something we can do to break that shield.
+RoomMarrano-Container-Pato-02,"Eso sería arriesgado, papi.",,"That will be risky, my love."
+RoomMarrano-Container-Pato-03,Pero alomejor le podemos tirar algo.,,But maybe there's something we can use on it.
+RoomMarrano-Container-Pato-04,"Mirá-ve, severas flores.",,Look at those beautiful flowers.
+RoomMarrano-Container-Pato-05,Contrastan con el marrano ese.,,They make a great contrast to their owner.
+RoomMarrano-Container-Pato-06,Ora jue. Ya perdió el agüita.,,Now is the time. I'll stole the Fast-growing-water.
+RoomMarrano-Container-Lobo-01,¿Y se le estrello esta?,,What if I crash the spaceship on it?
+RoomMarrano-Water-Pato-01,¿Puedo...?,,Can I...
+RoomMarrano-Water-Pato-02,Ta bueno...,,Ok ok...
+RoomMarrano-Water-Pato-03,¡ES MÍA DE MI PROPIEDAD!,,It is mine!!!
+RoomMarrano-Water-Pato-04,Negro. Usá el rasho teletransportador pa' sacarme de aquí.,,My love. Use the teleport ray to take me out of here.
 RoomMarrano-Water-Lobo-01,"Erre, mi reina de reinas",,"As you command, love of my loves"
-RoomMarrano-Water-Pig-01,,,"You touch it, I kill you."
-,,,
+RoomMarrano-Water-Pig-01,Si la tocas te rompo.,,"You touch it, I kill you."
+RoomEnd-GotDrunk-Game-01,Pato y Lobo se besaron.,,
+RoomEnd-GotDrunk-Game-02,Una y otra vez durante toda la noche.,,
+RoomEnd-GotDrunk-Game-03,Luego consiguieron pieza.,,
+RoomEnd-GotDrunk-Game-04,Y se revolcaron como animales salvajes.,,
+RoomEnd-GotDrunk-Game-05,Alas y pelos quedaron por toda la habitación.,,
+RoomEnd-GotDrunk-Game-06,Al día siguiente.,,
+RoomEnd-GotDrunk-Game-07,Pato despertó con mucho dolor de cabeza.,,
+RoomEnd-GotDrunk-Game-08,Y nunca más fue capaz de acercarse a Lobo.,,
+RoomEnd-GotDrunk-Game-09,Pero siempre recuerda lo rico que fue.,,
+RoomEnd-Unable-Game-01,Pato no fue capaz de hablarle a Lobo.,,
+RoomEnd-Unable-Game-02,A pesar de sentirse segura por sus imaginaciones.,,
+RoomEnd-Unable-Game-03,Hay quienes nacieron para fracasar.,,
+RoomEnd-Unable-Game-04,Como ayó.,,
+RoomEnd-Disguised-Game-01,Pato le dijo a Lobo que quería parecer más atractiva.,,
+RoomEnd-Disguised-Game-02,Lobo le quitó la máscara y le dijo que así estaba mejor.,,
+RoomEnd-Disguised-Game-03,Ambos rieron y bailaron.,,
+RoomEnd-Disguised-Game-04,Y Pato fue quitándose poco a poco todo el disfraz.,,
+RoomEnd-Disguised-Game-05,Al finalizar la fiesta fueron a tomar caldo de costilla.,,
+RoomEnd-Disguised-Game-06,Y ahora están saliendo juntitos lo más de lindos.,,
+RoomEnd-AllDone-Game-01,Pato le dijo a Lobo que quería parecer más atractiva.,,
+RoomEnd-AllDone-Game-02,Lobo le quitó la máscara y le dijo que así estaba mejor.,,
+RoomEnd-AllDone-Game-03,Ambos rieron y bailaron.,,
+RoomEnd-AllDone-Game-04,Pato le contó a Lobo acerca de sus ensoñaciones.,,
+RoomEnd-AllDone-Game-05,Lobo sintió mariposas en el estómago... se había enamorado.,,
+RoomEnd-AllDone-Game-06,Más tarde le dio un beso mientras bailaban.,,
+RoomEnd-AllDone-Game-07,Pato y Lobo ahora están juntos y son mucho muy felices.,,
+THE_END,Se acabó,Fin,The end
 PERSONAJES,,,
 CharacterPato-CheckCostumeCompletion-Pato-01,¡Síiiiiiiii!,¡Síiiiiiiiiiiiiiii!,WEEEEEEEEEE!
 CharacterPato-CheckCostumeCompletion-Pato-02,Ya tengo el disfracho.,Tengo el disfraz.,I completed the costume.
@@ -162,6 +188,15 @@ CharacterLobo-Bar-Pato-12,¡Ayyyy pero qué guapote!,¡Es tan atractivo!,He is s
 CharacterLobo-Bar-Pato-13,Nunca seré capaz de hablarle.,,I'll never have the guts to talk him
 CharacterLobo-Bar-Pato-14,Ayyyy... qué rico se mueve...,Ayyyy... qué bien baila...,And look how he moves...
 CharacterLobo-Bar-Pato-15,/( > __ < \\),,
+CharacterLobo-Bar-Pato-16,[wave]deEeeEe GuiHhHhero beEeeEEEsssss'r.[/wave],,
+CharacterLobo-Bar-Lobo-17,¡Ay qué riiiico!,,
+CharacterLobo-Bar-Pato-18,Ora que tengo el perrenque y la pinta.,,
+CharacterLobo-Bar-Pato-19,No lo dudaré ni un segundo. ¡LE HABLARÉ A ESA RICURA!,,
+CharacterLobo-Bar-Pato-20,Hola. Bailas muy mucho muy bien.,,
+CharacterLobo-Bar-Lobo-21,Hola. Gracias.,,
+CharacterLobo-Bar-Lobo-22,¿Por qué estás disfrazada?,,
+CharacterLobo-Bar-Pato-23,Porque quería hablarte... desde hace rato.,,
+CharacterLobo-Bar-Pato-24,Y así era más fácil pa' yo.,,
 CharacterLobo-Sea-Lobo-01,[wave]Aiudaaaaaaaaaaaaaaaa[/wave],[wave]Ayuuudaaaaaaaaa[/wave],[wave]Heeeeeeeeeeeeeeeeelp[/wave]
 CharacterLobo-Sea-Lobo-02,¡¡¡Mi hogo!!!,¡¡¡Me ahogo!!!,I'm drowning!!!
 CharacterLobo-Sea-Pato-03,Aguanta amor meo. Te sacaré de ahí.,Aguanta amor mío. Te salvaré.,Hang on there my love. I'll get you out of there.
@@ -229,7 +264,7 @@ BeersMenu-Opt3-Game-03,Pato tiró lo que quedaba.,Pato derramó lo que quedaba.,
 CocktailsMenu-Start-Conejuno-01,No nos haremos responsables por lo que pueda pasar,,The bar is not responsible for what may happen
 CocktailsMenu-Start-Conejuno-02,Y estas son las opciones,,But I offer you these cocktails
 CocktailsMenu-Opt1,Tumbalocas.,Sueño del gigante.,Golem Dream.
-CocktailsMenu-Opt2,El desolvido.,,The forgotter.
+CocktailsMenu-Opt2,Superperrenque.,Super-coraje.,Hyper-courage.
 CocktailsMenu-Opt3,Sudor de campeche.,Sudor de Hércules.,Hercules sweat.
 CocktailsMenu-Exit,Mejor otra cosita.,Mejor no quiero.,Changed my mind.
 CocktailsMenu-Please,Porfis.,Por favor.,Please.
@@ -241,6 +276,11 @@ CocktailsMenu-Opt2-Conejuno-02,Pilas.,Ten cuidado.,Be careful.
 CocktailsMenu-Opt2-Pato-03,Uyyyyyyy....,Ooooooohhhhh,Mmmmmmm.....
 CocktailsMenu-Opt2-Game-04,Pato tuvo una ideota.,A Pato se le ocurrió algo.,Pato had an idea...
 CocktailsMenu-Opt2-Pato-05,Todobien... (sapo).,Lo tendré... (entrometido).,Ok... (nosy).
+CocktailsMenu-Opt2-Game-06,Y se tomó el trago de un sorbo.,,
+CocktailsMenu-Opt2-Pato-06,gluuuuuuuuuuuuup,,
+CocktailsMenu-Opt2-Pato-07,Oh oh...,,
+CocktailsMenu-Opt2-Game-08,Pato se prendió una gonorrea.,,
+CocktailsMenu-Opt2-Pato-09,[wave]Yssssa nO thhheno meddddddo E haddddlarle a LoBo.[/wave],,
 CocktailsMenu-Opt3-Conejuno-01,¿Sabe los secretos del bar y que tales?,¿Así que conoces nuestra carta secreta?,So you know about our forbidden drinks?
 CocktailsMenu-Opt3-Conejuno-02,Me cae bien esta pelada.,Ahora me caes bien.,Now I like you.
 CocktailsMenu-Opt3-Conejuno-03,Péreme tantico lo preparo.,Dame unos minutos para prepararlo.,Just... let me prepare the ingredients

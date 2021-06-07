@@ -74,7 +74,7 @@ func on_room_transition_finished() -> void:
 			C.player.face_right(),
 			'Pato: RoomBar-Pato-03',
 			G.display('RoomBar-04'),
-			G.display('RoomBar-05	'),
+			G.display('RoomBar-05'),
 			'Pato: RoomBar-Pato-04',
 		])
 	elif C.player.last_room == 'Sea':

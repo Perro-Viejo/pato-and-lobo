@@ -312,6 +312,9 @@ position = Vector2( -572, 464 )
 [node name="DanceFloor2" type="Position2D" parent="Points" index="4"]
 position = Vector2( -1018, 794 )
 
+[node name="DanceFloor3" type="Position2D" parent="Points" index="5"]
+position = Vector2( -540, 816 )
+
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
 navpoly = SubResource( 1 )
 

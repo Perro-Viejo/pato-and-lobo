@@ -16,6 +16,9 @@ enum GameState {
 	TAIL_TAKEN,
 	DISGUISED,
 	CHARACTER_CHANGE_EXPLAINED,
+	GOT_DRUNK,
+	UNABLE,
+	ALL_DONE,
 }
 
 var game_progress := [GameState.NONE]

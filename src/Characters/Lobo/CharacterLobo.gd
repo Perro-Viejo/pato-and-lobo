@@ -6,21 +6,58 @@ extends Character
 func on_interact() -> void:
 	match E.current_room.script_name:
 		'Bar':
-			if Globals.courage >= 50:
-				if Globals.has_done(Globals.GameState.DISGUISED):
-					# El jugador decidió hablarle a Lobo teniendo el disfraz
-					yield(E.run([
-						'Pato: CharacterLobo-Bar-Pato-01',
+			if Globals.has_done(Globals.GameState.GOT_DRUNK):
+				# Pato le habló a Lobo teniendo borracha
+				E.clicked = self
+				yield(E.run(
+					[
 						C.walk_to_clicked(),
 						C.face_clicked(),
-						'...',
-						'Pato: CharacterLobo-Bar-Pato-02',
-						'Pato: CharacterLobo-Bar-Pato-03',
-						'Lobo: CharacterLobo-Bar-Lobo-04',
-						'Pato: CharacterLobo-Bar-Pato-05'
-					]), 'completed')
+						C.player.dance(),
+						'Pato: CharacterLobo-Bar-Pato-16',
+						C.player.dance(),
+						face_left(),
+						'Lobo: CharacterLobo-Bar-Lobo-17',
+						dance()
+					]
+				), 'completed')
+				
+				E.goto_room('End')
+			elif Globals.courage >= 50:
+				if Globals.has_done(Globals.GameState.DISGUISED):
+					# Pato le habló a Lobo teniendo el disfraz
+					if Globals.courage < 100:
+						yield(E.run([
+							'Pato: CharacterLobo-Bar-Pato-01',
+							C.walk_to_clicked(),
+							C.face_clicked(),
+							'...',
+							'Pato: CharacterLobo-Bar-Pato-02',
+							'Pato: CharacterLobo-Bar-Pato-03',
+							face_left(),
+							'Lobo: CharacterLobo-Bar-Lobo-04',
+							'Pato: CharacterLobo-Bar-Pato-05'
+						]), 'completed')
+					else:
+						# ...y el coraje
+						yield(E.run([
+							face_left(),
+							dance(),
+							'Pato: CharacterLobo-Bar-Pato-18',
+							'Pato: CharacterLobo-Bar-Pato-19',
+							C.walk_to_clicked(),
+							C.face_clicked(),
+							'Pato: CharacterLobo-Bar-Pato-20',
+							'Lobo: CharacterLobo-Bar-Lobo-21',
+							'Lobo: CharacterLobo-Bar-Lobo-22',
+							'Pato: CharacterLobo-Bar-Pato-23',
+							'Pato: CharacterLobo-Bar-Pato-24',
+						]), 'completed')
 				else:
+					# Pato le habló a Lobo teniendo el coraje
 					yield(E.run([
+						face_right(),
+						dance(),
 						'Pato: CharacterLobo-Bar-Pato-06',
 						'Pato: CharacterLobo-Bar-Pato-07',
 						C.walk_to_clicked(),
@@ -34,8 +71,9 @@ func on_interact() -> void:
 						C.player.face_right(),
 						'...',
 						'Pato: CharacterLobo-Bar-Pato-11',
-						A.play_music('mx_bar_03'),
+						C.player_walk_to(E.current_room.get_point('DanceFloor3'))
 					]), 'completed')
+					Globals.did(Globals.GameState.UNABLE)
 
 				E.goto_room('End')
 			else:

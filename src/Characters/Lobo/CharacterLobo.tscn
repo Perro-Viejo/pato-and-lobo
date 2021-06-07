@@ -1788,7 +1788,7 @@ animations = [ {
 [node name="CharacterLobo" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 description = "Lobo"
-walk_to_point = Vector2( -232, -93 )
+walk_to_point = Vector2( -228, 1 )
 cursor = 8
 script_name = "Lobo"
 text_color = Color( 0.913725, 0.639216, 0.235294, 1 )
@@ -1800,7 +1800,7 @@ vo_name = "vo_wolf"
 polygon = PoolVector2Array( -63, -361, -61, -298, -85, -262, -86, -230, -58, -217, -86.1163, -169.886, -122, -188, -134, -115, -86, -86, -64, 0, 60, 0, 54, -15, 42, -50, 68, -98, 53, -209, 101, -236, 94, -272, 57, -280, 59, -353, 29, -356, -3, -321, -31, -361 )
 
 [node name="WalkToHelper" parent="." index="2"]
-position = Vector2( -232, -93 )
+position = Vector2( -228, 1 )
 
 [node name="AnimationPlayer" parent="." index="3"]
 anims/dance_l = SubResource( 1 )
@@ -1830,7 +1830,7 @@ position = Vector2( -28, -182 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 89 )
 animation = "idle"
-frame = 1
+frame = 5
 playing = true
 
 [node name="DialogPos" parent="." index="6"]
