@@ -8,21 +8,21 @@ func on_interact() -> void:
 		E.run([
 			C.walk_to_clicked(),
 			C.player.face_up_right(),
-			'Pato: Can I...',
-			'Marrano: You touch it, I kill you.',
+			'Pato: RoomMarrano-Water-Pato-01',
+			'Marrano: RoomMarrano-Water-Pig-01',
 			C.player.face_right(),
-			'Pato: Ok ok...'
+			'Pato: RoomMarrano-Water-Pato-02'
 		])
 	else:
 		yield(E.run([
 			C.walk_to_clicked(),
 			C.face_clicked(),
-			'Pato: It is mine!!!',
+			'Pato: RoomMarrano-Water-Pato-03',
 			disable(),
 			A.play('sfx_watercase_pu', global_position),
 			I.add_item('WaterCase'),
-			'Pato: My love. Use the teleport ray to take me out of here.',
-			'Lobo: As you command, love of my loves',
+			'Pato: RoomMarrano-Water-Pato-04',
+			'Lobo: RoomMarrano-Water-Lobo-01',
 		]), 'completed')
 		Globals.did(Globals.GameState.WATER_TAKEN)
 		E.goto_room('Spaceship')

@@ -46,26 +46,26 @@ func on_room_transition_finished() -> void:
 	
 	if visited_first_time:
 		E.run([
-			G.display('Pato saw the water Pig was guarding.'),
+			G.display('RoomMarrano-01'),
 			C.player.face_up_right(),
-			'Pato: We need that water to water our house-seed.'
+			'Pato: RoomMarrano-Pato-01'
 		])
 	elif Globals.has_done(Globals.GameState.GARBAGE_THROWN) \
 		and not Globals.has_done(Globals.GameState.DOME_DESTROYED):
 		Globals.did(Globals.GameState.DOME_DESTROYED)
 		yield(E.run_cutscene([
 			A.play('sfx_dome', $Props/Container.global_position),
-			'Pato: I better hide.',
+			'Pato: RoomMarrano-Pato-02',
 			C.player_walk_to(get_point('Middle')),
 			_play_fall(),
 			A.play('sfx_garbage_fall', Vector2.ZERO, true, true),
 			A.play('sfx_alarm', Vector2.ZERO),
 			A.stop('sfx_dome', 0),
-			'Marrano: MY FLOWERS!',
+			'Marrano: RoomMarrano-Pig-01',
 			C.character_walk_to('Marrano', get_point('Container')),
-			"Marrano: Where are you stupid flower thief?",
+			"Marrano: RoomMarrano-Pig-02",
 			C.player_walk_to(get_point('Water')),
-			'Pato: lol... The only stupid here is him.'
+			'Pato: RoomMarrano-Pato-03'
 		]), 'completed')
 
 

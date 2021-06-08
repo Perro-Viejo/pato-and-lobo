@@ -13,8 +13,8 @@ func on_interact() -> void:
 		if Globals.has_done(Globals.GameState.GOT_HOME):
 			yield(
 				E.run([
-				'Lobo: I will use the picker to pull our house-seed.',
-				'Pato: This is so exciting my love!',
+				'Lobo: RoomSpaceship-RoboticArm-Lobo-01',
+				'Pato: RoomSpaceship-RoboticArm-Pato-01',
 				_play(),
 				A.play('sfx_spaceship_hook', global_position),
 				E.wait(1.3)
@@ -23,21 +23,21 @@ func on_interact() -> void:
 			E.goto_room('HomesPlantation', false)
 		else:
 			E.run([
-			'Lobo: I don\'t know which one to pick my love.'
+			'Lobo: RoomSpaceship-RoboticArm-Lobo-02'
 			])
 	elif C.player.last_room == 'Marrano':
 		if Globals.has_done(Globals.GameState.WATER_TAKEN):
 			E.run([
-				'Lobo: I do not want to hurt Pato.'
+				'Lobo: RoomSpaceship-RoboticArm-Lobo-03'
 			])
 	else:
 		E.run([
-			'Lobo: I do not know what to do with the picker'
+			'Lobo: RoomSpaceship-RoboticArm-Lobo-04'
 		])
 
 
 func on_look() -> void:
-	E.run(['Lobo: The picker can pull things with amazing force'])
+	E.run(['Lobo: RoomSpaceship-RoboticArm-Lobo-05'])
 
 
 func on_item_used(_item: Item) -> void:

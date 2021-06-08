@@ -10,10 +10,10 @@ func on_interact() -> void:
 				E.run([
 					C.walk_to_clicked(),
 					C.player.face_up(),
-					"Pato: There must be something we can do to break this shield.",
-					"Lobo: What if I crash the spaceship into it?",
-					"Pato: That will be risky, my love.",
-					"Pato: But maybe there's something we can use from it.",
+					"Pato: RoomMarrano-Container-Pato-01",
+					"Lobo: RoomMarrano-Container-Lobo-01",
+					"Pato: RoomMarrano-Container-Pato-02",
+					"Pato: RoomMarrano-Container-Pato-03",
 				]), 'completed'
 			)
 			E.goto_room('Spaceship')
@@ -22,12 +22,12 @@ func on_interact() -> void:
 			E.run([
 				C.walk_to_clicked(),
 				C.player.face_up(),
-				"Pato: Look at those beautiful flowers.",
-				"Pato: They make a great contrast to their owner."
+				"Pato: RoomMarrano-Container-Pato-04",
+				"Pato: RoomMarrano-Container-Pato-05"
 			])
 	else:
 		E.run([
-			"Pato: Now is the time. I'll stole the Fast-growing-water."
+			"Pato: RoomMarrano-Container-Pato-06"
 		])
 
 func on_look() -> void:

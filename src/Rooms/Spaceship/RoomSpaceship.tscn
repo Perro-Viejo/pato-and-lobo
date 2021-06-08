@@ -969,6 +969,7 @@ limit_top = -540.0
 limit_bottom = 540.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 3 )]
+description = "Bg"
 clickable = false
 baseline = -540
 texture = ExtResource( 4 )
@@ -976,7 +977,7 @@ texture = ExtResource( 4 )
 [node name="RoboticArm" parent="Props" index="1" instance=ExtResource( 3 )]
 position = Vector2( -557, 311 )
 script = ExtResource( 7 )
-description = "Picker"
+description = "RoboticArm"
 baseline = -636
 cursor = 1
 script_name = "RoboticArm"
@@ -1000,39 +1001,41 @@ texture = ExtResource( 13 )
 anims/SETUP = SubResource( 1 )
 anims/pull = SubResource( 2 )
 
-[node name="TeletransportLaser" parent="Props" index="2" instance=ExtResource( 3 )]
+[node name="TeletransportRay" parent="Props" index="2" instance=ExtResource( 3 )]
 position = Vector2( 593, 217 )
 script = ExtResource( 9 )
-description = "Teletransport-ray"
+description = "TeletransportRay"
 baseline = 540
 cursor = 1
 script_name = "TeletransportLaser"
 
-[node name="CollisionPolygon2D" parent="Props/TeletransportLaser" index="0"]
+[node name="CollisionPolygon2D" parent="Props/TeletransportRay" index="0"]
 position = Vector2( 37.4177, -53.454 )
 polygon = PoolVector2Array( -66.991, -21.2736, -93.9768, -55.4027, -56.6729, -88.7381, -17.9349, -59.1639, -26.5123, -26.8295 )
 
-[node name="BaselineHelper" parent="Props/TeletransportLaser" index="1"]
+[node name="BaselineHelper" parent="Props/TeletransportRay" index="1"]
 position = Vector2( 0, 540 )
 
-[node name="Laser" type="Sprite" parent="Props/TeletransportLaser" index="4"]
+[node name="Laser" type="Sprite" parent="Props/TeletransportRay" index="4"]
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -64, 78 )
 rotation = 1.0472
 texture = ExtResource( 24 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Props/TeletransportLaser" index="5"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Props/TeletransportRay" index="5"]
 anims/SETUP = SubResource( 3 )
 anims/turn_on = SubResource( 4 )
 
 [node name="Head" parent="Props" index="3" instance=ExtResource( 3 )]
 position = Vector2( 63, 647 )
+description = "Head"
 clickable = false
 baseline = -2000
 texture = ExtResource( 11 )
 
 [node name="Bottle1" parent="Props" index="4" instance=ExtResource( 3 )]
 position = Vector2( -90, 298 )
+description = "Bottle1"
 clickable = false
 baseline = -2000
 always_on_top = true
@@ -1040,6 +1043,7 @@ texture = ExtResource( 15 )
 
 [node name="Bottle2" parent="Props" index="5" instance=ExtResource( 3 )]
 position = Vector2( 344, 124 )
+description = "Bottle2"
 clickable = false
 baseline = -2000
 always_on_top = true
@@ -1047,6 +1051,7 @@ texture = ExtResource( 16 )
 
 [node name="Bag1" parent="Props" index="6" instance=ExtResource( 3 )]
 position = Vector2( -296, 79 )
+description = "Bag1"
 clickable = false
 baseline = -2000
 always_on_top = true
@@ -1054,12 +1059,14 @@ texture = ExtResource( 17 )
 
 [node name="Bag2" parent="Props" index="7" instance=ExtResource( 3 )]
 position = Vector2( 235.25, 307.487 )
+description = "Bag2"
 clickable = false
 baseline = -2000
 texture = ExtResource( 18 )
 
 [node name="Box" parent="Props" index="8" instance=ExtResource( 3 )]
 position = Vector2( -43, -232 )
+description = "Box"
 clickable = false
 baseline = -2000
 always_on_top = true
@@ -1067,6 +1074,7 @@ texture = ExtResource( 19 )
 
 [node name="Cup" parent="Props" index="9" instance=ExtResource( 3 )]
 position = Vector2( -312, 220 )
+description = "Cup"
 clickable = false
 baseline = -2000
 always_on_top = true
@@ -1074,6 +1082,7 @@ texture = ExtResource( 20 )
 
 [node name="Pan1" parent="Props" index="10" instance=ExtResource( 3 )]
 position = Vector2( 219, -97 )
+description = "Pan1"
 clickable = false
 baseline = -2000
 always_on_top = true
@@ -1081,6 +1090,7 @@ texture = ExtResource( 21 )
 
 [node name="Pan2" parent="Props" index="11" instance=ExtResource( 3 )]
 position = Vector2( 105, 375 )
+description = "Pan2"
 clickable = false
 baseline = -2000
 texture = ExtResource( 22 )
@@ -1088,7 +1098,7 @@ texture = ExtResource( 22 )
 [node name="GarbageExtractor" parent="Props" index="12" instance=ExtResource( 3 )]
 position = Vector2( 153, 268 )
 script = ExtResource( 12 )
-description = "Garbage gates"
+description = "GarbageExtractor"
 baseline = -612
 cursor = 1
 script_name = "GarbageExtractor"
@@ -1126,6 +1136,7 @@ turn_duration = 6.0
 [node name="Spaceship" parent="Props" index="13" instance=ExtResource( 3 )]
 position = Vector2( 15.7145, -42.6536 )
 script = ExtResource( 5 )
+description = "Prop"
 clickable = false
 baseline = 272
 texture = ExtResource( 10 )
@@ -1143,6 +1154,6 @@ position = Vector2( 150, 48 )
 position = Vector2( 0, 703 )
 
 [editable path="Props/RoboticArm"]
-[editable path="Props/TeletransportLaser"]
+[editable path="Props/TeletransportRay"]
 [editable path="Props/GarbageExtractor"]
 [editable path="Props/Spaceship"]

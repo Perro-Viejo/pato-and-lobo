@@ -11,15 +11,15 @@ func _ready() -> void:
 func on_interact() -> void:
 	if C.player.last_room == 'HomesPlantation':
 		E.run([
-			'Lobo: Can not use the ray for that...'
+			'Lobo: RoomSpaceship-TeletransportRay-Lobo-01'
 		])
 	elif C.player.last_room == 'Marrano':
 		if Globals.has_done(Globals.GameState.WATER_TAKEN):
 			yield(E.run([
-				'Lobo: See the teletransport-ray in action!!!',
+				'Lobo: RoomSpaceship-TeletransportRay-Lobo-02',
 				_play(),
 				A.play('sfx_spaceship_teleport', global_position),
-				'Pato: Pffff... the pig was already comming.',
+				'Pato: RoomSpaceship-TeletransportRay-Pato-01',
 			]), 'completed')
 			E.goto_room('Luna')
 

@@ -15,8 +15,8 @@ func _ready() -> void:
 func on_interact() -> void:
 	if C.player.last_room == 'HomesPlantation':
 		E.run([
-			'Lobo: Nope',
-			'Lobo: I won\'t trash our future home...'
+			'Lobo: RoomSpaceship-GarbageExtractor-Lobo-01',
+			'Lobo: RoomSpaceship-GarbageExtractor-Lobo-02'
 			
 		])
 #	elif C.player.last_room == 'Marrano':
@@ -25,25 +25,25 @@ func on_interact() -> void:
 			if not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
 				yield(
 					E.run([
-					'Lobo: Here we go! DESTRUCTION TIME!!!!',
+					'Lobo: RoomSpaceship-GarbageExtractor-Lobo-03',
 					A.play('sfx_spaceship_garbage', global_position),
 					play('open'),
-					'Pato: UUUUuuuUUUUuuuUUUuuu',
+					'Pato: RoomSpaceship-GarbageExtractor-Pato-01',
 				]), 'completed')
 				Globals.did(Globals.GameState.GARBAGE_THROWN)
 				E.goto_room('Marrano')
 			elif not Globals.has_done(Globals.GameState.WATER_TAKEN): 
 				E.run([
-					'Lobo: We don\'t have more trash...',
-					'Lobo: Hurry up Pato! The pig will come back soon!'
+					'Lobo: RoomSpaceship-GarbageExtractor-Lobo-04',
+					'Lobo: RoomSpaceship-GarbageExtractor-Lobo-05'
 				])
 			else:
 				E.run([
-					'Lobo: What!? I have to teletransport Pato.'
+					'Lobo: RoomSpaceship-GarbageExtractor-Lobo-06'
 				])
 		else:
 			E.run([
-				'Lobo: I will not trash our trash to the cosmos.'
+				'Lobo: RoomSpaceship-GarbageExtractor-Lobo-07'
 			])
 
 func on_look() -> void:
