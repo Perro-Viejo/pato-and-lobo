@@ -146,6 +146,11 @@ func get_prop(prop_name: String) -> Prop:
 	return null
 
 
+func hide_props() -> void:
+	for p in $Props.get_children():
+		p.hide()
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _move_along_path(distance):
 	var last_point = _moving_character.position
@@ -229,6 +234,7 @@ func _check_z_indexes(chr: Character) -> void:
 	
 	# Comparar la posición en Y del personaje con el baseline de cada Prop
 	for p in $Props.get_children():
+		if not p.visible: continue
 		if not p.always_on_top:
 			_check_baseline(p, y_pos, 2)
 		else:

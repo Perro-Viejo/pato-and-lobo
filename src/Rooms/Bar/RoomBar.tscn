@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://src/Rooms/Bar/RoomBar.gd" type="Script" id=1]
 [ext_resource path="res://src/Nodes/Room/Room.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Rooms/Bar/Sprites/bg.png" type="Texture" id=3]
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Rooms/Bar/Sprites/dance_floor.png" type="Texture" id=5]
+[ext_resource path="res://src/Rooms/Bar/Sprites/bar.png" type="Texture" id=6]
 [ext_resource path="res://src/Rooms/Bar/PropGlassWithDentures.gd" type="Script" id=7]
 [ext_resource path="res://src/Rooms/Bar/Sprites/glass_with_dentures.png" type="Texture" id=8]
 [ext_resource path="res://src/Nodes/Hotspot/Hotspot.tscn" type="PackedScene" id=9]
@@ -26,6 +27,8 @@
 [ext_resource path="res://src/Rooms/Bar/Sprites/platform.png" type="Texture" id=25]
 [ext_resource path="res://src/Rooms/Bar/Sprites/rail.png" type="Texture" id=26]
 [ext_resource path="res://src/Rooms/Bar/Sprites/sofas.png" type="Texture" id=27]
+[ext_resource path="res://src/Rooms/Bar/water_2D_material.tres" type="Material" id=28]
+[ext_resource path="res://src/Rooms/Bar/Sprites/water_normal.png" type="Texture" id=29]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 859, 892, 1315, 946, -1871, 933, 335, 892, 1302, 508, 1556, 759, 1217, 775, 1014.21, 513.794, 1183, -170, 1568, 244, 938, 288, 841, 118, -120, -182, -192, -276, 475, -261, 779, 18, 641, -144, 477, 200, 677, 27, 48, 211, -234, 36, -218, -68, 758, 127, -1008, 267, -409, 41, -1144, 709, -481, 36, -648, 40, -686, 35, -856, 36, -1020, -274, -941, -275, -946, -170, -1319, 253, -234, -170, -272, -21, -887, -63, -388, -22, -889, -169, -638, -14, -712, -18, -515, -12, -836, -15, -1571, 671 )
@@ -143,7 +146,7 @@ position = Vector2( 18, 414 )
 texture = ExtResource( 18 )
 
 [node name="Counter" parent="Props" index="4" instance=ExtResource( 4 )]
-position = Vector2( -572, -240 )
+position = Vector2( -568, -236 )
 description = "Counter"
 clickable = false
 baseline = 172
@@ -157,7 +160,7 @@ light_mask = 2
 texture = ExtResource( 22 )
 
 [node name="CounterChairs" parent="Props" index="5" instance=ExtResource( 4 )]
-position = Vector2( -556, -67 )
+position = Vector2( -545, -60 )
 description = "CounterChairs"
 clickable = false
 baseline = 102
@@ -171,7 +174,7 @@ light_mask = 2
 texture = ExtResource( 23 )
 
 [node name="Bench" parent="Props" index="6" instance=ExtResource( 4 )]
-position = Vector2( 1179, 205 )
+position = Vector2( 1179, 222 )
 description = "Bench"
 clickable = false
 baseline = 51
@@ -185,7 +188,7 @@ light_mask = 2
 texture = ExtResource( 24 )
 
 [node name="Platform" parent="Props" index="7" instance=ExtResource( 4 )]
-position = Vector2( -1289, 435 )
+position = Vector2( -1309, 421 )
 description = "Platform"
 clickable = false
 baseline = 29
@@ -221,7 +224,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 11 )
 
 [node name="Rail" parent="Props" index="9" instance=ExtResource( 4 )]
-position = Vector2( 1418, 693 )
+position = Vector2( 1418, 700 )
 description = "Rail"
 clickable = false
 baseline = 102
@@ -235,7 +238,7 @@ light_mask = 2
 texture = ExtResource( 26 )
 
 [node name="Sofas" parent="Props" index="10" instance=ExtResource( 4 )]
-position = Vector2( 419, 444 )
+position = Vector2( 408, 444 )
 description = "Sofas"
 clickable = false
 baseline = -189
@@ -268,6 +271,13 @@ position = Vector2( -242, 76 )
 
 [node name="Sprite" parent="Props/GlassWithDentures" index="3"]
 texture = ExtResource( 8 )
+
+[node name="WavingBar" type="Sprite" parent="." index="1"]
+visible = false
+light_mask = 2
+material = ExtResource( 28 )
+texture = ExtResource( 6 )
+normal_map = ExtResource( 29 )
 
 [node name="Sink" parent="Hotspots" index="0" instance=ExtResource( 9 )]
 position = Vector2( 842, -271 )
@@ -314,6 +324,18 @@ position = Vector2( -1018, 794 )
 
 [node name="DanceFloor3" type="Position2D" parent="Points" index="5"]
 position = Vector2( -540, 816 )
+
+[node name="Drunk1" type="Position2D" parent="Points" index="6"]
+position = Vector2( 200, -65 )
+
+[node name="Drunk2" type="Position2D" parent="Points" index="7"]
+position = Vector2( 842, 552 )
+
+[node name="Drunk3" type="Position2D" parent="Points" index="8"]
+position = Vector2( -1018, 131 )
+
+[node name="Drunk4" type="Position2D" parent="Points" index="9"]
+position = Vector2( -1545, 816 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
 navpoly = SubResource( 1 )

@@ -59,6 +59,36 @@ func moon_daydream_repeated() -> void:
 	]), 'completed')
 
 
+func get_drunk() -> void:
+	yield(E.run([
+		'Conejuno: CocktailsMenu-Opt2-Conejuno-01',
+		'Conejuno: CocktailsMenu-Opt2-Conejuno-02',
+		'Pato: CocktailsMenu-Opt2-Pato-03',
+		G.display('CocktailsMenu-Opt2-Game-04'),
+		'Pato: CocktailsMenu-Opt2-Pato-05',
+		G.display('CocktailsMenu-Opt2-Game-06'),
+		'Pato: CocktailsMenu-Opt2-Pato-06',
+		E.wait(3),
+		E.current_room.show_waving(),
+		'Pato: CocktailsMenu-Opt2-Pato-07',
+		G.display('CocktailsMenu-Opt2-Game-08'),
+		C.player_walk_to(E.current_room.get_point('Drunk1')),
+		'...',
+		C.player_walk_to(E.current_room.get_point('Drunk2')),
+		'...',
+		C.player_walk_to(E.current_room.get_point('Drunk3')),
+		'...',
+		C.player_walk_to(E.current_room.get_point('Drunk4')),
+		'...',
+	]), 'completed')
+	
+	did(GameState.GOT_DRUNK)
+	self.courage += 500
+	yield(I, 'courage_update_shown')
+	
+	yield(E.run(['Pato: CocktailsMenu-Opt2-Pato-09',]), 'completed')
+	C.get_character('Lobo').on_interact()
+
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _set_courage(value: int) -> void:

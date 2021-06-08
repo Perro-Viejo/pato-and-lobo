@@ -19,6 +19,9 @@ func _init() -> void:
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
+	$WavingBar.hide()
+#	$WavingBar.modulate.a = 0.0
+
 	# Quitar los elementos de inventario que hayan podido quedar del mundo de
 	# los sueños
 	I.remove_item('Pato', false)
@@ -105,6 +108,14 @@ func on_room_exited() -> void:
 	C.get_character('Lobo').idle(false)
 	
 	.on_room_exited()
+
+
+func show_waving() -> void:
+	yield()
+	hide_props()
+	$WavingBar.show()
+#	$WavingBar.modulate.a = 1.0
+	yield(get_tree(), 'idle_frame')
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

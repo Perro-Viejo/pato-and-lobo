@@ -89,6 +89,21 @@ func _input(event: InputEvent) -> void:
 		G.emit_signal('continue_clicked')
 
 
+func _unhandled_key_input(event: InputEventKey) -> void:
+	if current_room.script_name != 'Bar': return
+	if event.is_action_released('end_1'):
+		Globals.get_drunk()
+	elif event.is_action_released('end_2'):
+		Globals.did(Globals.GameState.DISGUISED)
+		Globals.courage = 50
+	elif event.is_action_released('end_3'):
+		Globals.did(Globals.GameState.DISGUISED)
+		Globals.did(Globals.GameState.ALL_DONE)
+		Globals.courage = 110
+	elif event.is_action_released('end_4'):
+		Globals.courage = 60
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
 func wait(time := 1.0, is_in_queue := true) -> void:
 	if is_in_queue: yield()
