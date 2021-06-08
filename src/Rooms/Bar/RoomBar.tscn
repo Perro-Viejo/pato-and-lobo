@@ -273,7 +273,6 @@ position = Vector2( -242, 76 )
 texture = ExtResource( 8 )
 
 [node name="WavingBar" type="Sprite" parent="." index="1"]
-visible = false
 light_mask = 2
 material = ExtResource( 28 )
 texture = ExtResource( 6 )

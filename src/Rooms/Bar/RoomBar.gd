@@ -20,7 +20,6 @@ func _init() -> void:
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
 	$WavingBar.hide()
-#	$WavingBar.modulate.a = 0.0
 
 	# Quitar los elementos de inventario que hayan podido quedar del mundo de
 	# los sueños
@@ -113,8 +112,9 @@ func on_room_exited() -> void:
 func show_waving() -> void:
 	yield()
 	hide_props()
+	$WavingBar.material.set_shader_param("aspect_ratio", $WavingBar.scale.y / $WavingBar.scale.x)
+	$WavingBar.material.set_shader_param("sine_offset_scale", Vector2(1.0, 4.0))
 	$WavingBar.show()
-#	$WavingBar.modulate.a = 1.0
 	yield(get_tree(), 'idle_frame')
 
 
