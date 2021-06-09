@@ -6,7 +6,7 @@
 
 [node name="CocktailGolem" instance=ExtResource( 2 )]
 script = ExtResource( 3 )
-description = "Golem Dream cocktail"
+description = "Items-GolemCocktail"
 script_name = "CocktailGolem"
 cursor = 1
 

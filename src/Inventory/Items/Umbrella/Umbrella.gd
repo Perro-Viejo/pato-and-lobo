@@ -17,19 +17,19 @@ func on_item_used(item: Item) -> void:
 			I.remove_item(item.script_name),
 			I.remove_item(script_name),
 			A.play('sfx_tape_use', Vector2.ZERO),
-			'Pato: Put the tape in the tip of the umbrella',
+			'Pato: Items-Umbrella-Pato-01',
 			I.add_item('UmbrellaTape'),
 		])
 	elif item.script_name == 'Mop':
 		E.run([
-			'Pato: It could work but I need something to bring them together'
+			'Pato: Items-Umbrella-Pato-02'
 		])
 	elif item.script_name == 'MopTape':
 		E.run([
 			I.remove_item(item.script_name),
 			I.remove_item(script_name),
 			A.play('sfx_mopbrella_pu', Vector2.ZERO),
-			'Pato: Great! I can reach Lobo with this. No doubt!',
+			'Pato: Items-Umbrella-Pato-03',
 			I.add_item('Mopbrella'),
-			'Pato: Hold on! I\'m comming for you!',
+			'Pato: Items-Umbrella-Pato-04',
 		])

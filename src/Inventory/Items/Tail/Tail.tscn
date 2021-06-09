@@ -6,7 +6,7 @@
 
 [node name="Tail" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
-description = "Cotton tail"
+description = "Items-Tail"
 script_name = "Tail"
 cursor = 1
 

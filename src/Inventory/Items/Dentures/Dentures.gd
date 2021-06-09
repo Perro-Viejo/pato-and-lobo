@@ -8,7 +8,7 @@ func on_interact() -> void:
 
 
 func on_look() -> void:
-	C.player_say('Just what I need to complete my costume', false)
+	C.player_say('Items-Dentures-Pato-01', false)
 
 
 func on_item_used(_item: Item) -> void:

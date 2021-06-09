@@ -205,7 +205,7 @@ texture = ExtResource( 12 )
 [node name="Container" parent="Props" index="2" instance=ExtResource( 4 )]
 position = Vector2( 334.863, -81.3031 )
 script = ExtResource( 11 )
-description = "Pretty flowers covered by something"
+description = "Container"
 baseline = 142
 walk_to_point = Vector2( 16.137, 291.303 )
 cursor = 1
@@ -226,7 +226,7 @@ texture = ExtResource( 10 )
 [node name="Water" parent="Props" index="3" instance=ExtResource( 4 )]
 position = Vector2( -457.58, -367.103 )
 script = ExtResource( 13 )
-description = "Fast-growing-water"
+description = "Water"
 walk_to_point = Vector2( 0, 267.27 )
 cursor = 1
 script_name = "Water"

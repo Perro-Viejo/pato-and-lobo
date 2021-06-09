@@ -6,7 +6,7 @@
 
 [node name="Legs" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
-description = "Mecha-legs"
+description = "Items-Legs"
 script_name = "Legs"
 cursor = 1
 

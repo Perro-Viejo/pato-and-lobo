@@ -6,7 +6,7 @@
 
 [node name="Mask" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
-description = "Wolf mask"
+description = "Items-Mask"
 script_name = "Mask"
 cursor = 1
 

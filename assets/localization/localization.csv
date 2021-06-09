@@ -121,52 +121,74 @@ RoomLuna-HomeSeed-Pato-04,"Vea mi rey, es nuestro cambuchito ideal.","Mira amor 
 RoomLuna-HomeSeed-Lobo-01,"Chimbita omee... jardín frontal, dos habitaciónes, baño con tina... pa que más.","Siiiiiiiiii... tiene jardín frontal, dos habitaciones y un baño con tina.","Yeeeyyyy... it has a front garden, two bedrooms, and bathroom with tub."
 RoomLuna-HomeSeed-Lobo-02,Ahora tengamos relaciones y hagamos retoños.,Ahora podemos darnos amor y hacer hijos.,Now we can give us love and make children.
 RoomLuna-Home,Nuestra ranchita.,Nuestro hogar.,Our home
-RoomMarrano-01,Pato vio el agua que estaba cuidando Duque.,,Pato saw the water Pig was guarding.
-RoomMarrano-Pato-01,Nitamos esa agüita pa' regar nuestra semilla-hogar.,,We need that water to water our house-seed.
-RoomMarrano-Pato-02,Mejor me escondo.,,I better hide.
-RoomMarrano-Pato-03,Gran pendejo...,,lol... The only stupid here is him.
-RoomMarrano-Pig-01,¡Mis flores de mi propiedad!,,MY FLOWERS!
-RoomMarrano-Pig-02,¿Dónde está este vándalo-terrorista desgraciado?,,Where are you stupid flower thief?
-RoomMarrano-Container-Pato-01,Debe haber una forma de romper ese escudo.,,There must be something we can do to break that shield.
-RoomMarrano-Container-Pato-02,"Eso sería arriesgado, papi.",,"That will be risky, my love."
-RoomMarrano-Container-Pato-03,Pero alomejor le podemos tirar algo.,,But maybe there's something we can use on it.
-RoomMarrano-Container-Pato-04,"Mirá-ve, severas flores.",,Look at those beautiful flowers.
-RoomMarrano-Container-Pato-05,Contrastan con el marrano ese.,,They make a great contrast to their owner.
-RoomMarrano-Container-Pato-06,Ora jue. Ya perdió el agüita.,,Now is the time. I'll stole the Fast-growing-water.
-RoomMarrano-Container-Lobo-01,¿Y se le estrello esta?,,What if I crash the spaceship on it?
-RoomMarrano-Water-Pato-01,¿Puedo...?,,Can I...
-RoomMarrano-Water-Pato-02,Ta bueno...,,Ok ok...
-RoomMarrano-Water-Pato-03,¡ES MÍA DE MI PROPIEDAD!,,It is mine!!!
-RoomMarrano-Water-Pato-04,Negro. Usá el rasho teletransportador pa' sacarme de aquí.,,My love. Use the teleport ray to take me out of here.
-RoomMarrano-Water-Lobo-01,"Erre, mi reina de reinas",,"As you command, love of my loves"
-RoomMarrano-Water-Pig-01,Si la tocas te rompo.,,"You touch it, I kill you."
-RoomEnd-GotDrunk-Game-01,Pato y Lobo se besaron.,,
-RoomEnd-GotDrunk-Game-02,Una y otra vez durante toda la noche.,,
-RoomEnd-GotDrunk-Game-03,Luego consiguieron pieza.,,
-RoomEnd-GotDrunk-Game-04,Y se revolcaron como animales salvajes.,,
-RoomEnd-GotDrunk-Game-05,Alas y pelos quedaron por toda la habitación.,,
-RoomEnd-GotDrunk-Game-06,Al día siguiente.,,
-RoomEnd-GotDrunk-Game-07,Pato despertó con mucho dolor de cabeza.,,
-RoomEnd-GotDrunk-Game-08,Y nunca más fue capaz de acercarse a Lobo.,,
-RoomEnd-GotDrunk-Game-09,Pero siempre recuerda lo rico que fue.,,
-RoomEnd-Unable-Game-01,Pato no fue capaz de hablarle a Lobo.,,
-RoomEnd-Unable-Game-02,A pesar de sentirse segura por sus imaginaciones.,,
-RoomEnd-Unable-Game-03,Hay quienes nacieron para fracasar.,,
-RoomEnd-Unable-Game-04,Como ayó.,,
-RoomEnd-Disguised-Game-01,Pato le dijo a Lobo que quería parecer más atractiva.,,
-RoomEnd-Disguised-Game-02,Lobo le quitó la máscara y le dijo que así estaba mejor.,,
-RoomEnd-Disguised-Game-03,Ambos rieron y bailaron.,,
-RoomEnd-Disguised-Game-04,Y Pato fue quitándose poco a poco todo el disfraz.,,
-RoomEnd-Disguised-Game-05,Al finalizar la fiesta fueron a tomar caldo de costilla.,,
-RoomEnd-Disguised-Game-06,Y ahora están saliendo juntitos lo más de lindos.,,
-RoomEnd-AllDone-Game-01,Pato le dijo a Lobo que quería parecer más atractiva.,,
-RoomEnd-AllDone-Game-02,Lobo le quitó la máscara y le dijo que así estaba mejor.,,
-RoomEnd-AllDone-Game-03,Ambos rieron y bailaron.,,
-RoomEnd-AllDone-Game-04,Pato le contó a Lobo acerca de sus ensoñaciones.,,
-RoomEnd-AllDone-Game-05,Lobo sintió mariposas en el estómago... se había enamorado.,,
-RoomEnd-AllDone-Game-06,Más tarde le dio un beso mientras bailaban.,,
-RoomEnd-AllDone-Game-07,Pato y Lobo ahora están juntos y son mucho muy felices.,,
-THE_END,Se acabó,Fin,The end
+RoomMarrano-01,Pato vió el agua que estaba cuidando Duque.,Pato vió el agua que el cerdo estaba cuidando.,Pato saw the water Pig was guarding.
+RoomMarrano-Pato-01,Nitamos esa agüita pa' regar nuestra semilla-hogar.,Necesitamos agua para regar nuestra semilla-hogar,We need that water to water our house-seed.
+RoomMarrano-Pato-02,Mejor me escondo.,Debo esconderme.,I better hide.
+RoomMarrano-Pato-03,Gran pendejo...,Es un tonto...,lol... The only stupid here is him.
+RoomMarrano-Pig-01,¡Mis flores de mi propiedad!,¡Mis floresssss!,MY FLOWERS!
+RoomMarrano-Pig-02,¿Dónde está este vándalo-terrorista desgraciado?,¿Dónde está ese sucio ladrón de flores?,Where are you stupid flower thief?
+RoomMarrano-Container,Flores bien pispas cuidadas por tesnología,Unas lindas flores protegidas por algo,Pretty flowers protected by something
+RoomMarrano-Container-Pato-01,Debe haber una forma de romper ese escudo.,Debe haber una forma de romper ese escudo.,There must be something we can do to break that shield.
+RoomMarrano-Container-Pato-02,"Eso sería arriesgado, papi.","Eso sería arriesgado, amor mío.","That will be risky, my love."
+RoomMarrano-Container-Pato-03,Pero alomejor le podemos tirar algo.,Tal vez podemos encontrar algo para tirarle encima.,But maybe there's something we can throw on it.
+RoomMarrano-Container-Pato-04,"Mirá-ve, severas flores.",Mira esas hermosas flores.,Look at those beautiful flowers.
+RoomMarrano-Container-Pato-05,Contrastan con el marrano ese.,Hacen un gran contraste con su dueño.,They make a great contrast to their owner.
+RoomMarrano-Container-Pato-06,Ora jue. Ya perdió el agüita.,Es el momento. Robaré el agua.,Now is the time. I'll stole the Fast-growing-water.
+RoomMarrano-Container-Lobo-01,¿Y se le estrello esta?,¿Qué tal si estrello la nave?,What if I crash the spaceship on it?
+RoomMarrano-Water,Agua-rapi-crecimiento,Agua-espacial-especial,Fast-growing-water
+RoomMarrano-Water-Pato-01,¿Puedo...?,¿Puedo...?,Can I...?
+RoomMarrano-Water-Pato-02,Ta bueno...,Está bien...,Ok ok...
+RoomMarrano-Water-Pato-03,¡ES MÍA DE MI PROPIEDAD!,¡ES MI PROPIEDAD!,It is mine!!!
+RoomMarrano-Water-Pato-04,Negro. Usá el rasho teletransportador pa' sacarme de aquí.,Amor mío. Usa el rayo teletransportador para sacarme de este lugar.,My love. Use the teleport ray to take me out of here.
+RoomMarrano-Water-Lobo-01,"Erre, mi reina de reinas","Como ordenes, amor de mis amores","As you command, love of my loves"
+RoomMarrano-Water-Pig-01,"Si la tocas, te rompo.","Si lo tocas, te mato.","You touch it, I kill you."
+RoomSpaceship-RoboticArm,Gancho Roboto,Gancho Funcional,Arm Picker
+RoomSpaceship-RoboticArm-Pato-01,Quemoción Lobo mío,¡Esto es muy emocionante amor!,This is so exciting my love!
+RoomSpaceship-RoboticArm-Lobo-01,Usaré el ganchoese pa' agarrar el semilla-hogar,Usaré el gancho para tomar nuestra semilla-hogar.,I will use the picker to pull our house-seed.
+RoomSpaceship-RoboticArm-Lobo-02,Pero... ¿Cuál agarro Pato de mis amores?,No se cual elegir amor mío.,I don\'t know which one to pick my love.
+RoomSpaceship-RoboticArm-Lobo-03,Es muy fuerte para agarrar a Pato... podría hacerle daño :(,No quiero lastimar a Pato.,I do not want to hurt Pato.
+RoomSpaceship-RoboticArm-Lobo-04,No se que hacer con el gancho roboto,No se que hacer con el gancho,I do not know what to do with the picker
+RoomSpaceship-RoboticArm-Lobo-05,Este gancho agarra cosas con muchas fuerzas,Este gancho puede halar cosas con mucha fuerza,The picker can pull things with amazing force
+RoomSpaceship-TeletransportRay,Rayo Teletransportador,Rayo Teletransportador,Teletransport-Ray
+RoomSpaceship-TeletransportRay-Pato-01,Ufff.... ya me estaba preocupando,Ufff... veía el cerdo regresando.,Pffff... the pig was already coming.
+RoomSpaceship-TeletransportRay-Lobo-01,El rayo no sirve pa' eso...,No puedo usar el rayo para eso...,Can not use the ray for that...
+RoomSpaceship-TeletransportRay-Lobo-02,"Preparate Pato, ahí va la tecnología",¡¡¡Observa el rayo-teletransportador en acción!!!,See the teletransport-ray in action!!!
+RoomSpaceship-GarbageExtractor,Puertas Basurísticas,Puertas del basurero,Garbage doors
+RoomSpaceship-GarbageExtractor-Pato-01,¡Suelteloooo!,¡Uuuuuuu!,UUUUuuuUUUUuuuUUUuuu
+RoomSpaceship-GarbageExtractor-Lobo-01,Nopo,No,Nope
+RoomSpaceship-GarbageExtractor-Lobo-02,No echaré basura en nuestra futura ranchis...,No tiraré basura en nuestro futuro hogar...,I won\'t trash our future home...
+RoomSpaceship-GarbageExtractor-Lobo-03,"Ahí voy, espero estes Patopreparade",¡Aquí vamos! ¡HORA DE LA DESTRUCCIÓN!,Here we go! DESTRUCTION TIME!!!!
+RoomSpaceship-GarbageExtractor-Lobo-04,Ya no hay más basura...,No tenemos más basura...,We don\'t have more trash...
+RoomSpaceship-GarbageExtractor-Lobo-05,"¡Vamos Pato, agarra el agua antes que se desdistraiga!",¡Apúrate Pato! ¡El cerdo volverá pronto!,Hurry up Pato! The pig will come back soon!
+RoomSpaceship-GarbageExtractor-Lobo-06,¿Para qué quiero esto? ¡Debo transportar a pato pronto!,¿Qué? Debo teletransportar a Pato.,What!? I have to teletransport Pato.
+RoomSpaceship-GarbageExtractor-Lobo-07,Es peligroso echar basura al espacio epsterior.,Trirar basura al espacio es peligroso.,Throwing trash to the cosmos is dangerous.
+RoomEnd-GotDrunk-Game-01,Pato y Lobo se besaron.,Pato y Lobo se besaron.,Pato and Lobo kissed.
+RoomEnd-GotDrunk-Game-02,Una y otra vez durante toda la noche.,Una y otra vez durante toda la noche.,Time after time the entire night.
+RoomEnd-GotDrunk-Game-03,Luego consiguieron pieza.,Luego buscaron un cuarto.,Then they got a room.
+RoomEnd-GotDrunk-Game-04,Y se revolcaron como animales salvajes.,Y tuvieron aventuras sensuales.,And they make fierce love to each other like wild animals.
+RoomEnd-GotDrunk-Game-05,Alas y pelos quedaron por toda la habitación.,El desorden y la pasión se esparcieron por la habitación.,Feathers and fur were spread around the room.
+RoomEnd-GotDrunk-Game-06,Al día siguiente.,Al día siguiente.,The next day.
+RoomEnd-GotDrunk-Game-07,Pato despertó con mucho dolor de cabeza.,Pato despertó con mucha resaca.,Pato woke up with a strong headache.
+RoomEnd-GotDrunk-Game-08,Y nunca más fue capaz de acercarse a Lobo.,Y nunca más fue capaz de acercarse a Lobo.,And was never capable to reach Lobo ever again.
+RoomEnd-GotDrunk-Game-09,Pero siempre recuerda lo rico que fue.,Pero siempre recuerda aquel día.,But she always remember how delicious it was.
+RoomEnd-Unable-Game-01,Pato no fue capaz de hablarle a Lobo.,Pato no fue capaz de hablarle a Lobo.,Pato wasn't capable to talk to Lobo.
+RoomEnd-Unable-Game-02,A pesar de sentirse segura por sus imaginaciones.,A pesar de sentirse segura por sus ensoñaciónes.,Even though she felt confident because of her imagination.
+RoomEnd-Unable-Game-03,Hay quienes nacieron para fracasar.,Algunos nacieron para fracasar.,Some are born to fail.
+RoomEnd-Unable-Game-04,Como ayó.,Como yo.,Like me.
+RoomEnd-Disguised-Game-01,Pato le dijo a Lobo que quería parecer más atractiva.,Pato le dijo a Lobo que quería parecer más atractiva.,Pato told Lobe she wante to look hotter.
+RoomEnd-Disguised-Game-02,Lobo le quitó la máscara y le dijo que así estaba mejor.,Lobo le quitó la máscara y le dijo que así estaba mejor.,Lobo took off her mask and told her she looked better like that.
+RoomEnd-Disguised-Game-03,Ambos rieron y bailaron.,Ambos rieron y bailaron.,Both laughed and dance.
+RoomEnd-Disguised-Game-04,Y Pato fue quitándose poco a poco todo el disfráz.,Y Pato fue quitándose poco a poco todo el disfráz.,"Pato took her custome slowly, piece by piece."
+RoomEnd-Disguised-Game-05,Al finalizar la fiesta fueron a tomar caldo de costilla.,Al finalizar la fiesta fueron a tomar sopa.,When the party ended they ate rib soup together.
+RoomEnd-Disguised-Game-06,Y ahora están saliendo juntitos lo más de lindos.,Y ahora están saliendo felices.,And now they are dating so pretty and cute.
+RoomEnd-AllDone-Game-01,Pato le dijo a Lobo que quería parecer más atractiva.,Pato le dijo a Lobo que quería parecer más atractiva.,Pato told Lobo she wante to look hotter.
+RoomEnd-AllDone-Game-02,Lobo le quitó la máscara y le dijo que así estaba mejor.,Lobo le quitó la máscara y le dijo que así estaba mejor.,Lobo took off her mask and told her she looked better like that.
+RoomEnd-AllDone-Game-03,Ambos rieron y bailaron.,Ambos rieron y bailaron.,Both laughed and dance.
+RoomEnd-AllDone-Game-04,Pato le contó a Lobo acerca de sus ensoñaciones.,Pato le contó a Lobo sobre sus sueños despiertos.,Pato talk to Lobo about her day dreams.
+RoomEnd-AllDone-Game-05,Lobo sintió mariposas en el estómago... se había enamorado.,Lobo empezó a sentirse extraño... se estaba enamorando.,Lobo felt butterflies in his stomach... he was falling in love.
+RoomEnd-AllDone-Game-06,Más tarde le dio un beso mientras bailaban.,Despues de un rato se besaron mientras bailaban.,Later he kissed her while they were dancing.
+RoomEnd-AllDone-Game-07,Pato y Lobo ahora están juntos y son mucho muy felices.,Pato y Lobo ahora estan juntos y son muy felices.,Pato and Lobo are now together and they are very happy.
+THE_END,Se acabó,Fin,End
 PERSONAJES,,,
 CharacterPato-CheckCostumeCompletion-Pato-01,¡Síiiiiiiii!,¡Síiiiiiiiiiiiiiii!,WEEEEEEEEEE!
 CharacterPato-CheckCostumeCompletion-Pato-02,Ya tengo el disfracho.,Tengo el disfraz.,I completed the costume.
@@ -174,32 +196,32 @@ CharacterPato-CheckCostumeCompletion-Pato-03,Ora sí... ¡transforlobación!,Aho
 CharacterPato-CheckCostumeCompletion-Pato-04,Estoy listerine para hablar con Lobo.,Estoy lista para hablar con Lobo.,I feel I'm ready to talk with Lobo!
 Character-Lobo,"Lobo, mi traga.","Lobo, mi amor inalcanzable.","Lobo, my unattainable love."
 CharacterLobo-Bar-Pato-01,Ora que tengo el disfracho no tendré miedo.,"Ahora que parezco una Loba, no tendré miedo.",Now that I have my disguise I won't fear.
-CharacterLobo-Bar-Pato-02,Hola.,,Hi.
+CharacterLobo-Bar-Pato-02,Hola.,Hola.,Hi.
 CharacterLobo-Bar-Pato-03,Qué.... más....,Ho... la...,Hell....o....
 CharacterLobo-Bar-Lobo-04,¡Epa! ¿Por qué 'tá disfrazada?,¡Ey! ¿Para qué es el disfraz?,Ey!... What's the costume for?
 CharacterLobo-Bar-Pato-05,Pues...,Emmm...,Well...
 CharacterLobo-Bar-Pato-06,Ya no le daré más vueltas.,No lo dudaré más.,I will not hesitate anymore.
 CharacterLobo-Bar-Pato-07,Voy con toda a hablarle a Lobo.,¡Le hablaré a Lobo AHORA!,I'm gonna talk with Lobo NOW!
-CharacterLobo-Bar-Pato-08,...,,
-CharacterLobo-Bar-Pato-09,........,,
-CharacterLobo-Bar-Pato-10,......................,,
-CharacterLobo-Bar-Pato-11,Ho..... ho..... ho.....,,He..... he..... h.....
+CharacterLobo-Bar-Pato-08,...,...,...
+CharacterLobo-Bar-Pato-09,........,........,........
+CharacterLobo-Bar-Pato-10,......................,......................,......................
+CharacterLobo-Bar-Pato-11,Ho..... ho..... ho.....,Je..... Je..... Je.....,He..... he..... h.....
 CharacterLobo-Bar-Pato-12,¡Ayyyy pero qué guapote!,¡Es tan atractivo!,He is sooooo handsome!!!
-CharacterLobo-Bar-Pato-13,Nunca seré capaz de hablarle.,,I'll never have the guts to talk him
+CharacterLobo-Bar-Pato-13,Nunca seré capaz de hablarle.,Nunca seré capaz de hablar con el.,I'll never have the guts to talk him
 CharacterLobo-Bar-Pato-14,Ayyyy... qué rico se mueve...,Ayyyy... qué bien baila...,And look how he moves...
-CharacterLobo-Bar-Pato-15,/( > __ < \\),,
-CharacterLobo-Bar-Pato-16,[wave]deEeeEe GuiHhHhero beEeeEEEsssss'r.[/wave],,
-CharacterLobo-Bar-Lobo-17,¡Ay qué riiiico!,,
-CharacterLobo-Bar-Pato-18,Ora que tengo el perrenque y la pinta.,,
-CharacterLobo-Bar-Pato-19,No lo dudaré ni un segundo. ¡LE HABLARÉ A ESA RICURA!,,
-CharacterLobo-Bar-Pato-20,Hola. Bailas muy mucho muy bien.,,
-CharacterLobo-Bar-Lobo-21,Hola. Gracias.,,
-CharacterLobo-Bar-Lobo-22,¿Por qué estás disfrazada?,,
-CharacterLobo-Bar-Pato-23,Porque quería hablarte... desde hace rato.,,
-CharacterLobo-Bar-Pato-24,Y así era más fácil pa' yo.,,
+CharacterLobo-Bar-Pato-15,/( > __ < \\),/( > __ < \\),/( > __ < \\)
+CharacterLobo-Bar-Pato-16,[wave]deEeeEe GuiHhHhero beEeeEEEsssss'r.[/wave],[wave]deEeeEe GuiHhHhero beEeeEEEsssss'r.[/wave],[wave]deEeeEe GuiHhHhero beEeeEEEsssss'r.[/wave]
+CharacterLobo-Bar-Lobo-17,¡Ay qué riiiico!,¡Que lindoooo!,"Woooo, Hot!"
+CharacterLobo-Bar-Pato-18,Ora que tengo el perrenque y la pinta.,Ahora tengo valor y un gran aspecto.,Now that I feel courageous and have this disguise.
+CharacterLobo-Bar-Pato-19,No lo dudaré ni un segundo. ¡LE HABLARÉ A ESA RICURA!,No dudaré ni un segundo ¡LE HABLARÉ A ESTE GUAPO!,I won't doubt a second. I WILL TALK TO THIS HOTTIE!
+CharacterLobo-Bar-Pato-20,Hola. Bailas muy mucho muy bien.,Hola. Bailas bonito.,Hi. You dance very nice.
+CharacterLobo-Bar-Lobo-21,Hola. Gracias.,Hola. Gracias.,Hi. Thanks.
+CharacterLobo-Bar-Lobo-22,¿Por qué estás disfrazada?,¿Por qué estás disfrazada?,Why are you disguised?
+CharacterLobo-Bar-Pato-23,Porque quería hablarte... desde hace rato.,Porque quería hablarte... desde hace un tiempo.,Because I wanted to talk to you... since a long time ago.
+CharacterLobo-Bar-Pato-24,Y así era más fácil pa' yo.,Y si me disfrazaba iba a ser más fácil para mí.,And it was easier for me this way.
 CharacterLobo-Sea-Lobo-01,[wave]Aiudaaaaaaaaaaaaaaaa[/wave],[wave]Ayuuudaaaaaaaaa[/wave],[wave]Heeeeeeeeeeeeeeeeelp[/wave]
 CharacterLobo-Sea-Lobo-02,¡¡¡Mi hogo!!!,¡¡¡Me ahogo!!!,I'm drowning!!!
-CharacterLobo-Sea-Pato-03,Aguanta amor meo. Te sacaré de ahí.,Aguanta amor mío. Te salvaré.,Hang on there my love. I'll get you out of there.
+CharacterLobo-Sea-Pato-03,Aguanta amor meo. Te sacaré de ahí.,Aguanta amor mío. Te salvaré.,Hang in there my love. I'll get you out of there.
 CharacterLobo-Look-Pato-01,Está más bueno que el pan con chocolate.,Es muuuuuuuy atractivo.,He is soooooooooo hot!!!
 CharacterLobo-Mopbrella-Pato-01,"Te salve de la desgracía, Lobo de mis amores.",Te he salvado amor mío.,"I've saved your life, love of my."
 CharacterLobo-OnItemUsed-Pato-01,Tá muy lejos.,No alcanzo hasta allá.,I can not reach you.
@@ -207,36 +229,36 @@ Character-Conejuno,El de la barra.,El camarero.,Barman.
 Character-Conejuno-OnLook-Pato-01,Es el de la barra.,Es el camarero.,The barman.
 Character-Conejuno-OnLook-Pato-02,Sirve tragos y escucha historias mierdas todos los días.,Sirve tragos y escucha historias.,The one who serves drinks and listens to nonsense stories every night.
 Character-Lagarto,El de la música.,El DJ.,The DJ
-Character-Lagarto-OnInteract-Pato-01,Hola.,,Hi-ya.
-Character-Lagarto-OnInteract-Lagarto-02,Punchis punchis. Hola.,,Pums pums pums. Hi.
-Character-Lagarto-OnInteract-Lagarto-03,Un momento. Una estrella no habla cara a cara con la chusma.,,Wait. A star can't talk to nobody without a mask.
-Character-Lagarto-OnInteract-Lagarto-04,Listo. ¿Qué pasó?,,So. What do you want?
-Character-Lagarto-OnInteract-Lagarto-05,Me lleva la verdura. Me robaron mi máscara.,,Fock. Someone stole my mask.
-Character-Lagarto-OnInteract-Lagarto-06,"Puedes hablarme, pero no me mires a la cara.",,"You can talk to me, but don't dare to look at me."
-Character-Lagarto-OnInteract-Pato-07,Está bien...,,Aaaaall right...
-Character-Lagarto-OnLook-Pato-01,Esa máscara del DJ puede servirme como disfraz.,,I can use the DJ's wolf mask for my costume.
-Character-Lagarto-OnLook-Pato-02,Con razón usaba esa máscara... está todo llevado.,,So that's why he uses the mask. Drogs!
-Character-Lagarto-OnLook-Pato-03,Hay algo de angustia en sus mirada.,,His gaze is full of anguish.
-Character-Marrano,¿Duque?,,Pres. Duque.
+Character-Lagarto-OnInteract-Pato-01,Hola.,Hola.,Hi-ya.
+Character-Lagarto-OnInteract-Lagarto-02,Punchis punchis. Hola.,Bum Bum. Hola.,Pums pums pums. Hi.
+Character-Lagarto-OnInteract-Lagarto-03,Un momento. Una estrella no habla cara a cara con la chusma.,Espera. Alguien famoso no habla con nadie sin su máscara.,Wait. A star can't talk to nobody without a mask.
+Character-Lagarto-OnInteract-Lagarto-04,Listo. ¿Qué pasó?,Entonces. ¿Qué necesitas?,So. What do you want?
+Character-Lagarto-OnInteract-Lagarto-05,Me lleva la verdura. Me robaron mi máscara.,Nooo. Alguien robó mi máscara.,Fock. Someone stole my mask.
+Character-Lagarto-OnInteract-Lagarto-06,"Puedes hablarme, pero no me mires a la cara.","Hablame, pero no me mires a la cara.","You can talk to me, but don't dare to look at me."
+Character-Lagarto-OnInteract-Pato-07,Está bien...,Bueno...,Aaaaall right...
+Character-Lagarto-OnLook-Pato-01,Esa máscara del DJ puede servirme como disfraz.,Su máscara de lobo es perfecta para mi disfraz.,I can use the DJ's wolf mask for my costume.
+Character-Lagarto-OnLook-Pato-02,Con razón usaba esa máscara... está todo llevado.,Por eso es que usaba máscara... esta un poco pasado.,So that's why he uses the mask. Drogs!
+Character-Lagarto-OnLook-Pato-03,Hay algo de angustia en sus mirada.,Su mirada parece angustiada.,His gaze is full of anguish.
+Character-Marrano,¿Duque?,¿SubPresidente?,Pres. Duque.
 Character-Marrano-OnInteract-Marrano-01,¡A la mierda! Estoy buscando al vándalo.,¡Vete! Estoy buscando al intruso.,Go away! I'm searching the intruder.
-Character-Pez,Un... pescado-guardian-robot.,,Mecha-fish... it seems.
-Character-Vieja,Una loba vieja.,,Old-y with dentures.
-Character-Vieja-OnInteract-Pato-01,La vieja quedó foquiada con mi super coctel.,,That cocktail made the job. She fell asleep.
-Character-Vieja-OnInteract-Pato-02,Ojalá no la irrespeten.,,I hope she'd be fine.
-Character-Vieja-CocktailSuper-Pato-01,Vea señora. Le invito este traguito.,,Old-y. I invite you this drink.
-Character-Vieja-CocktailSuper-Pato-02,Fuerte y con sabor a viejo.,,Strong and with the flavor of an elder so old...
-Character-Vieja-CocktailSuper-Vieja-03,Que el santo pollo la bendiga mija.,,"Glob bless you, my girl."
-Character-Vieja-CocktailSuper-Vieja-04,glup glup glup glup glup.,,gulp gulp gulp gulp.
-Character-Vieja-CocktailSuper-Vieja-05,Oh sí... como en los viejos tiempos.,,FOCK YEAH!... like old times.
-Character-Vieja-CocktailSuper-Vieja-06,Ahora sólo queda esperar a que...,,All I have to do now is wait for....
-Character-Vieja-CocktailSuper-Pato-07,¡Ferpecto! Alcanzó a dejar sus muelas en el vaso.,,Great! She put her dentures in the glass.
-Character-Vieja-CocktailSecret-Pato-01,¿Qué opina de este trago?,,What do you think of this drink old-y?
-Character-Vieja-CocktailSecret-Vieja-02,Mmmmm... no está nada mal... pero,,Mmmmm... not bad at all... but
-Character-Vieja-CocktailSecret-Vieja-03,"Como que le falta alguito. Sabe a viejo, pero no está tan fuerte.",,"But it lacks of something. It tastes like an elder, but it isn't strong."
-Character-Vieja-CocktailGolem-Pato-01,Tómese este.,,Drink this!
-Character-Vieja-CocktailGolem-Vieja-02,Pfffffffff.......,,
-Character-Vieja-CocktailGolem-Vieja-03,Está fuerte pero mucho lo dulce.,,What da fock. This is as sweet as a little pink baby.
-Character-Vieja-CocktailGolem-Vieja-04,El Tumbalocas no me gusta por eso. Le falta el sabor a viejo.,,I told you I don't like Golem cocktail. It lacks of the elder flavor.
+Character-Pez,Un... pescado-guardian-robot.,Un pez-mecánico... o eso parece.,Mecha-fish... it seems.
+Character-Vieja,Una loba vieja.,Una loba anciana.,Old-y with dentures.
+Character-Vieja-OnInteract-Pato-01,La vieja quedó foquiada con mi super coctel.,El coctel fue efectivo. Quedó totalmente dormida.,That cocktail made the job. She fell asleep.
+Character-Vieja-OnInteract-Pato-02,Ojalá no la irrespeten.,Espero que se encuentre bien.,I hope she'd be fine.
+Character-Vieja-CocktailSuper-Pato-01,Vea señora. Le invito este traguito.,Disculpe señora. Le invito un trago.,Old-y. I invite you this drink.
+Character-Vieja-CocktailSuper-Pato-02,Fuerte y con sabor a viejo.,Fuerte y con sabor a anciano.,Strong and with the flavor of an elder so old...
+Character-Vieja-CocktailSuper-Vieja-03,Que el santo pollo la bendiga mija.,"Dios la bendiga, jovencita.","Glob bless you, my girl."
+Character-Vieja-CocktailSuper-Vieja-04,glup glup glup glup glup.,glup glup glup glup glup.,gulp gulp gulp gulp.
+Character-Vieja-CocktailSuper-Vieja-05,Oh sí... como en los viejos tiempos.,Oh sí... como en los viejos tiempos.,FOCK YEAH!... like old times.
+Character-Vieja-CocktailSuper-Vieja-06,Ahora sólo queda esperar a que...,Ahora sólo queda esperar a que...,All I have to do now is wait for....
+Character-Vieja-CocktailSuper-Pato-07,¡Ferpecto! Alcanzó a dejar sus muelas en el vaso.,¡Genial! Puso sus dentaduras en un vaso.,Great! She put her dentures in the glass.
+Character-Vieja-CocktailSecret-Pato-01,¿Qué opina de este trago?,¿Qué opina de este trago?,What do you think of this drink old-y?
+Character-Vieja-CocktailSecret-Vieja-02,Mmmmm... no está nada mal... pero,Mmmmm... nada mal... pero,Mmmmm... not bad at all... but
+Character-Vieja-CocktailSecret-Vieja-03,"Como que le falta alguito. Sabe a viejo, pero no está tan fuerte.","Le falta algo. Sabe a viejo, pero no es fuerte.","But it lacks of something. It tastes like an elder, but it isn't strong."
+Character-Vieja-CocktailGolem-Pato-01,Tómese este.,"Pruebe este,",Drink this!
+Character-Vieja-CocktailGolem-Vieja-02,Pfffffffff.......,Pfffffffff.......,Pfffffffff.......
+Character-Vieja-CocktailGolem-Vieja-03,Está fuerte pero mucho lo dulce.,Es fuerte pero muy dulce.,What da fock. This is as sweet as a little pink baby.
+Character-Vieja-CocktailGolem-Vieja-04,El Tumbalocas no me gusta por eso. Le falta el sabor a viejo.,El Tumbalocas no me gusta por que no sabe a viejo.,I told you I don't like Golem cocktail. It lacks of the elder flavor.
 CONVERSACIONES,,,
 ChatWithConejuno-Start-01,A la orden.,¿Qué quieres?,What do you want?
 ChatWithConejuno-Opt1,Deme una pola,Quiero una cerveza.,A beer.
@@ -248,21 +270,21 @@ BeersMenu-Opt1,Redds,Corona,Pink Beer
 BeersMenu-Opt2,Galáctica,Galáctica,Cosmos Kick
 BeersMenu-Opt3,Negra,Negra,Cooffee
 BeersMenu-Exit,Neh quiero pola.,Ya no quiero cerveza.,I don't want beer.
-BeersMenu-Pato-01,Quiero una...,,I want a...
+BeersMenu-Pato-01,Quiero una...,Quisiera una...,I want a...
 BeersMenu-Pato-02,", porfis.",", por favor.",", please."
 BeersMenu-Conejuno-03,Sale una,Sirviendo una,Serving a
 BeersMenu-Pato-Thanks,Gracias.,Gracias.,Thanks.
 BeersMenu-Opt1-Game-01,Pato se la embuchó.,Pato se tomó la cerveza rápidamente.,Pato drank the beer quickly
-BeersMenu-Opt1-Pato-02,glup glup glup glup,,gulp gulp gulp
+BeersMenu-Opt1-Pato-02,glup glup glup glup,glup glup glup glup,gulp gulp gulp
 BeersMenu-Opt1-Pato-03,No me hizo una mierda.,No me hizo efecto.,Nothing happened.
 BeersMenu-Opt2-Game-01,Paro se la jartó despacito.,Pato se tomó la cerveza lentamente.,Pato drank the beer slowly
-BeersMenu-Opt2-Pato-02,glup glup glup glup glup glup glup glup glup glup,,gulp gulp gulp gulp gulp gulp gulp gulp gulp
+BeersMenu-Opt2-Pato-02,glup glup glup glup glup glup glup glup glup glup,glup glup glup glup glup glup glup glup glup glup,gulp gulp gulp gulp gulp gulp gulp gulp gulp
 BeersMenu-Opt2-Pato-03,Puta... esta sí me patió... AL INFINITO Y...,Changos... esta sí está fuerte... AL INFINITO Y...,Wow... now I feel the KICK TO THE COSM...
-BeersMenu-Opt3-Pato-01,glup... glup... glup......,,gulp gulp.... gulp...... gulp....
+BeersMenu-Opt3-Pato-01,glup... glup... glup......,glup... glup... glup......,gulp gulp.... gulp...... gulp....
 BeersMenu-Opt3-Pato-02,¡Qué puta mierda!,¡Qué cerveza más fea!,What a disgusting beer!
 BeersMenu-Opt3-Game-03,Pato tiró lo que quedaba.,Pato derramó lo que quedaba.,Pato watered what was left of the beer
-CocktailsMenu-Start-Conejuno-01,No nos haremos responsables por lo que pueda pasar,,The bar is not responsible for what may happen
-CocktailsMenu-Start-Conejuno-02,Y estas son las opciones,,But I offer you these cocktails
+CocktailsMenu-Start-Conejuno-01,No nos haremos responsables por lo que pueda pasar,El bar no se hace responsable de las consecuencias,The bar is not responsible for what may happen
+CocktailsMenu-Start-Conejuno-02,Y estas son las opciones,Pero le ofrezco estos cocteles,But I offer you these cocktails
 CocktailsMenu-Opt1,Tumbalocas.,Sueño del gigante.,Golem Dream.
 CocktailsMenu-Opt2,Superperrenque.,Super-coraje.,Hyper-courage.
 CocktailsMenu-Opt3,Sudor de campeche.,Sudor de Hércules.,Hercules sweat.
@@ -276,25 +298,25 @@ CocktailsMenu-Opt2-Conejuno-02,Pilas.,Ten cuidado.,Be careful.
 CocktailsMenu-Opt2-Pato-03,Uyyyyyyy....,Ooooooohhhhh,Mmmmmmm.....
 CocktailsMenu-Opt2-Game-04,Pato tuvo una ideota.,A Pato se le ocurrió algo.,Pato had an idea...
 CocktailsMenu-Opt2-Pato-05,Todobien... (sapo).,Lo tendré... (entrometido).,Ok... (nosy).
-CocktailsMenu-Opt2-Game-06,Y se tomó el trago de un sorbo.,,
-CocktailsMenu-Opt2-Pato-06,gluuuuuuuuuuuuup,,
-CocktailsMenu-Opt2-Pato-07,Oh oh...,,
-CocktailsMenu-Opt2-Game-08,Pato se prendió una gonorrea.,,
-CocktailsMenu-Opt2-Pato-09,[wave]Yssssa nO thhheno meddddddo E haddddlarle a LoBo.[/wave],,
+CocktailsMenu-Opt2-Game-06,Y se tomó el trago de un sorbo.,Y se tomó el coctel de un solo trago.,And she drank it in one sip.
+CocktailsMenu-Opt2-Pato-06,gluuuuuuuuuuuuup,gluuuuuuuuuuuuup,gluuuuuuuuuuuuup
+CocktailsMenu-Opt2-Pato-07,Oh oh...,Oh oh...,Oh oh...
+CocktailsMenu-Opt2-Game-08,Pato se prendió una gonorrea.,Pato se pasó de tragos.,Pato got really drunk instantly.
+CocktailsMenu-Opt2-Pato-09,[wave]Yssssa nO thhheno meddddddo E haddddlarle a LoBo.[/wave],[wave]Yssssa nO thhheno meddddddo E haddddlarle a LoBo.[/wave],"[wave]I'mmmm Nuut afreeiid AnyM0reeeeee, Tolllking tooo LoBooo noww[/wave]"
 CocktailsMenu-Opt3-Conejuno-01,¿Sabe los secretos del bar y que tales?,¿Así que conoces nuestra carta secreta?,So you know about our forbidden drinks?
 CocktailsMenu-Opt3-Conejuno-02,Me cae bien esta pelada.,Ahora me caes bien.,Now I like you.
 CocktailsMenu-Opt3-Conejuno-03,Péreme tantico lo preparo.,Dame unos minutos para prepararlo.,Just... let me prepare the ingredients
 CocktailsMenu-Opt3-Conejuno-04,"Aquí está. Un sabor clásico, pero no muy fuerte.","Aquí tienes. Sabor clásico, pero no muy fuerte.","Here it is. Classic flavor, but nothing strong."
 ChatWithLagarto-Opt1,La música está re-buena.,La música está muy bien.,The music is very good.
 ChatWithLagarto-Opt2,¿Le puedo pedir una canción?,¿Puedo pedirte una canción?,Can I request a song?
-ChatWithLagarto-Exit,Bueno... me voy.,,Well... bye.
+ChatWithLagarto-Exit,Bueno... me voy.,Bueno... adiós.,Well... bye.
 ChatWithLagarto-Opt1-Lagarto-01,Yo sé. Soy el más áspero de los ásperos.,Lo sé. Soy el mejor.,I know. I am the best.
 ChatWithLagarto-Opt1-Pato-02,Ajá...,Seguro...,Yup...
 ChatWithLagarto-Opt2-Lagarto-01,Pos claro. ¿Qué temita le pongo?,Claro que sí. ¿Cuál quieres escuchar?,Yes of course. These are the options.
-SongList-Opt1,El regreso del maestro de las acrobacias.,,Return of the stunt master.
-SongList-Opt2,La chucha.,,The opossum.
-SongList-Opt3,Tus ojos me llevan a la luna.,,Your eyes take me to the moon.
-SongList-Opt4,El embolatao.,,The mess-man.
+SongList-Opt1,El regreso del maestro de los visajes.,El regreso del maestro de las acrobacias.,Return of the stunt master.
+SongList-Opt2,La chucha.,La zarigüeya.,The opossum.
+SongList-Opt3,Tus ojos me llevan a la luna.,Tus ojos me llevan a la luna.,Your eyes take me to the moon.
+SongList-Opt4,El embolatao.,El desastrozo.,The mess-man.
 SongList-Exit,Ninguna de esas.,Ninguna.,None.
 SongList-Opt1-Lagarto-01,Buena eletción. Ya mismo se la pongo.,¡Qué buena elección! La pondré ya mismo.,Great choice. Will play it now.
 SongList-Opt1-Lagarto-02,Pere me quito esto porque esa me hace sudar.,Pero primero me quitaré esto porque esa me gusta mucho.,But I'm taking this off because that one makes me sweat.
@@ -308,176 +330,218 @@ SongList-Opt3-Pato-03,¿Qué tal si...?,¿Y si...?,What if...
 SongList-Exit-Lagarto-01,Ta bueno.,No hay problema.,Sure.
 ChatWithVieja-Start-Pato-01,Hola 'ñora.,Hola señora.,Hi ma'am.
 ChatWithVieja-Start-Vieja-02,Hola muchacha.,Hola jovencita.,Hi young lady.
-ChatWithVieja-Opt1,¿Cómo la está pasando señora?,,How are you doing ma'am?
-ChatWithVieja-Opt2,¿Qué está tomando?,,What are you drinking?
-ChatWithVieja-Opt3,¿Qué le gustaría tomar?,,Want a special drink?
+ChatWithVieja-Opt1,¿Cómo la está pasando señora?,¿Cómo la está pasando señora?,How are you doing ma'am?
+ChatWithVieja-Opt2,¿Qué está tomando?,¿Qué está tomando?,What are you drinking?
+ChatWithVieja-Opt3,¿Qué le gustaría tomar?,¿Qué le gustaría tomar?,Want a special drink?
 ChatWithVieja-Opt4,Sus dientes están bien lindos.,Tiene usted unos dientes muy bonitos.,You have very nice teeth
 ChatWithVieja-Exit,Conpermiso señora.,"Hasta luego, señora.",With your permission ma'am
-ChatWithVieja-Opt1-Vieja-01,Pues la pasaba mejor cuando era más joven. Como tú.,,"Well, I had a better time when I was younger. Like you."
-ChatWithVieja-Opt1-Vieja-02,"Ahora es muy difícil levantar polvo, aunque a veces se logra.",,"Now it is very difficult to flirt, although sometimes it is achieved."
-ChatWithVieja-Opt1-Vieja-03,Pero cuando era joven...,,But in my younger days...
-ChatWithVieja-Opt1-Vieja-04,no había noche en la que no me revolcara.,,Ouuueeeee!
-ChatWithVieja-Opt1-Pato-05,¡Ay santo pollo!,,Oh my!
-ChatWithVieja-Opt2-Vieja-01,Una mierda más chimba.,,Something for noobs.
-ChatWithVieja-Opt2-Vieja-02,Necesito emociones más fuertes en mi vida.,,I need stronger emotions in my life.
-ChatWithVieja-Opt2-Vieja-03,Un aventura que me recuerde los locos años de la juventú.,,An adventure that reminds me of the crazy youth years.
-ChatWithVieja-Opt3-Vieja-01,"Algo que sea fuerte, pero que sepa a viejo.",,"Something strong, but that tastes old."
-ChatWithVieja-Opt3-Vieja-02,Ese tal trago del gólem sabe a fresa... guácatelas.,,That Golem cocktail is poop.
-ChatWithVieja-Opt3-Pato-03,Fuerte y...,,Strong that...
-ChatWithVieja-Opt3-Vieja-04,"Viejo, sí.",,tastes old.
-ChatWithVieja-Opt3-Vieja-05,¿También te gustan así?,,Do you like them like that too?
-ChatWithVieja-Opt3-Pato-06,Emmm....mmmm......mmmmmmm.....,,
-ChatWithVieja-Opt3-Game-07,Pato se sonrojó,,Pato blushed
-ChatWithVieja-Opt3-Vieja-08,En mis tiempos no había cocteles. Tomábamos todo puro.,,In my time there were no cocktails. We drank everything pure.
-ChatWithVieja-Opt4-Vieja-01,"jijijijijiji.... gracias por el cumplido, pero son postizos.",,"hihihihihihi.... thanks for the compliment, but I use dentures."
-ChatWithVieja-Opt4-Vieja-02,Aprovecha tus dientes mientras puedas.,,Take advantage of your teeth while you can.
-ChatWithVieja-Opt4-Vieja-03,jijijijijiji,,hihihihihihi
-ChatWithVieja-Opt4-Game-04,La vieja se sacó la dentadura e hizo piruetas.,,The old woman took out her dentures and played with them'
-ChatWithVieja-Opt4-Pato-05,....(vieja puerca),,....
-ChatWithVieja-Exit-Vieja-01,Que se diviertas... jijijijijiji,,Have fun young and pretty lady... hihihihihihi
-ChatWithPez-Start-Pato-01,Emmm...,,Ehh....
-ChatWithPez-Start-Pato-02,Hola.,,Hi!
+ChatWithVieja-Opt1-Vieja-01,Pues la pasaba mejor cuando era más joven. Como tú.,Pues la pasaba mejor cuando era más joven. Como tú.,"Well, I had a better time when I was younger. Like you."
+ChatWithVieja-Opt1-Vieja-02,"Ahora es muy difícil levantar polvo, aunque a veces se logra.","Ahora es muy coquetear con los muchachos, aunque a veces es posible.","Now it is very difficult to flirt, although sometimes it is achieved."
+ChatWithVieja-Opt1-Vieja-03,Pero cuando era joven...,Pero cuando era joven...,But in my younger days...
+ChatWithVieja-Opt1-Vieja-04,no había noche en la que no me revolcara.,no había nadie que escapara de mis garras.,Ouuueeeee!
+ChatWithVieja-Opt1-Pato-05,¡Ay santo pollo!,¡Ohhh si!,Oh my!
+ChatWithVieja-Opt2-Vieja-01,Una mierda más chimba.,Algo para novatos,Something for noobs.
+ChatWithVieja-Opt2-Vieja-02,Necesito emociones más fuertes en mi vida.,Necesito emociones más fuertes en mi vida.,I need stronger emotions in my life.
+ChatWithVieja-Opt2-Vieja-03,Un aventura que me recuerde los locos años de la juventú.,Una aventura que me haga sentir joven de nuevo.,An adventure that reminds me of the crazy youth years.
+ChatWithVieja-Opt3-Vieja-01,"Algo que sea fuerte, pero que sepa a viejo.","Algo que sea fuerte, pero con sabor a viejo.","Something strong, but that tastes old."
+ChatWithVieja-Opt3-Vieja-02,Ese tal trago del gólem sabe a fresa... guácatelas.,Ese tal trago del tumbalocas sabe a fresa... muy feo.,That Golem cocktail is poop.
+ChatWithVieja-Opt3-Pato-03,Fuerte y...,Fuerte y...,Strong that...
+ChatWithVieja-Opt3-Vieja-04,"Viejo, sí.","Viejo, sí.",tastes old.
+ChatWithVieja-Opt3-Vieja-05,¿También te gustan así?,¿También te gustan así?,Do you like them like that too?
+ChatWithVieja-Opt3-Pato-06,Emmm....mmmm......mmmmmmm.....,Emmm....mmmm......mmmmmmm.....,Emmm....mmmm......mmmmmmm.....
+ChatWithVieja-Opt3-Game-07,Pato se sonrojó,Pato se sonrojó,Pato blushed
+ChatWithVieja-Opt3-Vieja-08,En mis tiempos no había cocteles. Tomábamos todo puro.,En mis tiempos no había cocteles. Tomábamos todo puro.,In my time there were no cocktails. We drank everything pure.
+ChatWithVieja-Opt4-Vieja-01,"jijijijijiji.... gracias por el cumplido, pero son postizos.","jijijijijiji.... gracias por el cumplido, pero son dentaduras.","hihihihihihi.... thanks for the compliment, but I use dentures."
+ChatWithVieja-Opt4-Vieja-02,Aprovecha tus dientes mientras puedas.,Aprovecha tus dientes mientras puedas.,Take advantage of your teeth while you can.
+ChatWithVieja-Opt4-Vieja-03,jijijijijiji,jijijijijiji,hehehehehehe
+ChatWithVieja-Opt4-Game-04,La vieja se sacó la dentadura e hizo piruetas.,La anciana se sacó la dentadura e hizo malabares.,The old woman took out her dentures and played with them'
+ChatWithVieja-Opt4-Pato-05,....(vieja puerca),....,....
+ChatWithVieja-Exit-Vieja-01,Que se diviertas... jijijijijiji,Pasa un buen rato jovencita... jijijijijiji,Have fun young and pretty lady... hihihihihihi
+ChatWithPez-Start-Pato-01,Emmm...,Emmm...,Ehh....
+ChatWithPez-Start-Pato-02,Hola.,Hola.,Hi!
 ChatWithPez-Start-Pez-03,Quiubo.,Hola.,Hey.
-ChatWithPez-Opt1,Eso que llevas puesto está áspero.,,That suit you're using looks cool.
-ChatWithPez-Opt2,¿Cómo puedo conseguir una cosa de esas?,,How can I get one?
-ChatWithPez-Opt3,¿Y puedo retarte a una pelea de miradas?,,Can I challenge you to a stare fight.
-ChatWithPez-Opt4,Te reto a una pelea de miradas por tu... aparato,,I challenge you to a stare fight... for your suit.
-ChatWithPez-Opt5,¿Por qué no entras?,,Why don't you come in?
-ChatWithPez-Opt6,Acerca del pasado del bar,,Talking about this place's past.
-ChatWithPez-Opt7,A ver esas patas,,Give me da legs.
-ChatWithPez-Exit,Bueno. Me voy. Chao.,,Well. I've to... bye.
-ChatWithPez-Opt1-Pez-01,Gracias. Lo gané hace poco en una pelea de miradas.,,Thanks. I earn it a while ago in a stare fight.
-ChatWithPez-Opt1-Pez-02,¿Una pelea de miradas?,,A stare fight?
-ChatWithPez-Opt1-Pez-03,Sí. Una pelea de miradas.,,Yep. A stare fight.
-ChatWithPez-Opt1-Pez-04,¿Y eso cómo se juega?,,And how do you play that?
-ChatWithPez-Opt1-Pez-05,¿Jugar?,,Play?
-ChatWithPez-Opt1-Pez-06,"La pelea de miradas no es un juego, amiga.",,"A stare fight is not a game, mate."
-ChatWithPez-Opt1-Pez-07,Es una prueba de valor y concentración... muy honorable.,,It is a guts and concentration test... so honorable.
-ChatWithPez-Opt1-Pato-08,"Entiendo, entiendo.",,"Got it, got it."
-ChatWithPez-Opt2-Pez-01,Puedes comprarla o ganarla en una pelea de miradas.,,You can buy it or earn it in a stare fight.
-ChatWithPez-Opt2-Pez-02,Así fue como gané la mía.,,That's how i earn mine.
-ChatWithPez-Opt2-Pato-03,Sí sí... ya lo dijites.,,Yep... you already said that.
-ChatWithPez-Opt3-Pez-01,Podrías... si no estuvieras tan sucia.,,You could... if you weren't so dirty.
-ChatWithPez-Opt3-Pato-02,¡YO NO ESTOY SUCIA!,,I'M NOT DIRTY!
-ChatWithPez-Opt3-Game-03,Pato se enojó como hace mucho no lo hacía.,,Pato got mad as she did not in a long time
-ChatWithPez-Opt3-Game-04,Ora sí estaba dispuesta a derrotar a Pez en la pelea de miradas.,,Now she was commited to defeat Pez in a stare fight
-ChatWithPez-Opt3-Pez-05,Estás muuuuuy sucia. Lo noto desde aquí.,,You are sooooooo dirtyy. I can notice from here.
-ChatWithPez-Opt3-Pato-06,Qué qué... ¿Qué tengo sucio?,,Wha... what... what do you see dirty?
-ChatWithPez-Opt3-Pez-07,Las alas... ¡guagh!,,Those... wings... ewwwwww!
-ChatWithPez-Opt3-Pez-08,No sé cómo puedes vivir así.,,I don't know how can you live like that.
-ChatWithPez-Opt3-Pato-09,¿Por qué debería lavarme las alitas pa' una pelea de miradas?,,Why should I clean my wings for a stare fight?
-ChatWithPez-Opt3-Pez-10,Porque limpiamos nuestros ojos una vez ha terminado.,,Because we clean our eyes after it.
-ChatWithPez-Opt3-Pez-11,Y no quieres ganarte una infección ocular. Seguro que no.,,And you don't want your eyes to get infected. Trust me.
-ChatWithPez-Opt3-Pez-12,Déjame ver tus alas.,,Let me see your wings
-ChatWithPez-Opt3-Pato-13,¿Pa' qué?,,What for?
-ChatWithPez-Opt3-Pez-14,Toda pelea de miradas requiere que los contrincantes tengan limpias sus manos.,,Every staring fight requires opponents to have their hands clean.
-ChatWithPez-Opt3-Pato-15,¿Por qué?,,Why?
-ChatWithPez-Opt3-Pez-16,Porque limpiamos nuestros ojos después.,,Because we clean our eyes after it.
-ChatWithPez-Opt3-Pez-17,"Y no querrás que se te infecten, ¿o si?",,And you don't want your eyes to get infected. Trust me.
-ChatWithPez-Opt3-Pato-18,Pos no.,,Oooook.
-ChatWithPez-Opt3-Game-19,Pato mostró sus alas a Pez.,,Pato showed her wings to Pez.
-ChatWithPez-Opt3-Pez-20,Muy bien. Cumples el requisito. Puedes retarme.,,All right. You meet the requirements. You can challenge me.
-ChatWithPez-Opt4-Game-01,Pez miró las alas de Pato.,,Pez looked at Pato's wings.
-ChatWithPez-Opt4-Pez-02,Primero quítate el mugre de las alas... y lucharemos,,"First, get that dirt out of your wings... and we'll fight"
+ChatWithPez-Opt1,Eso que llevas puesto está áspero.,Ese traje que estas usando se ve genial.,That suit you're using looks cool.
+ChatWithPez-Opt2,¿Cómo puedo conseguir una cosa de esas?,¿Donde puedo conseguir uno?,How can I get one?
+ChatWithPez-Opt3,¿Y puedo retarte a una pelea de miradas?,¿Puedo retarte a una batalla de miradas?,Can I challenge you to a stare fight?
+ChatWithPez-Opt4,Te reto a una pelea de miradas por tu... aparato.,Te reto a una batalla de miradas... por tu traje.,I challenge you to a stare fight... for your suit.
+ChatWithPez-Opt5,¿Por qué no entras?,¿Por qué no entras?,Why don't you come in?
+ChatWithPez-Opt6,Acerca del pasado del bar,Hablando del pasado de este sitio.,Talking about this place's past.
+ChatWithPez-Opt7,A ver esas patas,Dame esas patas.,Give me da legs.
+ChatWithPez-Exit,Bueno. Me voy. Chao.,Bueno. Me tengo que... adiós.,Well. I've to... bye.
+ChatWithPez-Opt1-Pez-01,Gracias. Lo gané hace poco en una pelea de miradas.,Gracias. Lo gane hace un tiempo en una batalla de miradas.,Thanks. I earn it a while ago in a stare fight.
+ChatWithPez-Opt1-Pez-02,¿Una pelea de miradas?,¿Una batalla de miradas?,A stare fight?
+ChatWithPez-Opt1-Pez-03,Sí. Una pelea de miradas.,Sí. Una batalla de miradas.,Yep. A stare fight.
+ChatWithPez-Opt1-Pez-04,¿Y eso cómo se juega?,¿Y eso cómo se juega?,And how do you play that?
+ChatWithPez-Opt1-Pez-05,¿Jugar?,¿Jugar?,Play?
+ChatWithPez-Opt1-Pez-06,"La pelea de miradas no es un juego, amiga.","La batalla de miradas no es un juego, amiga.","A stare fight is not a game, mate."
+ChatWithPez-Opt1-Pez-07,Es una prueba de valor y concentración... muy honorable.,Es una prueba de valor y concentración... muy honorable.,It is a guts and concentration test... so honorable.
+ChatWithPez-Opt1-Pato-08,"Entiendo, entiendo.","Entiendo, entiendo.","Got it, got it."
+ChatWithPez-Opt2-Pez-01,Puedes comprarla o ganarla en una pelea de miradas.,Puedes comprarla o ganarla en una batalla de miradas.,You can buy it or earn it in a stare fight.
+ChatWithPez-Opt2-Pez-02,Así fue como gané la mía.,Así fue como gané la mía.,That's how i earn mine.
+ChatWithPez-Opt2-Pato-03,Sí sí... ya lo dijites.,Si... ya dijiste eso.,Yep... you already said that.
+ChatWithPez-Opt3-Pez-01,Podrías... si no estuvieras tan puerca.,Podrías... si no estuvieras tan sucia.,You could... if you weren't so dirty.
+ChatWithPez-Opt3-Pato-02,¡QUE NO ESTOY SUCIA!,¡YO NO ESTOY SUCIA!,I'M NOT DIRTY!
+ChatWithPez-Opt3-Game-03,Pato se enojó como hace mucho no lo hacía.,Pato se enojó como hace mucho no lo hacía.,Pato got mad as she did not in a long time
+ChatWithPez-Opt3-Game-04,Ora sí estaba dispuesta a derrotar a Pez en la pelea de miradas.,Ahora sí estaba dispuesta a derrotar a Pez en la batalla de miradas.,Now she was commited to defeat Pez in a stare fight
+ChatWithPez-Opt3-Pez-05,Estás muuuuuy sucia. Lo noto desde aquí.,Estas demasiaaado sucia. Lo puedo ver desde aquí.,You are sooooooo dirtyy. I can notice from here.
+ChatWithPez-Opt3-Pato-06,Qué qué... ¿Qué tengo sucio?,Qué qué... ¿Qué tengo sucio?,Wha... what... what do you see dirty?
+ChatWithPez-Opt3-Pez-07,Las alas... ¡guagh!,Las alas... ¡iugh!,Those... wings... ewwwwww!
+ChatWithPez-Opt3-Pez-08,No sé cómo puedes vivir así.,No sé cómo puedes vivir así.,I don't know how can you live like that.
+ChatWithPez-Opt3-Pato-09,¿Por qué debería lavarme las alitas pa' una pelea de miradas?,¿Por qué debería lavarme las alitas para una batalla de miradas?,Why should I clean my wings for a stare fight?
+ChatWithPez-Opt3-Pez-10,Porque limpiamos nuestros ojos una vez ha terminado.,Porque limpiamos nuestros ojos una vez ha terminado.,Because we clean our eyes after it.
+ChatWithPez-Opt3-Pez-11,Y no quieres ganarte una infección ocular. Seguro que no.,Y no quieres ganarte una infección ocular. Seguro que no.,And you don't want your eyes to get infected. Trust me.
+ChatWithPez-Opt3-Pez-12,Déjame ver tus alas.,Déjame ver tus alas.,Let me see your wings
+ChatWithPez-Opt3-Pato-13,¿Pa' qué?,¿Para qué?,What for?
+ChatWithPez-Opt3-Pez-14,Toda pelea de miradas requiere que los contrincantes tengan limpias sus manos.,Toda pelea de miradas requiere que los contrincantes tengan limpias sus manos.,Every staring fight requires opponents to have their hands clean.
+ChatWithPez-Opt3-Pato-15,¿Por qué?,¿Por qué?,Why?
+ChatWithPez-Opt3-Pez-16,Porque limpiamos nuestros ojos después.,Porque limpiamos nuestros ojos después.,Because we clean our eyes after it.
+ChatWithPez-Opt3-Pez-17,"Y no querrás que se te infecten, ¿o si?","Y no querrás que se te infecten, ¿o si?",And you don't want your eyes to get infected. Trust me.
+ChatWithPez-Opt3-Pato-18,Pos no.,"No, no quiero.",Oooook.
+ChatWithPez-Opt3-Game-19,Pato mostró sus alas a Pez.,Pato mostró sus alas a Pez.,Pato showed her wings to Pez.
+ChatWithPez-Opt3-Pez-20,Muy bien. Cumples el requisito. Puedes retarme.,Muy bien. Cumples el requisito. Puedes retarme.,All right. You meet the requirements. You can challenge me.
+ChatWithPez-Opt4-Game-01,Pez miró las alas de Pato.,Pez miró las alas de Pato.,Pez looked at Pato's wings.
+ChatWithPez-Opt4-Pez-02,Primero quítate el mugre de las alas... y lucharemos,Primero limpiate la tierra de las alas... y lucharemos,"First, get that dirt out of your wings... and we'll fight"
 ChatWithPez-Opt4-Pez-03,¡AH GONORREA!,¡NO PUEDE SER!,IT CANNOT BE!
-ChatWithPez-Opt4-Pez-04,Me has derrotado...,,You... Defeated me...
-ChatWithPez-Opt4-Game-05,Para Pato fue algo realmente fácil.,,For Pato it was really easy.
-ChatWithPez-Opt4-Game-06,"El viejo truco de mirar el entrecejo, no los ojos.",,"That old trick of looking at the frown, not the eyes."
+ChatWithPez-Opt4-Pez-04,Me has derrotado...,"Oh, me hás vencido...",You... Defeated me...
+ChatWithPez-Opt4-Game-05,Para Pato fue algo realmente fácil.,Para Pato fue algo realmente fácil.,For Pato it was really easy.
+ChatWithPez-Opt4-Game-06,"El viejo truco de mirar el entrecejo, no los ojos.","El viejo truco de mirar el entrecejo, no los ojos.","That old trick of looking at the frown, not the eyes."
 ChatWithPez-Opt4-Pato-07,"¡Ya perdiste, gonorrea! Ahora dame tu aparato.",¡Pues sí! Ahora dame tu aparato.,Right! Now give me that thing.
-ChatWithPez-Opt4-Pez-08,"No puedo darte todo, porque si lo hago no podré volver a casa.",,"I can not give you all of it, If I do, I can't return home."
-ChatWithPez-Opt4-Pez-09,Te daré sólo las piernas.,,I'll give you only the legs.
-ChatWithPez-Opt5-Pez-01,Este no es el bar que conocí hace unos años.,,This is not the place I met some years ago.
-ChatWithPez-Opt5-Pez-02,Ha cambiado...pa' pior.,,It has changed...for worse.
-ChatWithPez-Opt5-Pato-03,¿Por qué vienes entonces?,,Why did you come then?
-ChatWithPez-Opt5-Pez-04,Algo me dijo que debía venir esta noche...,,Something said to me i should come tonight...
-ChatWithPez-Opt5-Game-05,Pez miró al cielo y luego cerró los ojos.,,Pez looked at the sky and closed his eyes.
-ChatWithPez-Opt5-Game-06,...pasaron muchos minutos...,,...several minutes went by...
-ChatWithPez-Opt5-Pez-07,Tal vez para contar sobre el pasado de este lugar.,,Maybe to share something about this place.
-ChatWithPez-Opt5-Pez-08,Puede que así vuelva a ser como solía ser...,,Maybe it could return to what it was...
+ChatWithPez-Opt4-Pez-08,"No puedo darte todo, porque si lo hago no podré volver a casa.","No puedo darte todo, porque si lo hago no podré volver a casa.","I can not give you all of it, If I do, I can't return home."
+ChatWithPez-Opt4-Pez-09,Te daré sólo las piernas.,Te daré sólo las piernas.,I'll give you only the legs.
+ChatWithPez-Opt5-Pez-01,Este no es el bar que conocí hace unos años.,Este no es el bar que conocí unos años atrás.,This is not the place I met some years ago.
+ChatWithPez-Opt5-Pez-02,Ha cambiado...pa' pior.,Ha cambiado...para peor.,It has changed...for worse.
+ChatWithPez-Opt5-Pato-03,¿Pa qué vienes entonces?,¿Por qué vienes entonces?,Why did you come then?
+ChatWithPez-Opt5-Pez-04,Algo me dijo que debía venir esta noche...,Algo me dijo que debía venir esta noche...,Something said to me i should come tonight...
+ChatWithPez-Opt5-Game-05,Pez miró al cielo y luego cerró los ojos.,Pez miró al cielo y luego cerró los ojos.,Pez looked at the sky and closed his eyes.
+ChatWithPez-Opt5-Game-06,...pasaron muchos minutos...,...pasaron muchos minutos...,...several minutes went by...
+ChatWithPez-Opt5-Pez-07,Tal vez para contar sobre el pasado de este lugar.,Tal vez para contar sobre el pasado de este lugar.,Maybe to share something about this place.
+ChatWithPez-Opt5-Pez-08,Puede que así vuelva a ser como solía ser...,Puede que así vuelva a ser como solía ser...,Maybe it could return to what it was...
 ChatWithPez-Opt6-Pez-01,Ajá...,Sí...,Sure...
-ChatWithPez-Opt7-Pez-01,Bien. Pues es la hora de cumplir.,,"Well, it's time to meet."
-ChatWithPez-Opt7-Pez-02,Aquí están...,,Here they are...
-ChatWithPez-Opt7-Pez-03,Y no siendo más mi propósito en este lugar...,,And having no longer a purpose in this place...
-ChatWithPez-Opt7-Pez-04,Mmmmme voy.,,I'mmmm gone.
+ChatWithPez-Opt7-Pez-01,Bien. Pues es la hora de cumplir.,Bien. Pues es la hora de cumplir.,"Well, it's time to meet."
+ChatWithPez-Opt7-Pez-02,Aquí están...,Aquí están...,Here they are...
+ChatWithPez-Opt7-Pez-03,Y no siendo más mi propósito en este lugar...,Y no siendo más mi propósito en este lugar...,And having no longer a purpose in this place...
+ChatWithPez-Opt7-Pez-04,Mmmmme voy.,Adiiiióooooosssssss.,I'mmmm gone.
 ChatWithPez-Opt7-Pato-05,A juepuerca. Desapareció...,¡Santo pollo! Desapareció...,Oh shoe. He vanished...
-ChatWithPez-Opt7-Game-06,"Pato sorprendida, pero Pato con patas de lobo.",,"Pato surprised, but Pato with wolf legs."
-ChatWithPez-Opt7-Pez-07,"Antes de darte mis patas, hay algo que debemos resolver.",,"Before giving you my legs, there is something I must tell"
-PezQuestions-TheQuestion,¿Cuál era esa bebida prohibida especial?,,What was that forbidden drink?
-PezQuestions-Opt2,¿Cómo era este lugar antes?,,How was this place before?
-PezQuestions-Opt3,¿Qué es lo que más extrañas?,,What do you miss the most?
-PezQuestions-Opt4,¿Esconde algún secreto el bar?,,Is the bar hiding a secret?
-PezQuestions-Opt5,¿Bebidas prohibidas?,,Forbidden drinks?
-PezQuestions-Exit,Ya no quiero hablar más del pasado bar.,,I don't want to talk about this place's past anymore.
-PezQuestions-TheQuestion-Game-01,Pez abrió sus ojotes como si hubiera visto un muerto.,,Pez opened his eyes as if he had seen a dead being.
-PezQuestions-TheQuestion-Pez-02,Eso era...,,That was...
-PezQuestions-TheQuestion-Pez-03,Eso era lo que tenía que contar.,,That was what I had to tell.
-PezQuestions-TheQuestion-Pez-04,La razón de estar aquí...,,The purpose of being here...
-PezQuestions-TheQuestion-Pez-05,Su nombre era Sudor de Hércules...,,It's name was Hercules sweat...
-PezQuestions-TheQuestion-Pez-06,Uno de los tragos más antiguos del continente.,,One of the oldest drinks of the continent.
-PezQuestions-TheQuestion-Pez-07,Se sentía como...,,It felt like...
-PezQuestions-TheQuestion-Pez-08,Como estar tomando sudor de un viejo muy viejo...,,Like being drinking the sweat of an old man so old...
-PezQuestions-TheQuestion-Pez-09,No quiero hablar más del pasado de este lugar.,,I don't want to talk about the past of this place anymore.
-PezQuestions-Opt2-Pez-01,"Ponían otro tipo de música, algo más relajado.",,"They played another type of music, something looser."
-PezQuestions-Opt2-Pez-02,Y las personas que venían solían ser más sociables.,,And people that came used to be more social.
-PezQuestions-Opt3-Pez-01,Sin duda las bebidas que vendía el anterior dueño.,,Without any doubt the drinks that the last owner sold.
-PezQuestions-Opt3-Pez-02,Solían ser más...,,Used to be...
+ChatWithPez-Opt7-Game-06,"Pato sorprendida, pero Pato con patas de lobo.","Pato sorprendida, pero Pato con piernas de lobo.","Pato surprised, but Pato with wolf legs."
+ChatWithPez-Opt7-Pez-07,"Antes de darte mis patas, hay algo que debemos resolver.","Antes de darte mis piernas, hay algo que debemos resolver.","Before giving you my legs, there is something I must tell"
+PezQuestions-TheQuestion,¿Cuál era esa bebida prohibida especial?,¿Cuál era esa bebida prohibida especial?,What was that forbidden drink?
+PezQuestions-Opt2,¿Cómo era este lugar antes?,¿Cómo era este lugar antes?,How was this place before?
+PezQuestions-Opt3,¿Qué es lo que más extrañas?,¿Qué es lo que más extrañas?,What do you miss the most?
+PezQuestions-Opt4,¿Esconde algún secreto el bar?,¿Esconde algún secreto el bar?,Is the bar hiding a secret?
+PezQuestions-Opt5,¿Bebidas prohibidas?,¿Bebidas prohibidas?,Forbidden drinks?
+PezQuestions-Exit,Ya no quiero hablar más del pasado bar.,Ya no quiero hablar más del pasado bar.,I don't want to talk about this place's past anymore.
+PezQuestions-TheQuestion-Game-01,Pez abrió sus ojotes como si hubiera visto un muerto.,Pez abrió sus grandes ojos como si hubiera visto un difunto.,Pez opened his eyes as if he had seen a dead being.
+PezQuestions-TheQuestion-Pez-02,Eso era...,Eso era...,That was...
+PezQuestions-TheQuestion-Pez-03,Eso era lo que tenía que contar.,Eso era lo que tenía que contar.,That was what I had to tell.
+PezQuestions-TheQuestion-Pez-04,La razón de estar aquí...,La razón de estar aquí...,The purpose of being here...
+PezQuestions-TheQuestion-Pez-05,Su nombre era Sudor de campeche...,Su nombre era Sudor de Hércules...,It's name was Hercules sweat...
+PezQuestions-TheQuestion-Pez-06,Uno de los tragos más viejos destas tierras.,Uno de los tragos más antiguos del continente.,One of the oldest drinks of the continent.
+PezQuestions-TheQuestion-Pez-07,Se sentía como...,Se sentía como...,It felt like...
+PezQuestions-TheQuestion-Pez-08,Como estar tomando sudor de un viejo muy viejo...,Como estar tomando sudor de un viejo muy viejo...,Like being drinking the sweat of an old man so old...
+PezQuestions-TheQuestion-Pez-09,No quiero hablar más del pasado de este lugar.,No quiero hablar más del pasado de este lugar.,I don't want to talk about the past of this place anymore.
+PezQuestions-Opt2-Pez-01,"Ponían otro tipo de música, algo más relajado.","Ponían otro tipo de música, algo más tranquilo.","They played another type of music, something looser."
+PezQuestions-Opt2-Pez-02,Y las personas que venían solían ser más sociables.,Y las personas que venían solían ser más extrovertidas.,And people that came used to be more social.
+PezQuestions-Opt3-Pez-01,Sin duda las bebidas que vendía el anterior dueño.,Sin duda las bebidas que vendía el anterior dueño.,Without any doubt the drinks that the last owner sold.
+PezQuestions-Opt3-Pez-02,Solían ser más...,Solían ser más...,Used to be...
 PezQuestions-Opt3-Pez-03,Mejores.,Decentes.,Better.
-PezQuestions-Opt4-Pez-01,Ciertamente más de uno.,,Certainly two or more.
-PezQuestions-Opt4-Pez-02,Antes solía haber un pasadizo secreto donde ahora hay baños.,,"Before, there was a secret passage where the washroom is located."
-PezQuestions-Opt4-Pez-03,Y también estaban las bebidas prohibidas.,,And also the forbidden drinks.
-PezQuestions-Opt5-Pez-01,Sí. Eran muy fuertes y generaron muchos problemas.,,Yeah. Those were very strong and meant a lot of issues.
-PezQuestions-Opt5-Pez-02,"Al final, sólo algunos podíamos beberlas.",,"At the end, only a few (me included, of course) could drink them."
-PezQuestions-Opt5-Pez-03,Y entre todas... había una. La más especial de las especiales.,,And between them all... There was one. The most special of the specials.
-PezQuestions-Exit-Pez-01,Como quieras quiero.,,As you want I want.
-ChatWithLoboInLuna-Start-Pato-01,Ya podemos regar nuestra semilla-hogar.,,We can water our house-seed now.
-ChatWithLoboInLuna-Start-Lobo-02,Nuestro sueño hecho realidad.,,Our dream come true.
-ChatWithLoboInLuna-Start-Pato-03,...,,
-ChatWithLoboInLuna-Start-Lobo-04,Riégala. Luego poséyeme.,,Water it. Then have me.
-ChatWithLoboInLuna-Start-Pato-05,Nitamos encontrar agua pa' reguar nuestro futuro hogar.,,We need to find water to water our future home.
-ChatWithLoboInLuna-Start-Lobo-06,Yo escuché que el agua espacial es especial.,,I've hear that space water is special.
-ChatWithLoboInLuna-Start-Pato-07,Ora sólo nos hace falta una semilla-hogar.,,All we need now is one of those house-seeds.
-ChatWithLoboInLuna-Start-Lobo-08,Toy seguro de haber visto un planeta de plantación de casas a unos pársec de aquí.,,I'm sure I saw a homes plantation planet a couple of parsecs from here.
-ChatWithLoboInLuna-Start-Pato-09,¡Y qué estamos esperando!,,So what are we waiting for.
-ChatWithLoboInLuna-Start-Lobo-10,A consumirnos antes de salir.,,To consume our love a little before leaving.
-ChatWithLoboInLuna-Start-Lobo-11,Nitaremos agua y una semilla-hogar pa' construir nuestra casa.,,We'll need water and a house-seed to build our home here.
-ChatWithLoboInLuna-Start-Pato-12,Sí sí sí. Hagámoslo.,,Yes yes yes. Let's do it.
-ChatWithMarrano-Opt1,¿Qué quiere?,,Hi-ya.
-ChatWithMarrano-Opt2,¿Me presta agua?,,Can I take your water?
-ChatWithMarrano-Opt3,Pilas... ¡le están pegando a alguien en la panza!,,Look behind you...A three headed monkey!
-ChatWithMarrano-Opt4,¿Qué es eso que cubre tus florecitas?,,What is that thing that covers your flowers?
-ChatWithMarrano-Exit,Mejor me alejo.,,I better go
-ChatWithMarrano-Start-Marrano-01,"Oink, oink.",,
-ChatWithMarrano-Opt1-Marrano-01,¿Qué quiere?,,What do you want?
-ChatWithMarrano-Opt1-Pato-02,Sólo saludaba.,,I'm just saying hi.
-ChatWithMarrano-Opt1-Marrano-03,"Se quiere robar mis flores, ¿sioqué?",,So you want to steal one of my flowers.
-ChatWithMarrano-Opt1-Pato-04,Claro que no. ¿Por qué o pa' qué?,,Of course not. Why would I do that?
-ChatWithMarrano-Opt1-Marrano-05,Porque todos me las quieren robar.,,Because everyone wants to steal my flowers.
-ChatWithMarrano-Opt1-Marrano-06,Pero nadie podrá.,,But no one can.
-ChatWithMarrano-Opt1-Pato-07,Sólo... saludaba.,,I just said... hi.
-ChatWithMarrano-Opt2-Marrano-01,¡Ni por el putas!,,No!
-ChatWithMarrano-Opt2-Pato-02,¿Me puede vender un poquito?,,Can you sell me some?
-ChatWithMarrano-Opt2-Marrano-03,"Ni la vendo, ni la comparto. Es para mis flores y pa' mí namás.",,"Don't sell, don't share. It is all for me and my precious flowers."
-ChatWithMarrano-Opt2-Pato-04,...,,
-ChatWithMarrano-Opt3-Marrano-01,¿Qué maricada fue eso?,,What a stupid trick...
-ChatWithMarrano-Opt3-Pato-02,glup,,gulp
-ChatWithMarrano-Opt3-Marrano-03,"¿No querrá robarme el agua, sioqué?",,"You're not trying to steal my water, don't ya?"
-ChatWithMarrano-Opt3-Pato-04,Nunca haría algo así.,,I would never do that.
-ChatWithMarrano-Opt3-Marrano-05,Claro. No quisiera tener que darle piso.,,Sure. I wouldn't want to have to kill you.
-ChatWithMarrano-Opt3-Pato-06,¿Por qué es tan guache?,,Why are you so mean?
-ChatWithMarrano-Opt3-Marrano-07,Soy un acérrimo defensor de la propiedad privada.,,I am a staunch protector of private property.
-ChatWithMarrano-Opt4-Marrano-01,Es una rasho-mega-protector-3000.,,It is a Light-vault-3000X.
-ChatWithMarrano-Opt4-Marrano-02,Protege mis flores de las ratas ladronas.,,It protects my flowers from being stolen.
-ChatWithMarrano-Opt4-Marrano-03,Nadie podrá ni tocarlas... a menos que...,,No one can even touch them... except...
-ChatWithMarrano-Opt4-Pato-04,Lo hagas tú.,,You.
-ChatWithMarrano-Opt4-Marrano-05,O que algo con mucha fuerza lo destruya.,,Or something strong enough to break the shield.
-ChatWithMarrano-Opt4-Marrano-06,Pero eso es imposible.,,But that would be impossible.
-ChatWithMarrano-Opt4-Pato-07,A menos que lo haga alguien mucho muy fuerte.,,Unless you are super strength.
-ChatWithMarrano-Opt4-Pato-08,(O que algo bien pesado se lo tire).,,(Or that you have something heavy enough).
-ChatWithMarrano-Opt4-Marrano-09,Sí.,,Yes.
-ChatWithMarrano-Exit-Marrano-01,¡SÍIIIIII! ¡VÁYASE PA' LA MIERDA!,,Yes. You better LEEEEAVE FOREVER!!!!
+PezQuestions-Opt4-Pez-01,Ciertamente más de uno.,Ciertamente más de uno.,Certainly two or more.
+PezQuestions-Opt4-Pez-02,Antes solía haber un pasadizo secreto donde ahora hay baños.,Antes solía haber un camino secreto donde ahora hay baños.,"Before, there was a secret passage where the washroom is located."
+PezQuestions-Opt4-Pez-03,Y también estaban las bebidas prohibidas.,Y también estaban las bebidas prohibidas.,And also the forbidden drinks.
+PezQuestions-Opt5-Pez-01,Sí. Eran muy fuertes y generaron muchos problemas.,Sí. Eran muy fuertes y generaron muchos problemas.,Yeah. Those were very strong and meant a lot of issues.
+PezQuestions-Opt5-Pez-02,"Al final, sólo algunos podíamos beberlas.","Al final, sólo pocos podíamos beberlas.","At the end, only a few (me included, of course) could drink them."
+PezQuestions-Opt5-Pez-03,Y entre todas... había una. La más especial de las especiales.,Y entre todas... había una. La más especial de las bebidas.,And between them all... There was one. The most special of the specials.
+PezQuestions-Exit-Pez-01,Como quieras quiero.,Como quieras.,As you want I want.
+ChatWithLoboInLuna-Start-Pato-01,Ya podemos echarle agüita a nuestra semilla-hogar.,Ya podemos regar nuestra semilla-hogar.,We can water our house-seed now.
+ChatWithLoboInLuna-Start-Lobo-02,Nuestro sueño hechos realidads.,Nuestro sueño hecho realidad.,Our dream come true.
+ChatWithLoboInLuna-Start-Pato-03,...,...,...
+ChatWithLoboInLuna-Start-Lobo-04,Riégala. Luego poséyeme.,Riégala. Luego sere tuyo.,Water it. Then have me.
+ChatWithLoboInLuna-Start-Pato-05,Nitamos encontrar agua pa' reguar nuestro futuro hogar.,Necesitamos encontrar agua para regar nuestro futuro hogar.,We need to find water to water our future home.
+ChatWithLoboInLuna-Start-Lobo-06,Yo escuché que el agua espacial es especial.,Yo escuché que el agua espacial es especial.,I've hear that space water is special.
+ChatWithLoboInLuna-Start-Pato-07,Ora sólo nos hace falta una semilla-hogar.,Ahora solo necesitamos una semilla-hogar.,All we need now is one of those house-seeds.
+ChatWithLoboInLuna-Start-Lobo-08,Toy seguro de haber visto un planeta de plantación de casas a unos pársec de aquí.,Estoy seguro de haber visto un planeta de plantación de casas a unos pársec de aquí.,I'm sure I saw a homes plantation planet a couple of parsecs from here.
+ChatWithLoboInLuna-Start-Pato-09,¡Y qué estamos esperando!,¡Qué estamos esperando!,So what are we waiting for.
+ChatWithLoboInLuna-Start-Lobo-10,A consumirnos antes de salir.,A consumirnos nuestro amor antes de partir.,To consume our love a little before leaving.
+ChatWithLoboInLuna-Start-Lobo-11,Nitaremos agua y una semilla-hogar pa' construir nuestra casa.,Necesitamos agua y una semilla-hogar para construir nuestra casa aquí.,We'll need water and a house-seed to build our home here.
+ChatWithLoboInLuna-Start-Pato-12,Sí sí sí. Hagámoslo real.,Sí sí sí. Hagámoslo.,Yes yes yes. Let's do it.
+ChatWithMarrano-Opt1,¿Qué quiere?,¿Hola?,Hi-ya.
+ChatWithMarrano-Opt2,¿Me presta agua?,¿Puedo tomar tu agua?,Can I take your water?
+ChatWithMarrano-Opt3,Pilas... ¡le están pegando a alguien en la panza!,¡Cuidado!... ¡Una nave voladora!,Look behind you...A three headed monkey!
+ChatWithMarrano-Opt4,¿Qué es eso que cubre tus florecitas?,¿Qué es eso que protege tus flores?,What is that thing that covers your flowers?
+ChatWithMarrano-Exit,Mejor me alejo.,Mejor me voy.,I better go
+ChatWithMarrano-Start-Marrano-01,"Oink, oink.","Oink, oink.","Oink, oink."
+ChatWithMarrano-Opt1-Marrano-01,¿Qué quiere?,¿Qué quiere?,What do you want?
+ChatWithMarrano-Opt1-Pato-02,Sólo saludaba.,Sólo saludaba.,I'm just saying hi.
+ChatWithMarrano-Opt1-Marrano-03,"Se quiere robar mis flores, ¿sioqué?","Quieres robar mis flores, ¿cierto?",So you want to steal one of my flowers.
+ChatWithMarrano-Opt1-Pato-04,Claro que no. ¿Por qué o pa' qué?,Por supesto que no. ¿Por qué haría tal cosa?,Of course not. Why would I do that?
+ChatWithMarrano-Opt1-Marrano-05,Porque todos me las quieren robar.,Porque todos quieren robarme.,Because everyone wants to steal my flowers.
+ChatWithMarrano-Opt1-Marrano-06,Pero nadie podrá.,Pero nadie podrá.,But no one can.
+ChatWithMarrano-Opt1-Pato-07,Sólo... saludaba.,Sólo... saludaba.,I just said... hi.
+ChatWithMarrano-Opt2-Marrano-01,¡Ni por el putas!,¡No!,No!
+ChatWithMarrano-Opt2-Pato-02,¿Me puede vender un poquito?,¿Me puedes vender un poquito?,Can you sell me some?
+ChatWithMarrano-Opt2-Marrano-03,"Ni la vendo, ni la comparto. Es para mis flores y pa' mí namás.","No vendo, no comparto. Es para mis flores y para mí nada más.","Don't sell, don't share. It is all for me and my precious flowers."
+ChatWithMarrano-Opt2-Pato-04,...,...,...
+ChatWithMarrano-Opt3-Marrano-01,¿Qué maricada fue eso?,Que mal truco...,What a stupid trick...
+ChatWithMarrano-Opt3-Pato-02,glup,glup,gulp
+ChatWithMarrano-Opt3-Marrano-03,"¿No querrá robarme el agua, sioqué?",Estás tratando de robar mi agua... ¿no?,"You're not trying to steal my water, don't ya?"
+ChatWithMarrano-Opt3-Pato-04,Nunca haría algo así.,Nunca haría algo así.,I would never do that.
+ChatWithMarrano-Opt3-Marrano-05,Claro. No quisiera tener que darle piso.,Bien. No quiero tener que hacerte daño.,Sure. I wouldn't want to have to kill you.
+ChatWithMarrano-Opt3-Pato-06,¿Por qué es tan guache?,¿Por qué eres tan grosero?,Why are you so mean?
+ChatWithMarrano-Opt3-Marrano-07,Soy un acérrimo defensor de la propiedad privada.,Soy un gran defensor de la propiedad privada.,I am a staunch protector of private property.
+ChatWithMarrano-Opt4-Marrano-01,Es una rasho-mega-protector-3000X.,Es una celda-protectora-laser-3000X,It is a Light-vault-3000X.
+ChatWithMarrano-Opt4-Marrano-02,Protege mis flores de las ratas ladronas.,Protege mis flores de vándalos y ladrones.,It protects my flowers from being stolen.
+ChatWithMarrano-Opt4-Marrano-03,Nadie podrá ni tocarlas... a menos que...,nadie podrá tocarlas... excepto...,No one can even touch them... except...
+ChatWithMarrano-Opt4-Pato-04,Lo hagas tú.,Tú.,You.
+ChatWithMarrano-Opt4-Marrano-05,O que algo con mucha fuerza lo destruya.,O que algo muy fuerte sea capaz de quebrarlo.,Or something strong enough to break the shield.
+ChatWithMarrano-Opt4-Marrano-06,Pero eso es imposible.,Pero eso sería imposible.,But that would be impossible.
+ChatWithMarrano-Opt4-Pato-07,A menos que lo haga alguien mucho muy fuerte.,A menos que tengas super fuerza.,Unless you are super strength.
+ChatWithMarrano-Opt4-Pato-08,(O que algo bien pesado se lo tire).,(O tengas algo lo suficientemente pesado).,(Or that you have something heavy enough).
+ChatWithMarrano-Opt4-Marrano-09,Sí.,Si.,Yes.
+ChatWithMarrano-Exit-Marrano-01,¡SÍIIIIII! ¡VÁYASE PA' LA MIERDA!,"¡SI! ESO ES, LARGATE Y NO REGRESES!",Yes. You better LEEEEAVE FOREVER!!!!
 GLOBALS,,,
 Globals-ExplainCharacterChange-Game-01,Se puede cambiar de personaje en algunas ensoñaciones.,En algunas ensoñaciones podrás cambiar de personaje.,In some daydreams you can switch characters.
 Globals-ExplainCharacterChange-Game-02,Se hace clic en el personaje en el inventario.,Haz clic en el icono respectivo en el inventario.,Just click the respective icon in the inventory.
-Globals-MoonDaydreamRepeated-Game-01,Pato quería volver a ensoñar con la Luna una vez más.,,Pato was waiting to daydream with Luna again.
+Globals-MoonDaydreamRepeated-Game-01,Pato quería volver a ensoñar con la Luna una vez más.,Pato quería volver a ensoñar con la Luna una vez más.,Pato was waiting to daydream with Luna again.
 Globals-MoonDaydreamRepeated-Game-02,Pero pailas.,Pero no sucedió.,But did not happen
 Globals-MoonDaydreamRepeated-Pato-03,Ya pailas.,Ya no es lo mismo.,It's not the same anymore
+ITEMS,,,
+Items-GolemCocktail,Tumbalocas,Sueño del gigante.,Golem Dream cocktail
+Items-GolemCocktail-Pato-01,El barman dice que esta me puede dejar malita.,El barman dice que este trago me puede derrumbar facilmente.,The barman says this one can K.O. me.
+Items-GolemCocktail-Pato-02,Mejor no me tomo ni una gotita...,Por supuesto no lo beberé...,Of course I\'ll not drink it...
+Items-GolemCocktail-Pato-03,Pero pa algo lo usaré.,Pero puede ser útil.,"Tho, might be helpful."
+Items-GolemCocktail-Pato-04,He creado un tragoncho re densidades que sabe a viejo.,He creado un coctel fuerte y con sabor a viejo.,I\'ve created a strong and elder flavored cocktail
+Items-CocktailSecret,Sudor de campeche.,Sudor de Hércules.,Hercules sweat cocktail
+Items-CocktailSecret-Pato-01,Una de las bebidas caletas. Con un sabor a cucho re viejo.,Una de las bebidas prohibidas. Con el sabor de un viejo tan viejo.,One of the forbidden drinks. With the flavor of an old man so old.
+Items-CocktailSecret-Pato-02,Pa algo me servirá.,Puede ser útil.,Can be useful.
+Items-CocktailSecret-Pato-03,Meinvente este coctel con sabor a anciano.,He creado un coctel fuerte y con sabor a viejo.,I\'ve created a strong and elder flavored cocktail
+Items-CocktailSuper,Superperrenque.,Super-coraje.,Hyper-courage.
+Items-CocktailSuper-Pato-01,Mi invento. Un tragojuerte y con sabor a cucho.,Mi creación. Un coctel fuerte y con sabor a viejo.,My own creation. A strong cocktail with an elder flavor.
+Items-CocktailSuper-Pato-02,Seguro me ayudará.,Seguramente será de utilidad.,Will help me for sure.
+Items-CocktailSuper-Pato-03,Hé creado un clásico muy juerte y viejo.,Hé creado un clásico tan fuerte y tan viejo.,I\'ve created a classic so strong and old.
+Items-Dentures,Dientes de la vieja,Dentadura postiza,Dentures
+Items-Dentures-Pato-01,Apenas pa mostrar las muelitas.,Justo lo que necesito para terminar mi difráz.,Just what I need to complete my costume
+Items-ItemLobo-Lobo-01,Soy Lobo.,Soy Lobo.,I am Lobo.
+Items-ItemPato-Pato-01,Soy Pato.,Soy Pato.,I am Pato.
+Items-Legs,PatasChimbita,Meca-piernas,Mecha-legs
+Items-Mask,Máscara care lobo,Máscara de lobo,Wolf mask
+Items-Mop,Trapero puerco,Trapero sucio,Dirty mop
+Items-Mop-Pato-01,Echemole cinta en una punta.,Pondré cinta en la punta del trapero.,Put the tape in the tip of the mop
+Items-Mop-Pato-02,Puede ser pero toca pegarlo con algotracosa.,Puede funcionar pero necesito algo para unirlos.,It could work but I need something to bring them together
+Items-Mop-Pato-03,"!Buena! ¡Ora si puedo alcanzar a Lobo, la madre si no!","!Genial! ¡Puedo alcanzar a Lobo con esto, sin duda!",Great! I can reach Lobo with this. No doubt!
+Items-Mop-Pato-04,¡Se juerte! ¡Voy a por tí!,¡Aguanta! ¡Voy a salvarte!,Hold on! I\'m comming for you!
+Items-MopTape,Trapero con cinta,Trapero con cinta,Taped mop
+Items-MopTape-Pato-01,"!Buena! ¡Ora si puedo alcanzar a Lobo, la madre si no!","!Genial! ¡Puedo alcanzar a Lobo con esto, sin duda!",Great! I can reach Lobo with this. No doubt!
+Items-MopTape-Pato-02,¡Se juerte! ¡Voy a por tí!,¡Aguanta! ¡Voy a salvarte!,Hold on! I\'m comming for you!
+Items-Mopbrella,Traperombrilla,Trapero con sombrilla,Mopbrella
+Items-Tail,Colita de lobo falsa,Cola de algodón,Cotton tail
+Items-Tape,Cinta pegante,Cinta adhesiva,Tape
+Items-Tape-Pato-01,Pegaré esto en el cosiato de la sombrilla.,Pondré cinta en la punta de la sombrilla.,Put the tape in the tip of the umbrella
+Items-Tape-Pato-02,Pegaré cinta en el traperocho a ver qué.,Pondré cinta en la punta del trapero.,Put the tape in the tip of the mop
+Items-Umbrella,Sombrilla con mangogancho,Sombrilla con mango de gancho,Umbrella with hook
+Items-Umbrella-Pato-01,Pegaré esto en el cosiato de la sombrilla.,Pondré cinta en la punta de la sombrilla.,Put the tape in the tip of the umbrella
+Items-Umbrella-Pato-02,Puede ser pero toca pegarlo con algotracosa.,Puede funcionar pero necesito algo para unirlos.,It could work but I need something to bring them together
+Items-Umbrella-Pato-03,"!Buena! ¡Ora si puedo alcanzar a Lobo, la madre si no!","!Genial! ¡Puedo alcanzar a Lobo con esto, sin duda!",Great! I can reach Lobo with this. No doubt!
+Items-Umbrella-Pato-04,¡Se juerte! ¡Voy a por tí!,¡Aguanta! ¡Voy a salvarte!,Hold on! I\'m comming for you!
+Items-UmbrellaTape,Sombrilla con cinta,Sombrilla con cinta,Umbrella+Tape
+Items-UmbrellaTape-Pato-01,"!Buena! ¡Ora si puedo alcanzar a Lobo, la madre si no!","!Genial! ¡Puedo alcanzar a Lobo con esto, sin duda!",Great! I can reach Lobo with this. No doubt!
+Items-UmbrellaTape-Pato-02,¡Se juerte! ¡Voy a por tí!,¡Aguanta! ¡Voy a salvarte!,Hold on! I\'m comming for you!
+Items-WaterCase,,Agua espacial,Fast-growing-water

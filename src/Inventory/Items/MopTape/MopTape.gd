@@ -16,8 +16,8 @@ func on_item_used(item: Item) -> void:
 		E.run([
 			I.remove_item(item.script_name),
 			I.remove_item(script_name),
-			'Pato: Great! I can reach Lobo with this. No doubt!',
+			'Pato: Items-MopTape-Pato-01',
 			A.play('sfx_mopbrella_pu', Vector2.ZERO),
 			I.add_item('Mopbrella'),
-			'Pato: Hold on! I\'m comming for you!',
+			'Pato: Items-MopTape-Pato-02',
 		])

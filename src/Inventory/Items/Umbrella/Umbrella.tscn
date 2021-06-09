@@ -6,7 +6,7 @@
 
 [node name="Umbrella" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
-description = "Umbrella with hook"
+description = "Items-Umbrella"
 script_name = "Umbrella"
 cursor = 1
 

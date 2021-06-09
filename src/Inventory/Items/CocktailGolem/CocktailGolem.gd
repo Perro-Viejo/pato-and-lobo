@@ -9,9 +9,9 @@ func on_interact() -> void:
 
 func on_look() -> void:
 	E.run([
-		'Pato: The barman says this one can K.O. me.',
-		'Pato: Of course I\'ll not drink it...',
-		'Pato: Tho, might be helpful.'
+		'Pato: Items-GolemCocktail-Pato-01',
+		'Pato: Items-GolemCocktail-Pato-02',
+		'Pato: Items-GolemCocktail-Pato-03'
 	])
 
 
@@ -20,6 +20,6 @@ func on_item_used(item: Item) -> void:
 		E.run([
 			I.remove_item(item.script_name),
 			I.remove_item(script_name),
-			'Pato: I\'ve created a strong and elder flavored cocktail',
+			'Pato: Items-GolemCocktail-Pato-04',
 			I.add_item('CocktailSuper'),
 		])

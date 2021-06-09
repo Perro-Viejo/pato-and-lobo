@@ -6,7 +6,6 @@
 
 [node name="UmbrellaTape" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-description = "Umbrella+Tape"
 script_name = "UmbrellaTape"
 cursor = 1
 

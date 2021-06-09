@@ -6,7 +6,7 @@
 
 [node name="MopTape" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-description = "Taped mop"
+description = "Items-MopTape"
 script_name = "MopTape"
 cursor = 1
 

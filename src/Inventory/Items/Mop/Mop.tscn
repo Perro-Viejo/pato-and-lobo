@@ -6,7 +6,7 @@
 
 [node name="Mop" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-description = "Dirty mop"
+description = "Items-Mop"
 script_name = "Mop"
 cursor = 1
 

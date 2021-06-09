@@ -22,25 +22,25 @@ func option_selected(opt: DialogOption) -> void:
 	match opt.id:
 		'TheQuestion':
 			yield(E.run([
-				G.display(''),
+				G.display('PezQuestions-TheQuestion-Game-01'),
 				E.wait(3),
-				'Pez: ',
+				'Pez: PezQuestions-TheQuestion-Pez-02',
 				'...',
-				'Pez: ',
+				'Pez: PezQuestions-TheQuestion-Pez-03',
 				pez.face_right(),
 				'...',
-				'Pez: ',
+				'Pez: PezQuestions-TheQuestion-Pez-04',
 				pez.face_left(),
 				'...',
-				'Pez: ',
-				'Pez: ',
-				'Pez: ',
+				'Pez: PezQuestions-TheQuestion-Pez-05',
+				'Pez: PezQuestions-TheQuestion-Pez-06',
+				'Pez: PezQuestions-TheQuestion-Pez-07',
 				'...',
 				pez.face_right(),
-				'Pez: ',
+				'Pez: PezQuestions-TheQuestion-Pez-08',
 				E.wait(2),
 				pez.face_left(),
-				'Pez: ',
+				'Pez: PezQuestions-TheQuestion-Pez-09',
 				pez.face_right()
 			]), 'completed')
 			E.current_room.state.cocktail_unlocked = true

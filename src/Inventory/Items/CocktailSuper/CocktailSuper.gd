@@ -9,8 +9,8 @@ func on_interact() -> void:
 
 func on_look() -> void:
 	E.run([
-		'Pato: My own creation. A strong cocktail with an elder flavor.',
-		'Pato: Will help me for sure.'
+		'Pato: Items-CocktailSuper-Pato-01',
+		'Pato: Items-CocktailSuper-Pato-02'
 	])
 
 
@@ -19,6 +19,6 @@ func on_item_used(item: Item) -> void:
 		E.run([
 			I.remove_item(item.script_name),
 			I.remove_item(script_name),
-			'Pato: I\'ve created a classic so strong and old.',
+			'Pato: Items-CocktailSuper-Pato-03',
 			I.add_item('CocktailSuper'),
 		])
