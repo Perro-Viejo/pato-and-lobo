@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_drunk.ogg-80ed2979c6ce2f2fd48579256329ca06.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_drunk.ogg"
+dest_files=[ "res://.import/sfx_drunk.ogg-80ed2979c6ce2f2fd48579256329ca06.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

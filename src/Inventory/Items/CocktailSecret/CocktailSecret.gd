@@ -20,5 +20,6 @@ func on_item_used(item: Item) -> void:
 			I.remove_item(item.script_name),
 			I.remove_item(script_name),
 			'Pato: Items-CocktailSecret-Pato-03',
+			A.play('sfx_cocktail_combine', Vector2.ZERO),
 			I.add_item('CocktailSuper'),
 		])

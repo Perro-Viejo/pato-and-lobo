@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ui_courage_drunk.ogg-2ed2c11ee82d9ebde8a88c9cad44ae8f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/ui_courage_drunk.ogg"
+dest_files=[ "res://.import/ui_courage_drunk.ogg-2ed2c11ee82d9ebde8a88c9cad44ae8f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

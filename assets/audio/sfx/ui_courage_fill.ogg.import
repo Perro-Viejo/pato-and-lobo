@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ui_courage_fill.ogg-7c6aef527e957bfb8c6eddbfde8eb414.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/ui_courage_fill.ogg"
+dest_files=[ "res://.import/ui_courage_fill.ogg-7c6aef527e957bfb8c6eddbfde8eb414.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -28,9 +28,11 @@ func on_item_used(item: Item) -> void:
 			'Pato: Character-Vieja-CocktailSuper-Pato-02',
 			'Vieja: Character-Vieja-CocktailSuper-Vieja-03',
 			'Vieja: Character-Vieja-CocktailSuper-Vieja-04',
+			A.play('sfx_granny_drink', C.get_character('Vieja').global_position),
 			E.wait(3.0),
 			'Vieja: Character-Vieja-CocktailSuper-Vieja-05',
 			'Vieja: Character-Vieja-CocktailSuper-Vieja-06',
+			A.play('sfx_mask_takeoff', C.get_character('Vieja').global_position),
 			sleep(),
 			E.current_room.get_prop('GlassWithDentures').enable(),
 			'Pato: Character-Vieja-CocktailSuper-Pato-07'

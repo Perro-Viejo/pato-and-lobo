@@ -12,6 +12,7 @@ func on_interact() -> void:
 			'Lobo: RoomLuna-Spaceship-Lobo-01',
 			C.character_walk_to('Lobo', to_global(E.clicked.walk_to_point))
 		]), 'completed')
+		A.play('sfx_space_transition', Vector2.ZERO, false) 
 		E.goto_room('Space')
 	else:
 		E.run([

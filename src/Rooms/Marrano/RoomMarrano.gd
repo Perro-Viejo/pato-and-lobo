@@ -29,6 +29,7 @@ func on_room_entered() -> void:
 	A.play('bg_marrano', Vector2.ZERO, false)
 	C.player.enable(false)
 	C.get_character('Lobo').disable(false)
+	C.get_character('Lobo').vo_name = 'vo_lobo_com'
 	
 	# Verificar el estado de la habitación
 	if state.container_weakness_revealed:
@@ -62,6 +63,7 @@ func on_room_transition_finished() -> void:
 			A.play('sfx_alarm', Vector2.ZERO),
 			A.stop('sfx_dome', 0),
 			'Marrano: RoomMarrano-Pig-01',
+			A.play('sfx_pig_drive', Vector2.ZERO),
 			C.character_walk_to('Marrano', get_point('Container')),
 			"Marrano: RoomMarrano-Pig-02",
 			C.player_walk_to(get_point('Water')),
@@ -79,6 +81,7 @@ func on_room_exited() -> void:
 
 	A.stop('bg_marrano', 0, false)
 	C.get_character('Lobo').enable(false)
+	C.get_character('Lobo').vo_name = 'vo_wolf'
 
 	.on_room_exited()
 

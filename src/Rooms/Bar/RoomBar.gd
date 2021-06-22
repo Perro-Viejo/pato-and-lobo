@@ -28,7 +28,7 @@ func on_room_entered() -> void:
 	I.remove_item('WaterCase', false)
 	
 	# TODO: Que audio siga desde donde quedó antes de abandonar la habitación
-	A.play_music('mx_bar_01', false)
+	A.play_music('mx_bar_gen', false)
 	A.play('bg_bar', Vector2.ZERO, false)
 	if state.vieja_sleeping:
 		A.play('sfx_granny_sleep', C.get_character('Vieja').global_position, false)
@@ -70,6 +70,7 @@ func on_room_transition_finished() -> void:
 			'Pato: RoomBar-Pato-02',
 			G.display('RoomBar-02'),
 			C.change_camera_owner(C.get_character('Lobo')),
+			A.play('sfx_camera_lobo_intro', Vector2.ZERO),
 			E.wait(2.0),
 			C.change_camera_owner(C.player),
 			G.display('RoomBar-03'),
@@ -102,6 +103,8 @@ func on_room_exited() -> void:
 	A.stop('mx_bar_01', 0, false)
 	A.stop('mx_bar_02', 0, false)
 	A.stop('mx_bar_03', 0, false)
+	A.stop('mx_bar_04', 0, false)
+	A.stop('mx_bar_gen', 0, false)
 	A.stop('sfx_granny_sleep', 0, false)
 	
 	C.get_character('Lobo').idle(false)

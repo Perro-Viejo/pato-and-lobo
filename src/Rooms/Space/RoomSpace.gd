@@ -13,7 +13,6 @@ func on_room_entered() -> void:
 	
 	A.stop('bg_marrano', 0, false)
 	A.stop('bg_homesplantation', 0, false)
-	A.play('bg_space', Vector2.ZERO, false)
 
 
 func on_room_transition_finished() -> void:

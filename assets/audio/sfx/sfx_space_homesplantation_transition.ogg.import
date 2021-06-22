@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_space_homesplantation_transition.ogg-188f956192808f9e8dec1ec0be9452ec.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_space_homesplantation_transition.ogg"
+dest_files=[ "res://.import/sfx_space_homesplantation_transition.ogg-188f956192808f9e8dec1ec0be9452ec.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

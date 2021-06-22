@@ -63,7 +63,9 @@ func _unhandled_input(event):
 	if not has_player: return
 	if not event.is_action_pressed('interact'):
 		if event.is_action_released('look'):
-			if I.active: I.set_active_item()
+			if I.active: 
+				A.play('sfx_ui_deselect', Vector2.ZERO, false) 
+				I.set_active_item()
 		return
 
 	C.player.walk(get_local_mouse_position(), false)

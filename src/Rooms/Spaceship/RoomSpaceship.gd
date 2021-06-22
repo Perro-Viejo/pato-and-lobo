@@ -12,11 +12,15 @@ func on_room_entered() -> void:
 	C.player.global_position = $Points/PlayerPos.global_position
 	C.player.disable(false)
 	C.get_character('Lobo').scale = Vector2.ONE * 0.8
+	C.get_character('Lobo').vo_name = 'vo_lobo_com'
+	C.get_character('Pato').vo_name = 'vo_duck_com'
 
 
 func on_room_exited() -> void:
 	A.stop('sfx_spaceship_idle', 0, false)
 	A.stop('bg_space', 0, false)
+	C.get_character('Lobo').vo_name = 'vo_wolf'
+	C.get_character('Pato').vo_name = 'vo_duck'
 	.on_room_exited()
 
 

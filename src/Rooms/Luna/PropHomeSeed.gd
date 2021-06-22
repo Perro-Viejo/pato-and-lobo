@@ -21,9 +21,9 @@ func on_item_used(item: Item) -> void:
 			C.walk_to_clicked(),
 			C.face_clicked(),
 			'Pato: RoomLuna-HomeSeed-Pato-03',
-			# TODO: Poner aquí un SFX de agua regándose sobre una planta
-			'...',
+			A.play('sfx_watercase_use', Vector2.ZERO, true, true),
 			C.player_walk_to(E.current_room.get_point('WolfPoint')),
+			A.play('sfx_seed_grow', Vector2.ZERO),
 			_shake_camera(),
 			disable(),
 			E.current_room.get_prop('Home').enable(),
@@ -33,6 +33,7 @@ func on_item_used(item: Item) -> void:
 			'Lobo: RoomLuna-HomeSeed-Lobo-02'
 		]), 'completed')
 		E.goto_room('Bar')
+		A.stop('bg_space', 0, false)
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

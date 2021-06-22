@@ -7,6 +7,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+description = "Character"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -10, -10, -10, 10, 10, 10, 10, -10 )

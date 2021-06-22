@@ -132,6 +132,10 @@ func _show_courage(courage: int) -> void:
 		1.0, Tween.TRANS_SINE, Tween.EASE_OUT
 	)
 	$Tween.start()
+	if Globals.has_done(Globals.GameState.GOT_DRUNK):
+		A.play('sfx_ui_courage_drunk', Vector2.ZERO, false)
+	else:
+		A.play('sfx_ui_courage_fill', Vector2.ZERO, false)
 	yield($Tween, 'tween_all_completed')
 	_close()
 	yield($Tween, 'tween_all_completed')

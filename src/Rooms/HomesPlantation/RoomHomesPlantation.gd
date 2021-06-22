@@ -23,6 +23,7 @@ func on_room_entered() -> void:
 		
 	A.play('bg_homesplantation', Vector2.ZERO, false)
 	C.get_character('Lobo').disable(false)
+	C.get_character('Lobo').vo_name = 'vo_lobo_com'
 	C.player.enable(false)
 
 
@@ -58,6 +59,7 @@ func on_room_exited() -> void:
 	A.stop('bg_homesplantation', 0, false)
 	C.player.enable(false)
 	C.get_character('Lobo').enable(false)
+	C.get_character('Lobo').vo_name = 'vo_wolf'
 	.on_room_exited()
 
 

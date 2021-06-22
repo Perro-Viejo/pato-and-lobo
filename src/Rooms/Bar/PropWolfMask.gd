@@ -11,8 +11,8 @@ func on_interact() -> void:
 		C.face_clicked(),
 		'Pato: RoomBar-WolfMask-Pato-01',
 		'Pato: RoomBar-WolfMask-Pato-02',
-		A.play('sfx_mask_pu', global_position),
 		C.player.grab(),
+		A.play('sfx_mask_pu', global_position),
 		disable(),
 		I.add_item('Mask')
 	])

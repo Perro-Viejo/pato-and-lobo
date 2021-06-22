@@ -54,8 +54,6 @@ characters = [ {
 "position": Vector2( 1300, 596 ),
 "script_name": "Pez"
 } ]
-limit_top = -1080.0
-limit_bottom = 960.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 4 )]
 description = "Bg"

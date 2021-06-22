@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_space_marrano_transition.ogg-a70f9cd1fea0d90dd339031b6ee4adfb.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_space_marrano_transition.ogg"
+dest_files=[ "res://.import/sfx_space_marrano_transition.ogg-a70f9cd1fea0d90dd339031b6ee4adfb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_pig_drive.ogg-0072ba32269aabdb40015d286d9761a4.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_pig_drive.ogg"
+dest_files=[ "res://.import/sfx_pig_drive.ogg-0072ba32269aabdb40015d286d9761a4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
