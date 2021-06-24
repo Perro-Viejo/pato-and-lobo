@@ -15,6 +15,7 @@ func _init() -> void:
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
+	C.player.current_surface = 'grass'
 	if not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
 		A.play('sfx_dome', $Props/Container.global_position, false)
 	

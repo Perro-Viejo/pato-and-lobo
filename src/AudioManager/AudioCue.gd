@@ -9,9 +9,9 @@ export var pitch := 0.0
 export var volume := 1.0
 export var rnd_pitch := Vector2.ZERO
 export var rnd_volume := Vector2.ZERO
-export var max_distance := 0.0
+export var max_distance := 2000
 export(float, EASE) var attenuation = 1.0
-export(String, 'Master') var bus = 0
+export(String, 'Master', 'Music', 'Bathroom', 'Bar') var bus = 0
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_fs_grass_03.ogg-7b2a2d2bdb4742990f4c0ffa0babfb87.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/sfx_fs_grass_03.ogg"
+dest_files=[ "res://.import/sfx_fs_grass_03.ogg-7b2a2d2bdb4742990f4c0ffa0babfb87.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

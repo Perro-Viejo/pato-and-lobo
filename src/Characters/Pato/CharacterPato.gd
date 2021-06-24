@@ -2,12 +2,15 @@ tool
 extends Character
 
 var disguised := false
+var walking := false
+var current_surface := 'tile'
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready() -> void:
 	I.connect('item_added', self, '_check_costume_completion')
 	_check_costume_completion(null)
+	$AnimationPlayer.connect('animation_started', self, '_animation_started')
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
@@ -58,3 +61,22 @@ func _check_costume_completion(item: Item) -> void:
 			else:
 				anim_suffix = ''
 				idle(false)
+
+func _animation_started(anim) -> void:
+	if anim == 'walk_l' or anim == 'walk_r' :
+		if not walking:
+			walking = true
+			if $AnimatedSprite.is_connected('frame_changed', self, '_check_frame'):
+				pass
+			else:
+				$AnimatedSprite.connect('frame_changed', self, '_check_frame')
+	else:
+		if $AnimatedSprite.is_connected('frame_changed', self, '_check_frame'):
+			$AnimatedSprite.disconnect('frame_changed', self, '_check_frame')
+		else:
+			pass
+		walking = false
+
+func _check_frame() -> void:
+	if $AnimatedSprite.frame == 11 or $AnimatedSprite.frame == 23:
+		A.play('sfx_fs_%s_0%s' % [current_surface, randi() % 4 + 1], global_position, false)

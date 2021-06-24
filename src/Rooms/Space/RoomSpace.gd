@@ -20,7 +20,6 @@ func on_room_transition_finished() -> void:
 
 
 func on_room_exited() -> void:
-	A.stop('bg_space', 0, false)
 	C.player.enable(false)
 	C.get_character('Spaceship').enable(false)
 	.on_room_exited()

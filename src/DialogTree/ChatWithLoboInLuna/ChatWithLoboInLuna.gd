@@ -28,6 +28,7 @@ func start() -> void:
 
 			if C.player.last_room != 'Bar':
 				E.goto_room('Bar')
+				A.stop('bg_space', 0, false)
 	elif Globals.has_done(Globals.GameState.WATER_TAKEN):
 		yield(
 			E.run_cutscene([
@@ -40,6 +41,7 @@ func start() -> void:
 
 		if C.player.last_room != 'Bar':
 			E.goto_room('Bar')
+			A.stop('bg_space', 0, false)
 	else:
 		yield(E.run([
 			'Lobo: ChatWithLoboInLuna-Start-Lobo-11',

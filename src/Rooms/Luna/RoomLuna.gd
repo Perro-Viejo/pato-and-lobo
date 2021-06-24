@@ -13,7 +13,9 @@ func _init() -> void:
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
-	A.play('bg_space', Vector2.ZERO, false)
+	C.player.current_surface = 'rock'
+	if C.player.last_room == 'Bar':
+		A.play('bg_space', Vector2.ZERO, false)
 	C.player.global_position = $Points/EntryPoint.global_position
 
 	C.player.enable(false)

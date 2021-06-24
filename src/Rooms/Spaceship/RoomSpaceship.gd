@@ -18,7 +18,6 @@ func on_room_entered() -> void:
 
 func on_room_exited() -> void:
 	A.stop('sfx_spaceship_idle', 0, false)
-	A.stop('bg_space', 0, false)
 	C.get_character('Lobo').vo_name = 'vo_wolf'
 	C.get_character('Pato').vo_name = 'vo_duck'
 	.on_room_exited()

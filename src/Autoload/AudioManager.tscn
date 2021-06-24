@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=2]
+[gd_scene load_steps=108 format=2]
 
 [ext_resource path="res://src/Autoload/AudioManager.gd" type="Script" id=1]
 [ext_resource path="res://src/AudioManager/Cues/VO_duck.tres" type="Resource" id=2]
@@ -87,10 +87,30 @@
 [ext_resource path="res://src/AudioManager/Cues/SFX_fs_tile_04.tres" type="Resource" id=85]
 [ext_resource path="res://src/AudioManager/Cues/MX_bar_gen.tres" type="Resource" id=86]
 [ext_resource path="res://src/AudioManager/Cues/MX_bar_04.tres" type="Resource" id=87]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_dirt_01.tres" type="Resource" id=88]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_concrete_01.tres" type="Resource" id=89]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_grass_01.tres" type="Resource" id=90]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_grass_03.tres" type="Resource" id=91]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_dirt_03.tres" type="Resource" id=92]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_wood_01.tres" type="Resource" id=93]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_concrete_02.tres" type="Resource" id=94]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_rock_03.tres" type="Resource" id=95]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_rock_04.tres" type="Resource" id=96]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_wood_03.tres" type="Resource" id=97]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_wood_02.tres" type="Resource" id=98]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_rock_01.tres" type="Resource" id=99]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_concrete_03.tres" type="Resource" id=100]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_grass_02.tres" type="Resource" id=101]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_dirt_02.tres" type="Resource" id=102]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_dirt_04.tres" type="Resource" id=103]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_wood_04.tres" type="Resource" id=104]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_grass_04.tres" type="Resource" id=105]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_rock_02.tres" type="Resource" id=106]
+[ext_resource path="res://src/AudioManager/Cues/SFX_fs_concrete_04.tres" type="Resource" id=107]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource( 1 )
-cues = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 25 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 21 ), ExtResource( 26 ), ExtResource( 12 ), ExtResource( 30 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 39 ), ExtResource( 49 ), ExtResource( 51 ), ExtResource( 48 ), ExtResource( 50 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 59 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 71 ), ExtResource( 70 ), ExtResource( 72 ), ExtResource( 69 ), ExtResource( 67 ), ExtResource( 63 ), ExtResource( 79 ), ExtResource( 62 ), ExtResource( 78 ), ExtResource( 74 ), ExtResource( 73 ), ExtResource( 66 ), ExtResource( 75 ), ExtResource( 68 ), ExtResource( 77 ), ExtResource( 76 ), ExtResource( 65 ), ExtResource( 64 ), ExtResource( 87 ), ExtResource( 86 ) ]
+cues = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 25 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 21 ), ExtResource( 26 ), ExtResource( 12 ), ExtResource( 30 ), ExtResource( 35 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 39 ), ExtResource( 49 ), ExtResource( 51 ), ExtResource( 48 ), ExtResource( 50 ), ExtResource( 58 ), ExtResource( 53 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 59 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 71 ), ExtResource( 70 ), ExtResource( 72 ), ExtResource( 69 ), ExtResource( 67 ), ExtResource( 63 ), ExtResource( 79 ), ExtResource( 62 ), ExtResource( 78 ), ExtResource( 74 ), ExtResource( 73 ), ExtResource( 66 ), ExtResource( 75 ), ExtResource( 68 ), ExtResource( 77 ), ExtResource( 76 ), ExtResource( 65 ), ExtResource( 64 ), ExtResource( 87 ), ExtResource( 86 ), ExtResource( 89 ), ExtResource( 94 ), ExtResource( 100 ), ExtResource( 107 ), ExtResource( 88 ), ExtResource( 102 ), ExtResource( 92 ), ExtResource( 103 ), ExtResource( 90 ), ExtResource( 101 ), ExtResource( 91 ), ExtResource( 105 ), ExtResource( 99 ), ExtResource( 106 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 93 ), ExtResource( 98 ), ExtResource( 97 ), ExtResource( 104 ) ]
 
 [node name="Positional" type="Node" parent="."]
 

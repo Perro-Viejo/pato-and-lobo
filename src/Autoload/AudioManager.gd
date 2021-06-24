@@ -109,6 +109,7 @@ func _play(cue: AudioCue, pos := Vector2.ZERO) -> Node:
 		(player as AudioStreamPlayer2D).stream = cue.audio
 		(player as AudioStreamPlayer2D).pitch_scale = cue.get_pitch()
 		(player as AudioStreamPlayer2D).volume_db = cue.volume
+		(player as AudioStreamPlayer2D).max_distance = cue.max_distance
 		(player as AudioStreamPlayer2D).position = pos
 	else:
 		player = _get_free_stream($Generic)

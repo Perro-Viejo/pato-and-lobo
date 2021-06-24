@@ -13,6 +13,6 @@ pitch = 0.0
 volume = 1.0
 rnd_pitch = Vector2( 0, 4 )
 rnd_volume = Vector2( -6, 0 )
-max_distance = 0.0
+max_distance = 2000
 attenuation = 1.10957
 bus = "0"

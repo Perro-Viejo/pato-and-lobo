@@ -14,6 +14,7 @@ func _init() -> void:
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
+	C.player.current_surface = 'dirt'
 	if visited_first_time:
 		C.player.global_position = $Points/EntryPoint.global_position
 		I.add_item('Pato', false)

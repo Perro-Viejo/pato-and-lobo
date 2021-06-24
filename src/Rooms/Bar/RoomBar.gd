@@ -20,7 +20,7 @@ func _init() -> void:
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
 	$WavingBar.hide()
-
+	C.player.current_surface = 'tile'
 	# Quitar los elementos de inventario que hayan podido quedar del mundo de
 	# los sueños
 	I.remove_item('Pato', false)
@@ -28,8 +28,9 @@ func on_room_entered() -> void:
 	I.remove_item('WaterCase', false)
 	
 	# TODO: Que audio siga desde donde quedó antes de abandonar la habitación
-	A.play_music('mx_bar_gen', false)
-	A.play('bg_bar', Vector2.ZERO, false)
+#	A.play_music('mx_bar_gen', false)
+#	A.play('bg_bar', Vector2.ZERO, false)
+	A.play('bg_bathroom', $Points/Bathroom.global_position, false)
 	if state.vieja_sleeping:
 		A.play('sfx_granny_sleep', C.get_character('Vieja').global_position, false)
 	
@@ -85,7 +86,7 @@ func on_room_transition_finished() -> void:
 		yield(I, 'courage_update_shown')
 
 		yield(E.run(['Pato: RoomBar-Pato-05']), 'completed')
-	elif Globals.has_done(Globals.GameState.GOT_HOME) or Globals.has_done(Globals.GameState.WATER_TAKEN):
+	elif C.player.last_room != 'MainMenu' and (Globals.has_done(Globals.GameState.GOT_HOME) or Globals.has_done(Globals.GameState.WATER_TAKEN)):
 		Globals.courage += 20
 		yield(I, 'courage_update_shown')
 
@@ -100,6 +101,7 @@ func on_room_exited() -> void:
 	state.last_player_pos = C.player.global_position
 	
 	A.stop('bg_bar', 0, false)
+	A.stop('bg_bathroom', 0, false)
 	A.stop('mx_bar_01', 0, false)
 	A.stop('mx_bar_02', 0, false)
 	A.stop('mx_bar_03', 0, false)
