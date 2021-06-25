@@ -60,6 +60,7 @@ func play_music(cue_name: String, is_in_queue := true) -> void:
 
 		var cue: AudioCue = _mx_cues[cue_name.to_lower()]
 		_play(cue)
+		C.get_character('Lagarto').current_track = cue_name
 	else:
 		printerr('AudioManager.play_music: No se encontró la música', cue_name)
 	yield(get_tree(), 'idle_frame')
@@ -150,6 +151,10 @@ func _get_free_stream(group: Node):
 # Reasigna el AudioStreamPlayer a su grupo original cuando ha terminado de sonar
 # pa' que vuelva a estar disponible para ser usado
 func _make_available(stream_player: Node, cue_name: String, debug_idx: int) -> void:
+	if 'mx' in cue_name:
+		if not cue_name == 'mx_bar_gen':
+			C.get_character('Lagarto').music_playing = false
+			C.get_character('Lagarto').check_music()
 	if stream_player is AudioStreamPlayer:
 		_reparent($Active, $Generic, stream_player.get_index())
 	else:

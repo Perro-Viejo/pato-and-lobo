@@ -10,7 +10,6 @@ extends Room
 func on_room_entered() -> void:
 	AudioServer.get_bus_effect(1, 0).cutoff_hz = 400
 	AudioServer.set_bus_volume_db(1, 2)
-	A.play_music('mx_bar_gen', false)
 	C.player.current_surface = 'concrete'
 	A.play('bg_street', Vector2.ZERO, false)
 	if visited_first_time:
@@ -21,6 +20,7 @@ func on_room_entered() -> void:
 
 func on_room_transition_finished() -> void:
 	if visited_first_time:
+		C.get_character('Lagarto').play_music('mx_bar_gen', false)
 		E.run_cutscene([
 			G.display('RoomMainMenu-01'),
 			G.display('RoomMainMenu-02'),

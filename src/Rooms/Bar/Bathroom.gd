@@ -28,7 +28,6 @@ func _process(delta):
 			AudioServer.set_bus_volume_db(2, 0)
 			AudioServer.set_bus_volume_db(1, 0)
 		
-		print(AudioServer.get_bus_effect(2, 0).cutoff_hz)
 
 func _on_area_entered(body) -> void:
 	if body.name == 'CharacterPato':

@@ -1,10 +1,17 @@
 tool
 extends Character
 
+var music_playing = false
+var current_track = ''
+
 var _using_mask := true
+
+onready var timer = $Timer
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready() -> void:
+	timer.connect('timeout', self, 'play_music', ['mx_bar_gen', false])
+	print('Y suenaaa: ', current_track)
 	_looking_dir = 'mask'
 	idle(false)
 
@@ -49,6 +56,28 @@ func on_look() -> void:
 	else:
 		E.run(['Pato: Character-Lagarto-OnLook-Pato-03'])
 
+#Funciones de DJ
+func play_music(track = 'mx_bar_gen', is_in_queue := true):
+	if is_in_queue: yield()
+	if music_playing:
+		stop_music(false)
+		A.play_music(track, false)
+		music_playing = true
+	else:
+		A.play_music(track, false)
+		music_playing = true
+	if is_inside_tree(): yield(get_tree(), 'idle_frame')
+
+func stop_music(is_in_queue := true):
+	if is_in_queue: yield()
+	A.stop(current_track, 0, false)
+	music_playing = false
+	current_track = ''
+
+func check_music():
+	if not music_playing:
+		$Timer.wait_time = rand_range(3, 8)
+		$Timer.start()
 
 func remove_mask(is_in_queue := true) -> void:
 	if is_in_queue: yield()
@@ -80,3 +109,4 @@ func _toggle_mask(put := true) -> void:
 
 func _can_put_mask():
 	return E.current_room.state.has_mask
+

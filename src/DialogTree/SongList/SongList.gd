@@ -24,12 +24,7 @@ func option_selected(opt: DialogOption) -> void:
 						'Lagarto: SongList-Opt1-Lagarto-02',
 						A.play('sfx_mask_takeoff', C.get_character('Lagarto').global_position),
 						C.get_character('Lagarto').remove_mask(),
-						A.stop('mx_bar_01'),
-						A.stop('mx_bar_02'),
-						A.stop('mx_bar_03'),
-						A.stop('mx_bar_04'),
-						A.stop('mx_bar_gen'),
-						A.play_music('mx_bar_04'),
+						C.get_character('Lagarto').play_music('mx_bar_04'),
 						'Lagarto: SongList-Opt1-Lagarto-03',
 					]),
 					'completed'
@@ -58,12 +53,8 @@ func option_selected(opt: DialogOption) -> void:
 			yield(
 				E.run([
 					'Lagarto: SongList-Opt3-Lagarto-01',
-					A.stop('mx_bar_01'),
-					A.stop('mx_bar_02'),
-					A.stop('mx_bar_03'),
-					A.stop('mx_bar_04'),
-					A.stop('mx_bar_gen'),
-					A.play_music('mx_bar_02'),
+					C.get_character('Lagarto').play_music('mx_bar_02'),
+					E.wait(1),
 					C.player_walk_to(E.current_room.get_point('DanceFloor2')),
 					C.player.dance(),
 					E.wait(3),
@@ -78,12 +69,9 @@ func option_selected(opt: DialogOption) -> void:
 				yield(E.run(['Pato: SongList-Opt3-Pato-03']), 'completed')
 				opt.visible = false
 				D.finish_dialog()
-				A.stop('mx_bar_01', 0, false)
-				A.stop('mx_bar_02', 0, false)
-				A.stop('mx_bar_03', 0, false)
-				A.stop('mx_bar_04', 0, false)
-				A.stop('mx_bar_gen', 0, false)
 				A.play('sfx_dream_transition', Vector2.ZERO, false)
+				C.get_character('Lagarto').stop_music(false)
+				C.get_character('Lagarto').timer.stop()
 				E.goto_room('Luna')
 			else:
 				yield(Globals.moon_daydream_repeated(), 'completed')
