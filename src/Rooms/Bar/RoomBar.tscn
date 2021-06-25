@@ -309,7 +309,7 @@ polygon = PoolVector2Array( -30, -664, -25, -273, 325, -269, 318, -681, 50, -686
 position = Vector2( 159, -238 )
 
 [node name="Bathroom" type="Area2D" parent="Regions" index="0"]
-position = Vector2( 1240, 7 )
+position = Vector2( 1392.22, -16.7842 )
 script = ExtResource( 30 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Regions/Bathroom" index="0"]

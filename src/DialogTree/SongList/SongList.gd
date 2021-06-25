@@ -78,6 +78,11 @@ func option_selected(opt: DialogOption) -> void:
 				yield(E.run(['Pato: SongList-Opt3-Pato-03']), 'completed')
 				opt.visible = false
 				D.finish_dialog()
+				A.stop('mx_bar_01', 0, false)
+				A.stop('mx_bar_02', 0, false)
+				A.stop('mx_bar_03', 0, false)
+				A.stop('mx_bar_04', 0, false)
+				A.stop('mx_bar_gen', 0, false)
 				A.play('sfx_dream_transition', Vector2.ZERO, false)
 				E.goto_room('Luna')
 			else:

@@ -20,6 +20,8 @@ func _init() -> void:
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
 	$WavingBar.hide()
+	AudioServer.get_bus_effect(1, 0).cutoff_hz = 20000
+	AudioServer.set_bus_volume_db(1, 0)
 	C.player.current_surface = 'tile'
 	# Quitar los elementos de inventario que hayan podido quedar del mundo de
 	# los sueños
@@ -28,8 +30,10 @@ func on_room_entered() -> void:
 	I.remove_item('WaterCase', false)
 	
 	# TODO: Que audio siga desde donde quedó antes de abandonar la habitación
+	# y que el DJ toque la mx_bar_gen cuando este en silencio por determinado
+	# tiempo
 #	A.play_music('mx_bar_gen', false)
-#	A.play('bg_bar', Vector2.ZERO, false)
+	A.play('bg_bar', Vector2.ZERO, false)
 	A.play('bg_bathroom', $Points/Bathroom.global_position, false)
 	if state.vieja_sleeping:
 		A.play('sfx_granny_sleep', C.get_character('Vieja').global_position, false)
@@ -102,11 +106,12 @@ func on_room_exited() -> void:
 	
 	A.stop('bg_bar', 0, false)
 	A.stop('bg_bathroom', 0, false)
-	A.stop('mx_bar_01', 0, false)
-	A.stop('mx_bar_02', 0, false)
-	A.stop('mx_bar_03', 0, false)
-	A.stop('mx_bar_04', 0, false)
-	A.stop('mx_bar_gen', 0, false)
+#	Aquí se apagaba la música antes
+#	A.stop('mx_bar_01', 0, false)
+#	A.stop('mx_bar_02', 0, false)
+#	A.stop('mx_bar_03', 0, false)
+#	A.stop('mx_bar_04', 0, false)
+#	A.stop('mx_bar_gen', 0, false)
 	A.stop('sfx_granny_sleep', 0, false)
 	
 	C.get_character('Lobo').idle(false)

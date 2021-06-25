@@ -124,7 +124,8 @@ func _play(cue: AudioCue, pos := Vector2.ZERO) -> Node:
 
 	var cue_name := cue.resource_name
 	var debug_idx: int = DebugOverlay.add_monitor('\n' + cue_name, player, ':playing')
-
+	
+	player.bus = cue.bus
 	player.play()
 	player.connect('finished', self, '_make_available', [player, cue_name, debug_idx])
 	

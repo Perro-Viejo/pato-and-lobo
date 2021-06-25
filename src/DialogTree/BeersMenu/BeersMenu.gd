@@ -44,6 +44,11 @@ func option_selected(opt: DialogOption) -> void:
 				opt.visible = false
 				D.finish_dialog()
 				A.play('sfx_dream_transition', Vector2.ZERO, false)
+				A.stop('mx_bar_01', 0, false)
+				A.stop('mx_bar_02', 0, false)
+				A.stop('mx_bar_03', 0, false)
+				A.stop('mx_bar_04', 0, false)
+				A.stop('mx_bar_gen', 0, false)
 				E.goto_room('Luna')
 				return
 			else:

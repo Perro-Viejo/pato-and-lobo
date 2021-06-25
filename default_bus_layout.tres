@@ -1,12 +1,15 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=2]
+[gd_resource type="AudioBusLayout" load_steps=3 format=2]
 
 [sub_resource type="AudioEffectFilter" id=1]
 resource_name = "Filter"
 cutoff_hz = 20500.0
-db = 2
+
+[sub_resource type="AudioEffectFilter" id=2]
+resource_name = "Filter"
+cutoff_hz = 20000.0
 
 [resource]
-bus/1/name = "Bar"
+bus/1/name = "Music"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
@@ -14,9 +17,17 @@ bus/1/volume_db = 0.0
 bus/1/send = "Master"
 bus/1/effect/0/effect = SubResource( 1 )
 bus/1/effect/0/enabled = true
-bus/2/name = "New Bus 2"
+bus/2/name = "Bar"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
 bus/2/volume_db = 0.0
 bus/2/send = "Master"
+bus/2/effect/0/effect = SubResource( 2 )
+bus/2/effect/0/enabled = true
+bus/3/name = "Bathroom"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.0
+bus/3/send = "Master"
