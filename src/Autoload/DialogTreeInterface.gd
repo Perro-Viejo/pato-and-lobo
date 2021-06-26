@@ -42,6 +42,7 @@ func show_dialog(script_name: String) -> void:
 
 
 func finish_dialog() -> void:
+	E.main_camera.offset_v = 0.0
 	emit_signal('dialog_finished')
 
 
