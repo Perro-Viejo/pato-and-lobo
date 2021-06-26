@@ -5,23 +5,20 @@ extends RichTextLabel
 
 signal animation_finished
 
-export var wrap_width := 200
+export var wrap_width := 200.0
 export var min_wrap_width := 120
 
 var _secs_per_character := 1.0
 var _is_waiting_input := false
-#  Estos valores se toman de la configuración hecha en el Editor --------------
 var _max_width := rect_size.x
 var _dflt_height := rect_size.y
-#  ----------------------------------------------------------------------------
-var _target_size := Vector2.ONE
 
 onready var _tween: Tween = $Tween
 onready var _label_dflt_size: Vector2 = $Label.rect_size
+onready var _wrap_width_limit := (wrap_width / 2) * 0.2
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
-# warning-ignore-all:return_value_discarded
 func _ready() -> void:
 	# Establecer la configuración inicial
 	clear()
@@ -51,59 +48,54 @@ func play_text(props: Dictionary) -> void:
 	
 	append_bbcode(msg)
 	rect_size = Vector2(wrap_width, _dflt_height)
+	rect_position = props.position
+	rect_position.x -= rect_size.x / 2
 
 	# Se usa un Label para saber el ancho y alto que tendrá el RichTextLabel
 	$Label.text = text
-	rect_position = props.position
 	yield(get_tree(), 'idle_frame') # Para que se pueda calcular bien el ancho
-	
-	
+
 	if $Label.rect_size.x > wrap_width:
 		$Label.rect_size.x = wrap_width
 		$Label.autowrap = true
+
+	if rect_position.x < -_wrap_width_limit:
+		rect_size.x = min_wrap_width
+		rect_position.x = props.position.x - (rect_size.x / 2)
+		yield(get_tree(), 'idle_frame') # Para que se pueda calcular bien el ancho
+		
+		if rect_position.x < 0:
+			rect_position.x = 4.0
+	elif rect_position.x + rect_size.x > E.game_width + _wrap_width_limit:
+		rect_size.x = min_wrap_width
+		rect_position.x = props.position.x - (rect_size.x / 2)
+		yield(get_tree(), 'idle_frame') # Para que se pueda calcular bien el ancho
+
+		if rect_position.x + rect_size.x > E.game_width:
+			rect_position.x = E.game_width - rect_size.x - 4.0
 	
-	_target_size = Vector2(
-		$Label.rect_size.x,
-		_dflt_height + (($Label.get_line_count() - 1) * 14.0)
-	)
-	rect_size = _target_size
-	rect_position.y -= 12.0
-
-	# Ajustar la posición en X del texto que dice el personaje
-	rect_position.x -= rect_size.x / 2
-	if rect_position.x < -16.0:
-		_target_size.x = min_wrap_width
-		_target_size.y = _dflt_height + (($Label.get_line_count() - 1) * 14.0)
-		rect_size = _target_size
-
-		rect_position.x = 4.0
-		rect_position.y -= 12.0
-	elif rect_position.x + rect_size.x > E.game_width + 16.0:
-		_target_size.x = min_wrap_width
-		_target_size.y = _dflt_height + (($Label.get_line_count() - 1) * 14.0)
-		rect_size = _target_size
-
-		rect_position.x = E.game_width - rect_size.x - 4.0
-		rect_position.y -= 12.0
-
-		clear()
-		push_color(props.color)
-		append_bbcode('[right]%s[/right]' % msg)
-	else:
+	# Determinar cómo se debe alinear el texto
+	var center := rect_position.x + (rect_size.x / 2)
+	if center == props.position.x:
 		clear()
 		push_color(props.color)
 		append_bbcode('[center]%s[/center]' % msg)
-	
-	# Ajustar la posición en Y del texto que dice el personaje	
-	rect_position.y -= _target_size.y
-	rect_position.y += props.offset_y
+		yield(get_tree(), 'idle_frame') 
+	elif center < props.position.x:
+		clear()
+		push_color(props.color)
+		append_bbcode('[right]%s[/right]' % msg)
+		yield(get_tree(), 'idle_frame') 
 
+	# Ajustar la posición en Y del texto que dice el personaje	
+	rect_position.y -= rect_size.y
+	
 	if _secs_per_character > 0.0:
 		# Que el texto aparezca animado
 		_tween.interpolate_property(
 			self, 'percent_visible',
 			0, 1,
-			_secs_per_character * $Label.get_total_character_count(),
+			_secs_per_character * get_total_character_count(),
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
 		_tween.start()
@@ -121,14 +113,18 @@ func stop() ->void:
 		# Saltarse las animaciones
 		_tween.stop_all()
 		percent_visible = 1.0
-		rect_size = _target_size
 		_wait_input()
 
 
 func hide() -> void:
+	if modulate.a == 0.0: return
+
 	modulate.a = 0.0
 	_tween.stop_all()
 	_is_waiting_input = false
+	clear()
+	yield(get_tree(), 'idle_frame')
+	rect_size = Vector2(wrap_width, _dflt_height)
 
 
 func change_speed(idx: int) -> void:

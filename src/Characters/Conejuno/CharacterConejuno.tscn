@@ -264,4 +264,4 @@ frame = 15
 playing = true
 
 [node name="DialogPos" parent="." index="6"]
-position = Vector2( 0, -226 )
+position = Vector2( 0, -214 )

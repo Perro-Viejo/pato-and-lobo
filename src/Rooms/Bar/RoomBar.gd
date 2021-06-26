@@ -90,7 +90,10 @@ func on_room_transition_finished() -> void:
 		yield(I, 'courage_update_shown')
 
 		yield(E.run(['Pato: RoomBar-Pato-05']), 'completed')
-	elif C.player.last_room != 'MainMenu' and (Globals.has_done(Globals.GameState.GOT_HOME) or Globals.has_done(Globals.GameState.WATER_TAKEN)):
+	elif C.player.last_room != 'MainMenu' and (
+		Globals.has_done(Globals.GameState.GOT_HOME)
+		or Globals.has_done(Globals.GameState.WATER_TAKEN)
+		):
 		Globals.courage += 20
 		yield(I, 'courage_update_shown')
 

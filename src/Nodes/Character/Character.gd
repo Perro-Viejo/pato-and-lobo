@@ -21,6 +21,7 @@ export var vo_name := ''
 export var follow_player := false
 
 onready var sprite: Sprite = $Sprite
+onready var dialog_pos: Position2D = $DialogPos
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
