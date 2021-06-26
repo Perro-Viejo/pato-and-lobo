@@ -3,7 +3,8 @@ extends Room
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
-# TODO: Sobrescribir los métodos de Godot que hagan falta
+func _ready() -> void:
+	$Props/Lovers.modulate.a = 0.0
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
@@ -47,6 +48,14 @@ func on_room_transition_finished() -> void:
 			G.display('RoomEnd-AllDone-Game-06'),
 			G.display('RoomEnd-AllDone-Game-07'),
 		]), 'completed')
+		
+		$Tween.interpolate_property(
+			$Props/Lovers, 'modulate:a',
+			0.0, 1.0,
+			6.0, Tween.TRANS_SINE, Tween.EASE_OUT
+		)
+		$Tween.start()
+		
 	else:
 		# Final gracioso: Pato y Lobo se ríen de la estupidez del disfraz.
 		yield(E.run([

@@ -12,6 +12,8 @@ func start() -> void:
 		E.run([
 			C.walk_to_clicked(),
 			C.player.face_up(),
+			E.offset_camera(Vector2(0.0, -2.0)),
+			E.wait(0.5),
 			'Conejuno: ChatWithConejuno-Start-01'
 		]),
 		'completed'

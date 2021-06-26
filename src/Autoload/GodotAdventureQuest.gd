@@ -269,6 +269,13 @@ func get_text(msg: String) -> String:
 	return tr(msg) if use_translations else msg
 
 
+func offset_camera(offset := Vector2.ZERO, is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	main_camera.offset_h = offset.x
+	main_camera.offset_v = offset.y
+	yield(get_tree(), 'idle_frame')
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _set_in_room(value: bool) -> void:
 	in_room = value
