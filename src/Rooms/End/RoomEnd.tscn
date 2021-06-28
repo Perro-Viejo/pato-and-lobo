@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/TransitionLayer/fade.png" type="Texture" id=1]
 [ext_resource path="res://src/Nodes/Prop/Prop.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/Rooms/End/RoomEnd.gd" type="Script" id=4]
 [ext_resource path="res://assets/fonts/kg-happy.solid.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://src/Rooms/End/lovers.png" type="Texture" id=6]
+[ext_resource path="res://src/Resources/DynamicFonts/KgHappySolid18.tres" type="DynamicFont" id=7]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -67,5 +68,68 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" index="1"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+custom_constants/margin_bottom = 64
+
+[node name="Endings" type="VBoxContainer" parent="PanelContainer/MarginContainer" index="0"]
+margin_top = 680.0
+margin_right = 1920.0
+margin_bottom = 1016.0
+size_flags_vertical = 12
+custom_constants/separation = 8
+
+[node name="End1" type="RichTextLabel" parent="PanelContainer/MarginContainer/Endings" index="0"]
+margin_right = 1920.0
+margin_bottom = 78.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][shake]UNKNOWN[/shake][/center]"
+meta_underlined = false
+text = "UNKNOWN"
+fit_content_height = true
+scroll_active = false
+
+[node name="End2" type="RichTextLabel" parent="PanelContainer/MarginContainer/Endings" index="1"]
+margin_top = 86.0
+margin_right = 1920.0
+margin_bottom = 164.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][shake]UNKNOWN[/shake][/center]"
+meta_underlined = false
+text = "UNKNOWN"
+fit_content_height = true
+scroll_active = false
+
+[node name="End3" type="RichTextLabel" parent="PanelContainer/MarginContainer/Endings" index="2"]
+margin_top = 172.0
+margin_right = 1920.0
+margin_bottom = 250.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][shake]UNKNOWN[/shake][/center]"
+meta_underlined = false
+text = "UNKNOWN"
+fit_content_height = true
+scroll_active = false
+
+[node name="End4" type="RichTextLabel" parent="PanelContainer/MarginContainer/Endings" index="3"]
+margin_top = 258.0
+margin_right = 1920.0
+margin_bottom = 336.0
+custom_fonts/normal_font = ExtResource( 7 )
+custom_colors/default_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][shake]UNKNOWN[/shake][/center]"
+meta_underlined = false
+text = "UNKNOWN"
+fit_content_height = true
+scroll_active = false
 
 [node name="Tween" type="Tween" parent="." index="7"]

@@ -1,10 +1,17 @@
 tool
 extends Room
 
+onready var _endings: VBoxContainer = $PanelContainer/MarginContainer/Endings
+
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready() -> void:
 	$Props/Lovers.modulate.a = 0.0
+	
+	for c in _endings.get_children():
+		var rtl: RichTextLabel = c
+		rtl.clear()
+		rtl.append_bbcode('[center]%s[/center]' % tr('UNKNOWN'))
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
@@ -15,6 +22,7 @@ func on_room_entered() -> void:
 func on_room_transition_finished() -> void:
 	if Globals.has_done(Globals.GameState.GOT_DRUNK):
 		# Final loco: Lobo se come a Pato y nunca más lo vuelve a ver.
+		_replace_ending(1)
 		yield(E.run([
 			G.display('RoomEnd-GotDrunk-Game-01'),
 			G.display('RoomEnd-GotDrunk-Game-02'),
@@ -28,6 +36,7 @@ func on_room_transition_finished() -> void:
 			G.display('RoomEnd-GotDrunk-Game-09'),
 		]), 'completed')
 	elif Globals.has_done(Globals.GameState.UNABLE):
+		_replace_ending(2)
 		# Final triste: Pato es un fracaso, como nosotros.
 		yield(E.run([
 			G.display('RoomEnd-Unable-Game-01'),
@@ -37,6 +46,7 @@ func on_room_transition_finished() -> void:
 			G.display('RoomEnd-Unable-Game-04'),
 		]), 'completed')
 	elif Globals.has_done(Globals.GameState.ALL_DONE):
+		_replace_ending(3)
 		# Final raro: Pato y Lobo se ríen de la estupidez del disfraz pero ella
 		# le cuenta sus ensoñaciones y Lobo se enamora locamente.
 		yield(E.run([
@@ -58,6 +68,7 @@ func on_room_transition_finished() -> void:
 		
 	else:
 		# Final gracioso: Pato y Lobo se ríen de la estupidez del disfraz.
+		_replace_ending(4)
 		yield(E.run([
 			G.display('RoomEnd-Disguised-Game-01'),
 			G.display('RoomEnd-Disguised-Game-02'),
@@ -83,3 +94,10 @@ func _show_the_end() -> void:
 
 func _show_illustration() -> void:
 	pass
+
+
+func _replace_ending(idx: int) -> void:
+	_endings.get_child(idx - 1).clear()
+	_endings.get_child(idx - 1).append_bbcode(
+		'[center]%s[/center]' % tr('END_%d' % idx)
+	)

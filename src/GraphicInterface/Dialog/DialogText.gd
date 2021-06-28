@@ -47,7 +47,7 @@ func play_text(props: Dictionary) -> void:
 	yield(get_tree(), 'idle_frame') # Para que se pueda calcular bien el ancho
 	
 	append_bbcode(msg)
-	rect_size = Vector2(wrap_width, _dflt_height)
+	rect_size = Vector2(_max_width, _dflt_height)
 	rect_position = props.position
 	rect_position.x -= rect_size.x / 2
 
@@ -55,9 +55,11 @@ func play_text(props: Dictionary) -> void:
 	$Label.text = text
 	yield(get_tree(), 'idle_frame') # Para que se pueda calcular bien el ancho
 
-	if $Label.rect_size.x > wrap_width:
+	if $Label.rect_size.x > _max_width:
 		$Label.rect_size.x = wrap_width
 		$Label.autowrap = true
+		rect_size.x = wrap_width
+		rect_position.x -= rect_size.x / 2
 
 	if rect_position.x < -_wrap_width_limit:
 		rect_size.x = min_wrap_width

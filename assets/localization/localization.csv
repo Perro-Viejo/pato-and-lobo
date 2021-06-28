@@ -189,6 +189,11 @@ RoomEnd-AllDone-Game-05,Lobo sintió mariposas en la panza... se había enamorad
 RoomEnd-AllDone-Game-06,Más tarde le dio un beso mientras bailaban.,Despues de un rato se besaron mientras bailaban.,Later he kissed her while they were dancing.
 RoomEnd-AllDone-Game-07,Pato y Lobo ahora están juntos y son mucho muy felices.,Pato y Lobo ahora estan juntos y son muy felices.,Pato and Lobo are now together and they are very happy.
 THE_END,Se acabó,Fin,End
+UNKNOWN,[shake]??????????[/shake],,
+END_1,[wave]La borrachera[/wave],,[wave]Drunk[/wave]
+END_2,[wave]La fracasada[/wave],,[wave]Failure[/wave]
+END_3,[wave]Los tortolitos[/wave],[wave]Los enamorados[/wave],[wave]Lovers[/wave]
+END_4,[wave]La aparente[/wave],[wave]La disfrazada[/wave],[wave]Costume[/wave]
 PERSONAJES,,,
 CharacterPato-CheckCostumeCompletion-Pato-01,¡Síííííííííííííí!,¡Síiiiiiiiiiiiiiii!,WEEEEEEEEEE!
 CharacterPato-CheckCostumeCompletion-Pato-02,Ya tengo el disfracho.,Tengo el disfraz.,I completed the costume.
