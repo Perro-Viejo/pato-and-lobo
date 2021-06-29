@@ -37,8 +37,6 @@ __meta__ = {
 [node name="DialogText" parent="MainContainer" instance=ExtResource( 3 )]
 margin_right = 0.0
 margin_bottom = 0.0
-wrap_width = 640.0
-min_wrap_width = 320
 
 [node name="DisplayBox" parent="MainContainer" instance=ExtResource( 11 )]
 

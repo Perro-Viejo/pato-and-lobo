@@ -14,7 +14,7 @@ var _max_width := rect_size.x
 var _dflt_height := rect_size.y
 
 onready var _tween: Tween = $Tween
-onready var _label_dflt_size: Vector2 = $Label.rect_size
+#onready var _label_dflt_size: Vector2 = $Label.rect_size
 onready var _wrap_width_limit := (wrap_width / 2) * 0.2
 
 
@@ -22,7 +22,7 @@ onready var _wrap_width_limit := (wrap_width / 2) * 0.2
 func _ready() -> void:
 	# Establecer la configuración inicial
 	clear()
-	$Label.text = ''
+#	$Label.text = ''
 	modulate.a = 0.0
 	_secs_per_character = E.text_speeds[E.text_speed_idx]
 	
@@ -41,24 +41,28 @@ func play_text(props: Dictionary) -> void:
 
 	clear()
 	push_color(props.color)
+	rect_size = Vector2(_max_width, _dflt_height)
+
 	$Label.text = ''
 	$Label.autowrap = false
 	$Label.rect_size.x = 0.0
+
 	yield(get_tree(), 'idle_frame') # Para que se pueda calcular bien el ancho
-	
+
 	append_bbcode(msg)
-	rect_size = Vector2(_max_width, _dflt_height)
 	rect_position = props.position
 	rect_position.x -= rect_size.x / 2
 
 	# Se usa un Label para saber el ancho y alto que tendrá el RichTextLabel
 	$Label.text = text
+
 	yield(get_tree(), 'idle_frame') # Para que se pueda calcular bien el ancho
 
 	if $Label.rect_size.x > _max_width:
 		$Label.rect_size.x = wrap_width
 		$Label.autowrap = true
 		rect_size.x = wrap_width
+		rect_position = props.position
 		rect_position.x -= rect_size.x / 2
 
 	if rect_position.x < -_wrap_width_limit:
@@ -77,17 +81,18 @@ func play_text(props: Dictionary) -> void:
 			rect_position.x = E.game_width - rect_size.x - 4.0
 	
 	# Determinar cómo se debe alinear el texto
-	var center := rect_position.x + (rect_size.x / 2)
+	var center := floor(rect_position.x + (rect_size.x / 2))
+	
 	if center == props.position.x:
 		clear()
 		push_color(props.color)
 		append_bbcode('[center]%s[/center]' % msg)
-		yield(get_tree(), 'idle_frame') 
+		yield(get_tree(), 'idle_frame')
 	elif center < props.position.x:
 		clear()
 		push_color(props.color)
 		append_bbcode('[right]%s[/right]' % msg)
-		yield(get_tree(), 'idle_frame') 
+		yield(get_tree(), 'idle_frame')
 
 	# Ajustar la posición en Y del texto que dice el personaje	
 	rect_position.y -= rect_size.y
@@ -127,6 +132,7 @@ func hide() -> void:
 	clear()
 	yield(get_tree(), 'idle_frame')
 	rect_size = Vector2(wrap_width, _dflt_height)
+	yield(get_tree(), 'idle_frame')
 
 
 func change_speed(idx: int) -> void:
