@@ -9,6 +9,8 @@ extends Room
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
 	C.player.current_surface = 'concrete'
+	AudioServer.get_bus_effect(1, 0).cutoff_hz = 400
+	AudioServer.set_bus_volume_db(1, 2)
 
 	if visited_first_time:
 		C.player.global_position = $Points/Entry.global_position

@@ -52,14 +52,14 @@ func play(cue_name: String, pos := Vector2.ZERO, is_in_queue := true, wait_audio
 		yield(get_tree(), 'idle_frame')
 
 
-func play_music(cue_name: String, is_in_queue := true) -> void:
+func play_music(cue_name: String, is_in_queue := true, music_position = 0.0) -> void:
 	# TODO: Puede que sí necesite recibir la posición por si se quiere que la música
 	# salga de un lugar específico (p.e. una radio en el escenario).
 	if _mx_cues.has(cue_name.to_lower()):
 		if is_in_queue: yield()
 
 		var cue: AudioCue = _mx_cues[cue_name.to_lower()]
-		_play(cue)
+		_play(cue, Vector2.ZERO, music_position)
 		C.get_character('Lagarto').current_track = cue_name
 	else:
 		printerr('AudioManager.play_music: No se encontró la música', cue_name)
@@ -84,6 +84,10 @@ func stop(cue_name: String, _instance_i := 0, is_in_queue := true) -> void:
 
 	yield(get_tree(), 'idle_frame')
 
+func get_cue_position(cue_name: String, is_in_queue := true) -> void:
+	var stream_player: Node = (_active[cue_name].players as Array).front()
+	C.get_character('Lagarto').music_position = stream_player.get_playback_position()
+	yield(get_tree(), 'idle_frame')
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
 func _set_cues(value: Array) -> void:
@@ -97,7 +101,7 @@ func _set_cues(value: Array) -> void:
 
 # Reproduce el sonido y se encarga de la lógica que lo asigna a un AudioStreamPlayer
 # o crea uno nuevo si no hay disponibles
-func _play(cue: AudioCue, pos := Vector2.ZERO) -> Node:
+func _play(cue: AudioCue, pos := Vector2.ZERO, position = 0.0) -> Node:
 	var player: Node = null
 	
 	if cue.is_2d:
@@ -127,7 +131,7 @@ func _play(cue: AudioCue, pos := Vector2.ZERO) -> Node:
 	var debug_idx: int = DebugOverlay.add_monitor('\n' + cue_name, player, ':playing')
 	
 	player.bus = cue.bus
-	player.play()
+	player.play(position)
 	player.connect('finished', self, '_make_available', [player, cue_name, debug_idx])
 	
 	if _active.has(cue_name):
@@ -154,7 +158,8 @@ func _make_available(stream_player: Node, cue_name: String, debug_idx: int) -> v
 	if 'mx' in cue_name:
 		if not cue_name == 'mx_bar_gen':
 			C.get_character('Lagarto').music_playing = false
-			C.get_character('Lagarto').check_music()
+			if C.get_character('Lagarto').paused == false:
+				C.get_character('Lagarto').check_music()
 	if stream_player is AudioStreamPlayer:
 		_reparent($Active, $Generic, stream_player.get_index())
 	else:

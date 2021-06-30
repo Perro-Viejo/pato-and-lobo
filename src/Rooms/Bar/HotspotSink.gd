@@ -22,7 +22,7 @@ func on_interact() -> void:
 			'...'
 		]), 'completed')
 		A.play('sfx_dream_transition', Vector2.ZERO, false)
-		C.get_character('Lagarto').stop_music()
+		C.get_character('Lagarto').stop_music(false)
 		C.get_character('Lagarto').timer.stop()
 		E.goto_room('Sea')
 	else:

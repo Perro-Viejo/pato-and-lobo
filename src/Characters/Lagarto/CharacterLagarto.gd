@@ -3,6 +3,8 @@ extends Character
 
 var music_playing = false
 var current_track = ''
+var music_position = 0.0
+var paused = false
 
 var _using_mask := true
 
@@ -11,7 +13,6 @@ onready var timer = $Timer
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready() -> void:
 	timer.connect('timeout', self, 'play_music', ['mx_bar_gen', false])
-	print('Y suenaaa: ', current_track)
 	_looking_dir = 'mask'
 	idle(false)
 
@@ -59,25 +60,33 @@ func on_look() -> void:
 #Funciones de DJ
 func play_music(track = 'mx_bar_gen', is_in_queue := true):
 	if is_in_queue: yield()
-	if music_playing:
+	if music_playing and current_track != track:
 		stop_music(false)
-		A.play_music(track, false)
+		A.play_music(track, false, 0.0)
 		music_playing = true
 	else:
-		A.play_music(track, false)
+		A.play_music(track, false, music_position)
 		music_playing = true
+	paused = false
 	if is_inside_tree(): yield(get_tree(), 'idle_frame')
 
-func stop_music(is_in_queue := true):
+func stop_music(is_in_queue := true, pause = true):
 	if is_in_queue: yield()
-	A.stop(current_track, 0, false)
-	music_playing = false
-	current_track = ''
+	if pause:
+		paused = true
+		A.get_cue_position(current_track, false)
+		A.stop(current_track, 0, false)
+	else:
+		play_music(current_track, false)
 
 func check_music():
 	if not music_playing:
-		$Timer.wait_time = rand_range(3, 8)
-		$Timer.start()
+		if paused:
+			play_music(current_track, false)
+		else:
+			$Timer.wait_time = rand_range(3, 8)
+			$Timer.start()
+			music_position = 0.0
 
 func remove_mask(is_in_queue := true) -> void:
 	if is_in_queue: yield()
