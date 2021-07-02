@@ -6,7 +6,7 @@ extends Hotspot
 func on_interact() -> void:
 	yield(E.run([
 		C.walk_to_clicked(),
-		A.play('sfx_door_open', global_position),
+		A.play({cue_name = 'sfx_door_open', pos = global_position}),
 	]), 'completed')
 	E.goto_room('Bar')
 

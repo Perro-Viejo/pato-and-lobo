@@ -64,7 +64,7 @@ func _unhandled_input(event):
 	if not event.is_action_pressed('interact'):
 		if event.is_action_released('look'):
 			if I.active: 
-				A.play('sfx_ui_deselect', Vector2.ZERO, false) 
+				A.play({cue_name = 'sfx_ui_deselect', pos = Vector2.ZERO, is_in_queue = false})
 				I.set_active_item()
 		return
 

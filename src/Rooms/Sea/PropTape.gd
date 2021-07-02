@@ -7,7 +7,7 @@ func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
 		'Pato: RoomSea-Tape-Pato-01',
-		A.play('sfx_tape_pu', global_position, true, true),
+		A.play({cue_name = 'sfx_tape_pu', pos = global_position, wait_audio_complete = true }),
 		disable(),
 		I.add_item('Tape'),
 		'Pato: RoomSea-Tape-Pato-02',

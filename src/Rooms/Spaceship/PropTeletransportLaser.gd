@@ -18,7 +18,7 @@ func on_interact() -> void:
 			yield(E.run([
 				'Lobo: RoomSpaceship-TeletransportRay-Lobo-02',
 				_play(),
-				A.play('sfx_spaceship_teleport', global_position),
+				A.play({cue_name = 'sfx_spaceship_teleport', pos = global_position}),
 				'Pato: RoomSpaceship-TeletransportRay-Pato-01',
 			]), 'completed')
 			E.goto_room('Luna')

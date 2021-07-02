@@ -29,7 +29,7 @@ func display(msg: String, is_in_queue := true) -> void:
 		return
 	
 	emit_signal('show_box_requested', E.get_text(msg))
-	A.play('sfx_ui_narrator_popup', Vector2.ZERO, false)
+	A.play({cue_name = 'sfx_ui_narrator_popup', pos = Vector2.ZERO, is_in_queue = false})
 	yield(self, 'continue_clicked')
 
 

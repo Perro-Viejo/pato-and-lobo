@@ -16,7 +16,7 @@ func on_interact() -> void:
 				'Lobo: RoomSpaceship-RoboticArm-Lobo-01',
 				'Pato: RoomSpaceship-RoboticArm-Pato-01',
 				_play(),
-				A.play('sfx_spaceship_hook', global_position),
+				A.play({cue_name = 'sfx_spaceship_hook', pos = global_position}),
 				E.wait(1.3)
 			]), 'completed')
 			Globals.did(Globals.GameState.ARM_DOWN)

@@ -15,7 +15,7 @@ func _init() -> void:
 func on_room_entered() -> void:
 	C.player.current_surface = 'rock'
 	if C.player.last_room == 'Bar':
-		A.play('bg_space', Vector2.ZERO, false)
+		A.play({cue_name = 'bg_space', pos = Vector2.ZERO, is_in_queue = false})
 	C.player.global_position = $Points/EntryPoint.global_position
 
 	C.player.enable(false)

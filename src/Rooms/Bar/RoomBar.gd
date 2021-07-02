@@ -33,10 +33,10 @@ func on_room_entered() -> void:
 	# TODO: Que audio siga desde donde quedó antes de abandonar la habitación
 	# y que el DJ toque la mx_bar_gen cuando este en silencio por determinado
 	# tiempo
-	A.play('bg_bar', Vector2.ZERO, false)
-	A.play('bg_bathroom', $Points/Bathroom.global_position, false)
+	A.play({cue_name = 'bg_bar', pos = Vector2.ZERO, is_in_queue = false})
+	A.play({cue_name = 'bg_bathroom', pos = $Points/Bathroom.global_position, is_in_queue = false})
 	if state.vieja_sleeping:
-		A.play('sfx_granny_sleep', C.get_character('Vieja').global_position, false)
+		A.play({cue_name = 'sfx_granny_sleep', pos = C.get_character('Vieja').global_position, is_in_queue = false})
 	
 	if visited_first_time:
 		C.player.global_position = $Points/Entrance.global_position
@@ -75,7 +75,7 @@ func on_room_transition_finished() -> void:
 			'Pato: RoomBar-Pato-02',
 			G.display('RoomBar-02'),
 			C.change_camera_owner(C.get_character('Lobo')),
-			A.play('sfx_camera_lobo_intro', Vector2.ZERO),
+			A.play({cue_name = 'sfx_camera_lobo_intro', pos = Vector2.ZERO}),
 			E.wait(2.0),
 			C.change_camera_owner(C.player),
 			G.display('RoomBar-03'),

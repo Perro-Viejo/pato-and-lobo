@@ -58,7 +58,7 @@ func on_look() -> void:
 		E.run(['Pato: Character-Lagarto-OnLook-Pato-03'])
 
 #Funciones de DJ
-func play_music(track = 'mx_bar_gen', is_in_queue := true):
+func play_music(track = '', is_in_queue := true):
 	if is_in_queue: yield()
 	if music_playing and current_track != track:
 		stop_music(false)
@@ -72,6 +72,7 @@ func play_music(track = 'mx_bar_gen', is_in_queue := true):
 
 func stop_music(is_in_queue := true, pause = true):
 	if is_in_queue: yield()
+	music_playing = false
 	if pause:
 		paused = true
 		A.get_cue_position(current_track, false)

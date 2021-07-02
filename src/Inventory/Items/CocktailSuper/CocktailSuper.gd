@@ -3,7 +3,7 @@ extends Item
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	A.play('sfx_cocktail_active', Vector2.ZERO, false)
+	A.play({cue_name = 'sfx_cocktail_active', pos = Vector2.ZERO, is_in_queue = false})
 	.on_interact()
 
 

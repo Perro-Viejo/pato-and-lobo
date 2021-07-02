@@ -6,7 +6,7 @@ extends Prop
 func on_interact() -> void:
 	if not C.player.last_room == 'Luna':
 		yield(E.run([
-			A.play('sfx_spaceship_transition', Vector2.ZERO),
+			A.play({cue_name = 'sfx_spaceship_transition', pos = Vector2.ZERO}),
 			E.current_room.goto_planet(script_name)
 		]), 'completed')
 		E.goto_room('Luna')

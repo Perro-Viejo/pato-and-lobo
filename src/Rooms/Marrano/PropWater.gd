@@ -19,7 +19,7 @@ func on_interact() -> void:
 			C.face_clicked(),
 			'Pato: RoomMarrano-Water-Pato-03',
 			disable(),
-			A.play('sfx_watercase_pu', global_position),
+			A.play({cue_name = 'sfx_watercase_pu', pos = global_position}),
 			I.add_item('WaterCase'),
 			'Pato: RoomMarrano-Water-Pato-04',
 			'Lobo: RoomMarrano-Water-Lobo-01',

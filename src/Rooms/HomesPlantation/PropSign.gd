@@ -21,6 +21,7 @@ func on_interact() -> void:
 		
 		if is_the_one:
 			yield(E.run(['Pato: RoomHomesPlantation-PropSign-Pato-02']), 'completed')
+			A.play({cue_name = 'sfx_space_character_transition', pos = Vector2.ZERO, is_in_queue = false})
 			E.goto_room('Spaceship')
 			Globals.did(Globals.GameState.GOT_HOME)
 		else:

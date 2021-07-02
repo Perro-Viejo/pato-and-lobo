@@ -21,9 +21,10 @@ func on_item_used(item: Item) -> void:
 			C.walk_to_clicked(),
 			C.face_clicked(),
 			'Pato: RoomLuna-HomeSeed-Pato-03',
-			A.play('sfx_watercase_use', Vector2.ZERO, true, true),
+			A.play({cue_name = 'sfx_watercase_use', pos = Vector2.ZERO, is_in_queue = true, wait_audio_complete = true}),
 			C.player_walk_to(E.current_room.get_point('WolfPoint')),
-			A.play('sfx_seed_grow', Vector2.ZERO),
+			A.play({cue_name = 'sfx_seed_grow', pos = Vector2.ZERO}),
+			
 			_shake_camera(),
 			disable(),
 			E.current_room.get_prop('Home').enable(),

@@ -26,7 +26,7 @@ func on_interact() -> void:
 				yield(
 					E.run([
 					'Lobo: RoomSpaceship-GarbageExtractor-Lobo-03',
-					A.play('sfx_spaceship_garbage', global_position),
+					A.play({cue_name = 'sfx_spaceship_garbage', pos = global_position}),
 					play('open'),
 					'Pato: RoomSpaceship-GarbageExtractor-Pato-01',
 				]), 'completed')

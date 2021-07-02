@@ -22,7 +22,7 @@ func option_selected(opt: DialogOption) -> void:
 					E.run([
 						'Lagarto: SongList-Opt1-Lagarto-01',
 						'Lagarto: SongList-Opt1-Lagarto-02',
-						A.play('sfx_mask_takeoff', C.get_character('Lagarto').global_position),
+						A.play({cue_name = 'sfx_mask_takeoff', pos = C.get_character('Lagarto').global_position}),
 						C.get_character('Lagarto').remove_mask(),
 						C.get_character('Lagarto').play_music('mx_bar_04'),
 						'Lagarto: SongList-Opt1-Lagarto-03',
@@ -69,7 +69,7 @@ func option_selected(opt: DialogOption) -> void:
 				yield(E.run(['Pato: SongList-Opt3-Pato-03']), 'completed')
 				opt.visible = false
 				D.finish_dialog()
-				A.play('sfx_dream_transition', Vector2.ZERO, false)
+				A.play({cue_name = 'sfx_dream_transition', pos = Vector2.ZERO, is_in_queue = false})
 				C.get_character('Lagarto').stop_music(false)
 				C.get_character('Lagarto').timer.stop()
 				E.goto_room('Luna')

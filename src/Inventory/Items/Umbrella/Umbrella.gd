@@ -3,7 +3,7 @@ extends Item
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_interact() -> void:
-	A.play('sfx_umbrella_active', Vector2.ZERO, false)
+	A.play({cue_name = 'sfx_umbrella_active', pos = Vector2.ZERO, is_in_queue = false})
 	.on_interact()
 
 
@@ -16,7 +16,7 @@ func on_item_used(item: Item) -> void:
 		E.run([
 			I.remove_item(item.script_name),
 			I.remove_item(script_name),
-			A.play('sfx_tape_use', Vector2.ZERO),
+			A.play({cue_name = 'sfx_tape_use', pos = Vector2.ZERO}),
 			'Pato: Items-Umbrella-Pato-01',
 			I.add_item('UmbrellaTape'),
 		])
@@ -28,7 +28,7 @@ func on_item_used(item: Item) -> void:
 		E.run([
 			I.remove_item(item.script_name),
 			I.remove_item(script_name),
-			A.play('sfx_mopbrella_pu', Vector2.ZERO),
+			A.play({cue_name = 'sfx_mopbrella_pu', pos = Vector2.ZERO}),
 			'Pato: Items-Umbrella-Pato-03',
 			I.add_item('Mopbrella'),
 			'Pato: Items-Umbrella-Pato-04',

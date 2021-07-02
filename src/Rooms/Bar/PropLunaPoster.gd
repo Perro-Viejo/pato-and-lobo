@@ -10,7 +10,7 @@ func on_interact() -> void:
 		C.player_say('La nueva película de Chicamocha'),
 		C.player_say('...y si...'),
 	]), 'completed')
-	A.play('sfx_dream_transition', Vector2.ZERO, false)
+	A.play({cue_name = 'sfx_dream_transition', pos = Vector2.ZERO, is_in_queue = false})
 	E.goto_room('Space')
 
 

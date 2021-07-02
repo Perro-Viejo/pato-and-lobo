@@ -22,7 +22,7 @@ func on_room_entered() -> void:
 	else:
 		C.player.global_position = state.last_player_pos
 		
-	A.play('bg_homesplantation', Vector2.ZERO, false)
+	A.play({cue_name = 'bg_homesplantation', pos = Vector2.ZERO, is_in_queue = false})
 	C.get_character('Lobo').disable(false)
 	C.get_character('Lobo').vo_name = 'vo_lobo_com'
 	C.player.enable(false)

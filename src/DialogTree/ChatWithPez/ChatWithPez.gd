@@ -101,12 +101,16 @@ func option_selected(opt: DialogOption) -> void:
 			else:
 				E.shake_camera({strength = 5.0, duration = 5.0})
 				E.main_camera.offset_v = -2.0
-				A.play('sfx_stare_fight', Vector2.ZERO, false)
+				A.play({cue_name = 'sfx_stare_fight', pos = Vector2.ZERO, is_in_queue = false})
+				AudioServer.get_bus_effect(1, 0).cutoff_hz = 600
+				AudioServer.set_bus_volume_db(1, -8)
 				yield(E.tween_zoom(Vector2.ONE * 0.3, 5.0, false), 'completed')
 				yield(E.run([
 					'Pez: ChatWithPez-Opt4-Pez-03',
-					A.play('sfx_stare_reset', Vector2.ZERO),
+					A.play({cue_name = 'sfx_stare_reset', pos = Vector2.ZERO, is_in_queue = false}),
 					E.tween_zoom(Vector2.ONE, 0.5),
+					AudioServer.get_bus_effect(1, 0).set_cutoff(20000),
+					AudioServer.set_bus_volume_db(1, 0),
 					pez.face_right(),
 					'...',
 					'Pez: ChatWithPez-Opt4-Pez-04',

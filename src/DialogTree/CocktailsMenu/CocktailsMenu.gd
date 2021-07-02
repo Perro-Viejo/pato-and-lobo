@@ -30,8 +30,8 @@ func option_selected(opt: DialogOption) -> void:
 				'Conejuno: CocktailsMenu-Opt1-Conejuno-01',
 				'Conejuno: CocktailsMenu-Opt1-Conejuno-02',
 				'Pato: CocktailsMenu-Opt1-Pato-03',
-				A.play('sfx_prepare_drink', C.player.global_position, true, true),
-				A.play('sfx_cocktail_pu', C.player.global_position),
+				A.play({cue_name = 'sfx_prepare_drink', pos = C.player.global_position, is_in_queue = true, wait_audio_complete = true}),
+				A.play({cue_name = 'sfx_cocktail_pu', pos = C.player.global_position}),
 				I.add_item('CocktailGolem'),
 			]), 'completed')
 		'Opt2':
@@ -41,9 +41,9 @@ func option_selected(opt: DialogOption) -> void:
 				'Conejuno: CocktailsMenu-Opt3-Conejuno-01',
 				'Conejuno: CocktailsMenu-Opt3-Conejuno-02',
 				'Conejuno: CocktailsMenu-Opt3-Conejuno-03',
-				A.play('sfx_prepare_drink', C.player.global_position, true, true),
+				A.play({cue_name = 'sfx_prepare_drink', pos = C.player.global_position, is_in_queue = true, wait_audio_complete = true}),
 				'Conejuno: CocktailsMenu-Opt3-Conejuno-04',
-				A.play('sfx_cocktail_pu', C.player.global_position),
+				A.play({cue_name = 'sfx_cocktail_pu', pos = C.player.global_position}),
 				I.add_item('CocktailSecret')
 			]), 'completed')
 		'Exit':

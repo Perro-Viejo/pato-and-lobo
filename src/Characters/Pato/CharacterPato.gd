@@ -79,4 +79,4 @@ func _animation_started(anim) -> void:
 
 func _check_frame() -> void:
 	if $AnimatedSprite.frame == 11 or $AnimatedSprite.frame == 23:
-		A.play('sfx_fs_%s_0%s' % [current_surface, randi() % 4 + 1], global_position, false)
+		A.play({cue_name = 'sfx_fs_%s_0%s' % [current_surface, randi() % 4 + 1], pos = global_position, is_in_queue = false})

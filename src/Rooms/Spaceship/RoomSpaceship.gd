@@ -8,7 +8,7 @@ extends Room
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
-	A.play('sfx_spaceship_idle', Vector2.ZERO, false)
+	A.play({cue_name = 'sfx_spaceship_idle', pos = Vector2.ZERO, is_in_queue = false})
 	C.player.global_position = $Points/PlayerPos.global_position
 	C.player.disable(false)
 	C.get_character('Lobo').scale = Vector2.ONE * 0.8

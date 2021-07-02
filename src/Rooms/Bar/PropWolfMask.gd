@@ -12,7 +12,7 @@ func on_interact() -> void:
 		'Pato: RoomBar-WolfMask-Pato-01',
 		'Pato: RoomBar-WolfMask-Pato-02',
 		C.player.grab(),
-		A.play('sfx_mask_pu', global_position),
+		A.play({cue_name = 'sfx_mask_pu', pos = global_position}),
 		disable(),
 		I.add_item('Mask')
 	])

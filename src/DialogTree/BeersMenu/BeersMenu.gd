@@ -20,9 +20,9 @@ func option_selected(opt: DialogOption) -> void:
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
 				'Pato: BeersMenu-Pato-Thanks',
-				A.play('sfx_beer', C.player.global_position),
+				A.play({cue_name = 'sfx_beer', pos = C.player.global_position}),
 				G.display('BeersMenu-Opt1-Game-01'),
-				A.play('sfx_drink_beer', C.player.global_position),
+				A.play({cue_name = 'sfx_drink_beer', pos = C.player.global_position}),
 				'Pato: BeersMenu-Opt1-Pato-02',
 				'...',
 				'Pato: BeersMenu-Opt1-Pato-03'
@@ -31,9 +31,9 @@ func option_selected(opt: DialogOption) -> void:
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
 				'Pato: BeersMenu-Pato-Thanks',
-				A.play('sfx_beer', C.player.global_position),
+				A.play({cue_name = 'sfx_beer', pos = C.player.global_position}),
 				G.display('BeersMenu-Opt2-Game-01'),
-				A.play('sfx_drink_beer', C.player.global_position),
+				A.play({cue_name = 'sfx_drink_beer', pos = C.player.global_position}),
 				'Pato: BeersMenu-Opt2-Pato-02',
 				'...',
 			]), 'completed')
@@ -43,7 +43,7 @@ func option_selected(opt: DialogOption) -> void:
 				yield(E.run(['Pato: BeersMenu-Opt2-Pato-03']), 'completed')
 				opt.visible = false
 				D.finish_dialog()
-				A.play('sfx_dream_transition', Vector2.ZERO, false)
+				A.play({cue_name = 'sfx_dream_transition', pos = Vector2.ZERO, is_in_queue = false})
 				C.get_character('Lagarto').stop_music(false)
 				C.get_character('Lagarto').timer.stop()
 				E.goto_room('Luna')
@@ -55,9 +55,9 @@ func option_selected(opt: DialogOption) -> void:
 		'Opt3':
 			yield(_ask_beer(opt.text), 'completed')
 			yield(E.run([
-				A.play('sfx_beer', C.player.global_position),
+				A.play({cue_name = 'sfx_beer', pos = C.player.global_position}),
 				'Pato: BeersMenu-Pato-Thanks',
-				A.play('sfx_drink_beer', C.player.global_position),
+				A.play({cue_name = 'sfx_drink_beer', pos = C.player.global_position}),
 				'Pato: BeersMenu-Opt3-Pato-01',
 				'...',
 				'Pato: BeersMenu-Opt3-Pato-02',

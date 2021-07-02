@@ -10,7 +10,7 @@ func on_interact() -> void:
 		C.walk_to_clicked(),
 		'Pato: RoomBar-Coat-Pato-01',
 		C.player.grab(),
-		A.play('sfx_tail_pu', global_position),
+		A.play({cue_name = 'sfx_tail_pu', pos = global_position}),
 		'Pato: RoomBar-Coat-Pato-02',
 		disable(),
 		I.add_item('Tail')

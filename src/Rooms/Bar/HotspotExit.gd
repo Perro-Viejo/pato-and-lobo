@@ -10,7 +10,7 @@ func on_interact() -> void:
 			C.player.face_left(),
 			'...',
 			'Pato: RoomBar-Exit-Pato-01',
-			A.play('sfx_door_open', global_position),
+			A.play({cue_name = 'sfx_door_open', pos = global_position}),
 			A.stop('bg_bar'),
 			A.stop('mx_bar_01')
 		]),

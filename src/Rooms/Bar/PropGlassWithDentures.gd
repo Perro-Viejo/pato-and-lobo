@@ -10,7 +10,7 @@ func on_interact() -> void:
 		C.walk_to_clicked(),
 		'Pato: RoomBar-GlassWithDentures-Pato-01',
 		C.player.grab(),
-		A.play('sfx_dentures_pu', global_position),
+		A.play({cue_name = 'sfx_dentures_pu', pos = global_position}),
 		disable(),
 		I.add_item('Dentures'),
 		'Pato: RoomBar-GlassWithDentures-Pato-02',

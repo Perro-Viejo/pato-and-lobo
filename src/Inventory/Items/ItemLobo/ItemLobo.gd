@@ -5,7 +5,7 @@ extends Item
 func on_interact() -> void:
 	if E.current_room.script_name != 'Spaceship':
 		E.goto_room('Spaceship')
-		A.play('sfx_space_character_transition', Vector2.ZERO, false)
+		A.play({cue_name = 'sfx_space_character_transition', pos = Vector2.ZERO, is_in_queue = false})
 	else:
 		E.run(['Lobo: Items-ItemLobo-Lobo-01'])
 

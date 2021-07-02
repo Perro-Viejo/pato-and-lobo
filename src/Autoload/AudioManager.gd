@@ -10,6 +10,8 @@ var _sfx_cues := {}
 var _mx_cues := {}
 var _active := {}
 
+onready var _tween = $Tween
+
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 # warning-ignore-all:return_value_discarded
@@ -31,22 +33,34 @@ func semitone_to_pitch(pitch: float) -> float:
 	return pow(twelfth_root_of_two, pitch)
 
 
-func play(cue_name: String, pos := Vector2.ZERO, is_in_queue := true, wait_audio_complete := false) -> void:
-	if is_in_queue: yield()
+func play(props = {
+		cue_name = '', 
+		pos = Vector2.ZERO, 
+		is_in_queue = true, 
+		wait_audio_complete = false, 
+		fade = false, 
+		from = -80, 
+		to = 0
+	}) -> void:
+	
+	if props.get('is_in_queue', true): yield()
 
 	var dic: Dictionary = {}
 	var stream_player: Node = null
 	
-	if cue_name.find('vo_') > -1: dic = _vo_cues
+	if props.cue_name.find('vo_') > -1: dic = _vo_cues
 	else: dic = _sfx_cues
 	
-	if dic.has(cue_name.to_lower()):
-		var cue: AudioCue = dic[cue_name.to_lower()]
-		stream_player = _play(cue, pos)
+	if dic.has(props.cue_name.to_lower()):
+		var cue: AudioCue = dic[props.cue_name.to_lower()]
+		if not props.get('fade', false):
+			stream_player = _play(cue, props.get('pos', Vector2.ZERO))
+		else:
+			stream_player = fade_in(cue, props.get('pos', Vector2.ZERO), 1, props.get('from', -80), props.get('to', cue.volume))
 	else:
-		printerr('AudioManager.play: No se encontró el sonido', cue_name)
+		printerr('AudioManager.play: No se encontró el sonido', props.cue_name)
 	
-	if stream_player and wait_audio_complete:
+	if stream_player and props.get('wait_audio_complete', false):
 		yield(stream_player, 'finished')
 	else:
 		yield(get_tree(), 'idle_frame')
@@ -89,7 +103,20 @@ func get_cue_position(cue_name: String, is_in_queue := true) -> void:
 	C.get_character('Lagarto').music_position = stream_player.get_playback_position()
 	yield(get_tree(), 'idle_frame')
 
+func change_cue_pitch(cue_name: String, new_pitch = 0, is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	var stream_player: Node = (_active[cue_name].players as Array).front()
+	stream_player.set_pitch_scale(semitone_to_pitch(new_pitch)) 
+	yield(get_tree(), 'idle_frame')
+
+func fade_in(cue: AudioCue, pos, duration = 1, from = -80, to = 0, position = 0.0) -> void:
+	cue.volume = from
+	_play(cue, pos)
+	_fade_sound(cue.resource_name, duration, from, to)
+
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
+
 func _set_cues(value: Array) -> void:
 	cues = value
 	for idx in value.size():
@@ -188,3 +215,12 @@ func _reparent(source: Node, target: Node, child_idx: int) -> Node:
 	target.add_child(node_to_reparent)
 
 	return node_to_reparent
+
+func _fade_sound(cue_name: String, duration = 1, from = 0, to = 0) -> void:
+	var stream_player: Node = (_active[cue_name].players as Array).front()
+	$Tween.interpolate_property(
+		stream_player, 'volume_db',
+		from, to,
+		duration, Tween.TRANS_SINE, Tween.EASE_OUT
+		)
+	$Tween.start()

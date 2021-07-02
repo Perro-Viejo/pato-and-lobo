@@ -7,7 +7,7 @@ func on_interact() -> void:
 	E.run([
 		C.walk_to_clicked(),
 		'Pato: RoomSea-Umbrella-Pato-01',
-		A.play('sfx_umbrella_pu', global_position),
+		A.play({cue_name = 'sfx_umbrella_pu', pos = global_position}),
 		disable(),
 		I.add_item('Umbrella'),
 		'Pato: RoomSea-Umbrella-Pato-02',

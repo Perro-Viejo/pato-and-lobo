@@ -28,11 +28,11 @@ func on_item_used(item: Item) -> void:
 			'Pato: Character-Vieja-CocktailSuper-Pato-02',
 			'Vieja: Character-Vieja-CocktailSuper-Vieja-03',
 			'Vieja: Character-Vieja-CocktailSuper-Vieja-04',
-			A.play('sfx_granny_drink', C.get_character('Vieja').global_position),
+			A.play({cue_name = 'sfx_granny_drink', pos = C.get_character('Vieja').global_position}),
 			E.wait(3.0),
 			'Vieja: Character-Vieja-CocktailSuper-Vieja-05',
 			'Vieja: Character-Vieja-CocktailSuper-Vieja-06',
-			A.play('sfx_mask_takeoff', C.get_character('Vieja').global_position),
+			A.play({cue_name = 'sfx_mask_takeoff', pos = C.get_character('Vieja').global_position}),
 			sleep(),
 			E.current_room.get_prop('GlassWithDentures').enable(),
 			'Pato: Character-Vieja-CocktailSuper-Pato-07'
@@ -60,6 +60,6 @@ func on_item_used(item: Item) -> void:
 
 func sleep(is_in_queue := true) -> void:
 	if is_in_queue: yield()
-	A.play('sfx_granny_sleep', global_position, false)
+	A.play({cue_name = 'sfx_granny_sleep', por = global_position, is_in_queue = false})
 	$AnimationPlayer.play('sleep')
 	yield(E.wait(1.0, false), 'completed')
