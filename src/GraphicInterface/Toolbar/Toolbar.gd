@@ -9,8 +9,6 @@ var is_disabled := false
 
 var _can_hide := true
 
-onready var _btn_dialog: ToolbarButton = find_node('BtnDialog')
-onready var _btn_power: ToolbarButton = find_node('BtnPower')
 onready var _grid: GridContainer = find_node('Grid')
 onready var _hide_y := rect_position.y - (rect_size.y - 26)
 
@@ -19,6 +17,11 @@ onready var _hide_y := rect_position.y - (rect_size.y - 26)
 # warning-ignore-all:return_value_discarded
 func _ready() -> void:
 	rect_position.y = _hide_y
+	
+	if OS.has_feature('HTML5') or OS.has_feature('web'):
+		rect_size.x = 313.0
+		margin_right = -16.0
+		margin_left = 0.0
 	
 	# Conectarse a señales del yo
 	connect('mouse_entered', self, '_open')
