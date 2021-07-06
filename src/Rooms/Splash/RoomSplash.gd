@@ -19,7 +19,7 @@ func on_room_entered() -> void:
 		fade = true, from = -30, to = -4, duration = 0.8})
 	AudioServer.get_bus_effect(1, 0).cutoff_hz = 400
 	AudioServer.set_bus_volume_db(1, 2)
-	C.get_character('Lagarto').play_music('mx_bar_gen', false)
+	C.get_character('Lagarto').play_music('mx_bar_gen', false, true, 1.8)
 
 
 func on_room_transition_finished() -> void:

@@ -27,7 +27,10 @@ func start() -> void:
 			D.finish_dialog()
 
 			if C.player.last_room != 'Bar':
+				C.get_character('Lagarto').check_music()
 				E.goto_room('Bar')
+				A.play({cue_name = 'bg_bar', is_in_queue = false, fade = true, 
+					from = -30, to = -10, duration = 2.2})
 				A.stop('bg_space', 0, false)
 	elif Globals.has_done(Globals.GameState.WATER_TAKEN):
 		yield(
@@ -40,7 +43,10 @@ func start() -> void:
 		D.finish_dialog()
 
 		if C.player.last_room != 'Bar':
+			C.get_character('Lagarto').check_music()
 			E.goto_room('Bar')
+			A.play({cue_name = 'bg_bar', is_in_queue = false, fade = true, 
+					from = -30, to = -10, duration = 2.2})
 			A.stop('bg_space', 0, false)
 	else:
 		yield(E.run([
