@@ -25,7 +25,7 @@ characters = [ {
 } ]
 limit_left = -960.0
 limit_right = 960.0
-limit_top = -540.0
+limit_top = -1080.0
 limit_bottom = 540.0
 
 [node name="Bg" parent="Props" index="0" instance=ExtResource( 1 )]

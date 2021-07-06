@@ -9,6 +9,7 @@ Toolbar-BtnLanguage,Idioma,,Language
 InventoryContainer-Courage,Perrenque:,Valentía:,Courage:
 Clickable-OnInteract-Game-01,Pato no sabe qué hacer.,,Pato doesn't know what to do with that.
 Clickable-OnLook-Game-01,Pato no sabe qué decir.,,Pato has nothing to say about it.
+Clickable-ToggleDescription-True,Usar %s con %s,,Use %s with %s
 HABITACIONES,,,
 RoomMainMenu-01,Clic izquierdo pa' INTERACTUAR con objetos y personajes.,Haz clic izquierdo para INTERACTUAR con objetos y personajes.,Use left click to interact with objects and characters.
 RoomMainMenu-02,Clic derecho pa' EXAMINAR objetos y personajes.,Haz clic derecho para OBSERVAR objetos y personajes.,Use right click to take a look on objects and characters.
@@ -29,6 +30,7 @@ RoomBar-Pato-02,Además Lobo está aquí <3.,Además Lobo está aquí <3.,And Lo
 RoomBar-Pato-03,Ora sí jue....,Hoy es el día....,Today will be the day....
 RoomBar-Pato-04,¡HOY LE HABLARÉ A LOBO!,,I WILL TALK WITH LOBO TODAY!
 RoomBar-Pato-05,He salvado a mi amor...,,The savior of my love...
+RoomBar-Lagarto-06,¡Uffff! Ya terminó de descargar %s,¡Qué bueno! Ya se descargó %s,Yeah! %s has downloaded
 RoomBar-Pato-06,Qué gonito sueño...,Qué bonito sueño...,What a romantic dream...
 RoomBar-Pato-07,Siento que ora sí le voy a hablar.,Siento que ahora si tengo el valor para hablarle,I feel I have the courage to talk with Lobo
 RoomBar-Coat,Un abrigomelo.,Un abrigo,A Coat
@@ -328,7 +330,7 @@ SongList-Opt1-Lagarto-02,Pere me quito esto porque esa me hace sudar.,Pero prime
 SongList-Opt1-Lagarto-03,¡Ora sí! A gozaaaaaaar.,¡Estoy listo! A gozaaaaaaaar.,Woooooooooooooooooooooo.
 SongList-Opt1-Lagarto-04,No quiero. Ahora me pone triste esa canción.,No... esa canción me trae malos recuerdos.,Don't gonna play that. Memories.
 SongList-Opt2-Lagarto-01,¡De una!,¡Con gusto!,Sure!
-SongList-Opt2-Lagarto-02,¡Ah juepuerca! Se me quedó ese disco.,¡Mierda! Esa no la traje.,FOCK! I didn't bring that record.
+SongList-Opt2-Lagarto-02,¡Ah juepuerca! No ha terminado de descargar la canción.,¡Mierda! Todavía se está descargando.,FOCK! It is still downloading.
 SongList-Opt3-Lagarto-01,Uffffffffff... mi canción más favorita.,Uuuuuuuu... ¡mi favorita!,Yeyyyyyyyyy... my favorite song.
 SongList-Opt3-Pato-02,¡Esta música mí gustar mucho muy!,¡Me gusta mucho esta canción!,I love this song so much!
 SongList-Opt3-Pato-03,¿Qué tal si...?,¿Y si...?,What if...

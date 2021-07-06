@@ -87,7 +87,18 @@ func on_room_transition_finished() -> void:
 		Globals.courage += 20
 		yield(I, 'courage_update_shown')
 
-		yield(E.run(['Pato: RoomBar-Pato-05']), 'completed')
+		# Se presenta escena de llegada del disco
+		yield(E.run([
+			'Pato: RoomBar-Pato-05',
+			E.wait(0.5),
+			C.change_camera_owner(C.get_character('Lagarto')),
+			A.play({cue_name = 'sfx_camera_lobo_intro', pos = Vector2.ZERO}),
+			'...',
+			'Lagarto: ' +\
+				E.get_text('RoomBar-Lagarto-06') % E.get_text('SongList-Opt2'),
+			'...',
+			C.change_camera_owner(C.player),
+		]), 'completed')
 	elif C.player.last_room != 'MainMenu' and (
 		Globals.has_done(Globals.GameState.GOT_HOME)
 		or Globals.has_done(Globals.GameState.WATER_TAKEN)
@@ -95,11 +106,25 @@ func on_room_transition_finished() -> void:
 		Globals.courage += 20
 		yield(I, 'courage_update_shown')
 
-		yield(E.run(['Pato: RoomBar-Pato-06']), 'completed')
+		yield(E.run(['Pato: RoomBar-Pato-07']), 'completed')
+		
+		if (Globals.has_done(Globals.GameState.GOT_HOME)
+			and Globals.has_done(Globals.GameState.WATER_TAKEN)
+		):
+			# Anunciar la descarga de una nueva canción.
+			yield(E.run([
+				C.change_camera_owner(C.get_character('Lagarto')),
+				A.play({cue_name = 'sfx_camera_lobo_intro', pos = Vector2.ZERO}),
+				'...',
+				'Lagarto: ' +\
+					E.get_text('RoomBar-Lagarto-06') % E.get_text('SongList-Opt4'),
+				'...',
+				C.change_camera_owner(C.player),
+			]), 'completed')
 	
 	if Globals.courage >= 60 \
 		and (C.player.last_room == 'Sea' or C.player.last_room == 'Luna'):
-		E.run(['Pato: RoomBar-Pato-07'])
+		E.run(['Pato: RoomBar-Pato-08'])
 
 
 func on_room_exited() -> void:

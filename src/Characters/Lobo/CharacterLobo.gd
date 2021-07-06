@@ -104,6 +104,8 @@ func on_look() -> void:
 func on_item_used(item: Item) -> void:
 	if item.script_name == 'Mopbrella':
 			yield(E.run([
+				C.player_walk_to(E.current_room.get_point('ProwPoint')),
+				'...',
 				'Pato: CharacterLobo-Mopbrella-Pato-01',
 			]), 'completed')
 			A.stop('bg_dream_boat', 0, false)

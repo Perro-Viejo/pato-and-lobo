@@ -7,7 +7,7 @@ class_name Item
 signal description_toggled(description)
 signal selected(item)
 
-export var description := ''
+export var description := '' setget ,_get_description
 export var stack := false
 export var script_name := ''
 export(Cursor.Type) var cursor
@@ -56,3 +56,11 @@ func _on_action_pressed(event: InputEvent) -> void:
 				on_interact()
 		elif mouse_event.is_action_pressed('look'):
 			pass
+
+
+func _get_description() -> String:
+	if Engine.editor_hint:
+		if not description:
+			description = name
+		return description
+	return E.get_text(description)

@@ -111,7 +111,9 @@ func _toggle_description(display: bool) -> void:
 		if not I.active:
 			G.show_info(self.description)
 		else:
-			G.show_info('Use %s with %s' % [I.active.description, self.description])
+			G.show_info(E.get_text('Clickable-ToggleDescription-True') % [
+				I.active.description, self.description
+			])
 	else:
 		if not G.waiting_click:
 			Cursor.set_cursor()
