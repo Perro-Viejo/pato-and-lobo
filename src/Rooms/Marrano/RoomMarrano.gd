@@ -1,6 +1,9 @@
 tool
 extends Room
 
+# Camera limits
+# -960, 960, -960, 340
+
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _init() -> void:

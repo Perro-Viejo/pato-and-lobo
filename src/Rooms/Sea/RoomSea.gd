@@ -1,6 +1,9 @@
 tool
 extends Room
 
+# Camera limits
+# -960, 960, -960, 1
+
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 # TODO: Sobrescribir los métodos de Godot que hagan falta

@@ -105,7 +105,7 @@ func on_room_transition_finished() -> void:
 		Globals.courage += 20
 		yield(I, 'courage_update_shown')
 
-		yield(E.run(['Pato: RoomBar-Pato-07']), 'completed')
+		yield(E.run(['Pato: RoomBar-Pato-06']), 'completed')
 		
 		if (Globals.has_done(Globals.GameState.GOT_HOME)
 			and Globals.has_done(Globals.GameState.WATER_TAKEN)
@@ -123,7 +123,7 @@ func on_room_transition_finished() -> void:
 	
 	if Globals.courage >= 60 \
 		and (C.player.last_room == 'Sea' or C.player.last_room == 'Luna'):
-		E.run(['Pato: RoomBar-Pato-08'])
+		E.run(['Pato: RoomBar-Pato-07'])
 
 
 func on_room_exited() -> void:

@@ -10,6 +10,7 @@ func start() -> void:
 	# camine hasta éste y lo salude (o sea saludado).
 	
 	# La llamada al método start del padre hace que se muestren las opciones
+	E.offset_camera(Vector2(0.0, -1.0), false)
 	.start()
 
 
@@ -43,8 +44,8 @@ func option_selected(opt: DialogOption) -> void:
 			if Globals.has_done(Globals.GameState.SEA_DREAMED):
 				yield(
 				E.run([
-					'Lagarto: Ahora si ya bajó',
-					'Lagarto: Me la robe por Ares',
+					'Lagarto: SongList-Opt1-Lagarto-05',
+					'Lagarto: SongList-Opt1-Lagarto-06',
 					C.get_character('Lagarto').play_music('mx_bar_01'),
 					'Lagarto: SongList-Opt1-Lagarto-03',
 				]),
