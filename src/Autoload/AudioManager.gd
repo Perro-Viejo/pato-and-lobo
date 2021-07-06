@@ -38,7 +38,8 @@ func play(props = {
 		pos = Vector2.ZERO, 
 		is_in_queue = true, 
 		wait_audio_complete = false, 
-		fade = false, 
+		fade = false,
+		duration = 1, 
 		from = -80, 
 		to = 0
 	}) -> void:
@@ -56,7 +57,7 @@ func play(props = {
 		if not props.get('fade', false):
 			stream_player = _play(cue, props.get('pos', Vector2.ZERO))
 		else:
-			stream_player = fade_in(cue, props.get('pos', Vector2.ZERO), 1, props.get('from', -80), props.get('to', cue.volume))
+			stream_player = fade_in(cue, props.get('pos', Vector2.ZERO), props.get('duration', 1), props.get('from', -80), props.get('to', cue.volume))
 	else:
 		printerr('AudioManager.play: No se encontró el sonido', props.cue_name)
 	
@@ -221,6 +222,6 @@ func _fade_sound(cue_name: String, duration = 1, from = 0, to = 0) -> void:
 	$Tween.interpolate_property(
 		stream_player, 'volume_db',
 		from, to,
-		duration, Tween.TRANS_SINE, Tween.EASE_OUT
+		duration, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
 	$Tween.start()

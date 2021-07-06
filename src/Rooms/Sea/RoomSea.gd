@@ -9,7 +9,8 @@ extends Room
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
 func on_room_entered() -> void:
 	C.player.current_surface = 'wood'
-	A.play({cue_name = 'bg_dream_boat', pos = Vector2.ZERO, is_in_queue = false})
+	A.play({cue_name = 'bg_dream_boat', pos = Vector2.ZERO, is_in_queue = false, 
+		fade = true, from = -30, to = -8, duration = 1})
 	C.player.global_position = $Points/EntryPoint.global_position
 	C.get_character('Lobo').drowning()
 	E.main_camera.offset_v = -2.0
@@ -47,6 +48,9 @@ func on_room_exited() -> void:
 	
 	C.get_character('Lobo').anim_suffix = ''
 	C.get_character('Lobo').idle(false)
+	
+	A.play({cue_name = 'bg_bar', pos = global_position, is_in_queue = false, fade = true, 
+		from = -30, to = -10, duration = 2.2})
 	
 	.on_room_exited()
 

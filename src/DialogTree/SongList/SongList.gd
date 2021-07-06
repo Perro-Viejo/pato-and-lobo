@@ -39,7 +39,29 @@ func option_selected(opt: DialogOption) -> void:
 				)
 				opt.visible = false
 				_show_options()
-		'Opt2', 'Opt4':
+		'Opt2':
+			if Globals.has_done(Globals.GameState.SEA_DREAMED):
+				yield(
+				E.run([
+					'Lagarto: Ahora si ya bajó',
+					'Lagarto: Me la robe por Ares',
+					C.get_character('Lagarto').play_music('mx_bar_01'),
+					'Lagarto: SongList-Opt1-Lagarto-03',
+				]),
+				'completed'
+			)
+			else:
+				 yield(
+				E.run([
+					'Lagarto: SongList-Opt2-Lagarto-01',
+					'...',
+					'Lagarto: SongList-Opt2-Lagarto-02'
+				]),
+				'completed'
+			)
+			_show_options()
+		
+		'Opt4':
 			yield(
 				E.run([
 					'Lagarto: SongList-Opt2-Lagarto-01',

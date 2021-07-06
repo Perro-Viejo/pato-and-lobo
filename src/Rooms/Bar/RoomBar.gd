@@ -30,10 +30,8 @@ func on_room_entered() -> void:
 	I.remove_item('Lobo', false)
 	I.remove_item('WaterCase', false)
 	
-	# TODO: Que audio siga desde donde quedó antes de abandonar la habitación
 	# y que el DJ toque la mx_bar_gen cuando este en silencio por determinado
 	# tiempo
-	A.play({cue_name = 'bg_bar', pos = Vector2.ZERO, is_in_queue = false})
 	A.play({cue_name = 'bg_bathroom', pos = $Points/Bathroom.global_position, is_in_queue = false})
 	if state.vieja_sleeping:
 		A.play({cue_name = 'sfx_granny_sleep', pos = C.get_character('Vieja').global_position, is_in_queue = false})
