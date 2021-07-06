@@ -67,14 +67,23 @@ func play(props = {
 		yield(get_tree(), 'idle_frame')
 
 
-func play_music(cue_name: String, is_in_queue := true, music_position = 0.0) -> void:
+func play_music(cue_name: String, is_in_queue := true, music_position = 0.0, fade = false, duration = 1) -> void:
 	# TODO: Puede que sí necesite recibir la posición por si se quiere que la música
 	# salga de un lugar específico (p.e. una radio en el escenario).
 	if _mx_cues.has(cue_name.to_lower()):
 		if is_in_queue: yield()
 
 		var cue: AudioCue = _mx_cues[cue_name.to_lower()]
-		_play(cue, Vector2.ZERO, music_position)
+		if fade:
+			var volume
+			match cue_name:
+				'mx_bar_01':
+					volume = -6
+				_: 
+					volume = -8
+			fade_in(cue, Vector2.ZERO, duration, -80, volume, music_position)
+		else:
+			_play(cue, Vector2.ZERO, music_position)
 		C.get_character('Lagarto').current_track = cue_name
 	else:
 		printerr('AudioManager.play_music: No se encontró la música', cue_name)
@@ -111,8 +120,9 @@ func change_cue_pitch(cue_name: String, new_pitch = 0, is_in_queue := true) -> v
 	yield(get_tree(), 'idle_frame')
 
 func fade_in(cue: AudioCue, pos, duration = 1, from = -80, to = 0, position = 0.0) -> void:
+	var cue_position = position
 	cue.volume = from
-	_play(cue, pos)
+	_play(cue, pos, cue_position)
 	_fade_sound(cue.resource_name, duration, from, to)
 
 

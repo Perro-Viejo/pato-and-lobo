@@ -17,7 +17,8 @@ func _init() -> void:
 func on_room_entered() -> void:
 	C.player.current_surface = 'grass'
 	if not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
-		A.play({cue_name = 'sfx_dome', pos = $Props/Container.global_position, is_in_queue = false})
+		A.play({cue_name = 'sfx_dome', pos = $Props/Container.global_position, is_in_queue = false, fade = true, 
+				from = -30, to = -2, duration = .7})
 	
 	if visited_first_time:
 		C.player.global_position = $Points/EntryPoint.global_position
@@ -27,7 +28,8 @@ func on_room_entered() -> void:
 	else:
 		C.player.global_position = state.last_player_pos
 
-	A.play({cue_name = 'bg_marrano', pos = Vector2.ZERO, is_in_queue = false})
+	A.play({cue_name = 'bg_marrano', is_in_queue = false, fade = true, 
+			from = -30, to = 1, duration = 1})
 	C.player.enable(false)
 	C.get_character('Lobo').disable(false)
 	C.get_character('Lobo').vo_name = 'vo_lobo_com'
@@ -56,13 +58,12 @@ func on_room_transition_finished() -> void:
 		and not Globals.has_done(Globals.GameState.DOME_DESTROYED):
 		Globals.did(Globals.GameState.DOME_DESTROYED)
 		yield(E.run_cutscene([
-			A.play({cue_name = 'sfx_dome', pos = $Props/Container.global_position}),
+			A.play({cue_name = 'sfx_dome', pos = $Props/Container.global_position, fade = true, 
+				from = -30, to = -2, duration = .7}),
 			'Pato: RoomMarrano-Pato-02',
 			C.player_walk_to(get_point('Middle')),
 			_play_fall(),
 			A.play({cue_name = 'sfx_garbage_fall', pos = Vector2.ZERO, wait_audio_complete = true}),
-			A.play({cue_name = 'sfx_alarm', pos = Vector2.ZERO}),
-			A.stop('sfx_dome', 0),
 			'Marrano: RoomMarrano-Pig-01',
 			A.play({cue_name = 'sfx_pig_drive', pos = Vector2.ZERO}),
 			C.character_walk_to('Marrano', get_point('Container')),
@@ -92,3 +93,7 @@ func _play_fall() -> void:
 	yield()
 	$Props/Head/AnimationPlayer.play('fall')
 	yield(get_tree(), 'idle_frame')
+
+func _break_dome() -> void:
+	A.stop('sfx_dome', 0, false)
+	A.play({cue_name = 'sfx_alarm', pos = Vector2.ZERO, is_in_queue = false})

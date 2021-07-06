@@ -58,14 +58,17 @@ func on_look() -> void:
 		E.run(['Pato: Character-Lagarto-OnLook-Pato-03'])
 
 #Funciones de DJ
-func play_music(track = '', is_in_queue := true):
+func play_music(track = '', is_in_queue := true, fade = false, duration = 2):
 	if is_in_queue: yield()
 	if music_playing and current_track != track:
 		stop_music(false)
 		A.play_music(track, false, 0.0)
 		music_playing = true
 	else:
-		A.play_music(track, false, music_position)
+		if paused:
+			A.play_music(track, false, music_position, true, duration)
+		else:
+			A.play_music(track, false, music_position, fade, duration)
 		music_playing = true
 	paused = false
 	if is_inside_tree(): yield(get_tree(), 'idle_frame')
@@ -77,8 +80,6 @@ func stop_music(is_in_queue := true, pause = true):
 		paused = true
 		A.get_cue_position(current_track, false)
 		A.stop(current_track, 0, false)
-	else:
-		play_music(current_track, false)
 
 func check_music():
 	if not music_playing:

@@ -22,7 +22,6 @@ func on_room_entered() -> void:
 	$WavingBar.hide()
 	AudioServer.get_bus_effect(1, 0).cutoff_hz = 20000
 	AudioServer.set_bus_volume_db(1, 0)
-	C.get_character('Lagarto').check_music()
 	C.player.current_surface = 'tile'
 	# Quitar los elementos de inventario que hayan podido quedar del mundo de
 	# los sueños

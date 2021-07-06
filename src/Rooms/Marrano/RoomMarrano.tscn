@@ -161,6 +161,20 @@ tracks/6/keys = {
 "method": "spin_all"
 } ]
 }
+tracks/7/type = "method"
+tracks/7/path = NodePath("../..")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 2.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_break_dome"
+} ]
+}
 
 [sub_resource type="NavigationPolygon" id=3]
 vertices = PoolVector2Array( 110, 108, 539, 232, 601, 584, 557, 776, 359, 980, -84, 1127, -519, 978, -701, 708, -785.112, 517.285, -789, 302, -694.343, 103.485, -561, -76, -50, -202, -357.964, -198.189, -167, -264 )
