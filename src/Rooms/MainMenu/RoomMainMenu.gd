@@ -29,7 +29,7 @@ func on_room_transition_finished() -> void:
 
 
 func on_room_exited() -> void:
-	A.stop('bg_street', 0, false)
+	A.stop('bg_street', 0, false, true, 3.5)
 	.on_room_exited()
 
 

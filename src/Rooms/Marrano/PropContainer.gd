@@ -17,6 +17,7 @@ func on_interact() -> void:
 				]), 'completed'
 			)
 			E.goto_room('Spaceship')
+			A.play({cue_name = 'sfx_space_character_transition', pos = Vector2.ZERO, is_in_queue = false})
 			Globals.did(Globals.GameState.DOME_SPOTTED)
 		else:
 			E.run([

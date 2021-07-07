@@ -61,7 +61,7 @@ func on_look() -> void:
 func play_music(track = '', is_in_queue := true, fade = false, duration = 2):
 	if is_in_queue: yield()
 	if music_playing and current_track != track:
-		stop_music(false)
+		stop_music(false, false)
 		A.play_music(track, false, 0.0)
 		music_playing = true
 	else:
@@ -79,8 +79,9 @@ func stop_music(is_in_queue := true, pause = true):
 	if pause:
 		paused = true
 		A.get_cue_position(current_track, false)
+		A.stop(current_track, 0, false, true, 8)
+	else:
 		A.stop(current_track, 0, false)
-
 func check_music():
 	if not music_playing:
 		if paused:

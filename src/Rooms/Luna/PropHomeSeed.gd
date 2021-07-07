@@ -34,10 +34,11 @@ func on_item_used(item: Item) -> void:
 			'Lobo: RoomLuna-HomeSeed-Lobo-02'
 		]), 'completed')
 		E.goto_room('Bar')
+		A.play({cue_name = 'sfx_dream_transition', pos = Vector2.ZERO, is_in_queue = false})
 		C.get_character('Lagarto').check_music()
 		A.play({cue_name = 'bg_bar', pos = global_position, is_in_queue = false, fade = true, 
 			from = -30, to = -10, duration = 2.2})
-		A.stop('bg_space', 0, false)
+		A.stop('bg_space', 0, false, true, 8)
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

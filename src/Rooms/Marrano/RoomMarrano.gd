@@ -21,7 +21,7 @@ func on_room_entered() -> void:
 	C.player.current_surface = 'grass'
 	if not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
 		A.play({cue_name = 'sfx_dome', pos = $Props/Container.global_position, is_in_queue = false, fade = true, 
-				from = -30, to = -2, duration = .7})
+				from = -30, to = -2, duration = .5})
 	
 	if visited_first_time:
 		C.player.global_position = $Points/EntryPoint.global_position
@@ -80,11 +80,11 @@ func on_room_exited() -> void:
 	state.last_player_pos = C.player.global_position
 
 	if not Globals.has_done(Globals.GameState.GARBAGE_THROWN):
-		A.stop('sfx_dome', 0, false)
+		A.stop('sfx_dome', 0, false, true, 3)
 	else:
-		A.stop('sfx_alarm', 0, false)
+		A.stop('sfx_alarm', 0, false, true, 3)
 
-	A.stop('bg_marrano', 0, false)
+	A.stop('bg_marrano', 0, false, true, 4)
 	C.get_character('Lobo').enable(false)
 	C.get_character('Lobo').vo_name = 'vo_wolf'
 
@@ -98,5 +98,5 @@ func _play_fall() -> void:
 	yield(get_tree(), 'idle_frame')
 
 func _break_dome() -> void:
-	A.stop('sfx_dome', 0, false)
+	A.stop('sfx_dome', 0, false, true, 4)
 	A.play({cue_name = 'sfx_alarm', pos = Vector2.ZERO, is_in_queue = false})

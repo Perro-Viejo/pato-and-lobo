@@ -58,7 +58,7 @@ func on_room_exited() -> void:
 	state.last_player_pos = C.player.global_position
 	
 	A.stop('sfx_spaceship_hook')
-	A.stop('bg_homesplantation', 0, false)
+	A.stop('bg_homesplantation', 0, false, true, 3)
 	C.player.enable(false)
 	C.get_character('Lobo').enable(false)
 	C.get_character('Lobo').vo_name = 'vo_wolf'

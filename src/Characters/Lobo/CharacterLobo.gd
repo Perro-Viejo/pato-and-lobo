@@ -108,7 +108,7 @@ func on_item_used(item: Item) -> void:
 				'...',
 				'Pato: CharacterLobo-Mopbrella-Pato-01',
 			]), 'completed')
-			A.stop('bg_dream_boat', 0, false)
+			A.stop('bg_dream_boat', 0, false, true, 8)
 			I.remove_item(item.script_name, false)
 			C.get_character('Lagarto').check_music()
 			A.play({cue_name = 'sfx_dream_transition', pos = Vector2.ZERO, is_in_queue = false})

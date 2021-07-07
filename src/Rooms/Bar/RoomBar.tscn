@@ -288,14 +288,14 @@ normal_map = ExtResource( 29 )
 position = Vector2( 842, -271 )
 script = ExtResource( 10 )
 description = "Sink"
-walk_to_point = Vector2( 48, 150 )
+walk_to_point = Vector2( 323.977, 142.982 )
 cursor = 1
 
 [node name="CollisionPolygon2D" parent="Hotspots/Sink" index="0"]
 polygon = PoolVector2Array( -154, -19, -154, 30, -113, 80, -14, 82, 82, 68, 86, 11, 16, -32, 0, -30, 5, -53, -29, -51, -31, -34, -49, -47, -76, -44, -89, -22, -89, -50, -118, -46, -119, -21 )
 
 [node name="WalkToHelper" parent="Hotspots/Sink" index="2"]
-position = Vector2( 48, 150 )
+position = Vector2( 323.977, 142.982 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Hotspots/Sink" index="3"]
 polygon = PoolVector2Array( 153, -52, 187, -54, 189, -33, 197, -48, 225, -50, 242, -38, 242, -56, 281, -55, 280, -39, 295, -41, 366, 4, 362, 62, 268, 76, 161, 74, 120, 21, 124, -31, 151, -32 )
@@ -320,7 +320,7 @@ script = ExtResource( 30 )
 shape = SubResource( 1 )
 
 [node name="Sink" type="Position2D" parent="Points" index="0"]
-position = Vector2( 890, -121 )
+position = Vector2( 1166, -126 )
 
 [node name="Entrance" type="Position2D" parent="Points" index="1"]
 position = Vector2( 159, -238 )

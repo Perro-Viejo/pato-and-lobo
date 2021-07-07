@@ -39,6 +39,7 @@ func on_room_entered() -> void:
 		C.player.global_position = $Points/Entrance.global_position
 		C.player.face_left(false)
 	elif C.player.last_room == 'Sea':
+		A.play({cue_name = 'sfx_sink_tail', pos = global_position, is_in_queue = false})
 		C.player.global_position = $Points/Sink.global_position
 	else:
 		C.player.global_position = state.last_player_pos
@@ -129,10 +130,10 @@ func on_room_transition_finished() -> void:
 func on_room_exited() -> void:
 	state.last_player_pos = C.player.global_position
 	
-	A.stop('bg_bar', 0, false)
+	A.stop('bg_bar', 0, false, true, 4)
 	A.stop('bg_bathroom', 0, false)
 #	Aquí se apagaba la música antes
-	A.stop('sfx_granny_sleep', 0, false)
+	A.stop('sfx_granny_sleep', 0, false, true, 3.5)
 	
 	C.get_character('Lobo').idle(false)
 	

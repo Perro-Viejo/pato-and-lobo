@@ -90,14 +90,17 @@ func play_music(cue_name: String, is_in_queue := true, music_position = 0.0, fad
 	yield(get_tree(), 'idle_frame')
 
 
-func stop(cue_name: String, _instance_i := 0, is_in_queue := true) -> void:
+func stop(cue_name: String, _instance_i := 0, is_in_queue := true, fade = false, duration = 1) -> void:
 	if is_in_queue: yield()
 
 	if _active.has(cue_name):
-		var stream_player: Node = (_active[cue_name].players as Array).pop_front()
+		var stream_player: Node = (_active[cue_name].players as Array).front()
 		
 		if is_instance_valid(stream_player):
-			stream_player.stop()
+			if fade:
+				_fade_sound(cue_name, duration, stream_player.volume_db, -80)
+			else:
+				stream_player.stop()
 			
 			if stream_player is AudioStreamPlayer2D and _active[cue_name].loop:
 				# Cuando se detiene (.stop()) un audio en loop, por alguna razón
@@ -119,6 +122,7 @@ func change_cue_pitch(cue_name: String, new_pitch = 0, is_in_queue := true) -> v
 	stream_player.set_pitch_scale(semitone_to_pitch(new_pitch)) 
 	yield(get_tree(), 'idle_frame')
 
+#ODO: Esto podría ser llamado directamente desde el play/play_music
 func fade_in(cue: AudioCue, pos, duration = 1, from = -80, to = 0, position = 0.0) -> void:
 	var cue_position = position
 	cue.volume = from
@@ -235,3 +239,9 @@ func _fade_sound(cue_name: String, duration = 1, from = 0, to = 0) -> void:
 		duration, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
 	$Tween.start()
+	if from > to :
+		print ('echando pa abajo: ', cue_name)
+		yield(get_tree().create_timer(duration), 'timeout')
+		stream_player.stop()
+	else:
+		print ('echando pa arriba: ', cue_name)

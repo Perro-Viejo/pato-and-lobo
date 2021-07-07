@@ -25,6 +25,7 @@ func on_interact() -> void:
 			'Lobo: RoomMarrano-Water-Lobo-01',
 		]), 'completed')
 		Globals.did(Globals.GameState.WATER_TAKEN)
+		A.play({cue_name = 'sfx_space_character_transition', pos = Vector2.ZERO, is_in_queue = false})
 		E.goto_room('Spaceship')
 
 

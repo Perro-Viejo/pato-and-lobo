@@ -18,8 +18,8 @@ func on_interact() -> void:
 			A.play({cue_name = 'sfx_sink_wash', pos = global_position}),
 			'Pato: RoomBar-Sink-Pato-03',
 			A.play({cue_name = 'sfx_sink_wash', pos = global_position}),
-			A.stop('sfx_sink_loop'),
-			'...'
+			'...',
+			A.stop('sfx_sink_loop', 0, true, true, 8)
 		]), 'completed')
 		A.play({cue_name = 'sfx_dream_transition', pos = Vector2.ZERO, is_in_queue = false})
 		C.get_character('Lagarto').stop_music(false)
