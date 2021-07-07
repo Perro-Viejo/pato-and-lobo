@@ -10,6 +10,8 @@ var _sfx_cues := {}
 var _mx_cues := {}
 var _active := {}
 
+var _fading_sounds := {}
+
 onready var _tween = $Tween
 
 
@@ -125,6 +127,11 @@ func change_cue_pitch(cue_name: String, new_pitch = 0, is_in_queue := true) -> v
 #ODO: Esto podría ser llamado directamente desde el play/play_music
 func fade_in(cue: AudioCue, pos, duration = 1, from = -80, to = 0, position = 0.0) -> void:
 	var cue_position = position
+	if cue.audio.get_instance_id() in _fading_sounds:
+		from = _fading_sounds[cue.audio.get_instance_id()].volume_db
+		$Tween.stop(_fading_sounds[cue.audio.get_instance_id()])
+		_fading_sounds[cue.audio.get_instance_id()].emit_signal('finished')
+		_fading_sounds.erase(cue.audio.get_instance_id())
 	cue.volume = from
 	_play(cue, pos, cue_position)
 	_fade_sound(cue.resource_name, duration, from, to)
@@ -241,7 +248,16 @@ func _fade_sound(cue_name: String, duration = 1, from = 0, to = 0) -> void:
 	$Tween.start()
 	if from > to :
 		print ('echando pa abajo: ', cue_name)
-		yield(get_tree().create_timer(duration), 'timeout')
-		stream_player.stop()
+		_fading_sounds[stream_player.stream.get_instance_id()] = stream_player
+		if not $Tween.is_connected('tween_completed', self, '_fadeout_finished'):
+			$Tween.connect('tween_completed', self, '_fadeout_finished')
 	else:
 		print ('echando pa arriba: ', cue_name)
+
+func _fadeout_finished(obj, key) -> void:
+	if obj.stream.get_instance_id() in _fading_sounds :
+		_fading_sounds.erase(obj.stream.get_instance_id())
+		obj.stop()
+		if _fading_sounds.empty():
+			$Tween.disconnect('tween_completed', self, '_fadeout_finished')
+	

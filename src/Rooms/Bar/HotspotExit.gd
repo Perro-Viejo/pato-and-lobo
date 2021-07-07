@@ -8,11 +8,9 @@ func on_interact() -> void:
 		E.run([
 			C.walk_to_clicked(),
 			C.player.face_left(),
-			'...',
 			'Pato: RoomBar-Exit-Pato-01',
 			A.play({cue_name = 'sfx_door_open', pos = global_position}),
 			A.play({cue_name = 'bg_street', pos = global_position, fade = true, from = -30, to = -4, duration = 2}),
-			A.stop('bg_bar', 0, false, true, 4)
 		]),
 		'completed'
 	)
