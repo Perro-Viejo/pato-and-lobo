@@ -20,6 +20,7 @@ clickable = false
 texture = ExtResource( 5 )
 
 [node name="PerroViejo" parent="Props" index="1" instance=ExtResource( 3 )]
+scale = Vector2( 0.5, 0.5 )
 description = "Prop"
 clickable = false
 texture = ExtResource( 4 )
