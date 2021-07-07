@@ -63,14 +63,26 @@ func option_selected(opt: DialogOption) -> void:
 			_show_options()
 		
 		'Opt4':
-			yield(
+			if (Globals.has_done(Globals.GameState.GOT_HOME)
+			and Globals.has_done(Globals.GameState.WATER_TAKEN)):
+				yield(
 				E.run([
-					'Lagarto: SongList-Opt2-Lagarto-01',
-					'...',
-					'Lagarto: SongList-Opt2-Lagarto-02'
+					'Lagarto: SongList-Opt1-Lagarto-05',
+					'Lagarto: SongList-Opt1-Lagarto-06',
+					C.get_character('Lagarto').play_music('mx_bar_03'),
+					'Lagarto: SongList-Opt1-Lagarto-03',
 				]),
 				'completed'
 			)
+			else:
+				yield(
+					E.run([
+						'Lagarto: SongList-Opt2-Lagarto-01',
+						'...',
+						'Lagarto: SongList-Opt2-Lagarto-02'
+					]),
+					'completed'
+				)
 			_show_options()
 		'Opt3':
 			yield(
