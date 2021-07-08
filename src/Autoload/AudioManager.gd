@@ -59,7 +59,7 @@ func play(props = {
 		if not props.get('fade', false):
 			stream_player = _play(cue, props.get('pos', Vector2.ZERO))
 		else:
-			stream_player = fade_in(cue, props.get('pos', Vector2.ZERO), props.get('duration', 1), props.get('from', -80), props.get('to', cue.volume))
+			stream_player = _fade_in(cue, props.get('pos', Vector2.ZERO), props.get('duration', 1), props.get('from', -80), props.get('to', cue.volume))
 	else:
 		printerr('AudioManager.play: No se encontró el sonido', props.cue_name)
 	
@@ -83,7 +83,7 @@ func play_music(cue_name: String, is_in_queue := true, music_position = 0.0, fad
 					volume = -6
 				_: 
 					volume = -8
-			fade_in(cue, Vector2.ZERO, duration, -80, volume, music_position)
+			_fade_in(cue, Vector2.ZERO, duration, -80, volume, music_position)
 		else:
 			_play(cue, Vector2.ZERO, music_position)
 		C.get_character('Lagarto').current_track = cue_name
@@ -124,17 +124,19 @@ func change_cue_pitch(cue_name: String, new_pitch = 0, is_in_queue := true) -> v
 	stream_player.set_pitch_scale(semitone_to_pitch(new_pitch)) 
 	yield(get_tree(), 'idle_frame')
 
-#ODO: Esto podría ser llamado directamente desde el play/play_music
-func fade_in(cue: AudioCue, pos, duration = 1, from = -80, to = 0, position = 0.0) -> void:
-	var cue_position = position
+func _fade_in(cue: AudioCue, pos, duration = 1, from = -80, to = 0, position = 0.0) -> Node:
 	if cue.audio.get_instance_id() in _fading_sounds:
 		from = _fading_sounds[cue.audio.get_instance_id()].volume_db
 		$Tween.stop(_fading_sounds[cue.audio.get_instance_id()])
 		_fading_sounds[cue.audio.get_instance_id()].emit_signal('finished')
 		_fading_sounds.erase(cue.audio.get_instance_id())
 	cue.volume = from
-	_play(cue, pos, cue_position)
-	_fade_sound(cue.resource_name, duration, from, to)
+
+	var stream_player: Node = _play(cue, pos, position)
+	if stream_player:
+		_fade_sound(cue.resource_name, duration, from, to)
+
+	return stream_player
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
