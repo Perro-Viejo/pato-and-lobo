@@ -135,7 +135,8 @@ func _fade_in(cue: AudioCue, pos, duration = 1, from = -80, to = 0, position = 0
 	var stream_player: Node = _play(cue, pos, position)
 	if stream_player:
 		_fade_sound(cue.resource_name, duration, from, to)
-
+	
+	cue.volume = to
 	return stream_player
 
 
