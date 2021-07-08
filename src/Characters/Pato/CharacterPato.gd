@@ -62,6 +62,7 @@ func _check_costume_completion(item: Item) -> void:
 				anim_suffix = ''
 				idle(false)
 
+
 func _animation_started(anim) -> void:
 	if anim == 'walk_l' or anim == 'walk_r' :
 		if not walking:
@@ -77,6 +78,11 @@ func _animation_started(anim) -> void:
 			pass
 		walking = false
 
+
 func _check_frame() -> void:
 	if $AnimatedSprite.frame == 11 or $AnimatedSprite.frame == 23:
-		A.play({cue_name = 'sfx_fs_%s_0%s' % [current_surface, randi() % 4 + 1], pos = global_position, is_in_queue = false})
+		A.play({
+			cue_name = 'sfx_fs_%s_0%s' % [current_surface, randi() % 4 + 1],
+			pos = global_position,
+			is_in_queue = false
+		})

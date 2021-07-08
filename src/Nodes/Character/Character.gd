@@ -55,21 +55,29 @@ func walk(target_pos: Vector2, is_in_queue := true) -> void:
 		yield(get_tree(), 'idle_frame')
 		E.main_camera.smoothing_enabled = true
 		return
-	
-	$AnimationPlayer.play('walk_%s' % _looking_dir + anim_suffix)
-	emit_signal('started_walk_to', self, position, target_pos)
-	yield(C, 'character_move_ended')
+
+	var animation_name := 'walk_%s' % _looking_dir + anim_suffix
+	if $AnimationPlayer.has_animation(animation_name):
+		$AnimationPlayer.play(animation_name)
+		emit_signal('started_walk_to', self, position, target_pos)
+		yield(C, 'character_move_ended')
+	else:
+		yield(get_tree(), 'idle_frame')
 
 
 func idle(is_in_queue := true) -> void:
 	if is_in_queue: yield()
-	$AnimationPlayer.play('idle_%s' % _looking_dir + anim_suffix)
 	
 	if E.cutscene_skipped:
 		yield(get_tree(), 'idle_frame')
 		return
 	
-	yield(get_tree().create_timer(0.2), 'timeout')
+	var animation_name := 'idle_%s' % _looking_dir + anim_suffix
+	if $AnimationPlayer.has_animation(animation_name):
+		$AnimationPlayer.play(animation_name)
+		yield(get_tree().create_timer(0.2), 'timeout')
+	else:
+		yield(get_tree(), 'idle_frame')
 
 
 func face_up(is_in_queue := true) -> void:
@@ -115,7 +123,11 @@ func say(dialog: String, is_in_queue := true) -> void:
 
 	if vo_name:
 		A.play({cue_name = vo_name, pos = global_position, is_in_queue = false})
-	$AnimationPlayer.play('talk_%s' % _looking_dir + anim_suffix)
+	
+	var animation_name := 'talk_%s' % _looking_dir + anim_suffix
+	
+	if $AnimationPlayer.has_animation(animation_name):
+		$AnimationPlayer.play(animation_name)
 
 	yield(G, 'continue_clicked')
 	idle(false)
@@ -128,12 +140,16 @@ func grab(is_in_queue := true) -> void:
 		yield(get_tree(), 'idle_frame')
 		return
 	
-	$AnimationPlayer.play('grab_%s' % _looking_dir)
-	
-	if get_node_or_null('AnimatedSprite'):
-		yield($AnimatedSprite, 'animation_finished')
+	var animation_name := 'grab_%s' % _looking_dir
+	if $AnimationPlayer.has_animation(animation_name):
+		$AnimationPlayer.play(animation_name)
+		
+		if get_node_or_null('AnimatedSprite'):
+			yield($AnimatedSprite, 'animation_finished')
+		else:
+			yield($AnimationPlayer, 'animation_finished')
 	else:
-		yield($AnimationPlayer, 'animation_finished')
+		yield(get_tree(), 'idle_frame')
 
 	idle(false)
 

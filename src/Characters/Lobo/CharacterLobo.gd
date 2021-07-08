@@ -40,6 +40,7 @@ func on_interact() -> void:
 						]), 'completed')
 					else:
 						# ...y el coraje
+						Globals.did(Globals.GameState.ALL_DONE)
 						yield(E.run([
 							face_left(),
 							dance(),
@@ -55,6 +56,7 @@ func on_interact() -> void:
 						]), 'completed')
 				else:
 					# Pato le habló a Lobo teniendo el coraje
+					Globals.did(Globals.GameState.UNABLE)
 					yield(E.run([
 						face_right(),
 						dance(),
@@ -73,7 +75,6 @@ func on_interact() -> void:
 						'Pato: CharacterLobo-Bar-Pato-11',
 						C.player_walk_to(E.current_room.get_point('DanceFloor3'))
 					]), 'completed')
-					Globals.did(Globals.GameState.UNABLE)
 
 				E.goto_room('End')
 			else:

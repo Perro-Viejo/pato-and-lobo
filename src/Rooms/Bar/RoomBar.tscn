@@ -35,9 +35,9 @@
 extents = Vector2( 769.916, 341.723 )
 
 [sub_resource type="NavigationPolygon" id=2]
-vertices = PoolVector2Array( 859, 892, 1315, 946, -1871, 933, 335, 892, 1302, 508, 1556, 759, 1217, 775, 1014.21, 513.794, 1183, -170, 1568, 244, 938, 288, 841, 118, -120, -182, -192, -276, 475, -261, 779, 18, 641, -144, 477, 200, 677, 27, 48, 211, -234, 36, -218, -68, 758, 127, -1008, 267, -409, 41, -1144, 709, -481, 36, -648, 40, -686, 35, -856, 36, -1020, -274, -941, -275, -946, -170, -1319, 253, -234, -170, -272, -21, -887, -63, -388, -22, -889, -169, -638, -14, -712, -18, -515, -12, -836, -15, -1571, 671 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 11 ), PoolIntArray( 12, 13, 14 ), PoolIntArray( 15, 16, 8 ), PoolIntArray( 7, 6, 1, 0, 17 ), PoolIntArray( 12, 14, 18, 17, 19, 20, 21 ), PoolIntArray( 15, 8, 11, 22 ), PoolIntArray( 22, 7, 17, 18 ), PoolIntArray( 18, 15, 22 ), PoolIntArray( 23, 24, 20, 19, 3, 25 ), PoolIntArray( 26, 24, 23, 27 ), PoolIntArray( 28, 27, 23, 29 ), PoolIntArray( 30, 31, 32, 23, 33 ), PoolIntArray( 21, 34, 12 ), PoolIntArray( 21, 20, 35 ), PoolIntArray( 36, 21, 35, 37 ), PoolIntArray( 32, 38, 36 ), PoolIntArray( 39, 27, 28, 40 ), PoolIntArray( 37, 24, 26, 41 ), PoolIntArray( 36, 37, 41, 39, 40 ), PoolIntArray( 36, 40, 42 ), PoolIntArray( 25, 3, 2, 43 ), PoolIntArray( 43, 2, 30, 33 ), PoolIntArray( 29, 23, 32, 36 ), PoolIntArray( 29, 36, 42 ) ]
-outlines = [ PoolVector2Array( -941, -275, -1020, -274, -1871, 933, 1315, 946, 1217, 775, 1556, 759, 1302, 508, 1014.21, 513.794, 758, 127, 841, 118, 938, 288, 1568, 244, 1183, -170, 641, -144, 779, 18, 677, 27, 475, -261, -192, -276, -120, -182, -234, -170, -218, -68, -887, -63, -889, -169, -946, -170 ), PoolVector2Array( -1571, 671, -1144, 709, -1008, 267, -1319, 253 ), PoolVector2Array( 48, 211, 335, 892, 859, 892, 477, 200 ), PoolVector2Array( -856, 36, -686, 35, -712, -18, -836, -15 ), PoolVector2Array( -638, -14, -515, -12, -481, 36, -648, 40 ), PoolVector2Array( -388, -22, -409, 41, -234, 36, -272, -21 ) ]
+vertices = PoolVector2Array( 859, 892, 1315, 946, -1871, 933, 335, 892, 1302, 508, 1556, 759, 1217, 775, 1014.21, 513.794, 1183, -170, 1568, 244, 938, 288, 841, 118, -120, -182, -192, -276, 475, -261, 779, 18, 641, -144, 477, 200, 677, 27, 48, 211, -234, 36, -210, -53, 758, 127, -1008, 267, -409, 41, -1144, 709, -481, 36, -648, 40, -686, 35, -856, 36, -234, -170, -272, -21, -892, -51, -388, -22, -1020, -274, -941, -275, -946, -170, -1319, 253, -889, -169, -638, -14, -712, -18, -515, -12, -836, -15, -1571, 671 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 11 ), PoolIntArray( 12, 13, 14 ), PoolIntArray( 15, 16, 8 ), PoolIntArray( 7, 6, 1, 0, 17 ), PoolIntArray( 12, 14, 18, 17, 19, 20, 21 ), PoolIntArray( 15, 8, 11, 22 ), PoolIntArray( 22, 7, 17, 18 ), PoolIntArray( 18, 15, 22 ), PoolIntArray( 23, 24, 20, 19, 3, 25 ), PoolIntArray( 26, 24, 23, 27 ), PoolIntArray( 28, 27, 23, 29 ), PoolIntArray( 21, 30, 12 ), PoolIntArray( 21, 20, 31 ), PoolIntArray( 32, 21, 31, 33 ), PoolIntArray( 34, 35, 36, 23, 37 ), PoolIntArray( 36, 38, 32 ), PoolIntArray( 39, 27, 28, 40 ), PoolIntArray( 33, 24, 26, 41 ), PoolIntArray( 32, 33, 41, 39, 40 ), PoolIntArray( 32, 40, 42 ), PoolIntArray( 32, 42, 29 ), PoolIntArray( 25, 3, 2, 43 ), PoolIntArray( 43, 2, 34, 37 ), PoolIntArray( 29, 23, 36, 32 ) ]
+outlines = [ PoolVector2Array( -941, -275, -1020, -274, -1871, 933, 1315, 946, 1217, 775, 1556, 759, 1302, 508, 1014.21, 513.794, 758, 127, 841, 118, 938, 288, 1568, 244, 1183, -170, 641, -144, 779, 18, 677, 27, 475, -261, -192, -276, -120, -182, -234, -170, -210, -53, -892, -51, -889, -169, -946, -170 ), PoolVector2Array( -1571, 671, -1144, 709, -1008, 267, -1319, 253 ), PoolVector2Array( 48, 211, 335, 892, 859, 892, 477, 200 ), PoolVector2Array( -856, 36, -686, 35, -712, -18, -836, -15 ), PoolVector2Array( -638, -14, -515, -12, -481, 36, -648, 40 ), PoolVector2Array( -388, -22, -409, 41, -234, 36, -272, -21 ) ]
 
 [node name="RoomBar" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
@@ -49,7 +49,7 @@ characters = [ {
 "position": Vector2( -588, -300 ),
 "script_name": "Conejuno"
 }, {
-"position": Vector2( -1292, 353 ),
+"position": Vector2( -1316, 353 ),
 "script_name": "Lagarto"
 }, {
 "position": Vector2( 318, 221 ),
@@ -279,6 +279,7 @@ position = Vector2( -242, 76 )
 texture = ExtResource( 8 )
 
 [node name="WavingBar" type="Sprite" parent="." index="1"]
+visible = false
 light_mask = 2
 material = ExtResource( 28 )
 texture = ExtResource( 6 )
