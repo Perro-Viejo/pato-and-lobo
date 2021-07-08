@@ -8,6 +8,7 @@ func on_interact() -> void:
 	Globals.did(Globals.GameState.DENTURES_TAKEN)
 	E.run([
 		C.walk_to_clicked(),
+		C.face_clicked(),
 		'Pato: RoomBar-GlassWithDentures-Pato-01',
 		C.player.grab(),
 		A.play({cue_name = 'sfx_dentures_pu', pos = global_position}),

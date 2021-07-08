@@ -181,6 +181,9 @@ position = Vector2( -114.102, -101.305 )
 
 [node name="ProwPoint" type="Position2D" parent="Points" index="1"]
 
+[node name="ProwPoint2" type="Position2D" parent="Points" index="2"]
+position = Vector2( 245.408, -79.2856 )
+
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="WalkableAreas/Navigation2D" index="0"]
 navpoly = SubResource( 1 )
 
