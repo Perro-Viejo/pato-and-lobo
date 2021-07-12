@@ -13,7 +13,8 @@ func on_interact() -> void:
 		A.play({cue_name = 'sfx_tail_pu', pos = global_position}),
 		'Pato: RoomBar-Coat-Pato-02',
 		disable(),
-		I.add_item('Tail')
+		I.add_item('Tail'),
+		'Pato: RoomBar-Coat-Pato-03',
 	])
 
 

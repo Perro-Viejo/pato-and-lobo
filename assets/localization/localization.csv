@@ -36,6 +36,7 @@ RoomBar-Pato-07,Siento que ora sí le voy a hablar.,Siento que ahora si tengo el
 RoomBar-Coat,Un abrigomelo.,Un abrigo,A Coat
 RoomBar-Coat-Pato-01,Nadie está viendo... es el momento.,Nadie esta viendo... es el momento,Now is the time... no one is looking.
 RoomBar-Coat-Pato-02,¡Ya perdistes!,¡Ahora es mío!,Now it is mine!
+RoomBar-Coat-Pato-03,Tengo colita de lobo :3,Tengo una cola de lobo,It's a wolf tail
 RoomBar-WolfMask,Una máscara de lobo.,Una máscara de lobo,A wolf mask
 RoomBar-WolfMask-Pato-01,Ahora o nunca. Está distraído drogándose.,Es el momento. Está distraído drogándose.,This is my chance. The guy is taking drugs.
 RoomBar-WolfMask-Pato-02,Ya perdistes de máscara.,La tomaré prestada un ratito,I'll borrow it for a moment
@@ -66,19 +67,19 @@ RoomSea-Tape-Pato-03,Pa' pegarlo... jijiji.,Puede ser útil.,Might be useful.
 RoomSea-Mop,Un trapero jediondo.,Un trapero sucio,A long dirty mop
 RoomSea-Mop-Pato-01,Esta repuerco... pero creo que me servirá.,Es desagradable... pero creo que será útil.,It's disgusting... but it can help.
 RoomSea-Mop-Pato-02,Esto huele a miaos... :S,Huele feo... :S,It stinks... :S
-RoomSea-Mop-Pato-03,Pero es medio largo.,Pero es largo.,But is long
+RoomSea-Mop-Pato-03,Pero es medio largo.,Pero es largo.,But it's long
 RoomSpace-Homesplantation,Plantación de casas.,Plantación de casas,Homes plantation
 RoomSpace-Homesplantation-Pato-01,Ya tenemos nuestra semilla-hogar. No hay pa'que volver.,Ya tenemos nuestra semilla-hogar. No hace falta volver.,We already have a house-seed. No need to go back.
-RoomSpace-Luna,Luna.,Luna,Luna
+RoomSpace-Luna,Luna.,Luna.,Luna.
 RoomSpace-Luna-01,Pato y Lobo no volverán poallá sin una semilla-hogar.,Pato y Lobo no regresarán a Luna sin una semilla-hogar,Pato and Lobo will not return to Luna without the house-seed
 RoomSpace-Luna-02,Pato y Lobo no volverán poallá sin agua espacial.,Pato y Lobo no regresarán a Luna sin agua espacial,Pato and Lobo will not return to Luna without the water
 RoomSpace-Luna-03,Pato y Lobo no volverán poallá sin una semilla-hogar o sin agua espacial.,Pato y Lobo no regresarán a Luna sin una semilla-hogar o agua espacial,Pato and Lobo will not return to Luna without the house-seed or the water
-RoomSpace-Marrano,Marrano.,Marrano,Pig Planet
+RoomSpace-Marrano,Marrano.,Marrano.,Pig Planet.
 RoomSpace-Marrano-Pato-01,Ya tenemos agüita fina pa' nuestra semiilla-hogar. No hay pa' qué volver.,Ya tenemos agua para nuestra semiilla-hogar. No es necesario volver.,We already have the water for the house-seed. No need to back.
 RoomHomesPlantation-Pato-01,Hágale con cariño.,Despacio,Do it slowly
 RoomHomesPlantation-Pato-02,"Eso, eso. Baje el bracito.","Bien, bien. Ahora baja el robo brazo.","Good, good. Now take down the arm."
 RoomHomesPlantation-Pato-03,Listones. Ya tenemos la semilla-hogar. Ora pa' Luna a sembrarla.,Listo. Ya tenemos la semilla-casa. Vamos a Luna a sembrarla.,Done! We have our house-seed. Let's go to Luna and sow it.
-RoomHomesPlantation-Pato-04,Lobo y yo necesitamos un hogar para vivir y darnos amor.,Lobo y yo necesitamos un hogar para amarnos por siempre,Lobo and I need a home to live and give each other love.
+RoomHomesPlantation-Pato-04,Lobo y yo necesitamos un hogar para vivir y darnos amor.,Lobo y yo necesitamos un hogar para amarnos por siempre.,Lobo and I need a home to live and give each other love.
 RoomHomesPlantation-Pato-05,En este planeta se siembran casas.,En este planeta se siembran casas.,Houses are planted on this planet.
 RoomHomesPlantation-Pato-06,Debemos escoger la más pispa pa' llevarla a la Luna.,Debemos escoger la más bonita para llevarla a la Luna.,We must choose the most beautiful one to take to Luna.
 RoomHomesPlantation-Pato-07,¿Sioqué mi rey?,¿Cierto amor mío?,"Is that true, love of mine?"
@@ -88,7 +89,7 @@ RoomHomesPlantation-PropSign-Pato-01,"Échele ojo a esta, está re kiut ^^",¿Qu
 RoomHomesPlantation-PropSign-Pato-02,Tengamos relaciones sepsuales en ella :3,Entonces esta es la elegida.,So this one will be.
 RoomHomesPlantation-PropSign-Pato-03,"Deacuerdo, mi rey. Echémole ojo a otra.","Estoy de acuerdo, mi amor. Busquemos otra.","Agree, my love. Let's check other one."
 RoomHomesPlantation-PropSign-Pato-04,"Seh, depronto esa de allá...",Si. Puede ser esa...,Yup. Maybe that one...
-RoomHomesPlantation-PropSign-Pato-05,Sicierto. Chsimosiemos otra.,Tienes razón. Buscaré otra.,You're right. I'll look another one.
+RoomHomesPlantation-PropSign-Pato-05,Sicierto. Chismosiemos otra.,Tienes razón. Buscaré otra.,You're right. I'll look another one.
 RoomHomesPlantation-PropSign-Pato-06,Es la señal con los detalles de la semilla-hogar.,Es la señal con los detalles de la casa,Is the sign with the detail of a house
 RoomHomesPlantation-Sign,Detalles de esta semilla-hogar.,Detalles de esta semilla-hogar,Details about this home-seed
 RoomHomesPlantation-Sign-Details,"Plantada hace 8 meses. Jardín frontal, dos habitaciones, baño con tinita.","Plantada hace 8 meses. Jardín frontal, 2 habitaciones, baño con tina.","Planted 8 months ago. Front garden, two bedrooms, bathroom with tub."
@@ -129,7 +130,7 @@ RoomMarrano-Pato-02,Mejor me escondo.,Debo esconderme.,I better hide.
 RoomMarrano-Pato-03,Gran pendejo...,Es un tonto...,lol... The only stupid here is him.
 RoomMarrano-Pig-01,¡Mis flores de mi propiedad!,¡Mis floresssss!,MY FLOWERS!
 RoomMarrano-Pig-02,¿Dónde está este vándalo-terrorista desgraciado?,¿Dónde está ese sucio ladrón de flores?,Where are you stupid flower thief?
-RoomMarrano-Container,Flores bien pispas cuidadas por tesnología.,Unas lindas flores protegidas por algo,Pretty flowers protected by something
+RoomMarrano-Container,Flores bien pispas cuidadas por tesnología.,Unas lindas flores protegidas por algo.,Pretty flowers protected by something.
 RoomMarrano-Container-Pato-01,Debe haber una forma de romper ese escudito.,Debe haber una forma de romper ese escudo.,There must be something we can do to break that shield.
 RoomMarrano-Container-Pato-02,"Eso sería arriesgado, amorcito.","Eso sería arriesgado, amor mío.","That will be risky, my love."
 RoomMarrano-Container-Pato-03,Pero alomejor le podemos tirar algo.,Tal vez podemos encontrar algo para tirarle encima.,But maybe there's something we can throw on it.
@@ -157,7 +158,7 @@ RoomSpaceship-TeletransportRay-Lobo-01,El rayo no sirve pa' eso...,No puedo usar
 RoomSpaceship-TeletransportRay-Lobo-02,"Prepárate Pato, ahí va la tesnología.",¡¡¡Observa el rayo-teletransportador en acción!!!,See the teletransport-ray in action!!!
 RoomSpaceship-GarbageExtractor,Puertas basurísticas.,Puertas del basurero,Garbage doors
 RoomSpaceship-GarbageExtractor-Pato-01,¡Suélteloooo!,¡Uuuuuuu!,UUUUuuuUUUUuuuUUUuuu
-RoomSpaceship-GarbageExtractor-Lobo-01,Nopo.,No,Nope
+RoomSpaceship-GarbageExtractor-Lobo-01,Nopo.,No.,Nope.
 RoomSpaceship-GarbageExtractor-Lobo-02,No echaré basura en nuestra futura ranchis...,No tiraré basura en nuestro futuro hogar...,I won\'t trash our future home...
 RoomSpaceship-GarbageExtractor-Lobo-03,Ahí voy. Espero estés Patopreparade.,¡Aquí vamos! ¡HORA DE LA DESTRUCCIÓN!,Here we go! DESTRUCTION TIME!!!!
 RoomSpaceship-GarbageExtractor-Lobo-04,Ya no hay más basura...,No tenemos más basura...,We don\'t have more trash...
@@ -196,6 +197,7 @@ END_1,[wave]La borrachera[/wave],,[wave]Drunk[/wave]
 END_2,[wave]La fracasada[/wave],,[wave]Failure[/wave]
 END_3,[wave]Los tortolitos[/wave],[wave]Los enamorados[/wave],[wave]Lovers[/wave]
 END_4,[wave]La aparente[/wave],[wave]La disfrazada[/wave],[wave]Costume[/wave]
+RESTART,Volverle a hacer,Reintentarlo,Let's do it again
 PERSONAJES,,,
 CharacterPato-CheckCostumeCompletion-Pato-01,¡Síííííííííííííí!,¡Síiiiiiiiiiiiiiii!,WEEEEEEEEEE!
 CharacterPato-CheckCostumeCompletion-Pato-02,Ya tengo el disfracho.,Tengo el disfraz.,I completed the costume.
@@ -246,7 +248,7 @@ Character-Lagarto-OnInteract-Pato-07,Está bien...,Bueno...,Aaaaall right...
 Character-Lagarto-OnLook-Pato-01,Esa máscara del DJ puede servirme como disfraz.,Su máscara de lobo es perfecta para mi disfraz.,I can use the DJ's wolf mask for my costume.
 Character-Lagarto-OnLook-Pato-02,Con razón usaba esa máscara... está todo llevado.,Por eso es que usaba máscara... esta un poco pasado.,So that's why he uses the mask. Drogs!
 Character-Lagarto-OnLook-Pato-03,Hay algo de angustia en sus mirada.,Su mirada parece angustiada.,His gaze is full of anguish.
-Character-Marrano,¿Subpresidente?,¿SubPresidente?,Pres. Duque.
+Character-Marrano,¿SubPresidente?,¿SubPresidente?,Pres. Duque.
 Character-Marrano-OnInteract-Marrano-01,¡A la mierda! Estoy buscando al vándalo.,¡Vete! Estoy buscando al intruso.,Go away! I'm searching the intruder.
 Character-Pez,Un... pescado-guardian-robot.,Un pez-mecánico... o eso parece.,Mecha-fish... it seems.
 Character-Vieja,Una loba vejete.,Una loba anciana.,Old-y with dentures.
@@ -265,7 +267,7 @@ Character-Vieja-CocktailSecret-Vieja-03,"Como que le falta alguito. Sabe a viejo
 Character-Vieja-CocktailGolem-Pato-01,Tómese este.,"Pruebe este,",Drink this!
 Character-Vieja-CocktailGolem-Vieja-02,Pfffffffff.......,Pfffffffff.......,Pfffffffff.......
 Character-Vieja-CocktailGolem-Vieja-03,Está fuerte pero mucho lo dulce.,Es fuerte pero muy dulce.,What da fock. This is as sweet as a little pink baby.
-Character-Vieja-CocktailGolem-Vieja-04,El Tumbalocas no me gusta por eso. Le falta el sabor a viejo.,El Tumbalocas no me gusta por que no sabe a viejo.,I told you I don't like Golem cocktail. It lacks of the elder flavor.
+Character-Vieja-CocktailGolem-Vieja-04,El Tumbalocas no me gusta por eso. Le falta el sabor a viejo.,El Sueño del gigante no me gusta por que no sabe a viejo.,I told you I don't like Golem cocktail. It lacks of the elder flavor.
 CONVERSACIONES,,,
 ChatWithConejuno-Start-01,A la orden.,¿Qué quieres?,What do you want?
 ChatWithConejuno-Opt1,Deme una pola.,Quiero una cerveza.,A beer.
@@ -273,9 +275,9 @@ ChatWithConejuno-Opt2,Deme algo juerte.,Quiero algo fuerte.,Something strong.
 ChatWithConejuno-Exit,No. Gracias.,No quiero nada.,Nothing. Thanks.
 ChatWithConejuno-Exit-01,Entonces ábrase.,De acuerdo.,Don't bother me!
 BeersMenu-Start-Conejuno-01,¿De cuál?,¿Qué cerveza quieres?,Which beer?
-BeersMenu-Opt1,Redds.,Corona,Pink Beer
-BeersMenu-Opt2,Galáctica.,Galáctica,Cosmos Kick
-BeersMenu-Opt3,Negra.,Negra,Cooffee
+BeersMenu-Opt1,Redds.,Corona.,Pink Beer.
+BeersMenu-Opt2,Galáctica.,Galáctica.,Cosmos Kick.
+BeersMenu-Opt3,Negra.,Negra.,Cooffee.
 BeersMenu-Exit,Neh quiero pola.,Ya no quiero cerveza.,I don't want beer.
 BeersMenu-Pato-01,Quiero una...,Quisiera una...,I want a...
 BeersMenu-Pato-02,", porfis.",", por favor.",", please."
@@ -330,7 +332,7 @@ SongList-Opt1-Lagarto-02,Pere me quito esto porque esa me hace sudar.,Pero prime
 SongList-Opt1-Lagarto-03,¡Ora sí! A gozaaaaaaar.,¡Estoy listo! A gozaaaaaaaar.,Woooooooooooooooooooooo.
 SongList-Opt1-Lagarto-04,No quiero. Ahora me pone triste esa canción.,No... esa canción me trae malos recuerdos.,Don't gonna play that. Memories.
 SongList-Opt1-Lagarto-05,Ora sí ya bajó.,Ahora sí. Ya se descargó.,The download has finished.
-SongList-Opt1-Lagarto-06,Me la choripapié por Ares.,Me la robé por Ares.,I stole it through Ares.
+SongList-Opt1-Lagarto-06,Me la choripapié por Ares.,Me la robé por Ares.,I stole it using Ares.
 SongList-Opt2-Lagarto-01,¡De una!,¡Con gusto!,Sure!
 SongList-Opt2-Lagarto-02,¡Ah juepuerca! No ha terminado de descargar la canción.,¡Mierda! Todavía se está descargando.,FOCK! It is still downloading.
 SongList-Opt3-Lagarto-01,Uffffffffff... mi canción más favorita.,Uuuuuuuu... ¡mi favorita!,Yeyyyyyyyyy... my favorite song.
@@ -345,7 +347,7 @@ ChatWithVieja-Opt3,¿Qué le gustaría tomar?,¿Qué le gustaría tomar?,Want a 
 ChatWithVieja-Opt4,Sus dientes están bien lindos.,Tiene usted unos dientes muy bonitos.,You have very nice teeth
 ChatWithVieja-Exit,Conpermiso señora.,"Hasta luego, señora.",With your permission ma'am
 ChatWithVieja-Opt1-Vieja-01,Pues la pasaba mejor cuando era más joven. Como tú.,Pues la pasaba mejor cuando era más joven. Como tú.,"Well, I had a better time when I was younger. Like you."
-ChatWithVieja-Opt1-Vieja-02,"Ahora es muy difícil levantar polvo, aunque a veces se logra.","Ahora es muy coquetear con los muchachos, aunque a veces es posible.","Now it is very difficult to flirt, although sometimes it is achieved."
+ChatWithVieja-Opt1-Vieja-02,"Ahora es muy difícil levantar polvo, aunque a veces se logra.","Ahora es muy complejo coquetear con los muchachos, aunque a veces es posible.","Now it is very difficult to flirt, although sometimes it is achieved."
 ChatWithVieja-Opt1-Vieja-03,Pero cuando era joven...,Pero cuando era joven...,But in my younger days...
 ChatWithVieja-Opt1-Vieja-04,No había noche en la que no me revolcara.,no había nadie que escapara de mis garras.,Ouuueeeee!
 ChatWithVieja-Opt1-Pato-05,¡Ayyyyyyy!,¡Ay dios!,Oh my!
@@ -360,12 +362,12 @@ ChatWithVieja-Opt3-Vieja-05,¿También te gustan así?,¿También te gustan así
 ChatWithVieja-Opt3-Pato-06,Emmmmmmmmmmmmmm.....,Emmm....mmmm......mmmmmmm.....,Emmm....mmmm......mmmmmmm.....
 ChatWithVieja-Opt3-Game-07,Pato se puso tomate.,Pato se sonrojó,Pato blushed
 ChatWithVieja-Opt3-Vieja-08,En mis tiempos no había cocteles. Tomábamos todo puro.,En mis tiempos no había cocteles. Tomábamos todo puro.,In my time there were no cocktails. We drank everything pure.
-ChatWithVieja-Opt4-Vieja-01,"jijijijijiji.... gracias por el cumplido, pero son postizos.","jijijijijiji.... gracias por el cumplido, pero son dentaduras.","hihihihihihi.... thanks for the compliment, but I use dentures."
+ChatWithVieja-Opt4-Vieja-01,"jijijijijiji.... gracias por el cumplido, pero son postizos.","jijijijijiji.... gracias por el cumplido, pero son dentaduras.","hehehehehehe.... thanks for the compliment, but I use dentures."
 ChatWithVieja-Opt4-Vieja-02,Aprovecha tus dientes mientras puedas.,Aprovecha tus dientes mientras puedas.,Take advantage of your teeth while you can.
 ChatWithVieja-Opt4-Vieja-03,jijijijijiji.,jijijijijiji,hehehehehehe
 ChatWithVieja-Opt4-Game-04,La vieja se sacó la dentadura e hizo piruetas.,La anciana se sacó la dentadura e hizo malabares.,The old woman took out her dentures and played with them'
 ChatWithVieja-Opt4-Pato-05,....(vieja puerca).,....,....
-ChatWithVieja-Exit-Vieja-01,Que se diviertas... jijijijijiji.,Pasa un buen rato jovencita... jijijijijiji,Have fun young and pretty lady... hihihihihihi
+ChatWithVieja-Exit-Vieja-01,Que se diviertas... jijijijijiji.,Pasa un buen rato jovencita... jijijijijiji,Have fun young and pretty lady... hehehehe
 ChatWithPez-Start-Pato-01,Emmm...,Emmm...,Ehh....
 ChatWithPez-Start-Pato-02,Hola.,Hola.,Hi!
 ChatWithPez-Start-Pez-03,Quiubo.,Hola.,Hey.
@@ -469,7 +471,7 @@ ChatWithLoboInLuna-Start-Lobo-06,Yo escuché que el agua espacial es especial.,Y
 ChatWithLoboInLuna-Start-Pato-07,Ora sólo nos hace falta una semilla-hogar.,Ahora solo necesitamos una semilla-hogar.,All we need now is one of those house-seeds.
 ChatWithLoboInLuna-Start-Lobo-08,Toy seguro de haber visto un planeta de plantación de casas a unos pársec de aquí.,Estoy seguro de haber visto un planeta de plantación de casas a unos pársec de aquí.,I'm sure I saw a homes plantation planet a couple of parsecs from here.
 ChatWithLoboInLuna-Start-Pato-09,¡Y qué estamos esperando!,¡Qué estamos esperando!,So what are we waiting for.
-ChatWithLoboInLuna-Start-Lobo-10,A consumirnos antes de salir.,A consumirnos nuestro amor antes de partir.,To consume our love a little before leaving.
+ChatWithLoboInLuna-Start-Lobo-10,A consumirnos antes de salir.,A demostrarnos nuestro amor antes de partir.,To consume our love a little before leaving.
 ChatWithLoboInLuna-Start-Lobo-11,Nitaremos agua y una semilla-hogar pa' construir nuestra casa.,Necesitamos agua y una semilla-hogar para construir nuestra casa aquí.,We'll need water and a house-seed to build our home here.
 ChatWithLoboInLuna-Start-Pato-12,Sí sí sí. Hagámoslo rial.,Sí sí sí. Hagámoslo.,Yes yes yes. Let's do it.
 ChatWithMarrano-Opt1,Holi,¿Hola?,Hi-ya.
@@ -502,8 +504,8 @@ ChatWithMarrano-Opt4-Marrano-03,Nadie podrá ni tocarlas... a menos que...,nadie
 ChatWithMarrano-Opt4-Pato-04,Lo hagas tú.,Tú.,You.
 ChatWithMarrano-Opt4-Marrano-05,O que algo con mucha fuerza lo destruya.,O que algo muy fuerte sea capaz de quebrarlo.,Or something strong enough to break the shield.
 ChatWithMarrano-Opt4-Marrano-06,Pero eso es imposible.,Pero eso sería imposible.,But that would be impossible.
-ChatWithMarrano-Opt4-Pato-07,A menos que lo haga alguien mucho muy fuerte.,A menos que tengas super fuerza.,Unless you are super strength.
-ChatWithMarrano-Opt4-Pato-08,(O que algo bien pesado se lo tire).,(O tengas algo lo suficientemente pesado).,(Or that you have something heavy enough).
+ChatWithMarrano-Opt4-Pato-07,A menos que lo haga alguien mucho muy fuerte.,A menos que tengas super fuerza.,Unless you have super strength.
+ChatWithMarrano-Opt4-Pato-08,(O que algo bien pesado se lo tire).,(O tengas algo lo suficientemente pesado).,(Or something heavy enough).
 ChatWithMarrano-Opt4-Marrano-09,Sí.,Si.,Yes.
 ChatWithMarrano-Exit-Marrano-01,¡SÍÍÍÍÍÍÍ! ¡VÁYASE PA' LA MIERDA!,"¡SI! ESO ES, LARGATE Y NO REGRESES!",Yes. You better LEEEEAVE FOREVER!!!!
 GLOBALS,,,
@@ -515,17 +517,19 @@ Globals-MoonDaydreamRepeated-Pato-03,Ya pailas.,Ya no es lo mismo.,It's not the 
 ITEMS,,,
 Items-GolemCocktail,Tumbalocas,Sueño del gigante.,Golem Dream cocktail
 Items-GolemCocktail-Pato-01,El barman dice que esta me puede dejar malita.,El barman dice que este trago me puede derrumbar facilmente.,The barman says this one can K.O. me.
-Items-GolemCocktail-Pato-02,Mejor no me tomo ni una gotita...,Por supuesto no lo beberé...,Of course I\'ll not drink it...
+Items-GolemCocktail-Pato-02,Mejor no me tomo ni una gotita...,Por supuesto no lo beberé...,Of course I won\'t drink it...
 Items-GolemCocktail-Pato-03,Pero pa algo lo usaré.,Pero puede ser útil.,"Tho, might be helpful."
 Items-GolemCocktail-Pato-04,He creado un tragoncho re densidades que sabe a viejo.,He creado un coctel fuerte y con sabor a viejo.,I\'ve created a strong and elder flavored cocktail
 Items-CocktailSecret,Sudor de campeche.,Sudor de Hércules.,Hercules sweat cocktail
-Items-CocktailSecret-Pato-01,Una de las bebidas caletas. Con un sabor a cucho re viejo.,Una de las bebidas prohibidas. Con el sabor de un viejo tan viejo.,One of the forbidden drinks. With the flavor of an old man so old.
+Items-CocktailSecret-Pato-01,Una de las bebidas caletas. Con un sabor a cucho re viejo.,Una de las bebidas prohibidas. Con el sabor de un viejo tan viejo.,One of the forbidden drinks. With the flavor of a very old man.
 Items-CocktailSecret-Pato-02,Pa algo me servirá.,Puede ser útil.,Can be useful.
 Items-CocktailSecret-Pato-03,Meinventé este coctel con sabor a anciano.,He creado un coctel fuerte y con sabor a viejo.,I\'ve created a strong and elder flavored cocktail
 Items-CocktailSuper,Superperrenque.,Super-coraje.,Hyper-courage.
 Items-CocktailSuper-Pato-01,Mi invento. Un tragojuerte y con sabor a cucho.,Mi creación. Un coctel fuerte y con sabor a viejo.,My own creation. A strong cocktail with an elder flavor.
 Items-CocktailSuper-Pato-02,Seguro me ayudará.,Seguramente será de utilidad.,Will help me for sure.
 Items-CocktailSuper-Pato-03,Hé creado un clásico muy juerte y viejo.,Hé creado un clásico tan fuerte y tan viejo.,I\'ve created a classic so strong and old.
+Items-Costume-Pato-01,Todavía faltan corotos para parecer un Lobiño...,Todavía le faltan elementos al disfraz...,We still need some more costume pieces...
+Items-Costume-Pato-02,Si me pongo a pendejear con esto me tiro mi disfraz...,Esto podría arruinar el disfraz...,This can damage the costume piece...
 Items-Dentures,Dientes de la vieja,Dentadura postiza,Dentures
 Items-Dentures-Pato-01,Apenas pa mostrar las muelitas.,Justo lo que necesito para terminar mi difráz.,Just what I need to complete my costume
 Items-ItemLobo-Lobo-01,Soy Lobo.,Soy Lobo.,I am Lobo.

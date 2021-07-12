@@ -334,7 +334,7 @@ walk_to_point = Vector2( 108, 45 )
 cursor = 1
 script_name = "Sign"
 texture = ExtResource( 11 )
-details = "RoomHomesPlantation-Sign6-Reaction"
+details = "RoomHomesPlantation-Sign6-Details"
 lobo_reaction = "RoomHomesPlantation-Sign6-Reaction"
 
 [node name="CollisionPolygon2D" parent="Props/Sign6" index="0"]
