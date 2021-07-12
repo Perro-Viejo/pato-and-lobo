@@ -12,4 +12,13 @@ func on_look() -> void:
 
 
 func on_item_used(_item: Item) -> void:
-	pass
+	match _item.script_name: 
+		'Mask', 'Dentures', 'Legs', 'Tail':
+			E.run([
+				'Pato: Items-Costume-Pato-01'
+			])
+		_:
+			E.run([
+				'Pato: Items-Costume-Pato-02'
+			])
+
