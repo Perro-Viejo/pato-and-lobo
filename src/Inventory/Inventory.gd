@@ -8,6 +8,7 @@ signal item_removed(item)
 signal item_remove_done(item)
 signal courage_updated(value)
 signal courage_update_shown()
+signal courage_restarted
 
 export var always_visible := false
 

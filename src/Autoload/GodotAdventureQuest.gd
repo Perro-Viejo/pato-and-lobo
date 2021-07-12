@@ -94,14 +94,18 @@ func _unhandled_key_input(event: InputEventKey) -> void:
 	if event.is_action_released('end_1'):
 		Globals.get_drunk()
 	elif event.is_action_released('end_2'):
-		Globals.did(Globals.GameState.DISGUISED)
-		Globals.courage = 50
+		Globals.courage = 60
 	elif event.is_action_released('end_3'):
 		Globals.did(Globals.GameState.DISGUISED)
 		Globals.did(Globals.GameState.ALL_DONE)
 		Globals.courage = 110
+		C.player.anim_suffix = '_costume'
+		C.player.idle(false)
 	elif event.is_action_released('end_4'):
-		Globals.courage = 60
+		Globals.did(Globals.GameState.DISGUISED)
+		Globals.courage = 50
+		C.player.anim_suffix = '_costume'
+		C.player.idle(false)
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
@@ -197,7 +201,6 @@ func goto_room(path := '', use_transition := true) -> void:
 		var room = r as GAQRoom
 		if room.id.to_lower() == path.to_lower():
 			get_tree().change_scene(room.path)
-#			get_tree().change_scene_to(room.scene)
 			return
 	
 	printerr('No se encontró la Room %s' % path)
@@ -226,6 +229,8 @@ func room_readied(room: Room) -> void:
 	if room.has_player:
 		room.add_character(C.player)
 		yield(C.player.idle(false), 'completed')
+	else:
+		C.player.position = Vector2.ZERO
 
 	room.on_room_entered()
 

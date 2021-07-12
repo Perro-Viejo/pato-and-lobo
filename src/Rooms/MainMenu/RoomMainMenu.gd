@@ -19,7 +19,8 @@ func on_room_entered() -> void:
 
 
 func on_room_transition_finished() -> void:
-	if visited_first_time:
+	if not Globals.has_done(Globals.GameState.GAMEPLAY_EXPLAINED):
+		Globals.did(Globals.GameState.GAMEPLAY_EXPLAINED)
 		E.run_cutscene([
 			G.display('RoomMainMenu-01'),
 			G.display('RoomMainMenu-02'),

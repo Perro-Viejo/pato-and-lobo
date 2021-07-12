@@ -31,6 +31,7 @@ func _ready():
 	I.connect('item_added', self, '_add_item')
 	I.connect('item_removed', self, '_remove_item')
 	I.connect('courage_updated', self, '_show_courage')
+	I.connect('courage_restarted', self, '_restart_courage')
 	G.connect('inventory_show_requested', self, '_show_and_hide')
 	E.connect('language_changed', self, '_translate')
 	
@@ -153,3 +154,7 @@ func _show_and_hide(time := 1.0) -> void:
 
 func _translate() -> void:
 	_courage_label.text = E.get_text(_courage_code)
+
+
+func _restart_courage() -> void:
+	_courage.value = 0

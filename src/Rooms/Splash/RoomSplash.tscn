@@ -8,6 +8,7 @@
 
 [node name="RoomSplash" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+script_name = "Splash"
 has_player = false
 hide_gi = true
 

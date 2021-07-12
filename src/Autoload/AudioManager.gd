@@ -160,7 +160,7 @@ func _play(cue: AudioCue, pos := Vector2.ZERO, position = 0.0) -> Node:
 		player = _get_free_stream($Positional)
 		
 		if not is_instance_valid(player):
-			prints('AudioManager._play(...): Nos quedamos sin AudioStreamPlayer2D')
+			print_debug('AudioManager._play(...): Nos quedamos sin AudioStreamPlayer2D')
 			return null
 
 		(player as AudioStreamPlayer2D).stream = cue.audio
@@ -172,7 +172,7 @@ func _play(cue: AudioCue, pos := Vector2.ZERO, position = 0.0) -> Node:
 		player = _get_free_stream($Generic)
 		
 		if not is_instance_valid(player):
-			prints('AudioManager._play(...): Nos quedamos sin AudioStreamPlayer')
+			print_debug('AudioManager._play(...): Nos quedamos sin AudioStreamPlayer')
 			return null
 
 		(player as AudioStreamPlayer).stream = cue.audio
@@ -242,6 +242,7 @@ func _reparent(source: Node, target: Node, child_idx: int) -> Node:
 
 	return node_to_reparent
 
+
 func _fade_sound(cue_name: String, duration = 1, from = 0, to = 0) -> void:
 	var stream_player: Node = (_active[cue_name].players as Array).front()
 	$Tween.interpolate_property(
@@ -251,12 +252,10 @@ func _fade_sound(cue_name: String, duration = 1, from = 0, to = 0) -> void:
 		)
 	$Tween.start()
 	if from > to :
-		print ('echando pa abajo: ', cue_name)
 		_fading_sounds[stream_player.stream.get_instance_id()] = stream_player
 		if not $Tween.is_connected('tween_completed', self, '_fadeout_finished'):
 			$Tween.connect('tween_completed', self, '_fadeout_finished')
-	else:
-		print ('echando pa arriba: ', cue_name)
+
 
 func _fadeout_finished(obj, key) -> void:
 	if obj.stream.get_instance_id() in _fading_sounds :
@@ -264,4 +263,3 @@ func _fadeout_finished(obj, key) -> void:
 		obj.stop()
 		if _fading_sounds.empty():
 			$Tween.disconnect('tween_completed', self, '_fadeout_finished')
-	

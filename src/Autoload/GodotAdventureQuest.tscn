@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://src/Autoload/GodotAdventureQuest.gd" type="Script" id=1]
 [ext_resource path="res://src/TransitionLayer/TransitionLayer.tscn" type="PackedScene" id=2]
@@ -8,27 +8,22 @@
 [ext_resource path="res://src/Characters/Lobo/CharacterLobo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Characters/Conejuno/CharacterConejuno.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Characters/Spaceship/CharacterSpaceship.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Rooms/Sea/RoomSea.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/Rooms/Bar/RoomBar.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/Characters/Marrano/CharacterMarrano.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Characters/Lagarto/CharacterLagarto.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/Characters/Vieja/CharacterVieja.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/Characters/Pez/CharacterPez.tscn" type="PackedScene" id=14]
-[ext_resource path="res://src/Rooms/Splash/RoomSplash.tscn" type="PackedScene" id=15]
 
 [sub_resource type="Resource" id=1]
 resource_name = "Bar"
 script = ExtResource( 4 )
 id = "Bar"
 path = "res://src/Rooms/Bar/RoomBar.tscn"
-scene = ExtResource( 10 )
 
 [sub_resource type="Resource" id=2]
 resource_name = "Sea"
 script = ExtResource( 4 )
 id = "Sea"
 path = "res://src/Rooms/Sea/RoomSea.tscn"
-scene = ExtResource( 9 )
 
 [sub_resource type="Resource" id=3]
 resource_name = "Space"
@@ -78,9 +73,15 @@ script = ExtResource( 4 )
 id = "MainMenu"
 path = "res://src/Rooms/MainMenu/RoomMainMenu.tscn"
 
+[sub_resource type="Resource" id=11]
+resource_name = "Splash"
+script = ExtResource( 4 )
+id = "Splash"
+path = "res://src/Rooms/Splash/RoomSplash.tscn"
+
 [node name="GodotAdventureQuest" type="Node"]
 script = ExtResource( 1 )
-rooms = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), ExtResource( 15 ) ]
+rooms = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ]
 characters = [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ]
 skip_cutscene_time = 0.5
 text_speeds = [ 0.05, 0.01, 0.0 ]

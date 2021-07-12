@@ -19,14 +19,15 @@ enum GameState {
 	GOT_DRUNK,
 	UNABLE,
 	ALL_DONE,
+	GAMEPLAY_EXPLAINED,
 }
 
 var game_progress := [GameState.NONE]
-var asked_polas := 0
 var courage := 0 setget _set_courage
 var rooms_states := {}
 var moon_song_played := false
 var cosmo_kick_drunk := false
+var achieved_endings := []
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
