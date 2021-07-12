@@ -41,6 +41,9 @@ func on_room_entered() -> void:
 	elif C.player.last_room == 'Sea':
 		A.play({cue_name = 'sfx_sink_tail', pos = global_position, is_in_queue = false})
 		C.player.global_position = $Points/Sink.global_position
+	elif C.player.last_room == 'MainMenu':
+		C.get_character('Lagarto').check_music()
+		C.player.global_position = $Points/Entrance.global_position
 	else:
 		C.player.global_position = state.last_player_pos
 	

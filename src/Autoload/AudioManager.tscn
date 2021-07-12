@@ -135,6 +135,8 @@ cues = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ),
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Generic"]
 
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Generic"]
+
 [node name="Active" type="Node" parent="."]
 
 [node name="Tween" type="Tween" parent="."]

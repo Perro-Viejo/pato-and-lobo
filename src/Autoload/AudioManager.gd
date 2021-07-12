@@ -209,8 +209,9 @@ func _get_free_stream(group: Node):
 func _make_available(stream_player: Node, cue_name: String, debug_idx: int) -> void:
 	if 'mx' in cue_name:
 		if not cue_name == 'mx_bar_gen':
-			C.get_character('Lagarto').music_playing = false
 			if C.get_character('Lagarto').paused == false:
+				if cue_name == C.get_character('Lagarto').current_track:
+					C.get_character('Lagarto').music_playing = false
 				C.get_character('Lagarto').check_music()
 	if stream_player is AudioStreamPlayer:
 		_reparent($Active, $Generic, stream_player.get_index())

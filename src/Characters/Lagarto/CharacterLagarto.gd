@@ -62,8 +62,8 @@ func play_music(track = '', is_in_queue := true, fade = false, duration = 2):
 	if is_in_queue: yield()
 	if music_playing and current_track != track:
 		stop_music(false, false)
-		A.play_music(track, false, 0.0)
 		music_playing = true
+		A.play_music(track, false, 0.0)
 	else:
 		if paused:
 			A.play_music(track, false, music_position, true, duration)
@@ -83,13 +83,16 @@ func stop_music(is_in_queue := true, pause = true):
 	else:
 		A.stop(current_track, 0, false)
 func check_music():
+	print('Music Sonanding: ', music_playing, 'pausado: ', paused)
 	if not music_playing:
 		if paused:
 			play_music(current_track, false)
+			paused = false
 		else:
-			$Timer.wait_time = rand_range(3, 8)
-			$Timer.start()
-			music_position = 0.0
+			if $Timer.is_inside_tree():
+				$Timer.wait_time = rand_range(3, 8)
+				$Timer.start()
+				music_position = 0.0
 
 func remove_mask(is_in_queue := true) -> void:
 	if is_in_queue: yield()
