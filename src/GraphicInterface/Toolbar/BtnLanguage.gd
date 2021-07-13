@@ -19,3 +19,8 @@ func on_pressed() -> void:
 
 func get_description() -> String:
 	return '%s: %s' % [description, E.get_text(states_descriptions[E.language_idx])]
+
+
+func _translate() -> void:
+	._translate()
+	texture_normal = btn_states[E.language_idx]

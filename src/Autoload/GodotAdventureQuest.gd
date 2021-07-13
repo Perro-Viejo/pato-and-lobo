@@ -63,7 +63,18 @@ func _ready() -> void:
 	
 	# Creo que esto no debería ser necesario, pero el Godoto se volvió loco y no
 	# mostraba bien el idioma por defecto.
-	_set_language_idx(language_idx)
+	if OS.has_feature('editor'):
+		_set_language_idx(language_idx)
+	else:
+		var device_locale := OS.get_locale()
+
+		if OS.has_feature('HTML5'):
+			device_locale = JavaScript.eval('perro_viejo_games.get_language();')
+
+		if device_locale.find('es') > -1:
+			_set_language_idx(languages[0])
+		else:
+			_set_language_idx(languages[2])
 
 
 func _process(delta: float) -> void:

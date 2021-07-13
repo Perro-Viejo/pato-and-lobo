@@ -315,6 +315,7 @@
       return {
         is_mobile: () => device.mobile(),
         is_landscape: () => device.landscape(),
+        get_language: () => window.navigator.language
       }
     })()
   </script>
