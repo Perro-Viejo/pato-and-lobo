@@ -59,7 +59,7 @@ func _ready() -> void:
 	set_process_input(false)
 	
 	if OS.has_feature('editor'):
-		DebugOverlay.visible = true
+		DebugOverlay.is_visible = true
 	
 	# Creo que esto no debería ser necesario, pero el Godoto se volvió loco y no
 	# mostraba bien el idioma por defecto.

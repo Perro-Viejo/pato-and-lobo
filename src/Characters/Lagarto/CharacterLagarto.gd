@@ -57,6 +57,7 @@ func on_look() -> void:
 	else:
 		E.run(['Pato: Character-Lagarto-OnLook-Pato-03'])
 
+
 #Funciones de DJ
 func play_music(track = '', is_in_queue := true, fade = false, duration = 2):
 	if is_in_queue: yield()
@@ -73,6 +74,7 @@ func play_music(track = '', is_in_queue := true, fade = false, duration = 2):
 	paused = false
 	if is_inside_tree(): yield(get_tree(), 'idle_frame')
 
+
 func stop_music(is_in_queue := true, pause = true):
 	if is_in_queue: yield()
 	music_playing = false
@@ -82,6 +84,8 @@ func stop_music(is_in_queue := true, pause = true):
 		A.stop(current_track, 0, false, true, 8)
 	else:
 		A.stop(current_track, 0, false)
+
+
 func check_music():
 	print('Music Sonanding: ', music_playing, 'pausado: ', paused)
 	if not music_playing:
@@ -119,7 +123,7 @@ func _toggle_mask(put := true) -> void:
 		E.current_room.get_prop('WolfMask').enable(false)
 
 	idle(false)
-	yield(get_tree().create_timer(0.3), 'timeout')
+	yield(E.get_tree().create_timer(0.3), 'timeout')
 
 
 func _can_put_mask():

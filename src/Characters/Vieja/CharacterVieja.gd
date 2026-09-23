@@ -63,3 +63,9 @@ func sleep(is_in_queue := true) -> void:
 	A.play({cue_name = 'sfx_granny_sleep', por = global_position, is_in_queue = false})
 	$AnimationPlayer.play('sleep')
 	yield(E.wait(1.0, false), 'completed')
+
+
+func awake(is_in_queue := true) -> void:
+	if is_in_queue: yield()
+	$AnimationPlayer.play('idle_d')
+	yield(E.get_tree(), 'idle_frame')

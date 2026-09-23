@@ -140,6 +140,14 @@ func on_room_exited() -> void:
 	
 	C.get_character('Lobo').idle(false)
 	
+	if (
+		Globals.has_done(Globals.GameState.GOT_DRUNK)
+		or Globals.has_done(Globals.GameState.UNABLE)
+		or Globals.has_done(Globals.GameState.ALL_DONE)
+		or Globals.has_done(Globals.GameState.DISGUISED)
+	):
+		C.get_character('Lagarto').put_mask(false)
+	
 	.on_room_exited()
 
 

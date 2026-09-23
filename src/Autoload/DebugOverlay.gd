@@ -4,19 +4,19 @@ extends CanvasLayer
 var _monitors = {}
 var _monitors_sequence: int = 0 setget , get_sequence
 
-var visible: bool = false setget set_visible, get_visible
+var is_visible: bool = false setget set_is_visible, get_is_visible
 
 onready var _ori_pos: Vector2 = $Label.rect_position
 
-func set_visible(value):
-	visible = value
-	$Label.visible = visible
-	if not visible:
+func set_is_visible(value):
+	is_visible = value
+	$Label.visible = is_visible
+	if not is_visible:
 		$Label.text = ""
 
 
-func get_visible():
-	return visible
+func get_is_visible():
+	return is_visible
 
 
 func add_monitor(label: String, caller: Node, target: NodePath, call_method: String = "", args: Array = []) -> int:
@@ -63,7 +63,7 @@ func process_monitor(monitor) -> String:
 
 
 func _process(_delta):
-	if visible:
+	if is_visible:
 		$Label.rect_size = Vector2.ZERO
 
 		var label_text = ""

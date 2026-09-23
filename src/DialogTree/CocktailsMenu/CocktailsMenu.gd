@@ -35,7 +35,8 @@ func option_selected(opt: DialogOption) -> void:
 				I.add_item('CocktailGolem'),
 			]), 'completed')
 		'Opt2':
-			yield(Globals.get_drunk(), 'completed')
+			D.show_dialog('DrunkConfirmation')
+			return
 		'Opt3':
 			yield(E.run([
 				'Conejuno: CocktailsMenu-Opt3-Conejuno-01',

@@ -74,7 +74,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Nodes/Prop/Prop.gd"
 }, {
-"base": "Node2D",
+"base": "Reference",
 "class": "Room",
 "language": "GDScript",
 "path": "res://src/Nodes/Room/Room.gd"

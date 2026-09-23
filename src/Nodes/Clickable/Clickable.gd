@@ -91,7 +91,7 @@ func disable(is_in_queue := true) -> void:
 func enable(is_in_queue := true) -> void:
 	if is_in_queue: yield()
 	self.visible = true
-	yield(get_tree(), 'idle_frame')
+	yield(E.get_tree(), 'idle_frame')
 
 
 func get_description() -> String:

@@ -22,6 +22,7 @@ func on_interact() -> void:
 					]
 				), 'completed')
 				
+				D.finish_dialog()
 				E.goto_room('End')
 			elif Globals.courage >= 50:
 				if Globals.has_done(Globals.GameState.DISGUISED):
@@ -75,7 +76,8 @@ func on_interact() -> void:
 						'Pato: CharacterLobo-Bar-Pato-11',
 						C.player_walk_to(E.current_room.get_point('DanceFloor3'))
 					]), 'completed')
-
+				
+				D.finish_dialog()
 				E.goto_room('End')
 			else:
 				E.run([

@@ -62,7 +62,6 @@ func moon_daydream_repeated() -> void:
 
 func get_drunk() -> void:
 	yield(E.run([
-		'Conejuno: CocktailsMenu-Opt2-Conejuno-01',
 		'Conejuno: CocktailsMenu-Opt2-Conejuno-02',
 		'Pato: CocktailsMenu-Opt2-Pato-03',
 		G.display('CocktailsMenu-Opt2-Game-04'),

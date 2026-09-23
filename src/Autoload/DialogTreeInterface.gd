@@ -14,7 +14,7 @@ var _current_tree: DialogTree = null
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
-func show_dialog(script_name: String) -> void:
+func show_dialog(script_name: String, show_start := true) -> void:
 	if _current_tree:
 		# Si hay un diálogo en progreso y se solicitó otro, hay que desconectar
 		# al diálogo en progreso para que el nuevo diálogo escuche la selección
@@ -26,8 +26,11 @@ func show_dialog(script_name: String) -> void:
 		if tree.script_name.to_lower() == script_name.to_lower():
 			active = true
 			_current_tree = tree
-
-			tree.start()
+			
+			if show_start:
+				tree.start()
+			else:
+				tree.show_options()
 			yield(self, 'dialog_finished')
 
 			if active:

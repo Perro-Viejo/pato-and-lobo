@@ -10,6 +10,7 @@ export var script_name := ''
 func start() -> void:
 	_show_options()
 	yield(D, 'dialog_finished')
+	
 	disconnect_option_selection()
 
 
@@ -34,6 +35,13 @@ func is_option_visible(id: String) -> bool:
 		if (o as DialogOption).id == id:
 			return o.visible
 	return false
+
+
+func show_options() -> void:
+	_show_options()
+	yield(D, 'dialog_finished')
+	
+	disconnect_option_selection()
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░
