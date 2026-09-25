@@ -7,6 +7,9 @@ export var states_descriptions := ['colombiano', 'español', 'english']
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready() -> void:
 	texture_normal = btn_states[E.language_idx]
+	
+	# Connect to global signals
+	E.connect('language_changed', self, '_on_language_changed')
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos virtuales ░░░░
@@ -23,4 +26,8 @@ func get_description() -> String:
 
 func _translate() -> void:
 	._translate()
+	texture_normal = btn_states[E.language_idx]
+
+
+func _on_language_changed() -> void:
 	texture_normal = btn_states[E.language_idx]

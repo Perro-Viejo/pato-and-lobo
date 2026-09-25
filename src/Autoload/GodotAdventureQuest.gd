@@ -72,9 +72,9 @@ func _ready() -> void:
 			device_locale = JavaScript.eval('perro_viejo_games.get_language();')
 
 		if device_locale.find('es') > -1:
-			_set_language_idx(languages[0])
+			_set_language_idx(1)
 		else:
-			_set_language_idx(languages[2])
+			_set_language_idx(2)
 
 
 func _process(delta: float) -> void:

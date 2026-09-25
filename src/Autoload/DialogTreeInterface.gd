@@ -20,7 +20,17 @@ func _ready() -> void:
 		var tree: DialogTree = t.duplicate(true)
 		tree.options = []
 		for o in t.options:
-			tree.options.append((o as DialogOption).duplicate(true))
+			var dialog_option := DialogOption.new()
+			dialog_option.id = o.id
+			dialog_option.text = o.text
+			dialog_option.visible = o.visible
+			dialog_option.description = o.description
+			dialog_option.disabled = o.disabled
+			dialog_option.used = o.used
+			dialog_option.script_name = o.script_name
+			
+			tree.options.append(dialog_option)
+		
 		_dflt_trees.append(tree)
 
 
