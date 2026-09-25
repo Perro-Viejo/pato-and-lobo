@@ -32,6 +32,7 @@ func _ready():
 	I.connect('item_removed', self, '_remove_item')
 	I.connect('courage_updated', self, '_show_courage')
 	I.connect('courage_restarted', self, '_restart_courage')
+	I.connect('cleared', self, '_on_inventory_cleared')
 	G.connect('inventory_show_requested', self, '_show_and_hide')
 	E.connect('language_changed', self, '_translate')
 	
@@ -158,3 +159,16 @@ func _translate() -> void:
 
 func _restart_courage() -> void:
 	_courage.value = 0
+
+
+func _on_inventory_cleared() -> void:
+	for i in _grid.get_children():
+		var item: Item = i
+		
+		if item.is_connected('description_toggled', self, '_show_item_info'):
+			item.disconnect('description_toggled', self, '_show_item_info')
+		if item.is_connected('selected', self, '_change_cursor'):
+			item.disconnect('selected', self, '_change_cursor')
+		
+		_grid.call_deferred('remove_child', item)
+

@@ -9,6 +9,7 @@ signal item_remove_done(item)
 signal courage_updated(value)
 signal courage_update_shown()
 signal courage_restarted
+signal cleared
 
 export var always_visible := false
 
@@ -68,6 +69,12 @@ func remove_item(item_name: String, is_in_queue := true) -> void:
 		set_active_item(null)
 		emit_signal('item_removed', i)
 		yield(self, 'item_remove_done')
+
+
+func clear() -> void:
+	for ii in _item_instances:
+		(ii.node as Item).in_inventory = false
+	emit_signal('cleared')
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos privados ░░░░

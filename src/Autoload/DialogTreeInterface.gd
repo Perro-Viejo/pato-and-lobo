@@ -11,6 +11,17 @@ export(Array, Resource) var trees := []
 var active := false
 
 var _current_tree: DialogTree = null
+var _dflt_trees := []
+
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
+func _ready() -> void:
+	for t in trees:
+		var tree: DialogTree = t.duplicate(true)
+		tree.options = []
+		for o in t.options:
+			tree.options.append((o as DialogOption).duplicate(true))
+		_dflt_trees.append(tree)
 
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos públicos ░░░░
@@ -55,3 +66,22 @@ func get_dialog_tree(script_name: String) -> DialogTree:
 		if tree.script_name.to_lower() == script_name.to_lower():
 			return t
 	return null
+
+
+func reset_dialogs() -> void:
+	trees.clear()
+	for t in _dflt_trees:
+		var tree: DialogTree = t.duplicate(true)
+		tree.options = []
+		for o in t.options:
+			var dialog_option := DialogOption.new()
+			dialog_option.id = o.id
+			dialog_option.text = o.text
+			dialog_option.visible = o.visible
+			dialog_option.description = o.description
+			dialog_option.disabled = o.disabled
+			dialog_option.used = o.used
+			dialog_option.script_name = o.script_name
+			
+			tree.options.append(dialog_option)
+		trees.append(tree)

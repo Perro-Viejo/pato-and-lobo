@@ -146,6 +146,7 @@ func on_room_exited() -> void:
 		or Globals.has_done(Globals.GameState.ALL_DONE)
 		or Globals.has_done(Globals.GameState.DISGUISED)
 	):
+		state.has_mask = true
 		C.get_character('Lagarto').put_mask(false)
 	
 	.on_room_exited()

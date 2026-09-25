@@ -122,8 +122,10 @@ func _restart_game() -> void:
 	Globals.cosmo_kick_drunk = false
 	C.player.anim_suffix = ''
 	
+	I.clear()
+	I.emit_signal('courage_restarted')
+	D.reset_dialogs()
 	C.get_character('Pez').enable(false)
 	C.get_character('Vieja').awake(false)
 	C.get_character('Lagarto').stop_music(false, false)
-	I.emit_signal('courage_restarted')
 	E.goto_room('Splash')
