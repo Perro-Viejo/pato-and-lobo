@@ -17,7 +17,9 @@ var _dflt_trees := []
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ métodos de Godot ░░░░
 func _ready() -> void:
 	for t in trees:
-		var tree: DialogTree = t.duplicate(true)
+		var tree := DialogTree.new()
+		tree.set_script(t.get_script())
+		tree.script_name = t.script_name
 		tree.options = []
 		for o in t.options:
 			var dialog_option := DialogOption.new()
@@ -79,9 +81,13 @@ func get_dialog_tree(script_name: String) -> DialogTree:
 
 
 func reset_dialogs() -> void:
+	_current_tree = null
+	active = false
 	trees.clear()
 	for t in _dflt_trees:
-		var tree: DialogTree = t.duplicate(true)
+		var tree := DialogTree.new()
+		tree.set_script(t.get_script())
+		tree.script_name = t.script_name
 		tree.options = []
 		for o in t.options:
 			var dialog_option := DialogOption.new()
